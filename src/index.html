@@ -1,0 +1,715 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>CASHe learnings</title>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css">
+        <link rel="stylesheet" href="css/casheLearnings.css">
+        <script src="js/jquery-3.6.0.min.js"></script>
+        <script src="js/angular.min.js"></script>
+    </head>
+
+    <body ng-app="casheLearningsApp" ng-controller="quizController" >
+        <!-- Welcome to CASHe learnings -->
+        <h1 id='welcome-heading'>Welcome to CASHe learnings</h1>
+
+        <!-- ==========================================================================-->
+
+                                        <!-- CASHe topics list -->
+                                        <!-- ================= -->
+
+        <div class="CASHe-topics-list">
+
+            <!-- --------------------------------------------------------------------------- -->
+                                        <!-- Video recordings -->
+                                        <!-- ================= -->
+
+            <div id="vidRec" class="left-nav-topics vid">
+                VIDEO RECORDINGS <div class="align"></div>
+            </div>
+
+            <!-- sub accordions of videos -->
+            <div class="videos" id="vid1" ng-click="changeBackground($event)" onclick="displayInThePage(id)">
+                Digital Transformation (Tech Panel)
+            </div>
+
+            <div class="videos" id="vid2" ng-click="changeBackground($event)" onclick="displayInThePage(id)">
+                About CASHe
+            </div>
+
+            <div class="videos" id="vid3" ng-click="changeBackground($event)" onclick="displayInThePage(id)">
+                    Pandaemic Fuels Tech Inclusion in the Financial Sector
+            </div>
+
+            <div class="videos" id="vid4" ng-click="changeBackground($event)" onclick="displayInThePage(id)">
+                    V Raman Kumar talks about growth ahead
+            </div>
+
+            <div class="videos" id="vid5" ng-click="changeBackground($event)" onclick="displayInThePage(id)">
+                    Building a Digital-first Customer Acquisition
+            </div>
+
+            <div class="videos" id="vid6" ng-click="changeBackground($event)" onclick="displayInThePage(id)">
+                    Is Buy Now Pay Later A Good Idea For Consumers?
+            </div>
+
+            <!-- ==========================================================================-->
+
+            <!-- Documentation -->
+            <!-- ===================-->
+
+            <div class="left-nav-topics documentation">
+                DOCUMENTATION
+            </div>
+
+            <!-- ---------X-----------------X----------------------X---------------X--------------X -->
+            <!-- Word Documents -->
+            <!-- ===================-->
+
+            <div class="word-doc">
+                Word Documents
+            </div>
+
+            <div ng-click="changeBackground($event)" class="topics word-docs" id="word-doc-1" onclick="displayInThePage(id)">
+                3 reasons BNPL is a hit among young shoppers this festive season
+            </div>
+
+            <div ng-click="changeBackground($event)" class="topics word-docs" id="word-doc-2" onclick="displayInThePage(id)">
+                5 apps to consider for micro loans this festive season
+            </div>
+
+            <div ng-click="changeBackground($event)" class="topics word-docs" id="word-doc-3" onclick="displayInThePage(id)">
+                5 Tech-Based Platforms Driving Credit Literacy
+            </div>
+
+            <div ng-click="changeBackground($event)" class="topics word-docs" id="word-doc-4" onclick="displayInThePage(id)">
+                Banking 2.0
+            </div>
+
+            <div ng-click="changeBackground($event)" class="topics word-docs" id="word-doc-5" onclick="displayInThePage(id)">
+                BHANIX FINANCE
+            </div>
+
+            <div ng-click="changeBackground($event)" class="topics word-docs" id="word-doc-6" onclick="displayInThePage(id)">
+                BNPL lights up India’s ecommerce sales this Diwali
+            </div>
+
+            <div ng-click="changeBackground($event)" class="topics word-docs" id="word-doc-7" onclick="displayInThePage(id)">
+                Buy now pay later set to surge over ten fold in India
+            </div>
+
+            <div ng-click="changeBackground($event)" class="topics word-docs" id="word-doc-8" onclick="displayInThePage(id)">
+                Buy now, pay later set to surge over ten-fold in India - reuters
+            </div>
+
+            <div ng-click="changeBackground($event)" class="topics word-docs" id="word-doc-9" onclick="displayInThePage(id)">
+                Buy-Now, Pay-Later Loans Help Fuel India’s Festive Recovery
+            </div>
+
+            <div ng-click="changeBackground($event)" class="topics word-docs" id="word-doc-10" onclick="displayInThePage(id)">
+                CASHe appoints veteran banker Jogindar Rana to Top Role
+            </div>
+
+            <div ng-click="changeBackground($event)" class="topics word-docs" id="word-doc-11" onclick="displayInThePage(id)">
+                CASHe product pipeline
+            </div>
+
+            <div ng-click="changeBackground($event)" class="topics word-docs" id="word-doc-12" onclick="displayInThePage(id)">
+                CASHe Raises Rs 140 Cr V Raman Kumar Talks About Growth Ahead
+            </div>
+
+            <div ng-click="changeBackground($event)" class="topics word-docs" id="word-doc-13" onclick="displayInThePage(id)">
+                CASHe roadmap
+            </div>
+
+            <div ng-click="changeBackground($event)" class="topics word-docs" id="word-doc-14" onclick="displayInThePage(id)">
+                CASHe
+            </div>
+
+            <div ng-click="changeBackground($event)" class="topics word-docs" id="word-doc-15" onclick="displayInThePage(id)">
+                CXO Exclusive - Building a Digital-first Customer Acquisition and Collection Process
+            </div>
+
+            <div ng-click="changeBackground($event)" class="topics word-docs" id="word-doc-16" onclick="displayInThePage(id)">
+                Ecd D:xploring 'AI-Driven Financial Inclusion' with Yashoraj Tyagi, CTO of CASHe
+            </div>
+
+            <div ng-click="changeBackground($event)" class="topics word-docs" id="word-doc-17" onclick="displayInThePage(id)">
+                Fintech Platform raises $19 million from its Singaporean parent TSLC
+            </div>
+
+            <div ng-click="changeBackground($event)" class="topics word-docs" id="word-doc-18" onclick="displayInThePage(id)">
+                How to safeguard yourself from financial frauds
+            </div>
+
+            <div ng-click="changeBackground($event)" class="topics word-docs" id="word-doc-19" onclick="displayInThePage(id)">
+                Is Buy Now, Pay Later A Good Idea For Consumers
+            </div>
+
+            <div ng-click="changeBackground($event)" class="topics word-docs" id="word-doc-20" onclick="displayInThePage(id)">
+                Pandemic Fuels Tech Inclusion in the Financial Sector
+            </div>
+
+            <div ng-click="changeBackground($event)" class="topics word-docs" id="word-doc-21" onclick="displayInThePage(id)">
+                Personal Lending Startup CASHe secures INR 140 Crores Equity funding
+            </div>
+
+            <div ng-click="changeBackground($event)" class="topics word-docs" id="word-doc-22" onclick="displayInThePage(id)">
+                Personal Loans for young salaried millennials across India
+            </div>
+
+            <div ng-click="changeBackground($event)" class="topics word-docs" id="word-doc-23" onclick="displayInThePage(id)">
+                Sept records 35 percent rise in BNPL loan applications
+            </div>
+
+            <div ng-click="changeBackground($event)" class="topics word-docs" id="word-doc-24" onclick="displayInThePage(id)">
+                The evolution of the digital lending sector in India
+            </div>
+
+            <div ng-click="changeBackground($event)" class="topics word-docs" id="word-doc-25" onclick="displayInThePage(id)">
+                Top apps that help you take an instant personal loan
+            </div>
+
+            <div ng-click="changeBackground($event)" class="topics word-docs" id="word-doc-26" onclick="displayInThePage(id)">
+                With 10x growth for BNPL products during sales
+            </div>
+
+            <!-- --------X-------------X------------X-----------------X----------------X-------    -->
+
+            <!-- pdf documents  -->
+            <!-- ==================-->
+
+            <div class="left-nav-topics pdf-doc">
+                PDF Documents
+            </div>
+
+            <div ng-click="changeBackground($event)" class="topics pdf-docs" id="pdf-doc-1" onclick='displayInThePage(id)'>
+                BHANIX & CASHe
+            </div>
+
+            <div ng-click="changeBackground($event)" class="topics pdf-docs" id="pdf-doc-2" onclick='displayInThePage(id)'>
+                BUY NOW PAY LATER
+            </div>
+
+            <div ng-click="changeBackground($event)" class="topics pdf-docs" id="pdf-doc-3" onclick='displayInThePage(id)'>
+                FinTech – Financial Sector
+            </div>
+
+            <!-- --------X-------------X------------X-----------------X----------------X -->
+
+            <!-- ppt documents -->
+            <!-- =================-->
+
+            <div class="left-nav-topics ppt">
+                PPT PRESENTATION
+            </div>
+
+            <div ng-click="changeBackground($event)" class="ppt-docs" id="ppt-doc-1" onclick='displayInThePage(id)'>
+                BHANIX & CASHe
+            </div>
+
+            <div ng-click="changeBackground($event)" class="ppt-docs" id="ppt-doc-2" onclick='displayInThePage(id)'>
+                BUY NOW PAY LATER
+            </div>
+
+            <div ng-click="changeBackground($event)" class="ppt-docs" id="ppt-doc-3" onclick='displayInThePage(id)'>
+                FINTECH - FINANCIAL SECTOR
+            </div>
+
+            <!-- --------X-------------X------------X-----------------X----------------X -->
+
+            <!-- website Links -->
+            <!-- ==================-->
+
+            <div class="left-nav-topics links-websites">
+                LINKS
+            </div>
+
+            <div ng-click="changeBackground($event)" id="cashe" class="links" onclick='displayInThePage(id)'>
+                CASHe
+            </div>
+
+            <div ng-click="changeBackground($event)" id="bhanix" class="links" onclick='displayInThePage(id)'>
+                Bhanix Finance
+            </div>
+
+            <!-- --------X-------------X------------X-----------------X----------------X -->
+
+            <!-- QUIZ -->
+            <!-- ===========-->
+            <div class="left-nav-topics" id="quiz">
+                QUIZ
+            </div>
+
+            <!-- Fintech Quiz -->
+            <!-- ===========-->
+            <div>
+                <div id="fintechQuiz" class="quiz-topics" ng-click="displayFintechQuizTips($event)">
+                    Fintech Eco System
+                </div>
+
+                <!-- Fintech eco system questions -->
+                <div class="fintechQuestions" value="1" id="1" ng-click="jumpToQuestion($event)">
+                    When to choose Buy Now Pay later?
+                </div>
+
+                <div class="fintechQuestions" value="2" id="2" ng-click="jumpToQuestion($event)">
+                    Does Buy Now Pay Later charge interest?
+                </div>
+
+                <div class="fintechQuestions" id="3" value="3" ng-click="jumpToQuestion($event)">
+                    Is early salary a mobile app or desktop app?
+                </div>
+
+                <div class="fintechQuestions" id="4" value="4" ng-click="jumpToQuestion($event)">
+                    Traditional lending saves customer's time compared to digital lending?
+                </div>
+
+                <div class="fintechQuestions" id="5" value="5" ng-click="jumpToQuestion($event)">
+                    Competition, collaboration and convergence makes healthy relationship between bank and NBFC
+                </div>
+            </div>
+            <!-- --------X-------------X------------X-----------------X----------------X -->
+
+            <!-- CASHe Quiz -->
+            <!-- ==============-->
+            <div>
+                <div id="casheQuiz" class="quiz-topics" ng-click="displayCasheQuizTips($event)">
+                    CASHe
+                </div>
+
+                <!-- CASHe questions -->
+                <div class="casheQuestions" id="11" value="11" ng-click="jumpToQuestion($event)">
+                    Who is the founder of CASHe?
+                </div>
+
+                <div class="casheQuestions" id="12" value="12" ng-click="jumpToQuestion($event)">
+                    What Is CASHe’s mission?
+                </div>
+
+                <div class="casheQuestions" id="13" value="13" ng-click="jumpToQuestion($event)">
+                    What is the fundamental belief of CASHe?
+                </div>
+
+                <div class="casheQuestions" id="14" value="14" ng-click="jumpToQuestion($event)">
+                    CASHe was founded in _______
+                </div>
+
+                <div class="casheQuestions" id="15" value="15" ng-click="jumpToQuestion($event)">
+                    CASHe is a mobile app
+                </div>
+            </div>
+            <!-- --------X-------------X------------X-----------------X----------------X -->
+
+
+            <!-- Bhanix Quiz -->
+            <!-- =================-->
+            <div>
+                <div id="bhanixQuiz" class="quiz-topics" ng-click="displayBhanixQuizTips($event)">
+                    Bhanix
+                </div>
+
+                <!-- Bhanix Questions -->
+                <div class="bhanixQuestions" id="5" value="5" ng-click="jumpToQuestion($event)">
+                    Who is the founder of CASHe?
+                </div>
+
+                <div class="bhanixQuestions" id="5" value="5" ng-click="jumpToQuestion($event)">
+                    What is full form of NBFC?
+                </div>
+
+                <div class="bhanixQuestions" id="5" value="5" ng-click="jumpToQuestion($event)">
+                    NBFC's allow deposits from customers
+                </div>
+
+                <div class="bhanixQuestions" id="5" value="5" ng-click="jumpToQuestion($event)">
+                    Bhanix provides loan through
+                </div>
+
+                <div class="bhanixQuestions" id="5" value="5" ng-click="jumpToQuestion($event)">
+                    Fair practice code is meant for
+                </div>
+            </div>
+            <!-- --------X-------------X------------X-----------------X----------------X -->
+
+            <!-- Competitive Analysis -->
+            <!-- =======================-->
+        
+            <div id="competitiveAnalysisQuiz" ng-click="changeBackground($event)" class="quiz-topics" onclick="startCompetitiveAnalysisQuiz()">
+                Competitive Analysis
+            </div>
+
+            <div class="competitiveAnalysisQuestions" id="5" value="5" ng-click="jumpToQuestion($event)">
+                How much is MoneyView's Maximum Loan Ticket Size
+            </div>
+
+            <div class="competitiveAnalysisQuestions" id="5" value="5" ng-click="jumpToQuestion($event)">
+                Which of the following demographic are eligible to apply for a loan at MoneyView
+            </div>
+
+            <div class="competitiveAnalysisQuestions" id="5" value="5" ng-click="jumpToQuestion($event)">
+                MoneyView is available in Gpay
+            </div>
+
+            <div class="competitiveAnalysisQuestions" id="5" value="5" ng-click="jumpToQuestion($event)">
+                MoneyView Advantage Card offers an interest free period of up to
+            </div>
+
+            <div class="competitiveAnalysisQuestions" id="5" value="5" ng-click="jumpToQuestion($event)">
+                PostPe card has a credit limit of upto
+            </div>
+        </div>
+
+        <!-- ======================================================================= -->
+
+        <!-- display videos, documentations, ppts, links and quiz -->
+        <!-- =========================================================-->
+
+        <div id="displayDIV">
+            <object id="display" height="85%" width="85%" data="https://www.youtube.com/embed/Pl7XP8o7v6g"></object>
+        </div>
+
+        <!-- ======================================================================= -->
+        <div id="display-quiz-pages">
+        <!-- The Fintech Quiz Page -->
+        <!-- ===========================-->
+
+        <!-- <div id="displayQuizPage"> -->
+            <div id="display-fintech-quiz-page">
+                <!-- -------X---------X--------X -------X---------X--------X-------- -->
+
+                <!-- Display fintech quiz tips page -->
+                <!-- ===========================-->
+
+                <div id='fintech-quiz-tips' align="center">
+                    <p>Welcome to Fintech Ecosystem Quiz !!</p><br />
+                    <p>This Quiz contains 5 Questions</p><br />
+                    <p>Each Question has two options</p><br />
+                    <p>Each correct option carries 1 point</p><br />
+                    <p>Try to answer as many questions as possible</p><br />
+                    <p>Time limit : 5 minutes</p>
+
+                    <div class="start-quiz" ng-click="startFintechQuiz()">
+                        <a href="#" id="prev" class="btn btn-info btn-lg">
+                            <div class="glyphicon"></div> Start Quiz
+                        </a>
+                    </div>
+                </div>
+
+                <!-- -------X---------X--------X -------X---------X--------X-------- -->
+                                <!-- Fintech Quiz Page -->
+                                <!--======================-->
+
+                <div id="fintech-quiz-page">
+
+                    <!-- Previous button -->
+                    <!-- ==================-->
+                    <div id="fintech-previous-button" ng-hide="currentQ==1" ng-click="currentQ=currentQ-1">
+                        <a href="#" id="prev" class="btn btn-info btn-lg">
+                            <div class="glyphicon glyphicon-circle-arrow-left"></div>Previous
+                        </a>
+                    </div>
+
+                    <!-- -------X---------X--------X -------X---------X--------X---------- -->
+
+                    <!-- question and options -->
+                    <!-- ===========================-->
+
+                    <div>
+
+                        <!-- question -->
+                        <p ng-init="currentQ=1" id="fintech-question">
+                            {{questions[currentQ-1].Question}}
+                        </p><br />
+                        
+                        <table align="center" ng-init="currentQ=1">
+                            
+                            <tr>
+                                <td ng-model="selections[currentQ-1]" ng-click="selectFintechAnswer($index)" 
+                                ng-repeat="op in questions[currentQ-1].options" class="option">
+                                <input ng-checked="selections[currentQ-1] === $index" type="radio"
+                                name="fintech_option_quiz" ng-value="op">
+                                {{op}}
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+
+                    <!-- -------X---------X--------X -------X---------X--------X---------- -->
+
+                    <!-- progress bar -->
+                    <!-- =================-->
+                    <center>
+                        <div ng-show="currentQ>0" id="progressBar" class="progress">
+                            <div class="progress-bar progress-bar-success" role="progressbar" aria-valuemin="0"
+                                aria-valuemax="100" ng-style="currentProgress">
+                            </div>
+                        </div>
+                    </center>
+
+                    <!-- -------X---------X--------X -------X---------X--------X-------------- -->
+
+                    <!-- countdown timer and next button -->
+                    <!-- ================================-->
+
+                    <div class="timer-next-button">
+
+                        <!-- count down timer -->
+                        <div id="countdown" class="background-of-countdown">
+                            <p id="countdown-timer-text">Time left off</p>
+                            <h1 id="countdown-timer"></h1>
+                        </div>
+
+                        <!-- next button -->
+                        <div id="fintech-next-button" ng-hide="currentQ==5" ng-click="currentQ=currentQ+1">
+                            <a href="#" id="next" class="btn btn-info btn-lg">
+                                
+                                Next&nbsp;<div class="glyphicon glyphicon-circle-arrow-right"></div>
+                            </a>
+                        </div>
+
+                        <input id="fintech-submit-button" ng-show="currentQ==5" ng-click="submitFintechQuiz()"
+                            class="btn btn-primary" type="submit" value="Submit">
+                        </input>
+                    </div>
+                </div>
+                <!-- -------X---------X--------X -------X---------X--------X----------- -->
+
+                <!-- Display fintech quiz score -->
+                <!-- ================================-->
+
+                <div align="center" id="displayFintechQuizScore">
+                    <h1 id="fintechScoreText">Congratulations on completing the Quiz !!</h1>
+                    <h1 id="score"></h1>
+                    <h1 id="feedback"></h1>
+                </div>
+
+                <!-- -------X---------X--------X -------X---------X--------X----------- -->
+
+            </div>
+
+            <!-- ======================================================================= -->
+
+            <!-- CASHe Quiz Page -->
+            <!-- ===========================-->
+
+            <div id="display-cashe-quiz-page" ng-init="currentQ=6">
+
+                <!-- -------X---------X--------X -------X---------X--------X-------- -->
+
+                        <!-- Display CASHE quiz tips page -->
+                        <!-- ===========================-->
+
+                <div id='cashe-quiz-tips' align="center">
+                    <p>Welcome to CASHe Quiz !!</p><br />
+                    <p>This Quiz contains 5 Questions</p><br />
+                    <p>Each Question has two options</p><br />
+                    <p>Each correct option carries 1 point</p><br />
+                    <p>Try to answer as many questions as possible</p><br />
+                    <p>Time limit : 5 minutes</p>
+
+                    <div class="start-quiz" ng-click="startCasheQuiz()">
+                        <a href="#" id="prev" class="btn btn-info btn-lg">
+                            <div class="glyphicon"></div> Start Quiz
+                        </a>
+                    </div>
+                </div>
+
+
+                <!-- -------X---------X--------X -------X---------X--------X-------- -->
+
+                                    <!-- Previous button -->
+                                    <!-- ==================-->
+                <div id="cashe-quiz-page">
+                    <div id="cashe-previous-button" ng-hide="currentQ==6" ng-click="currentQ=currentQ-1">
+                        <a href="#" id="prev" class="btn btn-info btn-lg">
+                        <div class="glyphicon glyphicon-circle-arrow-left"></div> Previous
+                        </a>
+                    </div>  
+
+                <!-- -------X---------X--------X -------X---------X--------X---------- -->
+
+                                    <!-- question and options -->
+                                    <!-- ===========================-->
+                    <div>
+                        <p id="fintech-question">{{questions[currentQ-1].Question}}</p><br />
+                            <table align="center" ng-init="currentQ=11">
+                                <tr>
+                                    <td ng-model="selections[currentQ-1]" ng-click="selectCasheAnswer($index)" 
+                                    ng-repeat="op in questions[currentQ-1].options" class="option">
+                                    <input ng-checked="selections[currentQ-1] === $index" type="radio"
+                                    name="cashe_option_quiz" id="{{op}}" ng-value="op">
+                                    {{op}}
+                                    </td>
+                                </tr>
+                            </table>
+                    </div>            
+
+
+                <!-- -------X---------X--------X -------X---------X--------X---------- -->
+
+                                            <!-- progress bar -->
+                                            <!-- =================-->
+
+                    <center>
+                        <div ng-show="currentQ>0" id="progressBar" class="progress">
+                            <div class="progress-bar progress-bar-success" role="progressbar" aria-valuemin="0"
+                                aria-valuemax="100" ng-style="currentProgress">
+                            </div>
+                        </div>
+                    </center>
+
+                <!-- -------X---------X--------X -------X---------X--------X-------------- -->
+
+                                    <!-- countdown timer and next button -->
+                                    <!-- ================================-->
+
+                    <div class="timer-next-button">
+
+                        <!-- count down timer -->
+                        <div id="countdown" class="background-of-countdown">
+                            <p id="countdown-timer-text">Time left off</p>
+                            <h1 id="cashe-countdown-timer"></h1>
+                        </div>
+
+                        <!-- next button -->
+                        <div id="fintech-next-button" ng-hide="currentQ==10" ng-click="currentQ=currentQ+1">
+                            <a href="#" id="next" class="btn btn-info btn-lg">
+                                Next&nbsp;<div class="glyphicon glyphicon-circle-arrow-right"></div>  
+                            </a>
+                        </div>
+
+                        <input id="fintech-submit-button" ng-show="currentQ==10" ng-click="submitCasheQuiz()"
+                            class="btn btn-primary" type="submit" value="Submit">
+                        </input>
+                    </div>
+                </div>
+
+                <!-- -------X---------X--------X -------X---------X--------X----------- -->
+
+                <!-- Display CASHe quiz score -->
+                <!-- ================================-->
+                <div align="center" id="displayCasheQuizScore">
+                    <h1 id="fintechScoreText">Congratulations on completing the Quiz !!</h1>
+                    <h1 id="cashe-quiz-score"></h1>
+                    <h1 id="cashe-quiz-feedback"></h1>
+                </div>
+
+
+                <!-- -------X---------X--------X -------X---------X--------X----------- -->
+
+            </div>
+
+            <!-- ======================================================================= -->
+
+            <div id="display-bhanix-quiz-page">
+
+                <div id='bhanix-quiz-tips' align="center">
+                    <p>Welcome to Bhanix Quiz !!</p><br />
+                    <p>This Quiz contains 5 Questions</p><br />
+                    <p>Each Question has two options</p><br />
+                    <p>Each correct option carries 1 point</p><br />
+                    <p>Try to answer as many questions as possible</p><br />
+                    <p>Time limit : 5 minutes</p>
+            
+                    <div class="start-quiz" ng-click="startBhanixQuiz()">
+                        <a href="#" id="prev" class="btn btn-info btn-lg">
+                            <div class="glyphicon"></div> <b>Start Quiz</b>
+                        </a>
+                    </div>
+                </div>
+            
+                <div id="bhanix-quiz-page">
+            
+                                <!-- Previous button -->
+                                <!-- ==================-->
+                    <div ng-hide="currentQ==11" ng-click="currentQ=currentQ-1">
+                        <a href="#" id="prev" class="btn btn-info btn-lg">
+                            <div class="glyphicon glyphicon-circle-arrow-left"></div> <b>Previous</b>
+                        </a>
+                    </div>
+            
+            <!-- -------X---------X--------X -------X---------X--------X---------- -->
+            
+                                <!-- question and options -->
+                                <!-- ===========================-->
+            
+                    <div>
+            
+                        <!-- question -->
+                        <p ng-init="currentQ=11" id="fintech-question">
+                            {{questions[currentQ-1].Question}}
+                        </p><br />
+            
+                        <table align="center" ng-init="currentQ=11">
+                            <tr>
+                                <td ng-model="selections[currentQ-1]" ng-click="selectBhanixAnswer($index)" 
+                                ng-repeat="op in questions[currentQ-1].options" class="option">
+                                <input ng-checked="selections[currentQ-1] === $index" type="radio"
+                                name="bhanix_option_quiz" id="{{op}}" ng-value="op">
+                                {{op}}
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+            
+            <!-- -------X---------X--------X -------X---------X--------X---------- -->
+            
+                                                <!-- progress bar -->
+                                                <!-- =================-->
+                    <center>
+                        <div id="progressBar" class="progress">
+                            <div class="progress-bar progress-bar-success" role="progressbar" aria-valuemin="0"
+                                aria-valuemax="100" ng-style="currentProgress">
+                            </div>
+                        </div>
+                    </center>
+            
+            <!-- -------X---------X--------X -------X---------X--------X-------------- -->
+            
+                                        <!-- countdown timer and next button -->
+                                        <!-- ================================-->
+            
+                    <div class="timer-next-button">
+            
+                        <!-- count down timer -->
+                        <div id="countdown" class="background-of-countdown">
+                            <p id="countdown-timer-text">Time left off</p>
+                            <h1 id="bhanix-countdown-timer"></h1>
+                        </div>
+            
+                        <!-- next button -->
+                        <div id="next-button" ng-hide="currentQ==15" ng-click="currentQ=currentQ+1">
+                            <a href="#" id="next" class="btn btn-info btn-lg">
+                                Next&nbsp;<div class="glyphicon glyphicon-circle-arrow-right"></div>
+                            </a>
+                        </div>
+            
+                        <input id="fintech-submit-button" ng-show="currentQ==15" ng-click="submitBhanixQuiz()"
+                            class="btn btn-primary" type="submit" value="Submit">
+                        </input>
+                    </div>
+                </div>
+            
+                                    <!-- Display Bhanix quiz score -->
+                                    <!-- ================================-->
+            
+                <div align="center" id="displayBhanixQuizScore">
+                    <h1>Congratulations on completing the Quiz !!</h1>
+                    <h1 id="bhanix-quiz-score"></h1>
+                    <h1 id="bhanix-quiz-feedback"></h1>
+                </div>
+            </div>
+        </div>
+        <!-- ==============================================================================-->
+
+        <link rel="stylesheet" href="css/quiz.css">
+        <link rel="stylesheet" href="css/styles.less">
+        <script src="js/casheLearnings.js"></script>
+        <script src="js/fintech-quiz.js"></script>
+    </body>
+
+</html>

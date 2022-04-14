@@ -1,0 +1,295 @@
+body
+{
+    background-color : silver;
+    user-select : none;
+}
+.Question
+{
+    cursor : pointer;
+    height: 35px;
+    width: 45px;
+    background-color: white;
+    display: inline-block;
+ 	text-align : center;
+     box-sizing : border-box;
+    font-weight : bold;
+    color : black;
+    padding : 5px;
+    font-size : 20px;
+}
+table
+{
+    border-spacing : 10px ;
+    border-collapse : separate;
+}
+
+.current-Question
+{
+    position : absolute;
+    top : 100px;
+    left : 0;
+}
+#Q
+{
+    position : absolute;
+    color : white;
+    font-weight : bold;
+    top : 30%;
+    left : 50px;
+    font-size : 20px;
+}
+.option
+{
+    position : relative;
+    cursor : pointer;
+    color :black;
+    top : 120px;
+    font-weight : bold;
+    font-size : 15px;
+    padding : 10px;
+
+}
+
+.progress
+{
+    border-radius : 5px;
+    position : absolute;
+    top : 375px;
+    width : 35%;
+    left : 35%;
+}
+
+.progress-bar-success
+{
+    background-color : green;
+   
+}
+#next:link, #next:visited, #next:active:hover
+{
+   border-radius : 20%;
+   font-weight : bold;
+   color : white;
+    position : absolute;
+    background-color : green;
+    right : 30px;    
+    bottom : 30px;
+}
+#next:hover
+{
+    background-color : rgb(72, 213, 77)
+}
+#prev:link, #prev:visited, #prev:active:hover
+{
+    border-radius : 20%;
+    color : white;
+    font-weight : bold;
+    background-color : green;
+    border-color : green;
+    position : absolute;
+    left : 30px;    
+    bottom : 30px;
+}
+#prev:hover
+{
+    background-color : rgb(72, 213, 77)
+}
+#fintech-submit-button
+{
+    border-radius : 20%;
+    position : absolute;
+    background-color : blue;
+    border-color : black;
+    font-size : 15px;
+    font-weight : bold;
+    right : 30px;    
+    bottom : 30px;
+}
+#submit-button:hover
+{
+    background-color : rgb(42, 81, 208);
+}
+.btn
+{
+    height : 50px;
+    width : 150px;
+}
+
+#fintech-quiz-tips, #cashe-quiz-tips, #bhanix-quiz-tips
+{
+    position : relative;
+    top : 10px;
+    color : black;
+    font-weight : bold;
+    display : none;
+}
+
+#displayFintechQuizScore
+{
+    display : none;
+}
+#fintechScoreText
+{
+    color : black;
+    text-align : center;
+}
+#fintechQuizScoreDisplay
+{
+    display : none;
+}
+
+.start-quiz
+{
+    position : relative;
+    top : 80px;
+    left : 300px;
+}
+#score
+{
+    color : black;
+    font-weight : bold;
+    font-size : 20px;
+    text-align :center;
+}
+
+.countdown-timer
+{
+    position : absolute;
+    background-color : white;
+    right : 42px;
+    top : 10px;
+    color : black;
+    height : 60px;
+    width : 100px;
+    padding : 17px;
+    border : 3px solid black;
+    border-radius : 30%;
+}
+
+#prev-progress-next
+{
+    position : absolute;
+    bottom: 20px;
+}
+
+.buttons
+{
+    width : 40%;
+}
+.Question.selected
+{
+    background-color : green;
+    color : white;
+}
+
+/* custom radio button */
+.container {
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    font-size: 22px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+  .container input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+  }
+  .checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 30px;
+    width: 30px;
+    background-color: #eee;
+    border-radius: 50%;
+  }
+  .container:hover input ~ .checkmark {
+    background-color: #ccc;
+  }
+
+  .checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+  }
+  .container input:checked ~ .checkmark:after {
+    display: block;
+  }
+  
+  /* Style the indicator (dot/circle) 
+  .container .checkmark:after {
+       top: 9px;
+      left: 9px;
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: white;
+  }
+
+  .container input:checked ~ .checkmark {
+    background-color: green;
+  }*/
+  #fintech-question
+  {
+        text-align : center;
+        color : black;
+        position : relative;
+        font-size : 25px;
+        top : 150px;
+        
+  }
+  
+/* #options
+{
+    position : relative;
+    cursor : pointer;
+    color :black;
+    top : 120px;
+    font-weight : bold;
+    font-size : 15px;
+    padding : 10px;
+} */
+
+#countdown-timer-text
+{
+    position : absolute;
+    right : 42px;
+    top : 10px;
+    color : red;
+    font-weight : bold;
+}
+#Cashe-quiz-tips
+{
+    display : none;
+}
+#displayCasheQuizPage
+{
+    position : absolute;
+    border : 4px solid grey;
+    height : 70%;
+    width : 60%;
+    max-width: 60%;
+    top : 18.5%;
+    left : 28.5%;
+    left : 400px; 
+    display : none;
+}
+
+#displayFintechQuizScore
+{
+    display : none;
+}
+#feedback
+{
+    font-size : 20px;
+    color : black;
+}
+#fintech-quiz-page
+{
+    display :none
+}
