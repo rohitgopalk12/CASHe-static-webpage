@@ -189,34 +189,21 @@ $(document).ready(function()
             isDisplayed=false;
     })
 
-    $('#bhanixQuiz').click(function()
-    {
-            $('.bhanixQuestions').slideToggle(500);
-            $('.links').slideUp(500);
-            $('.ppt-docs').slideUp(500);
-            $('.word-doc').slideUp(500);
-            $('.word-docs').slideUp(500);
-            $('.videos').slideUp(500);
-            $('.pdf-docs').slideUp(500);  
-            $('.pdf-doc').slideUp(500);
-            $('.fintechQuestions').slideUp(500);  
-            $('.casheQuestions').slideUp(500); 
-            $('.competitiveAnalysisQuestions').slideUp(500); 
-    })
-    $('#competitiveAnalysisQuiz').click(function()
-    {
-            $('.competitiveAnalysisQuestions').slideToggle(500);
-            $('.links').slideUp(500);
-            $('.ppt-docs').slideUp(500);
-            $('.word-doc').slideUp(500);
-            $('.word-docs').slideUp(500);
-            $('.videos').slideUp(500);
-            $('.pdf-docs').slideUp(500);  
-            $('.pdf-doc').slideUp(500);
-            $('.fintechQuestions').slideUp(500);  
-            $('.casheQuestions').slideUp(500);  
-            $('.bhanixQuestions').slideUp(500);  
-    })
+//   
+//     $('#competitiveAnalysisQuiz').click(function()
+//     {
+//             $('.competitiveAnalysisQuestions').slideToggle(500);
+//             $('.links').slideUp(500);
+//             $('.ppt-docs').slideUp(500);
+//             $('.word-doc').slideUp(500);
+//             $('.word-docs').slideUp(500);
+//             $('.videos').slideUp(500);
+//             $('.pdf-docs').slideUp(500);  
+//             $('.pdf-doc').slideUp(500);
+//             $('.fintechQuestions').slideUp(500);  
+//             $('.casheQuestions').slideUp(500);  
+//             $('.bhanixQuestions').slideUp(500);  
+//     })
 })
 
 var min=0;

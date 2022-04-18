@@ -4,6 +4,26 @@ var remSec = 0;
 
 /* Quiz Questions and answers */
 
+/* JavaScript functions */
+/*=========================*/
+
+var div_clicked = false;
+var current_div = '';
+var ch=0;
+function hoverApplied(id,color)
+{
+    document.getElementById(id).style.backgroundColor = color;
+    document.getElementById(current_div).style.backgroundColor = 'orange';
+}
+
+var accordion_clicked = false;
+
+var ch01=0;
+function hoverLost(id,color)
+{
+        document.getElementById(id).style.backgroundColor = color;
+        document.getElementById(current_div).style.backgroundColor = 'orange';
+} 
 
 var ctrl = function($scope)
 {
@@ -152,21 +172,29 @@ var ctrl = function($scope)
         $scope.casheQuizTips = false;
 
         var prev_div = 0;
-        var ch=0;
+        var prev_accordion_visited = false;
+
         $scope.changeBackground = function(event)
         {
-            var current_div = event.target.id;
-            if(ch==1)
+            
+            current_div = event.target.id;
+            if(prev_accordion_visited==true)
             {
                 document.getElementById(prev_div).style.backgroundColor = 'rgb(64,64,64)';
             }
-            document.getElementById(current_div).style.backgroundColor = 'green';
+            document.getElementById(current_div).style.backgroundColor = 'orange';
+            hoverApplied(current_div,'orange');
+            hoverLost(current_div,'orange');
             prev_div = current_div;
-            ch=1;
+            prev_accordion_visited=true;
         }
 
-        $scope.displayFintechQuizTips = function()
+        $scope.displayFintechQuizTips = function(event)
         {
+                $('.fintechQuestions').slideUp(500); 
+                $('.casheQuestions').slideUp(500); 
+                $('.bhanixQuestions').slideUp(500); 
+                $scope.changeBackground(event);
                 document.getElementById('display-quiz-pages').style.display = "block";
                 document.getElementById('display-fintech-quiz-page').style.display = 'block';
                 document.getElementById('display-cashe-quiz-page').style.display = 'none';
@@ -185,6 +213,10 @@ var ctrl = function($scope)
 
     $scope.submitFintechQuiz = function(submit)
     {      
+        $('.fintechQuestions').slideUp(500); 
+        $('.casheQuestions').slideUp(500); 
+        $('.bhanixQuestions').slideUp(500); 
+        
         var score=0;
         $scope.quizFeedback = '';
         if(submit == false)
@@ -196,10 +228,10 @@ var ctrl = function($scope)
         }
         else
         {
-            $scope.currentProgress =
-            {
-                width : "0%"
-            }
+            // $scope.currentProgress =
+            // {
+            //     width : "0%"
+            // }
             document.getElementById('displayFintechQuizScore').style.display = "block";
             document.getElementById('fintech-quiz-page').style.display='none';
                         /* score calculation takes place here */
@@ -228,18 +260,31 @@ var ctrl = function($scope)
             {
                 document.getElementById('feedback').innerHTML = "Feedback : "+scoreFeedback[3];
             }
-            $scope.selections = [-1, -1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1]
+            $scope.selections = [-1, -1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1];
+           
         }  
     }
 
     $scope.startFintechQuiz = function()
     {
+        $('.fintechQuestions').slideDown(500);
+        $('.links').slideUp(500);
+        $('.ppt-docs').slideUp(500);
+        $('.word-doc').slideUp(500);
+        $('.word-docs').slideUp(500);
+        $('.videos').slideUp(500);
+        $('.pdf-docs').slideUp(500);  
+        $('.pdf-doc').slideUp(500);
+        $('.casheQuestions').slideUp(500); 
+        $('.competitiveAnalysisQuestions').slideUp(500); 
+    
         progress = 0;
         $scope.currentQ = 1;
         $scope.timeleft = 300;
+        $scope.status = [false,false,false,false,false,false,false,false,false,false,false,false,false,false,false];
         $scope.currentProgress = 
         {
-                width : "0%"
+                 width : progress + '%'
         }
         $scope.selections = [-1, -1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1];
         document.getElementById('fintech-quiz-page').style.display = "block";
@@ -315,14 +360,39 @@ var ctrl = function($scope)
         document.getElementById('display-fintech-quiz-page').style.display = 'block';
         document.getElementById('displayDIV').style.display = 'none';
       
-
         $scope.currentQ=1;
-        
-
+    
         $scope.jumpToQuestion = function(event)
         {
-                id = parseInt(event.target.id);
-                $scope.currentQ = id;
+            id=event.target.id;
+            var ch=0;
+            var new_id = '';
+            var new_i=0;
+            for(var i=0;i<id.length;i++)
+            {
+                if(id.charAt(i) == "_")
+                {
+                    ch=1;
+                    break;
+                }
+            }
+            if(ch == 1)
+            {
+                for(var i=0;i<id.length;i++)
+                {
+                    if(id.charAt(i) == "_")
+                    {
+                        new_i=i+1;
+                        break;
+                    }
+                }
+                for(i=new_i;i<id.length;i++)
+                {
+                    new_id = new_id+id.charAt(i);
+                }
+                id = parseInt(new_id);
+            }
+            $scope.currentQ = id;
         }
     }
 
@@ -330,8 +400,13 @@ var ctrl = function($scope)
              // CASHe quiz
              //===========
 
-    $scope.displayCasheQuizTips = function()
+    $scope.displayCasheQuizTips = function(event)
     {
+        $('.fintechQuestions').slideUp(500); 
+        $('.casheQuestions').slideUp(500); 
+        $('.bhanixQuestions').slideUp(500); 
+
+        $scope.changeBackground(event);
         document.getElementById('display-quiz-pages').style.display = "block";
         document.getElementById('display-cashe-quiz-page').style.display = 'block';
         document.getElementById('display-bhanix-quiz-page').style.display = 'none';
@@ -350,6 +425,10 @@ var ctrl = function($scope)
 
     $scope.submitCasheQuiz = function()
     {      
+        $('.fintechQuestions').slideUp(500); 
+        $('.casheQuestions').slideUp(500); 
+        $('.bhanixQuestions').slideUp(500); 
+
         var score=0;
         
         $scope.currentProgress =
@@ -390,9 +469,21 @@ var ctrl = function($scope)
 
     $scope.startCasheQuiz = function()
     {
+         $('.casheQuestions').slideDown(500);  
+            $('.links').slideUp(500);
+            $('.ppt-docs').slideUp(500);
+            $('.word-doc').slideUp(500);
+            $('.word-docs').slideUp(500);
+            $('.videos').slideUp(500);
+            $('.pdf-docs').slideUp(500);  
+            $('.pdf-doc').slideUp(500);
+            $('.fintechQuestions').slideUp(500); 
+            $('.bhanixQuestions').slideUp(500);  
+
         $scope.casheTimeLeft = 300;
         $scope.currentQ = 6;
         progress = 0;
+        $scope.status = [false,false,false,false,false,false,false,false,false,false,false,false,false,false,false];
         $scope.currentProgress = 
         {
                 width : "0%"
@@ -454,8 +545,13 @@ var ctrl = function($scope)
         }
     }
 
-    $scope.displayBhanixQuizTips = function()
+    $scope.displayBhanixQuizTips = function(event)
     {
+        $('.fintechQuestions').slideUp(500); 
+        $('.casheQuestions').slideUp(500); 
+        $('.bhanixQuestions').slideUp(500); 
+        
+        $scope.changeBackground(event);
         document.getElementById('display-quiz-pages').style.display = "block";
         document.getElementById('display-bhanix-quiz-page').style.display = 'block';
         document.getElementById('display-cashe-quiz-page').style.display = 'none';
@@ -469,8 +565,15 @@ var ctrl = function($scope)
         document.getElementById('displayDIV').style.display = 'none';
     }
 
+    /* =================================================================*/
+
+    /* bhanix quiz submission functionality starts here */
     $scope.submitBhanixQuiz = function()
     {      
+        $('.fintechQuestions').slideUp(500); 
+        $('.casheQuestions').slideUp(500); 
+        $('.bhanixQuestions').slideUp(500); 
+
         var score=0;
         
         $scope.currentProgress =
@@ -509,11 +612,26 @@ var ctrl = function($scope)
         $scope.selections = [-1, -1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1]
     }
 
+    /* ===============================================================================*/
+
+    /* bhanix quiz functionality starts here */
     $scope.startBhanixQuiz = function()
     {
+        $('.bhanixQuestions').slideDown(500);  
+        $('.links').slideUp(500);
+        $('.ppt-docs').slideUp(500);
+        $('.word-doc').slideUp(500);
+        $('.word-docs').slideUp(500);
+        $('.videos').slideUp(500);
+        $('.pdf-docs').slideUp(500);  
+        $('.pdf-doc').slideUp(500);
+        $('.fintechQuestions').slideUp(500); 
+        $('.casheQuestions').slideUp(500);  
+
         $scope.casheTimeLeft = 300;
         $scope.currentQ = 11;
         progress = 0;
+        $scope.status = [false,false,false,false,false,false,false,false,false,false,false,false,false,false,false];
         $scope.currentProgress = 
         {
                 width : "0%"

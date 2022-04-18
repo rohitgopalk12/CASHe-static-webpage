@@ -16,10 +16,9 @@ div.CASHe-topics-list
 {
     position : absolute;
     top : 12.5%;
-    height : 87.5%; /* original code */
+    height : 87.5%;
     overflow-x: hidden;
-    width : 20%;
-    max-width : 20%;
+    width : 25%;
     left : 0px;
     background-color : rgb(192,192,192);
 }
@@ -31,6 +30,7 @@ div.word-doc{
     position : absolute;
     height : 80%;
     min-width: 71.5%;
+    max-width : 80%;
     top : 18.5%;
     left : 28.5%;  
 }
@@ -61,9 +61,8 @@ button
     cursor: pointer;
 }
 
-#vid2, #vid3, #vid4, #vid5, #vid6, #vid1, #vid61, #vid62
+#vid2, #vid3, #vid4, #vid5, #vid6, #vid1
 {
-    text-indent : 20px;
     cursor : pointer;
     display : none;
     height : 80px;
@@ -78,11 +77,11 @@ body
 {
     font-family : tahoma;
 }
-.vid:hover, .videos:hover, .word-doc:hover, .word-docs:hover, .pdf-doc:hover, .pdf-docs:hover, .ppt-docs:hover, .links:hover, .links-websites:hover, .ppt:hover, .documentation:hover, .fintechQuestions:hover, .casheQuestions:hover, .bhanixQuestions:hover, .competitiveAnalysisQuestions:hover
+/*.vid:hover, .videos:hover, .word-doc:hover, .word-docs:hover, .pdf-doc:hover, .pdf-docs:hover, .ppt-docs:hover, .links:hover, .links-websites:hover, .ppt:hover, .documentation:hover, .fintechQuestions:hover, .casheQuestions:hover, .bhanixQuestions:hover, .competitiveAnalysisQuestions:hover
 {
-    background-color : orange;
-    color : black;
-}
+    /* background-color : rgb(255,153,51); */
+    /* color : black;
+}*/
 .changeBgColor
 {
     background-color : blue !important;
@@ -93,12 +92,12 @@ body
     background-color : blue;
 }
 
-.quiz-topics:hover, #quiz:hover
+/* .quiz-topics:hover, #quiz:hover
 {
-    background-color : orange;
-    color : black;
-}
-.vid, .documentation, .ppt, .links-websites, #quiz, .word-doc, .pdf-doc, .quiz-topics
+    /* background-color : orange; */
+    /* color : black; 
+} */
+.vid, .documentation, .ppt, .links-websites, #quiz, .word-doc, .pdf-doc
 {
     cursor : pointer;
     font-weight : bold;
@@ -106,11 +105,10 @@ body
     font-size : 15x;
     background-color : rgb(64,64,64);
     color : white;
-    border-top : 1px solid black;
-    text-align : left;
-    padding-top : 50px;
-    height : 120px;
-    max-height : 120px; 
+    padding-left : 20px;
+    padding-top : 32px;
+    height : 80px;
+    max-height : 80px; 
 }
 
 .videos, .word-doc, .word-docs, .ppt-docs, .pdf-doc, .pdf-docs, .links, .quiz-topics
@@ -119,25 +117,26 @@ body
     cursor : pointer;
     display  : none;
     color : white;
-    height : 120px;
-    border-bottom : 1px solid white;
-    padding-top : 50px;
+    height : 80px;
+    max-height : 80px;
+    
 }
 
-.word-doc, .pdf-doc, .ppt-docs, .links, .quiz-topics
-{
-    padding-left : 20px;
-}
-.word-docs, .pdf-docs
+.word-doc, .pdf-doc, .ppt-docs, .links, .quiz-topics, .videos
 {
     padding-left : 40px;
+}
+.word-docs, .pdf-docs, .fintechQuestions
+{
+    padding-left : 60px;
+    padding-right : 15px;
     color : white;
 }
 .videos 
 {
     font-weight : bold;
     height : 50px;
-    padding : 5px;
+    
 }
 .vid, .documentation, .ppt, .links-websites
 {
@@ -150,7 +149,6 @@ body
 
 .videos 
 {
-    padding : 3px;
     font-weight : normal;
 }
 
@@ -169,9 +167,9 @@ body
 #display
 {
     position : sticky;
-   top : 0%;
-   width : 80%;
-   max-width : 80%;
+    top : 0%;
+    width : 80%;
+    max-width : 80%;
     padding : 3px;
     border : 4px solid rgb(192,192,192);
 }
@@ -197,28 +195,109 @@ body
     cursor : pointer;
     color : white;
     display : none;
-    height : 120px;
+    height : 80px;
     background-color : rgb(64,64,64);
-    text-indent : 40px;
 }
 a{
     text-decoration : none;
     color : white;
 }
-#display-fintech-quiz-page, #display-cashe-quiz-page, #display-bhanix-quiz-page
-{
-    position : absolute;
-    border : 4px solid grey;
-    display : none;
-    height : 70%;
-    width : 60%;
-    max-width: 60%;
-    top : 18.5%;
-    left : 28.5%;
-    left : 400px; 
-    display : none;
-}
+
 #display-quiz-pages
 {
     display : none;
+    position : absolute;
+    border : 4px solid grey;
+    height : 70%;
+    width : 60%;
+    top : 18.5%;
+    left : 28.5%;
 }
+#display-fintech-quiz-page #fintech-quiz-tips,#display-cashe-quiz-page #cashe-quiz-tips,#display-bhanix-quiz-page #bhanix-quiz-tips
+{
+    position : absolute;
+    top : 20%;
+    left : 30%;
+}
+
+#display-fintech-quiz-page #displayFintechQuizScore, #display-cashe-quiz-page #displayCasheQuizScore, #display-bhanix-quiz-page #displayBhanixQuizScore
+{
+    position : absolute;
+    top : 27%;
+    left : 7%;
+    color : black;
+    font-size : 35px;
+    font-weight : bold;
+}
+/* ---------------------------------------------------------------*/
+
+/*   vid1 to vid6  aligned */
+/* ===========================*/
+#vid1, #vid2, #vid4, #vid5
+{
+    padding-top : 10%;
+}
+#vid3, #vid6
+{
+    padding-top : 6%;
+}
+/* --------------------------------------*/
+
+/* word docs aligned */
+/*======================*/
+#word-doc-4,#word-doc-5,#word-doc-11,#word-doc-13,#word-doc-14
+{
+    padding-top : 10%;
+}
+#word-doc-1,#word-doc-2,#word-doc-3,#word-doc-6,#word-doc-7,#word-doc-8,#word-doc-9,#word-doc-10,#word-doc-12,#word-doc-17,#word-doc-18,#word-doc-19,#word-doc-20,#word-doc-21,#word-doc-22,#word-doc-23,#word-doc-24,#word-doc-25,#word-doc-26
+{
+    padding-top : 6%;
+}
+#word-doc-15,#word-doc-16
+{
+    padding-top : 2.8%;
+}
+/* --------------------------------------*/
+/* PDF and PPT documents, links */
+/*================================*/
+.pdf-docs, .ppt-docs, .links
+{
+    padding-top : 10%;
+}
+/* --------------------------------------*/
+
+/* quiz topics */
+/*===============*/
+.quiz-topics
+{
+    padding-top : 10%;
+}
+/* --------------------------------------*/
+
+/* fintech questions */
+/*====================*/
+#fintech_1
+{
+    padding-top : 10%;
+}
+
+#fintech_2, #fintech_3, #fintech_4
+{
+    padding-top : 6%;
+}
+
+#fintech_5
+{
+    padding-top : 2.8%;
+}
+/* -------------------------------------*/
+
+/* cashe questions */
+/*====================*/
+
+/* ----------------------------------------------*/
+
+/* bhanix questions */
+/*====================*/
+
+/* ----------------------------------------------*/

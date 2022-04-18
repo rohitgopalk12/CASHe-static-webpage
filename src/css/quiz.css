@@ -143,15 +143,9 @@ table
     top : 80px;
     left : 300px;
 }
-#score
-{
-    color : black;
-    font-weight : bold;
-    font-size : 20px;
-    text-align :center;
-}
 
-.countdown-timer
+
+#countdown-timer, #cashe-countdown-timer, #bhanix-countdown-timer
 {
     position : absolute;
     background-color : white;
@@ -284,11 +278,7 @@ table
 {
     display : none;
 }
-#feedback
-{
-    font-size : 20px;
-    color : black;
-}
+
 #fintech-quiz-page
 {
     display :none
