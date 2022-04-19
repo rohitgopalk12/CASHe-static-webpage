@@ -215,7 +215,7 @@ var ctrl = function($scope)
 
                 document.getElementById(quiz_topic_prev).onmouseover = function()
                 {
-                    console.log("prev hover ON");
+            
                     document.getElementById(quiz_topic_prev).style.backgroundColor = 'rgb(255,153,51)';
                 }
 
@@ -223,13 +223,13 @@ var ctrl = function($scope)
 
                 document.getElementById(quiz_topic_prev).onmouseout = function()
                 {
-                    console.log("prev hover OFF");
+            
                     document.getElementById(quiz_topic_prev).style.backgroundColor = "rgb(64,64,64)";
                 }
             }
             document.getElementById(quiz_topic).onmouseover = function()
             {
-                console.log("hover ON");
+        
                 document.getElementById(quiz_topic).style.backgroundColor = "orange";
             }
 
@@ -237,7 +237,7 @@ var ctrl = function($scope)
 
             document.getElementById(quiz_topic).onmouseout = function()
             {
-                console.log("hover OFF");
+        
                 document.getElementById(quiz_topic).style.backgroundColor = "orange";
             }
             quiz_topic_prev = quiz_topic;
