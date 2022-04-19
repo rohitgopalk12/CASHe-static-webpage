@@ -410,6 +410,7 @@ var ctrl = function($scope)
         $('.casheQuestions').slideUp(500); 
         $('.bhanixQuestions').slideUp(500); 
 
+        document.getElementById('casheQuiz').style.backgroundColor = "orange";
         $scope.changeBackground(event);
         document.getElementById('display-quiz-pages').style.display = "block";
         document.getElementById('display-cashe-quiz-page').style.display = 'block';
