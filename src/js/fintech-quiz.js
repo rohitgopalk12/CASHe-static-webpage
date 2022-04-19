@@ -176,7 +176,6 @@ var ctrl = function($scope)
 
         $scope.changeBackground = function(event)
         {
-            
             current_div = event.target.id;
             if(prev_accordion_visited==true)
             {
@@ -194,6 +193,7 @@ var ctrl = function($scope)
                 $('.fintechQuestions').slideUp(500); 
                 $('.casheQuestions').slideUp(500); 
                 $('.bhanixQuestions').slideUp(500); 
+
                 $scope.changeBackground(event);
                 document.getElementById('display-quiz-pages').style.display = "block";
                 document.getElementById('display-fintech-quiz-page').style.display = 'block';
@@ -263,6 +263,45 @@ var ctrl = function($scope)
             $scope.selections = [-1, -1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1];
            
         }  
+    }
+
+    // jump to Question
+    $scope.jumpToQuestion = function(event)
+    {
+            $scope.changeBackground(event);
+            id=event.target.id;
+            var ch=0;
+            var new_id = '';
+            var new_i=0;
+            for(var i=0;i<id.length;i++)
+            {
+                if(id.charAt(i) == "_")
+                {
+                    ch=1;
+                    break;
+                }
+            }
+            if(ch == 1)
+            {
+                for(var i=0;i<id.length;i++)
+                {
+                    if(id.charAt(i) == "_")
+                    {
+                        new_i=i+1;
+                        break;
+                    }
+                }
+                for(i=new_i;i<id.length;i++)
+                {
+                    new_id = new_id+id.charAt(i);
+                }
+                id = parseInt(new_id);
+            }
+            else
+            {
+                id=parseInt(id);
+            }
+            $scope.currentQ = id;
     }
 
     $scope.startFintechQuiz = function()
@@ -362,43 +401,6 @@ var ctrl = function($scope)
       
         $scope.currentQ=1;
     
-        $scope.jumpToQuestion = function(event)
-        {
-            $scope.changeBackground(event);
-            id=event.target.id;
-            var ch=0;
-            var new_id = '';
-            var new_i=0;
-            for(var i=0;i<id.length;i++)
-            {
-                if(id.charAt(i) == "_")
-                {
-                    ch=1;
-                    break;
-                }
-            }
-            if(ch == 1)
-            {
-                for(var i=0;i<id.length;i++)
-                {
-                    if(id.charAt(i) == "_")
-                    {
-                        new_i=i+1;
-                        break;
-                    }
-                }
-                for(i=new_i;i<id.length;i++)
-                {
-                    new_id = new_id+id.charAt(i);
-                }
-                id = parseInt(new_id);
-            }
-            else
-            {
-                id=parseInt(id);
-            }
-            $scope.currentQ = id;
-        }
     }
 
     // =======================================================================
