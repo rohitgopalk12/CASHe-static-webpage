@@ -173,10 +173,18 @@ var ctrl = function($scope)
 
         var prev_div = 0;
         var prev_accordion_visited = false;
-
+        var quiz_enabled = false;
+        
         $scope.changeBackground = function(event)
         {
             current_div = event.target.id;
+            if(quiz_enabled == true)
+            {
+                    document.getElementById(quiz_topic_prev).style.backgroundColor = 'rgb(64,64,64)';
+                    document.getElementById(quiz_topic).style.backgroundColor = 'orange';
+                    quiz_topic_prev = quiz_topic;
+                    quiz_enabled = false;
+            }
             if(prev_accordion_visited==true)
             {
                 document.getElementById(prev_div).style.backgroundColor = 'rgb(64,64,64)';
@@ -188,13 +196,67 @@ var ctrl = function($scope)
             prev_accordion_visited=true;
         }
 
+        /* ------------------------------------------------------------------*/
+
+        /* Quiz topics highlighted */
+        /* ======================= */
+
+        var quiz_topic = '';
+        var quiz_topic_prev = '';
+        var prev_quiz_topic_visited = false;
+        var ch=0;
+        
+        $scope.quizTopicsHighlighted = function(quiz_topic)
+        {
+            console.log("prev. quiz topic : "+quiz_topic_prev);
+            if(prev_quiz_topic_visited == true)
+            {
+                
+
+                document.getElementById(quiz_topic_prev).onmouseover = function()
+                {
+                    console.log("prev hover ON");
+                    document.getElementById(quiz_topic_prev).style.backgroundColor = 'rgb(255,153,51)';
+                }
+
+                document.getElementById(quiz_topic_prev).style.backgroundColor = "rgb(64,64,64)";
+
+                document.getElementById(quiz_topic_prev).onmouseout = function()
+                {
+                    console.log("prev hover OFF");
+                    document.getElementById(quiz_topic_prev).style.backgroundColor = "rgb(64,64,64)";
+                }
+            }
+            document.getElementById(quiz_topic).onmouseover = function()
+            {
+                console.log("hover ON");
+                document.getElementById(quiz_topic).style.backgroundColor = "orange";
+            }
+
+            document.getElementById(quiz_topic).style.backgroundColor = "orange";
+
+            document.getElementById(quiz_topic).onmouseout = function()
+            {
+                console.log("hover OFF");
+                document.getElementById(quiz_topic).style.backgroundColor = "orange";
+            }
+            quiz_topic_prev = quiz_topic;
+            prev_quiz_topic_visited = true;
+        }   
+
+        /* ------------------------------------------------------------------*/
+
         $scope.displayFintechQuizTips = function(event)
         {
                 $('.fintechQuestions').slideUp(500); 
                 $('.casheQuestions').slideUp(500); 
-                $('.bhanixQuestions').slideUp(500); 
+                $('.bhanixQuestions').slideUp(500);
 
+                quiz_topic = event.target.id;
+                $scope.quizTopicsHighlighted(quiz_topic);
+                quiz_enabled = true;
                 $scope.changeBackground(event);
+                
                 document.getElementById('display-quiz-pages').style.display = "block";
                 document.getElementById('display-fintech-quiz-page').style.display = 'block';
                 document.getElementById('display-cashe-quiz-page').style.display = 'none';
@@ -267,7 +329,9 @@ var ctrl = function($scope)
 
     // jump to Question
     $scope.jumpToQuestion = function(event)
-    {
+    {       
+            $scope.quizTopicsHighlighted(quiz_topic);
+            quiz_enabled = true;
             $scope.changeBackground(event);
             id=event.target.id;
             var ch=0;
@@ -413,7 +477,12 @@ var ctrl = function($scope)
         $('.casheQuestions').slideUp(500); 
         $('.bhanixQuestions').slideUp(500); 
 
+        quiz_topic = event.target.id;
+        $scope.quizTopicsHighlighted(quiz_topic);
+        
         document.getElementById('casheQuiz').style.backgroundColor = "orange";
+
+        quiz_enabled = true;
         $scope.changeBackground(event);
         document.getElementById('display-quiz-pages').style.display = "block";
         document.getElementById('display-cashe-quiz-page').style.display = 'block';
@@ -559,6 +628,11 @@ var ctrl = function($scope)
         $('.casheQuestions').slideUp(500); 
         $('.bhanixQuestions').slideUp(500); 
         
+        quiz_topic = event.target.id;
+        $scope.quizTopicsHighlighted(quiz_topic);
+
+        quiz_enabled = true;
+
         $scope.changeBackground(event);
         document.getElementById('display-quiz-pages').style.display = "block";
         document.getElementById('display-bhanix-quiz-page').style.display = 'block';
