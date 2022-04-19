@@ -1,0 +1,80 @@
+<div id="competitive-analysis-quiz-page">
+            
+                                <!-- Previous button -->
+                                <!-- ==================-->
+                    <div ng-hide="currentQ==16" ng-click="currentQ=currentQ-1">
+                        <a href="#" class="prev" class="btn btn-info btn-lg">
+                            <div class="glyphicon glyphicon-circle-arrow-left"></div> <b>Previous</b>
+                        </a>
+                    </div>
+            
+            <!-- -------X---------X--------X -------X---------X--------X---------- -->
+            
+                                <!-- question and options -->
+                                <!-- ===========================-->
+            
+                    <div>
+                        <!-- question -->
+                        <p ng-init="currentQ=16" class="question">
+                            {{questions[currentQ-1].Question}}
+                        </p><br />
+            
+                        <table align="center" ng-init="currentQ=16">
+                            <tr>
+                                <td ng-model="selections[currentQ-1]" ng-click="selectCompetitiveAnalysisAnswer($index)" 
+                                ng-repeat="op in questions[currentQ-1].options" class="option">
+                                <input ng-checked="selections[currentQ-1] === $index" type="radio"
+                                name="competitive_option_quiz" id="{{op}}" ng-value="op">
+                                {{op}}
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+            
+            <!-- -------X---------X--------X -------X---------X--------X---------- -->
+            
+                                                <!-- progress bar -->
+                                                <!-- =================-->
+                    <center>
+                        <div class="progressBar" class="progress">
+                            <div class="progress-bar progress-bar-success" role="progressbar" aria-valuemin="0"
+                                aria-valuemax="100" ng-style="currentProgress">
+                            </div>
+                        </div>
+                    </center>
+            
+            <!-- -------X---------X--------X -------X---------X--------X-------------- -->
+            
+                                        <!-- countdown timer and next button -->
+                                        <!-- ================================-->
+            
+                    <div class="timer-next-button">
+            
+                        <!-- count down timer -->
+                        <div class="background-of-countdown">
+                            <p class="countdown-timer-text">Time left off</p>
+                            <h1 id="competitive-analysis-countdown-timer"></h1>
+                        </div>
+            
+                        <!-- next button -->
+                        <div class="next-button" ng-hide="currentQ==20" ng-click="currentQ=currentQ+1">
+                            <a href="#" class="btn btn-info btn-lg next">
+                                Next&nbsp;<div class="glyphicon glyphicon-circle-arrow-right"></div>
+                            </a>
+                        </div>
+            
+                        <input class="submit-button" ng-show="currentQ==20" ng-click="submitCompetitiveAnalysisQuiz()"
+                            class="btn btn-primary" type="submit" value="Submit">
+                        </input>
+                    </div>
+                </div>
+            
+                                    <!-- Display Bhanix quiz score -->
+                                    <!-- ================================-->
+            
+                <div align="center" id="displayCompetitiveAnalysisQuizScore">
+                    <h1>Congratulations on completing the Quiz !!</h1>
+                    <h1 class="quiz-score"></h1>
+                    <h1 class="quiz-feedback"></h1>
+                </div>
+            </div>

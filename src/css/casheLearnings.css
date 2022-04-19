@@ -1,5 +1,4 @@
 
-
 #welcome-heading
 {
     position : sticky;
@@ -77,19 +76,9 @@ body
 {
     font-family : tahoma;
 }
-/*.vid:hover, .videos:hover, .word-doc:hover, .word-docs:hover, .pdf-doc:hover, .pdf-docs:hover, .ppt-docs:hover, .links:hover, .links-websites:hover, .ppt:hover, .documentation:hover, .fintechQuestions:hover, .casheQuestions:hover, .bhanixQuestions:hover, .competitiveAnalysisQuestions:hover
+.vid:hover, .word-doc:hover, .pdf-doc:hover, .links:hover, .links-websites:hover, .ppt:hover, .documentation:hover, #quiz:hover
 {
-    /* background-color : rgb(255,153,51); */
-    /* color : black;
-}*/
-.changeBgColor
-{
-    background-color : blue !important;
-}
-
-.videos:focus
-{
-    background-color : blue;
+    background-color : rgb(255,153,51);
 }
 
 /* .quiz-topics:hover, #quiz:hover
@@ -126,7 +115,7 @@ body
 {
     padding-left : 40px;
 }
-.word-docs, .pdf-docs, .fintechQuestions
+.word-docs, .pdf-docs, .fintechQuestions, .casheQuestions, .bhanixQuestions, .competitiveAnalysisQuestions
 {
     padding-left : 60px;
     padding-right : 15px;
@@ -213,13 +202,6 @@ a{
     top : 18.5%;
     left : 28.5%;
 }
-#display-fintech-quiz-page #fintech-quiz-tips,#display-cashe-quiz-page #cashe-quiz-tips,#display-bhanix-quiz-page #bhanix-quiz-tips
-{
-    position : absolute;
-    top : 20%;
-    left : 30%;
-}
-
 #display-fintech-quiz-page #displayFintechQuizScore, #display-cashe-quiz-page #displayCasheQuizScore, #display-bhanix-quiz-page #displayBhanixQuizScore
 {
     position : absolute;
@@ -294,10 +276,37 @@ a{
 
 /* cashe questions */
 /*====================*/
+#cashe_6, #cashe_7, #cashe_9, #cashe_10
+{
+    padding-top : 10%;
+}
+#cashe_8
+{
+    padding-top : 6%;
+}
 
 /* ----------------------------------------------*/
 
 /* bhanix questions */
 /*====================*/
+.bhanixQuestions
+{
+    padding-top : 10%;
+}
+/* ----------------------------------------------*/
 
+/* competitive Analysis questions */
+/*===============================*/
+#competitive_16, #competitive_19
+{
+    padding-top : 6%;
+}
+#competitive_18, #competitive_20
+{
+    padding-top : 10%;
+}
+#competitive_17
+{
+    padding-top : 2.8%; 
+}
 /* ----------------------------------------------*/

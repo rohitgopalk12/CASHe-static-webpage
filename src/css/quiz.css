@@ -64,7 +64,7 @@ table
     background-color : green;
    
 }
-#next:link, #next:visited, #next:active:hover
+.next:link, .next:visited, .next:active:hover
 {
    border-radius : 20%;
    font-weight : bold;
@@ -78,7 +78,7 @@ table
 {
     background-color : rgb(72, 213, 77)
 }
-#prev:link, #prev:visited, #prev:active:hover
+.prev:link, .prev:visited, .prev:active:hover, .start:link,  .start:visited, .start:active:hover
 {
     border-radius : 20%;
     color : white;
@@ -89,22 +89,26 @@ table
     left : 30px;    
     bottom : 30px;
 }
-#prev:hover
+.prev:hover, .start:hover
 {
     background-color : rgb(72, 213, 77)
 }
-#fintech-submit-button
+.submit-button
 {
     border-radius : 20%;
     position : absolute;
     background-color : blue;
     border-color : black;
-    font-size : 15px;
+    font-size : 18px;
     font-weight : bold;
     right : 30px;    
     bottom : 30px;
+    height : 50px;
+    width : 150px;
+    color : white;
+
 }
-#submit-button:hover
+.submit-button:hover
 {
     background-color : rgb(42, 81, 208);
 }
@@ -114,10 +118,10 @@ table
     width : 150px;
 }
 
-#fintech-quiz-tips, #cashe-quiz-tips, #bhanix-quiz-tips
+#fintech-quiz-tips, #cashe-quiz-tips, #bhanix-quiz-tips, #competitive-analysis-quiz-tips
 {
     position : relative;
-    top : 10px;
+    top : 20%;
     color : black;
     font-weight : bold;
     display : none;
@@ -127,7 +131,7 @@ table
 {
     display : none;
 }
-#fintechScoreText
+.score-text
 {
     color : black;
     text-align : center;
@@ -215,28 +219,14 @@ table
     display: block;
   }
   
-  /* Style the indicator (dot/circle) 
-  .container .checkmark:after {
-       top: 9px;
-      left: 9px;
-      width: 8px;
-      height: 8px;
-      border-radius: 50%;
-      background: white;
-  }
-
-  .container input:checked ~ .checkmark {
-    background-color: green;
-  }*/
-  #fintech-question
-  {
+.question
+{
         text-align : center;
         color : black;
         position : relative;
         font-size : 25px;
         top : 150px;
-        
-  }
+}
   
 /* #options
 {
@@ -249,7 +239,7 @@ table
     padding : 10px;
 } */
 
-#countdown-timer-text
+.countdown-timer-text
 {
     position : absolute;
     right : 42px;
