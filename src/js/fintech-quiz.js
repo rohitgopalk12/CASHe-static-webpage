@@ -364,6 +364,7 @@ var ctrl = function($scope)
     
         $scope.jumpToQuestion = function(event)
         {
+            $scope.changeBackground(event);
             id=event.target.id;
             var ch=0;
             var new_id = '';
