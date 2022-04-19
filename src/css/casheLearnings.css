@@ -126,7 +126,7 @@ body
 {
     padding-left : 40px;
 }
-.word-docs, .pdf-docs, .fintechQuestions
+.word-docs, .pdf-docs, .fintechQuestions, .casheQuestions, .bhanixQuestions, .competitiveAnalysisQuestions
 {
     padding-left : 60px;
     padding-right : 15px;
@@ -294,10 +294,37 @@ a{
 
 /* cashe questions */
 /*====================*/
+#cashe_6, #cashe_7, #cashe_9, #cashe_10
+{
+    padding-top : 10%;
+}
+#cashe_8
+{
+    padding-top : 6%;
+}
 
 /* ----------------------------------------------*/
 
 /* bhanix questions */
 /*====================*/
+.bhanixQuestions
+{
+    padding-top : 10%;
+}
+/* ----------------------------------------------*/
 
+/* competitive Analysis questions */
+/*===============================*/
+#competitive_16, #competitive_19
+{
+    padding-top : 6%;
+}
+#competitive_18, #competitive_20
+{
+    padding-top : 10%;
+}
+#competitive_17
+{
+    padding-top : 2.8%; 
+}
 /* ----------------------------------------------*/
