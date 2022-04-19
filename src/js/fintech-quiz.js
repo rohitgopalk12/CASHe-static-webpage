@@ -392,6 +392,10 @@ var ctrl = function($scope)
                 }
                 id = parseInt(new_id);
             }
+            else
+            {
+                id=parseInt(id);
+            }
             $scope.currentQ = id;
         }
     }
