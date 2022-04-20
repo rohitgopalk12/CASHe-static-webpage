@@ -774,6 +774,36 @@ var ctrl = function($scope)
                 }
         }
     }
+
+    /* ===============================================================================*/
+
+    $scope.displayCompetitiveAnalysisQuizTips = function(event)
+    {
+            console.log("hey hi");
+                $('.fintechQuestions').slideUp(500); 
+                $('.casheQuestions').slideUp(500); 
+                $('.bhanixQuestions').slideUp(500); 
+                $('.competitiveAnalysisQuestions').slideUp(500); 
+
+                $scope.changeBackground(event);
+                document.getElementById('displayDIV').style.display = 'none';
+
+                document.getElementById('display-quiz-pages').style.display = "block";
+                document.getElementById('display-competitive-analysis-quiz-page').style.display = 'block';
+                document.getElementById('competitive-analysis-quiz-tips').style.display = 'block';
+
+                document.getElementById('display-fintech-quiz-page').style.display = 'none';
+                document.getElementById('display-cashe-quiz-page').style.display = 'none';
+                document.getElementById('display-bhanix-quiz-page').style.display = 'none';
+
+               
+                document.getElementById('competitive-analysis-quiz-page').style.display = 'none';
+                document.getElementById('displayCompetitiveAnalysisQuizScore').style.display = 'none';
+                
+                clearInterval($scope.downloadTimer);
+                
+                $scope.timeleft = 0;
+    }
 }
 
 fintechQuizApp.controller('quizController',ctrl);
