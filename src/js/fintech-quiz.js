@@ -228,6 +228,28 @@ var ctrl = function($scope)
         var quiz_topic_enabled = false;
         quiz_topic_prev = ''
 
+        /* display website links functionality */
+        $scope.displayLinks = function(event)
+        {   
+           
+            document.getElementById('display-quiz-pages').style.display = "none";
+            document.getElementById('displayDIV').style.display = "none";
+            document.getElementById('displayWebsiteLinks').style.display = "block";
+
+            var id = event.target.id;
+            console.log("id : "+id);
+            if(id=='cashe')
+            {
+                $scope.links = "https://www.cashe.co.in";
+                console.log("hi");
+            }
+            else
+            {
+                $scope.links = "https://bhanixfinance.com";
+                console.log("hello");
+            }
+        }
+
         $scope.changeBackground = function(event)
         {
             document.getElementById('displayWebsiteLinks').style.display = "none";
