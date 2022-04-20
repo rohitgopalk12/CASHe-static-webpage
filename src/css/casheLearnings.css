@@ -80,7 +80,6 @@ body
 .vid:hover, .videos:hover, .word-doc:hover, .word-docs:hover, .pdf-doc:hover, .pdf-docs:hover, .ppt-docs:hover, .links:hover, .links-websites:hover, .ppt:hover, .documentation:hover, .fintechQuestions:hover, .casheQuestions:hover, .bhanixQuestions:hover, .competitiveAnalysisQuestions:hover, #quiz:hover
 {
     background-color : rgb(255,153,51); 
-    color : black;
 }
 .changeBgColor
 {
@@ -106,9 +105,9 @@ body
     background-color : rgb(64,64,64);
     color : white;
     padding-left : 20px;
-    padding-top : 32px;
-    height : 80px;
-    max-height : 80px; 
+    padding-top : 6.5%;
+    height : 60px;
+    max-height : 60px; 
 }
 .videos, .word-doc, .word-docs, .ppt-docs, .pdf-doc, .pdf-docs, .links, .quiz-topics
 {
@@ -116,8 +115,8 @@ body
     cursor : pointer;
     display  : none;
     color : white;
-    height : 80px;
-    max-height : 80px;
+    height : 60px;
+    max-height : 60px;
     
 }
 
@@ -135,7 +134,10 @@ body
 {
     font-weight : bold;
     height : 50px;
-    
+}
+#fintechQuiz, #casheQuiz, #bhanixQuiz, #competitiveAnalysisQuiz
+{
+    font-weight : bold;
 }
 .vid, .documentation, .ppt, .links-websites
 {
@@ -194,7 +196,7 @@ body
     cursor : pointer;
     color : white;
     display : none;
-    height : 80px;
+    height : 60px;
     background-color : rgb(64,64,64);
 }
 a{
@@ -244,11 +246,12 @@ a{
 /* ===========================*/
 #vid1, #vid2, #vid4, #vid5
 {
-    padding-top : 10%;
+    /*padding-top : 10%;*/
+    padding-top : 6.5%;
 }
 #vid3, #vid6
 {
-    padding-top : 6%;
+    padding-top : 3.2%;
 }
 /* --------------------------------------*/
 
@@ -256,22 +259,19 @@ a{
 /*======================*/
 #word-doc-4,#word-doc-5,#word-doc-11,#word-doc-13,#word-doc-14
 {
-    padding-top : 10%;
+    padding-top : 6.5%;
 }
 #word-doc-1,#word-doc-2,#word-doc-3,#word-doc-6,#word-doc-7,#word-doc-8,#word-doc-9,#word-doc-10,#word-doc-12,#word-doc-17,#word-doc-18,#word-doc-19,#word-doc-20,#word-doc-21,#word-doc-22,#word-doc-23,#word-doc-24,#word-doc-25,#word-doc-26
 {
-    padding-top : 6%;
+    padding-top : 3.2%;
 }
-#word-doc-15,#word-doc-16
-{
-    padding-top : 2.8%;
-}
+
 /* --------------------------------------*/
 /* PDF and PPT documents, links */
 /*================================*/
 .pdf-docs, .ppt-docs, .links
 {
-    padding-top : 10%;
+    padding-top : 6.5%;
 }
 /* --------------------------------------*/
 
@@ -279,7 +279,7 @@ a{
 /*===============*/
 .quiz-topics
 {
-    padding-top : 10%;
+    padding-top : 6.5%;
 }
 /* --------------------------------------*/
 
@@ -287,17 +287,12 @@ a{
 /*====================*/
 #fintech_1
 {
-    padding-top : 10%;
+    padding-top : 6.5%;
 }
 
 #fintech_2, #fintech_3, #fintech_4
 {
-    padding-top : 6%;
-}
-
-#fintech_5
-{
-    padding-top : 2.8%;
+    padding-top : 3.2%;
 }
 /* -------------------------------------*/
 
@@ -305,11 +300,11 @@ a{
 /*====================*/
 #cashe_6, #cashe_7, #cashe_9, #cashe_10
 {
-    padding-top : 10%;
+    padding-top : 6.5%;
 }
 #cashe_8
 {
-    padding-top : 6%;
+    padding-top : 3.2%;
 }
 
 /* ----------------------------------------------*/
@@ -318,7 +313,7 @@ a{
 /*====================*/
 .bhanixQuestions
 {
-    padding-top : 10%;
+    padding-top : 6.5%;
 }
 /* ----------------------------------------------*/
 
@@ -326,14 +321,10 @@ a{
 /*===============================*/
 #competitive_16, #competitive_19
 {
-    padding-top : 6%;
+    padding-top : 3.2%;
 }
 #competitive_18, #competitive_20
 {
-    padding-top : 10%;
-}
-#competitive_17
-{
-    padding-top : 2.8%; 
+    padding-top : 6.5%;
 }
 /* ----------------------------------------------*/
