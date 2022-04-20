@@ -83,6 +83,7 @@ function displayInThePage(id)
         document.getElementById('display-quiz-pages').style.display = "none";
         document.getElementById('displayDIV').style.display = "block";
         document.getElementById('display').data = casheFiles.get(id);
+        document.getElementById('displayWebsiteLinks').style.display = "none";
 }
 
 //====================================================================================
