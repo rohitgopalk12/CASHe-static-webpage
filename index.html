@@ -13,25 +13,31 @@
     </head>
 
     <body ng-app="casheLearningsApp" ng-controller="quizController" >
+
+        <!-- ==========================================================================-->
+
         <!-- Welcome to CASHe learnings -->
+        <!-- ---------------------------- -->
+
         <h1 id='welcome-heading'>Welcome to CASHe learnings</h1>
 
         <!-- ==========================================================================-->
 
                                         <!-- CASHe topics list -->
-                                        <!-- ================= -->
+                                        <!-- -------------------- -->
 
         <div class="CASHe-topics-list">
 
-            <!-- --------------------------------------------------------------------------- -->
+            <!-- ==========================================================================-->
                                         <!-- Video recordings -->
-                                        <!-- ================= -->
+                                        <!-- ----------------- -->
 
             <div id="vidRec" class="left-nav-topics vid">
                 VIDEO RECORDINGS <div class="align"></div>
             </div>
 
             <!-- sub accordions of videos -->
+            <!-- -------------------------- -->
             <div class="videos" id="vid1" onmouseover="hoverApplied(id,'rgb(255,153,51)')" onmouseout="hoverLost(id,'rgb(64,64,64)')" ng-click="changeBackground($event)" onclick="displayInThePage(id)">
                 Digital Transformation (Tech Panel)
             </div>
@@ -224,21 +230,6 @@
             <!-- website Links -->
             <!-- ==================-->
 
-            <!-- <div class="left-nav-topics links-websites">
-                LINKS
-            </div>
-
-            <div ng-click="changeBackground($event)" onmouseover="hoverApplied(id,'rgb(255,153,51)')" onmouseout="hoverLost(id,'rgb(64,64,64)')" id="cashe" class="links" onclick='displayInThePage(id)'>
-                CASHe
-            </div>
-
-            <div ng-click="changeBackground($event)" onmouseover="hoverApplied(id,'rgb(255,153,51)')" onmouseout="hoverLost(id,'rgb(64,64,64)')" id="bhanix" class="links" onclick='displayInThePage(id)'>
-                Bhanix Finance
-            </div> -->
-
-            <!-- website Links -->
-            <!-- ==================-->
-
             <div class="left-nav-topics links-websites">
                 LINKS
             </div>
@@ -251,7 +242,6 @@
                 Bhanix Finance
             </div>
 
-
             <!----------X-------------X------------X-----------------X----------------X  -->
 
             <!-- QUIZ -->
@@ -262,6 +252,7 @@
 
             <!-- Fintech Quiz -->
             <!-- ===========-->
+
             <div>
                 <div id="fintechQuiz" onmouseover="hoverApplied(id,'rgb(255,153,51)')" onmouseout="hoverLost(id,'rgb(64,64,64)')" class="quiz-topics" ng-click="displayFintechQuizTips($event)">
                     Fintech Eco System
@@ -288,6 +279,7 @@
                     Competition, collaboration and convergence makes healthy relationship between bank and NBFC
                 </div>
             </div>
+
             <!-- --------X-------------X------------X-----------------X----------------X -->
 
             <!-- CASHe Quiz -->
@@ -397,12 +389,12 @@
 
         <!-- ======================================================================= -->
         <div id="display-quiz-pages">
-        <!-- The Fintech Quiz Page -->
-        <!-- ===========================-->
 
-        <!-- <div id="displayQuizPage"> -->
+        <!-- The Fintech Quiz Page -->
+        <!-- ------------------------- -->
+
             <div id="display-fintech-quiz-page">
-                <!-- -------X---------X--------X -------X---------X--------X-------- -->
+            <!-- -------X---------X--------X -------X---------X--------X-------- -->
 
                 <!-- Display fintech quiz tips page -->
                 <!-- ===========================-->
@@ -527,25 +519,23 @@
 
                         <!-- Display CASHE quiz tips page -->
                         <!-- ===========================-->
-                    <div id='cashe-quiz-tips' >
-                        <div class="tips" align="center">
-                            <p>Welcome to CASHe Quiz !!</p><br />
-                            <p>This Quiz contains 5 Questions</p><br />
-                            <p>Each Question has two options</p><br />
-                            <p>Each correct option carries 1 point</p><br />
-                            <p>Try to answer as many questions as possible</p><br />
-                            <p>Time limit : 5 minutes</p>
-                        </div>
-
-                        <div id="casheQuizStart" class="start-quiz" ng-click="startCasheQuiz()">
-                            <a href="#" id="prev" class="btn btn-info btn-lg">
-                                <div class="glyphicon"></div> Start Quiz
-                            </a>
-                        </div>
+                <div id='cashe-quiz-tips' >
+                    <div class="tips" align="center">
+                        <p>Welcome to CASHe Quiz !!</p><br />
+                        <p>This Quiz contains 5 Questions</p><br />
+                        <p>Each Question has two options</p><br />
+                        <p>Each correct option carries 1 point</p><br />
+                        <p>Try to answer as many questions as possible</p><br />
+                        <p>Time limit : 5 minutes</p>
                     </div>
-                
 
-
+                    <div id="casheQuizStart" class="start-quiz" ng-click="startCasheQuiz()">
+                        <a href="#" id="prev" class="btn btn-info btn-lg">
+                            <div class="glyphicon"></div> Start Quiz
+                        </a>
+                    </div>
+                </div>
+            
                 <!-- -------X---------X--------X -------X---------X--------X-------- -->
 
                                     <!-- Previous button -->
@@ -563,16 +553,16 @@
                                     <!-- ===========================-->
                     <div>
                         <p id="fintech-question">{{questions[currentQ-1].Question}}</p><br />
-                            <table align="center" ng-init="currentQ=11">
-                                <tr>
-                                    <td ng-model="selections[currentQ-1]" ng-click="selectCasheAnswer($index)" 
+                        <table align="center" ng-init="currentQ=11">
+                            <tr>
+                                <td ng-model="selections[currentQ-1]" ng-click="selectCasheAnswer($index)" 
                                     ng-repeat="op in questions[currentQ-1].options" class="option">
                                     <input ng-checked="selections[currentQ-1] === $index" type="radio"
                                     name="cashe_option_quiz" id="{{op}}" ng-value="op">
                                     {{op}}
-                                    </td>
-                                </tr>
-                            </table>
+                                </td>
+                            </tr>
+                        </table>
                     </div>            
 
 
@@ -624,7 +614,6 @@
                     <h1 id="cashe-quiz-score"></h1>
                     <h1 id="cashe-quiz-feedback"></h1>
                 </div>
-
 
                 <!-- -------X---------X--------X -------X---------X--------X----------- -->
 
@@ -773,7 +762,6 @@
                         <!-- ===========================-->
     
                     <div>
-        
                         <!-- question -->
                         <p ng-init="currentQ=16" id="fintech-question">
                             {{questions[currentQ-1].Question}}
