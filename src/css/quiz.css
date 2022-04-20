@@ -123,6 +123,15 @@ table
     display : none;
 }
 
+/* .tips
+{
+    position : relative;
+    top : 10px;
+    color : black;
+    font-weight : bold;
+    display : none;
+} */
+
 #displayFintechQuizScore
 {
     display : none;
@@ -282,4 +291,10 @@ table
 #fintech-quiz-page
 {
     display :none
+}
+#fintechQuizStart, #casheQuizStart, #bhanixQuizStart, #competitiveAnalysisQuizStart
+{
+    position : relative;
+    bottom : 0.5px;
+    left : 20%;
 }

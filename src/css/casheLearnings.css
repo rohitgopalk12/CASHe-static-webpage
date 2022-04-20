@@ -68,10 +68,10 @@ button
     height : 80px;
 }
 
-div
+/* div
 {
     padding : 2px;
-}
+} */
 
 body
 {
@@ -110,7 +110,6 @@ body
     height : 80px;
     max-height : 80px; 
 }
-
 .videos, .word-doc, .word-docs, .ppt-docs, .pdf-doc, .pdf-docs, .links, .quiz-topics
 {
     border-bottom : 1px solid silver;
@@ -142,10 +141,10 @@ body
 {
     border-top : 1px solid black;
 }
-.links-websites
+/* .links-websites
 {
     border-bottom : 1px solid black;
-}
+} */
 
 .videos 
 {
@@ -213,6 +212,7 @@ a{
     top : 18.5%;
     left : 28.5%;
 }
+/* original code */
 #display-fintech-quiz-page #fintech-quiz-tips,#display-cashe-quiz-page #cashe-quiz-tips,#display-bhanix-quiz-page #bhanix-quiz-tips, #display-competitive-analysis-quiz-page #competitive-analysis-quiz-tips
 {
     position : absolute;
@@ -220,7 +220,16 @@ a{
     left : 30%;
 }
 
-#display-fintech-quiz-page #displayFintechQuizScore, #display-cashe-quiz-page #displayCasheQuizScore, #display-bhanix-quiz-page #displayBhanixQuizScore
+/* .tips
+{
+    position : absolute;
+    top : 20%;
+    left : 30%;
+} */
+
+
+
+#display-fintech-quiz-page #displayFintechQuizScore, #display-cashe-quiz-page #displayCasheQuizScore, #display-bhanix-quiz-page #displayBhanixQuizScore, #display-competitive-analysis-quiz-page #displayCompetitiveAnalysisQuizScore
 {
     position : absolute;
     top : 27%;
