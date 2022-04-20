@@ -7,11 +7,13 @@ var remSec = 0;
 /* JavaScript functions */
 /*=========================*/
 
-var div_clicked = false;
 var current_div = '';
-var ch=0;
-
 var current_div_clicked=false;
+
+// ---------X----------X----------X---------X-----------X-----------X---------
+
+/* hovering functionality */
+/* ------------------------ */
 
 function hoverApplied(id,color)
 {
@@ -19,41 +21,28 @@ function hoverApplied(id,color)
     if(current_div_clicked == true)
     {
         document.getElementById(current_div).style.backgroundColor = 'orange';
-    }
-    
+    } 
 }
 
-var accordion_clicked = false;
-
-var ch01=0;
 function hoverLost(id,color)
 {
-        if(current_div_clicked == true)
-        {
-            document.getElementById(current_div).style.backgroundColor = 'orange';
-        }
-        document.getElementById(id).style.backgroundColor = color;
+    document.getElementById(id).style.backgroundColor = color;
+    if(current_div_clicked == true)
+    {
+        document.getElementById(current_div).style.backgroundColor = 'orange';
+    }    
 } 
+
+// ---------X----------X----------X---------X-----------X-----------X---------
 
 var ctrl = function($scope)
 {
-    
-        document.getElementById('displayWebsiteLinks').style.display = "none";
-        $scope.startCountDown = false;
-        $scope.color = false;
-        $scope.displayFintechQuiz = false;
-        $scope.casheQuizDisplay =true;
-        $scope.fintechQuizScoreDisplay=false;
-        $scope.scoreDisplay=false;
-       
-
+    document.getElementById('displayWebsiteLinks').style.display = "none";
         $scope.selections = [-1, -1,-1,-1,-1,
             -1,-1,-1,-1,-1,
             -1,-1,-1,-1,-1,
             -1, -1,-1,-1,-1];
 
-
-        //$scope.status = [false,false,false,false,false,false,false,false,false,false,false,false,false,false,false];
         $scope.status = [false,false,false,false,false,
             false,false,false,false,false,
             false,false,false,false,false,
@@ -261,6 +250,7 @@ var ctrl = function($scope)
         $scope.changeBackground = function(event)
         {
             document.getElementById('displayWebsiteLinks').style.display = "none";
+            
             current_div = event.target.id;
             current_div_clicked = true;
              if(prev_accordion_visited==true)
@@ -278,8 +268,7 @@ var ctrl = function($scope)
         /* ======================= */
 
         var quiz_topic = '';
-        var prev_quiz_topic_visited = false;
-        var ch=0;  
+        var prev_quiz_topic_visited = false;  
 
         /* ------------------------------------------------------------------*/
 
