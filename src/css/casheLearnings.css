@@ -77,11 +77,11 @@ body
 {
     font-family : tahoma;
 }
-/*.vid:hover, .videos:hover, .word-doc:hover, .word-docs:hover, .pdf-doc:hover, .pdf-docs:hover, .ppt-docs:hover, .links:hover, .links-websites:hover, .ppt:hover, .documentation:hover, .fintechQuestions:hover, .casheQuestions:hover, .bhanixQuestions:hover, .competitiveAnalysisQuestions:hover
+.vid:hover, .videos:hover, .word-doc:hover, .word-docs:hover, .pdf-doc:hover, .pdf-docs:hover, .ppt-docs:hover, .links:hover, .links-websites:hover, .ppt:hover, .documentation:hover, .fintechQuestions:hover, .casheQuestions:hover, .bhanixQuestions:hover, .competitiveAnalysisQuestions:hover, #quiz:hover
 {
-    /* background-color : rgb(255,153,51); */
-    /* color : black;
-}*/
+    background-color : rgb(255,153,51); 
+    color : black;
+}
 .changeBgColor
 {
     background-color : blue !important;
