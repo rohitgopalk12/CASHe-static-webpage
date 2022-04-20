@@ -114,7 +114,7 @@ table
     width : 150px;
 }
 
-#fintech-quiz-tips, #cashe-quiz-tips, #bhanix-quiz-tips
+#fintech-quiz-tips, #cashe-quiz-tips, #bhanix-quiz-tips, #competitive-analysis-quiz-tips
 {
     position : relative;
     top : 10px;
@@ -145,7 +145,7 @@ table
 }
 
 
-#countdown-timer, #cashe-countdown-timer, #bhanix-countdown-timer
+#fintech-countdown-timer, #cashe-countdown-timer, #bhanix-countdown-timer, #competitive-analysis-countdown-timer
 {
     position : absolute;
     background-color : white;
