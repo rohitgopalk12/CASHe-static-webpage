@@ -25,7 +25,7 @@ div.CASHe-topics-list
 div.word-doc{
     overflow-y:auto;
 }
-#displayDIV
+#displayDIV, #displayWebsiteLinks
 {
     position : absolute;
     height : 80%;

@@ -246,7 +246,7 @@ var ctrl = function($scope)
             }
             else
             {
-                $scope.links = "https://bhanixfinance.com";
+                $scope.links = "https://www.bhanixfinance.com";
                 console.log("hello");
             }
         }
