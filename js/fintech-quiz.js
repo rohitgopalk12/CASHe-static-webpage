@@ -300,6 +300,7 @@ var ctrl = function($scope)
 
         }
 
+        var score=0;
         $scope.submitFintechQuiz = function(submit)
         {    
             document.getElementById('displayWebsiteLinks').style.display = "none";  
@@ -308,53 +309,89 @@ var ctrl = function($scope)
             $('.bhanixQuestions').slideUp(500); 
             $('.competitiveAnalysisQuestions').slideUp(500); 
 
-            var score=0;
+            score=0;
             $scope.quizFeedback = '';
             if(submit == false)
             {
-                if(confirm("Are you sure you want to submit?")==submit)
+                if(confirm("Are you sure you want to submit?")==true)
                 {
-                    submit = true;
+                    $scope.displayFintechScore();
                 }
             }
             else
             {
+                $scope.displayFintechScore();
+            }
+            
+            
+
                 // $scope.currentProgress =
                 // {
                 //     width : "0%"
                 // }
-                document.getElementById('displayFintechQuizScore').style.display = "block";
-                document.getElementById('fintech-quiz-page').style.display='none';
-                            /* score calculation takes place here */
-                for(var i=0 ; i<5 ; i++)
-                {
-                    if($scope.selections[i] == $scope.questions[i].rightOption)
-                    {
-                        score++;
-                    } 
-                }
-                document.getElementById('score').innerHTML = "<h1>Score : "+score+"/5</h1>";
+                // document.getElementById('displayFintechQuizScore').style.display = "block";
+                // document.getElementById('fintech-quiz-page').style.display='none';
+                //             /* score calculation takes place here */
+                // for(var i=0 ; i<5 ; i++)
+                // {
+                //     if($scope.selections[i] == $scope.questions[i].rightOption)
+                //     {
+                //         score++;
+                //     } 
+                // }
+                // document.getElementById('score').innerHTML = "<h1>Score : "+score+"/5</h1>";
 
-                if(score<=1)
-                {
-                    document.getElementById('feedback').innerHTML= "Feedback : "+scoreFeedback[0];
-                }
-                else if(score>1 && score<=2)
-                {
-                    document.getElementById('feedback').innerHTML = "Feedback : "+scoreFeedback[1];
-                }
-                else if(score>2 && score<=3)
-                {
-                    document.getElementById('feedback').innerHTML = "Feedback : "+scoreFeedback[2];
-                }
-                else
-                {
-                    document.getElementById('feedback').innerHTML = "Feedback : "+scoreFeedback[3];
-                }
-            
-            }  
+                // if(score<=1)
+                // {
+                //     document.getElementById('feedback').innerHTML= "Feedback : "+scoreFeedback[0];
+                // }
+                // else if(score>1 && score<=2)
+                // {
+                //     document.getElementById('feedback').innerHTML = "Feedback : "+scoreFeedback[1];
+                // }
+                // else if(score>2 && score<=3)
+                // {
+                //     document.getElementById('feedback').innerHTML = "Feedback : "+scoreFeedback[2];
+                // }
+                // else
+                // {
+                //     document.getElementById('feedback').innerHTML = "Feedback : "+scoreFeedback[3];
+                // }  
         }
 
+        $scope.displayFintechScore = function()
+            {
+                    document.getElementById('displayFintechQuizScore').style.display = "block";
+                    document.getElementById('fintech-quiz-page').style.display='none';
+                                /* score calculation takes place here */
+                    for(var i=0 ; i<5 ; i++)
+                    {
+                        if($scope.selections[i] == $scope.questions[i].rightOption)
+                        {
+                            score++;
+                        } 
+                    }
+                    document.getElementById('score').innerHTML = "<h1>Score : "+score+"/5</h1>";
+
+                    if(score<=1)
+                    {
+                        document.getElementById('feedback').innerHTML= "Feedback : "+scoreFeedback[0];
+                    }
+                    else if(score>1 && score<=2)
+                    {
+                        document.getElementById('feedback').innerHTML = "Feedback : "+scoreFeedback[1];
+                    }
+                    else if(score>2 && score<=3)
+                    {
+                        document.getElementById('feedback').innerHTML = "Feedback : "+scoreFeedback[2];
+                    }
+                    else
+                    {
+                        document.getElementById('feedback').innerHTML = "Feedback : "+scoreFeedback[3];
+                    }
+            }
+
+        
         // jump to Question
         $scope.jumpToQuestion = function(event)
         {   
@@ -529,7 +566,7 @@ var ctrl = function($scope)
         document.getElementById('displayDIV').style.display = 'none';        
     }
 
-    $scope.submitCasheQuiz = function()
+    $scope.submitCasheQuiz = function(submit)
     {     
         document.getElementById('displayWebsiteLinks').style.display = "none"; 
         $('.fintechQuestions').slideUp(500); 
@@ -537,43 +574,57 @@ var ctrl = function($scope)
         $('.bhanixQuestions').slideUp(500); 
         $('.competitiveAnalysisQuestions').slideUp(500); 
 
-        var score=0;
-        
-        $scope.currentProgress =
+        if(submit == false)
         {
-            width : "0%"
-        }
-        document.getElementById('displayCasheQuizScore').style.display = "block";
-        document.getElementById('cashe-quiz-page').style.display='none';
-        
-                        /* score calculation takes place here */
-        for(var i=5 ; i<10 ; i++)
-        {
-            if($scope.selections[i] == $scope.questions[i].rightOption)
-            {
-                score++;
-            } 
-        }
-        document.getElementById('cashe-quiz-score').innerHTML = "Score : "+score+"/5";
-
-        if(score<=1)
-        {
-            document.getElementById('cashe-quiz-feedback').innerHTML= "Feedback : "+scoreFeedback[0];
-        }
-        else if(score>1 && score<=2)
-        {
-            document.getElementById('cashe-quiz-feedback').innerHTML = "Feedback : "+scoreFeedback[1];
-        }
-        else if(score>2 && score<=3)
-        {
-            document.getElementById('cashe-quiz-feedback').innerHTML = "Feedback : "+scoreFeedback[2];
+                if(confirm("Are you sure you want to submit?")==true)
+                {
+                    displayCasheScore();
+                }
         }
         else
         {
-            document.getElementById('cashe-quiz-feedback').innerHTML = "Feedback : "+scoreFeedback[3];
+                displayCasheScore();
         }
-    
     }
+
+    displayCasheScore = function()
+        {
+            score=0;
+        
+            $scope.currentProgress =
+            {
+                width : "0%"
+            }
+            document.getElementById('displayCasheQuizScore').style.display = "block";
+            document.getElementById('cashe-quiz-page').style.display='none';
+            
+                            /* score calculation takes place here */
+            for(var i=5 ; i<10 ; i++)
+            {
+                if($scope.selections[i] == $scope.questions[i].rightOption)
+                {
+                    score++;
+                } 
+            }
+            document.getElementById('cashe-quiz-score').innerHTML = "Score : "+score+"/5";
+    
+            if(score<=1)
+            {
+                document.getElementById('cashe-quiz-feedback').innerHTML= "Feedback : "+scoreFeedback[0];
+            }
+            else if(score>1 && score<=2)
+            {
+                document.getElementById('cashe-quiz-feedback').innerHTML = "Feedback : "+scoreFeedback[1];
+            }
+            else if(score>2 && score<=3)
+            {
+                document.getElementById('cashe-quiz-feedback').innerHTML = "Feedback : "+scoreFeedback[2];
+            }
+            else
+            {
+                document.getElementById('cashe-quiz-feedback').innerHTML = "Feedback : "+scoreFeedback[3];
+            }
+        }
 
     $scope.startCasheQuiz = function()
     {
@@ -618,7 +669,7 @@ var ctrl = function($scope)
             if($scope.casheTimeLeft <= 0)
             {
                 clearInterval($scope.downloadTimer);
-                $scope.submitCasheQuiz();
+                $scope.submitCasheQuiz(true);
             }
             
             min= Math.floor($scope.casheTimeLeft/60);
@@ -698,7 +749,7 @@ var ctrl = function($scope)
     /* =================================================================*/
 
     /* bhanix quiz submission functionality starts here */
-    $scope.submitBhanixQuiz = function()
+    $scope.submitBhanixQuiz = function(submit)
     {      
         document.getElementById('displayWebsiteLinks').style.display = "none";
         $('.fintechQuestions').slideUp(500); 
@@ -706,42 +757,58 @@ var ctrl = function($scope)
         $('.bhanixQuestions').slideUp(500); 
         $('.competitiveAnalysisQuestions').slideUp(500); 
 
-        var score=0;
-        
-        $scope.currentProgress =
+        if(submit == false)
         {
-            width : "0%"
-        }
-        document.getElementById('displayBhanixQuizScore').style.display = "block";
-        document.getElementById('bhanix-quiz-page').style.display='none';
-        
-                        /* score calculation takes place here */
-        for(var i=10 ; i<15 ; i++)
-        {
-            if($scope.selections[i] == $scope.questions[i].rightOption)
+            if(confirm("Are you sure you want to submit?")==true)
             {
-                score++;
-            } 
-        }
-        document.getElementById('bhanix-quiz-score').innerHTML = "Score : "+score+"/5";
-
-        if(score<=1)
-        {
-            document.getElementById('bhanix-quiz-feedback').innerHTML= "Feedback : "+scoreFeedback[0];
-        }
-        else if(score>1 && score<=2)
-        {
-            document.getElementById('bhanix-quiz-feedback').innerHTML = "Feedback : "+scoreFeedback[1];
-        }
-        else if(score>2 && score<=3)
-        {
-            document.getElementById('bhanix-quiz-feedback').innerHTML = "Feedback : "+scoreFeedback[2];
+                $scope.displayBhanixScore();
+            }
         }
         else
         {
-            document.getElementById('bhanix-quiz-feedback').innerHTML = "Feedback : "+scoreFeedback[3];
+            $scope.displayBhanixScore();
         }
     }
+
+    $scope.displayBhanixScore = function()
+            {
+                score=0;
+        
+                $scope.currentProgress =
+                {
+                    width : "0%"
+                }
+                document.getElementById('displayBhanixQuizScore').style.display = "block";
+                document.getElementById('bhanix-quiz-page').style.display='none';
+                
+                                /* score calculation takes place here */
+                for(var i=10 ; i<15 ; i++)
+                {
+                    if($scope.selections[i] == $scope.questions[i].rightOption)
+                    {
+                        score++;
+                    } 
+                }
+                document.getElementById('bhanix-quiz-score').innerHTML = "Score : "+score+"/5";
+        
+                if(score<=1)
+                {
+                    document.getElementById('bhanix-quiz-feedback').innerHTML= "Feedback : "+scoreFeedback[0];
+                }
+                else if(score>1 && score<=2)
+                {
+                    document.getElementById('bhanix-quiz-feedback').innerHTML = "Feedback : "+scoreFeedback[1];
+                }
+                else if(score>2 && score<=3)
+                {
+                    document.getElementById('bhanix-quiz-feedback').innerHTML = "Feedback : "+scoreFeedback[2];
+                }
+                else
+                {
+                    document.getElementById('bhanix-quiz-feedback').innerHTML = "Feedback : "+scoreFeedback[3];
+                }
+            }
+
 
     /* ===============================================================================*/
 
@@ -790,7 +857,7 @@ var ctrl = function($scope)
             if($scope.casheTimeLeft <= 0)
             {
                 clearInterval($scope.downloadTimer);
-                $scope.submitCasheQuiz();
+                $scope.submitBhanixQuiz(true);
             }
             
             min= Math.floor($scope.casheTimeLeft/60);
@@ -931,7 +998,7 @@ var ctrl = function($scope)
             if($scope.timeleft <= 0)
             {
                 clearInterval($scope.downloadTimer);
-                $scope.submitFintechQuiz(true);
+                $scope.submitCompetitiveAnalysisQuiz(true);
             }
             min= Math.floor($scope.timeleft/60);
             sec = $scope.timeleft%60;
@@ -965,6 +1032,44 @@ var ctrl = function($scope)
       
     }
 
+    function displayCompetitiveAnalysisScore()
+    {
+        score=0;
+        $scope.quizFeedback = '';
+           // $scope.currentProgress =
+            // {
+            //     width : "0%"
+            // }
+            document.getElementById('displayCompetitiveAnalysisQuizScore').style.display = "block";
+            document.getElementById('competitive-analysis-quiz-page').style.display='none';
+                        /* score calculation takes place here */
+            for(var i=15 ; i<20 ; i++)
+            {
+                if($scope.selections[i] == $scope.questions[i].rightOption)
+                {
+                    score++;
+                } 
+            }
+            document.getElementById('competitive-analysis-quiz-score').innerHTML = "<h1>Score : "+score+"/5</h1>";
+
+            if(score<=1)
+            {
+                document.getElementById('competitive-analysis-quiz-feedback').innerHTML= "Feedback : "+scoreFeedback[0];
+            }
+            else if(score>1 && score<=2)
+            {
+                document.getElementById('competitive-analysis-quiz-feedback').innerHTML = "Feedback : "+scoreFeedback[1];
+            }
+            else if(score>2 && score<=3)
+            {
+                document.getElementById('competitive-analysis-quiz-feedback').innerHTML = "Feedback : "+scoreFeedback[2];
+            }
+            else
+            {
+                document.getElementById('competitive-analysis-quiz-feedback').innerHTML = "Feedback : "+scoreFeedback[3];
+            } 
+    }
+    
     $scope.submitCompetitiveAnalysisQuiz = function(submit)
         {    
             document.getElementById('displayWebsiteLinks').style.display = "none";  
@@ -973,51 +1078,19 @@ var ctrl = function($scope)
             $('.bhanixQuestions').slideUp(500); 
             $('.competitiveAnalysisQuestions').slideUp(500); 
 
-            var score=0;
-            $scope.quizFeedback = '';
             if(submit == false)
             {
-                if(confirm("Are you sure you want to submit?")==submit)
+                if(confirm("Are you sure you want to submit?")==true)
                 {
-                    submit = true;
+                    displayCompetitiveAnalysisScore();
                 }
             }
             else
             {
-                // $scope.currentProgress =
-                // {
-                //     width : "0%"
-                // }
-                document.getElementById('displayCompetitiveAnalysisQuizScore').style.display = "block";
-                document.getElementById('competitive-analysis-quiz-page').style.display='none';
-                            /* score calculation takes place here */
-                for(var i=15 ; i<20 ; i++)
-                {
-                    if($scope.selections[i] == $scope.questions[i].rightOption)
-                    {
-                        score++;
-                    } 
-                }
-                document.getElementById('competitive-analysis-quiz-score').innerHTML = "<h1>Score : "+score+"/5</h1>";
+                displayCompetitiveAnalysisScore();
+            }
 
-                if(score<=1)
-                {
-                    document.getElementById('competitive-analysis-quiz-feedback').innerHTML= "Feedback : "+scoreFeedback[0];
-                }
-                else if(score>1 && score<=2)
-                {
-                    document.getElementById('competitive-analysis-quiz-feedback').innerHTML = "Feedback : "+scoreFeedback[1];
-                }
-                else if(score>2 && score<=3)
-                {
-                    document.getElementById('competitive-analysis-quiz-feedback').innerHTML = "Feedback : "+scoreFeedback[2];
-                }
-                else
-                {
-                    document.getElementById('competitive-analysis-quiz-feedback').innerHTML = "Feedback : "+scoreFeedback[3];
-                }
             
-            }  
         }
 }
 

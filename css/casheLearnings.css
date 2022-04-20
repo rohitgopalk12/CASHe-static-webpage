@@ -229,7 +229,11 @@ a{
     left : 30%;
 } */
 
-
+#link:hover
+{
+    color : blue;
+    text-decoration : underline;
+}
 
 #display-fintech-quiz-page #displayFintechQuizScore, #display-cashe-quiz-page #displayCasheQuizScore, #display-bhanix-quiz-page #displayBhanixQuizScore, #display-competitive-analysis-quiz-page #displayCompetitiveAnalysisQuizScore
 {
@@ -288,11 +292,6 @@ a{
 #fintech_1
 {
     padding-top : 6.5%;
-}
-
-#link:hover
-{
-    color : orange;
 }
 #fintech_2, #fintech_3, #fintech_4
 {
