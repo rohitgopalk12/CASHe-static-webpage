@@ -250,7 +250,7 @@ var ctrl = function($scope)
         $scope.changeBackground = function(event)
         {
             document.getElementById('displayWebsiteLinks').style.display = "none";
-            
+
             current_div = event.target.id;
             current_div_clicked = true;
              if(prev_accordion_visited==true)

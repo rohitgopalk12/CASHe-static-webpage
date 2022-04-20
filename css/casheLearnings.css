@@ -290,6 +290,10 @@ a{
     padding-top : 6.5%;
 }
 
+#link:hover
+{
+    color : orange;
+}
 #fintech_2, #fintech_3, #fintech_4
 {
     padding-top : 3.2%;
