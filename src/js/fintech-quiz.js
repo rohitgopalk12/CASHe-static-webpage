@@ -27,6 +27,8 @@ function hoverLost(id,color)
 
 var ctrl = function($scope)
 {
+    
+        document.getElementById('displayWebsiteLinks').style.display = "none";
         $scope.startCountDown = false;
         $scope.color = false;
         $scope.displayFintechQuiz = false;
@@ -231,7 +233,6 @@ var ctrl = function($scope)
         /* display website links functionality */
         $scope.displayLinks = function(event)
         {   
-           
             document.getElementById('display-quiz-pages').style.display = "none";
             document.getElementById('displayDIV').style.display = "none";
             document.getElementById('displayWebsiteLinks').style.display = "block";
