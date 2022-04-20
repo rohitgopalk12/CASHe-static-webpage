@@ -10,10 +10,17 @@ var remSec = 0;
 var div_clicked = false;
 var current_div = '';
 var ch=0;
+
+var current_div_clicked=false;
+
 function hoverApplied(id,color)
 {
     document.getElementById(id).style.backgroundColor = color;
-    document.getElementById(current_div).style.backgroundColor = 'orange';
+    if(current_div_clicked == true)
+    {
+        document.getElementById(current_div).style.backgroundColor = 'orange';
+    }
+    
 }
 
 var accordion_clicked = false;
@@ -21,8 +28,11 @@ var accordion_clicked = false;
 var ch01=0;
 function hoverLost(id,color)
 {
+        if(current_div_clicked == true)
+        {
+            document.getElementById(current_div).style.backgroundColor = 'orange';
+        }
         document.getElementById(id).style.backgroundColor = color;
-        document.getElementById(current_div).style.backgroundColor = 'orange';
 } 
 
 var ctrl = function($scope)
@@ -228,7 +238,6 @@ var ctrl = function($scope)
         var prev_div = 0;
         var prev_accordion_visited = false;
         var quiz_topic_enabled = false;
-        quiz_topic_prev = ''
 
         /* display website links functionality */
         $scope.displayLinks = function(event)
@@ -238,16 +247,14 @@ var ctrl = function($scope)
             document.getElementById('displayWebsiteLinks').style.display = "block";
 
             var id = event.target.id;
-            console.log("id : "+id);
+
             if(id=='cashe')
             {
                 $scope.links = "https://www.cashe.co.in";
-                console.log("hi");
             }
             else
             {
                 $scope.links = "https://www.bhanixfinance.com";
-                console.log("hello");
             }
         }
 
@@ -255,13 +262,12 @@ var ctrl = function($scope)
         {
             document.getElementById('displayWebsiteLinks').style.display = "none";
             current_div = event.target.id;
+            current_div_clicked = true;
              if(prev_accordion_visited==true)
                 {
                     document.getElementById(prev_div).style.backgroundColor = 'rgb(64,64,64)';
                 }
                 document.getElementById(current_div).style.backgroundColor = 'orange';
-                // hoverApplied(current_div,'orange');
-                // hoverLost(current_div,'orange');
                 prev_div = current_div;
                 prev_accordion_visited=true;
         }
@@ -272,7 +278,6 @@ var ctrl = function($scope)
         /* ======================= */
 
         var quiz_topic = '';
-        var quiz_topic_prev = '';
         var prev_quiz_topic_visited = false;
         var ch=0;  
 
@@ -286,11 +291,6 @@ var ctrl = function($scope)
             $('.bhanixQuestions').slideUp(500); 
             $('.competitiveAnalysisQuestions').slideUp(500); 
 
-                // quiz_topic = event.target.id;
-                // document.getElementById(quiz_topic).style.backgroundColor = "orange";
-                // quiz_topic_prev=quiz_topic;
-
-                //$scope.quizTopicsHighlighted(quiz_topic);
                 quiz_topic_enabled = true;
                 $scope.changeBackground(event);
                 
