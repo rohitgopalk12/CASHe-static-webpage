@@ -11,6 +11,9 @@ var current_div = '';
 var current_div_clicked=false;
 var current_quiz_name = '';
 
+document.getElementById('vid1').style.backgroundColor = 'orange';
+var default_video_clicked = true;
+
 // ---------X----------X----------X---------X-----------X-----------X---------
 
 /* hovering functionality */
@@ -18,20 +21,36 @@ var current_quiz_name = '';
 
 function hoverApplied(id,color)
 {
-    document.getElementById(id).style.backgroundColor = color;
-    if(current_div_clicked == true)
+    if(default_video_clicked == true)
     {
-        document.getElementById(current_div).style.backgroundColor = 'orange';
-    } 
+        document.getElementById('vid1').style.backgroundColor = 'orange';
+    }
+    else
+    {
+        document.getElementById(id).style.backgroundColor = color;
+        if(current_div_clicked == true)
+        {
+            document.getElementById(current_div).style.backgroundColor = 'orange';
+        } 
+    }
+    
 }
 
 function hoverLost(id,color)
 {
-    document.getElementById(id).style.backgroundColor = color;
-    if(current_div_clicked == true)
+    if(default_video_clicked == true)
     {
-        document.getElementById(current_div).style.backgroundColor = 'orange';
-    }    
+        document.getElementById('vid1').style.backgroundColor = 'orange';
+    }
+    else
+    {
+        document.getElementById(id).style.backgroundColor = color;
+        if(current_div_clicked == true)
+        {
+            document.getElementById(current_div).style.backgroundColor = 'orange';
+        }
+    }
+        
 } 
 
 // ---------X----------X----------X---------X-----------X-----------X---------
@@ -43,8 +62,10 @@ var ctrl = function($scope)
             -1,-1,-1,-1,-1,
             -1,-1,-1,-1,-1,
             -1, -1,-1,-1,-1];
+    $('.videos').slideDown(500);
+    
 
-        $scope.status = [false,false,false,false,false,
+    $scope.status = [false,false,false,false,false,
             false,false,false,false,false,
             false,false,false,false,false,
             false,false,false,false,false];
@@ -250,9 +271,11 @@ var ctrl = function($scope)
 
         $scope.changeBackground = function(event)
         {
+            default_video_clicked = false;
+            document.getElementById('vid1').style.backgroundColor="rgb(64,64,64)";
+            current_div = event.target.id;
             document.getElementById('displayWebsiteLinks').style.display = "none";
 
-            current_div = event.target.id;
             current_div_clicked = true;
              if(prev_accordion_visited==true)
                 {

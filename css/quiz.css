@@ -1,6 +1,6 @@
 body
 {
-    background-color : silver;
+    background-color : white;
     user-select : none;
 }
 .Question
@@ -315,7 +315,7 @@ original code
 #displayCasheQuizPage
 {
     position : absolute;
-    border : 4px solid grey;
+    border : 4px solid black;
     height : 70%;
     width : 60%;
     max-width: 60%;
