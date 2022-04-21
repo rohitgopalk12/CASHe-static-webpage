@@ -104,6 +104,9 @@ $(document).ready(function()
             $('.links').slideUp(500);
             $('.quiz-topics').slideUp(500);
             $('.fintechQuestions').slideUp(500);  
+            $('.bhanixQuestions').slideUp(500);  
+            $('.casheQuestions').slideUp(500);  
+            $('.competitiveAnalysisQuestions').slideUp(500);  
             
     })
 
@@ -118,7 +121,10 @@ $(document).ready(function()
             $('.links').slideUp(500);
             $('.ppt-docs').slideUp(500);
             $('.quiz-topics').slideUp(500);
-            $('.fintechQuestions').slideUp(500);  
+            $('.fintechQuestions').slideUp(500); 
+            $('.bhanixQuestions').slideUp(500);  
+            $('.casheQuestions').slideUp(500);  
+            $('.competitiveAnalysisQuestions').slideUp(500);   
     })
 
     $('.word-doc').click(function()
@@ -130,6 +136,9 @@ $(document).ready(function()
             $('.links').slideUp(500);
             $('.quiz-topics').slideUp(500);
             $('.fintechQuestions').slideUp(500); 
+            $('.bhanixQuestions').slideUp(500);  
+            $('.casheQuestions').slideUp(500);  
+            $('.competitiveAnalysisQuestions').slideUp(500);  
             isDisplayed=false; 
     })
 
@@ -142,6 +151,9 @@ $(document).ready(function()
             $('.links').slideUp(500);
             $('.quiz-topics').slideUp(500);
             $('.fintechQuestions').slideUp(500);  
+            $('.bhanixQuestions').slideUp(500);  
+            $('.casheQuestions').slideUp(500);  
+            $('.competitiveAnalysisQuestions').slideUp(500);  
             isDisplayed=false;
     })
 
@@ -155,7 +167,10 @@ $(document).ready(function()
             $('.pdf-docs').slideUp(500);
             $('.links').slideUp(500);
             $('.quiz-topics').slideUp(500);
-            $('.fintechQuestions').slideUp(500);  
+            $('.fintechQuestions').slideUp(500);
+            $('.bhanixQuestions').slideUp(500);  
+            $('.casheQuestions').slideUp(500);  
+            $('.competitiveAnalysisQuestions').slideUp(500);    
             isDisplayed=false;
     })
 
@@ -170,6 +185,9 @@ $(document).ready(function()
             $('.pdf-doc').slideUp(500); 
             $('.quiz-topics').slideUp(500);
             $('.fintechQuestions').slideUp(500);  
+            $('.bhanixQuestions').slideUp(500);  
+            $('.casheQuestions').slideUp(500);  
+            $('.competitiveAnalysisQuestions').slideUp(500);  
             isDisplayed=false;
     })
 

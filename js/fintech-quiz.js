@@ -139,7 +139,7 @@ var ctrl = function($scope)
                 "rightOption" : 0
             },
             {
-                "qid" : 11, "Question" : "What is full form of NBFC", 
+                "qid" : 11, "Question" : "What is full form of NBFC?", 
                 "options" :
                 [
                     "Non-banking functional company","Non-banking financial company"    
