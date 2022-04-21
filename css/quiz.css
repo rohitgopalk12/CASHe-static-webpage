@@ -300,10 +300,10 @@ original code
     padding : 10px;
 } */
 
-#countdown-timer-text
+.countdown-timer-text
 {
     position : absolute;
-    right : 42px;
+    right : 47px;
     top : 10px;
     color : red;
     font-weight : bold;
