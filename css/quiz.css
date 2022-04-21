@@ -64,7 +64,7 @@ table
     background-color : green;
    
 }
-#next:link, #next:visited, #next:active:hover
+.next:link, .next:visited, .next:active:hover
 {
    border-radius : 20%;
    font-weight : bold;
@@ -74,11 +74,12 @@ table
     right : 30px;    
     bottom : 30px;
 }
-#next:hover
+.next:hover
 {
     background-color : rgb(72, 213, 77)
 }
-/* .start-quiz .prev:link, .start-quiz .prev:visited, .start-quiz .prev:active:hover
+
+.prev:link, .prev:visited, .prev:active:hover
 {
     border-radius : 20%;
     color : white;
@@ -89,10 +90,11 @@ table
     left : 30px;    
     bottom : 30px;
 }
-.start-quiz .prev:hover
+.prev:hover
 {
     background-color : rgb(72, 213, 77)
-} */
+}
+
 #fintech-submit-button
 {
     border-radius : 20%;
@@ -146,12 +148,14 @@ table
     display : none;
 }
 
+/* 
+original code
 .start-quiz
 {
     position : relative;
     top : 80px;
     left : 300px;
-}
+} */
 
 /* start button CSS */
 #fintech-start, #cashe-start, #bhanix-start, #competitive-analysis-start
@@ -172,7 +176,7 @@ table
 }
 
 /* prev button CSS all 4 quizzes */
-#fintech-prev,
+/* #fintech-prev,
 #cashe-prev,
 #bhanix-prev,
 #competitive-analysis-prev
@@ -185,11 +189,11 @@ table
     position : absolute;
     left : 30px;    
     bottom : 30px;
-}
-#fintech-prev:hover, #cashe-prev:hover, #bhanix-prev:hover, #competitive-analysis-prev:hover
+} */
+/* #fintech-prev:hover, #cashe-prev:hover, #bhanix-prev:hover, #competitive-analysis-prev:hover
 {
     background-color : rgb(72, 213, 77)
-}
+} */
 
 #fintech-countdown-timer, #cashe-countdown-timer, #bhanix-countdown-timer, #competitive-analysis-countdown-timer
 {
@@ -274,7 +278,7 @@ table
   .container input:checked ~ .checkmark {
     background-color: green;
   }*/
-  #fintech-question
+    .quiz-question
   {
         text-align : center;
         color : black;
@@ -334,4 +338,24 @@ table
     position : relative;
     bottom : 0.5px;
     left : 20%;
+}
+
+.start-quiz
+{
+    position : relative;
+    top : 80px;
+    bottom : 0.5px;
+    left : 20%;
+}
+
+.start-quiz .start-quiz-button
+{
+    border-radius : 20%;
+    color : white;
+    font-weight : bold;
+    background-color : green;
+    border-color : green;
+    position : absolute;
+    left : 30px;    
+    bottom : 30px;
 }

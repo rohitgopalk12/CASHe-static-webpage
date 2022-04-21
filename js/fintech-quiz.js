@@ -276,7 +276,7 @@ var ctrl = function($scope)
         $scope.displayFintechQuizTips = function(event)
         {
             document.getElementById('displayWebsiteLinks').style.display = "none";
-            
+
             $('.fintechQuestions').slideUp(500); 
             $('.casheQuestions').slideUp(500); 
             $('.bhanixQuestions').slideUp(500); 
@@ -521,8 +521,7 @@ var ctrl = function($scope)
             
             
             document.getElementById('fintech-previous-button').style.display = 'block';
-            document.getElementById('progressBar').style.display = 'block';
-            
+    
             document.getElementById('countdown').style.display = 'block';
 
             document.getElementById('fintech-next-button').style.display = 'block';
@@ -695,7 +694,6 @@ var ctrl = function($scope)
         }, 1000);
       
         document.getElementById('fintech-previous-button').style.display = 'block';
-        document.getElementById('progressBar').style.display = 'block';
 
         document.getElementById('countdown').style.display = 'block';
 
@@ -884,7 +882,6 @@ var ctrl = function($scope)
         }, 1000);
       
         document.getElementById('fintech-previous-button').style.display = 'block';
-        document.getElementById('progressBar').style.display = 'block';
 
         document.getElementById('countdown').style.display = 'block';
 
@@ -1028,7 +1025,6 @@ var ctrl = function($scope)
         
         
         document.getElementById('fintech-previous-button').style.display = 'block';
-        document.getElementById('progressBar').style.display = 'block';
         
         document.getElementById('countdown').style.display = 'block';
 
