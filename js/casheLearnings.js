@@ -107,7 +107,6 @@ $(document).ready(function()
             $('.bhanixQuestions').slideUp(500);  
             $('.casheQuestions').slideUp(500);  
             $('.competitiveAnalysisQuestions').slideUp(500);  
-            
     })
 
     $('.documentation').click(function()
