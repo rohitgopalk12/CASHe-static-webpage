@@ -78,12 +78,35 @@ casheFiles.set('bhanix','https://www.bhanixfinance.com');
                 //=====================================================
 
 var isDisplayed = false;
+var quiz_running = false;
 function displayInThePage(id)
 {
-        document.getElementById('display-quiz-pages').style.display = "none";
-        document.getElementById('displayDIV').style.display = "block";
-        document.getElementById('display').data = casheFiles.get(id);
-        document.getElementById('displayWebsiteLinks').style.display = "none";
+        if(quiz_running == true)
+        {
+                if(confirm("Would you like to end the quiz?")==true)
+                {
+                        displayPages(id);
+                        quiz_running = false;
+                }
+        }
+        else
+        {
+                displayPages(id);
+        }
+        // function displayPages()
+        // {
+        //         document.getElementById('display-quiz-pages').style.display = "none";
+        //         document.getElementById('displayDIV').style.display = "block";
+        //         document.getElementById('display').data = casheFiles.get(id);
+        //         document.getElementById('displayWebsiteLinks').style.display = "none";
+        // }
+}
+function displayPages(id)
+{
+                document.getElementById('display-quiz-pages').style.display = "none";
+                document.getElementById('displayDIV').style.display = "block";
+                document.getElementById('display').data = casheFiles.get(id);
+                document.getElementById('displayWebsiteLinks').style.display = "none";
 }
 
 //====================================================================================
@@ -459,21 +482,37 @@ var ctrl = function($scope)
 
         /* display website links functionality */
         $scope.displayLinks = function(event)
-        {   
-            document.getElementById('display-quiz-pages').style.display = "none";
-            document.getElementById('displayDIV').style.display = "none";
-            document.getElementById('displayWebsiteLinks').style.display = "block";
+        { 
 
-            var id = event.target.id;
+                if(quiz_running == true)
+                {
+                        if(confirm("Would you like to end the quiz?")==true)
+                        {
+                                displayTheLinks(event);
+                                quiz_running = false;
+                        }
+                }
+                else
+                {
+                        displayTheLinks(event);
+                }
+                function displayTheLinks()
+                {
+                        document.getElementById('display-quiz-pages').style.display = "none";
+                        document.getElementById('displayDIV').style.display = "none";
+                        document.getElementById('displayWebsiteLinks').style.display = "block";
 
-            if(id=='cashe')
-            {
-                $scope.links = "https://www.cashe.co.in";
-            }
-            else
-            {
-                $scope.links = "https://www.bhanixfinance.com";
-            }
+                        var id = event.target.id;
+
+                        if(id=='cashe')
+                        {
+                                $scope.links = "https://www.cashe.co.in";
+                        }
+                        else
+                        {
+                                $scope.links = "https://www.bhanixfinance.com";
+                        }
+                }
         }
 
         $scope.changeBackground = function(event)
@@ -505,31 +544,45 @@ var ctrl = function($scope)
 
         $scope.displayFintechQuizTips = function(event)
         {
-            document.getElementById('displayWebsiteLinks').style.display = "none";
+                if(quiz_running == true)
+                {
+                        if(confirm("Would you like to end the quiz?")==true)
+                        {
+                                displayFintechTips(event);
+                                quiz_running = false;
+                        }
+                }
+                else
+                {
+                        displayFintechTips(event);
+                }
+                function displayFintechTips(event)
+                {
+                        document.getElementById('displayWebsiteLinks').style.display = "none";
 
-            $('.fintechQuestions').slideUp(500); 
-            $('.casheQuestions').slideUp(500); 
-            $('.bhanixQuestions').slideUp(500); 
-            $('.competitiveAnalysisQuestions').slideUp(500); 
-
-                quiz_topic_enabled = true;
-                $scope.changeBackground(event);
-                
-                document.getElementById('display-quiz-pages').style.display = "block";
-                document.getElementById('display-fintech-quiz-page').style.display = 'block';
-                document.getElementById('display-cashe-quiz-page').style.display = 'none';
-                document.getElementById('display-bhanix-quiz-page').style.display = 'none';
-                document.getElementById('display-competitive-analysis-quiz-page').style.display = 'none';
-
-                document.getElementById('fintech-quiz-tips').style.display = 'block';
-                document.getElementById('fintech-quiz-page').style.display = 'none';
-                document.getElementById('displayFintechQuizScore').style.display = 'none';
-                
-                clearInterval($scope.downloadTimer);
-                
-                $scope.timeleft = 0;
-                document.getElementById('displayDIV').style.display = 'none';
-
+                        $('.fintechQuestions').slideUp(500); 
+                        $('.casheQuestions').slideUp(500); 
+                        $('.bhanixQuestions').slideUp(500); 
+                        $('.competitiveAnalysisQuestions').slideUp(500); 
+            
+                            quiz_topic_enabled = true;
+                            $scope.changeBackground(event);
+                            
+                            document.getElementById('display-quiz-pages').style.display = "block";
+                            document.getElementById('display-fintech-quiz-page').style.display = 'block';
+                            document.getElementById('display-cashe-quiz-page').style.display = 'none';
+                            document.getElementById('display-bhanix-quiz-page').style.display = 'none';
+                            document.getElementById('display-competitive-analysis-quiz-page').style.display = 'none';
+            
+                            document.getElementById('fintech-quiz-tips').style.display = 'block';
+                            document.getElementById('fintech-quiz-page').style.display = 'none';
+                            document.getElementById('displayFintechQuizScore').style.display = 'none';
+                            
+                            clearInterval($scope.downloadTimer);
+                            
+                            $scope.timeleft = 0;
+                            document.getElementById('displayDIV').style.display = 'none';
+                }
         }
 
         var score=0;
@@ -667,6 +720,7 @@ var ctrl = function($scope)
 
         $scope.startFintechQuiz = function()
         {
+                quiz_running = true;
             current_quiz_name = 'fintech';
             document.getElementById('displayWebsiteLinks').style.display = "none";
             $('.fintechQuestions').slideDown(500);
@@ -768,34 +822,49 @@ var ctrl = function($scope)
 
     $scope.displayCasheQuizTips = function(event)
     {
-        document.getElementById('displayWebsiteLinks').style.display = "none";
-        $('.fintechQuestions').slideUp(500); 
-        $('.casheQuestions').slideUp(500); 
-        $('.bhanixQuestions').slideUp(500); 
-        $('.competitiveAnalysisQuestions').slideUp(500); 
-
-        quiz_topic = event.target.id;
-        //$scope.quizTopicsHighlighted(quiz_topic);
+        if(quiz_running == true)
+        {
+                if(confirm("Would you like to end the quiz?")==true)
+                {
+                        displayCasheTips(event);
+                        quiz_running = false;
+                }
+        }
+        else
+        {
+                displayCasheTips(event);
+        }
+        function displayCasheTips(event)
+        {
+                document.getElementById('displayWebsiteLinks').style.display = "none";
+                $('.fintechQuestions').slideUp(500); 
+                $('.casheQuestions').slideUp(500); 
+                $('.bhanixQuestions').slideUp(500); 
+                $('.competitiveAnalysisQuestions').slideUp(500); 
         
-        document.getElementById('casheQuiz').style.backgroundColor = "orange";
-
-        quiz_topic_enabled = true;
-        $scope.changeBackground(event);
-        document.getElementById('display-quiz-pages').style.display = "block";
-        document.getElementById('display-cashe-quiz-page').style.display = 'block';
-        document.getElementById('display-bhanix-quiz-page').style.display = 'none';
-        document.getElementById('display-competitive-analysis-quiz-page').style.display = 'none';
-        document.getElementById('cashe-quiz-tips').style.display = 'block';
-
-        document.getElementById('displayCasheQuizScore').style.display = 'none';
-        document.getElementById('displayDIV').style.display = 'none';
-        document.getElementById('display-fintech-quiz-page').style.display = 'none';
-        document.getElementById('cashe-quiz-page').style.display = 'none';
-      
-        clearInterval($scope.downloadTimer);
+                quiz_topic = event.target.id;
+                //$scope.quizTopicsHighlighted(quiz_topic);
+                
+                document.getElementById('casheQuiz').style.backgroundColor = "orange";
         
-        $scope.casheTimeLeft = 0;
-        document.getElementById('displayDIV').style.display = 'none';        
+                quiz_topic_enabled = true;
+                $scope.changeBackground(event);
+                document.getElementById('display-quiz-pages').style.display = "block";
+                document.getElementById('display-cashe-quiz-page').style.display = 'block';
+                document.getElementById('display-bhanix-quiz-page').style.display = 'none';
+                document.getElementById('display-competitive-analysis-quiz-page').style.display = 'none';
+                document.getElementById('cashe-quiz-tips').style.display = 'block';
+        
+                document.getElementById('displayCasheQuizScore').style.display = 'none';
+                document.getElementById('displayDIV').style.display = 'none';
+                document.getElementById('display-fintech-quiz-page').style.display = 'none';
+                document.getElementById('cashe-quiz-page').style.display = 'none';
+              
+                clearInterval($scope.downloadTimer);
+                
+                $scope.casheTimeLeft = 0;
+                document.getElementById('displayDIV').style.display = 'none';  
+        }    
     }
 
     $scope.submitCasheQuiz = function(submit)
@@ -860,6 +929,7 @@ var ctrl = function($scope)
 
     $scope.startCasheQuiz = function()
     {
+        quiz_running = true;
         current_quiz_name = 'cashe';
         document.getElementById('displayWebsiteLinks').style.display = "none";
          $('.casheQuestions').slideDown(500);  
@@ -951,31 +1021,47 @@ var ctrl = function($scope)
 
     $scope.displayBhanixQuizTips = function(event)
     {
-        document.getElementById('displayWebsiteLinks').style.display = "none";
-        $('.fintechQuestions').slideUp(500); 
-        $('.casheQuestions').slideUp(500); 
-        $('.bhanixQuestions').slideUp(500); 
-        $('.competitiveAnalysisQuestions').slideUp(500); 
-
-        quiz_topic = event.target.id;
-        //$scope.quizTopicsHighlighted(quiz_topic);
-
-        quiz_topic_enabled = true;
-
-        $scope.changeBackground(event);
-        document.getElementById('display-quiz-pages').style.display = "block";
-        document.getElementById('display-bhanix-quiz-page').style.display = 'block';
-        document.getElementById('display-cashe-quiz-page').style.display = 'none';
-        document.getElementById('display-fintech-quiz-page').style.display = 'none';
-        document.getElementById('display-competitive-analysis-quiz-page').style.display = 'none';
-
-        document.getElementById('bhanix-quiz-tips').style.display = 'block';
-        document.getElementById('bhanix-quiz-page').style.display = 'none';
-        document.getElementById('displayBhanixQuizScore').style.display = 'none';
+        if(quiz_running == true)
+        {
+                if(confirm("Would you like to end the quiz?")==true)
+                {
+                        displayBhanixTips(event);
+                        quiz_running = false;
+                }
+        }
+        else
+        {
+                displayBhanixTips(event);
+        }
+        function displayBhanixTips(event)
+        {
+                document.getElementById('displayWebsiteLinks').style.display = "none";
+                $('.fintechQuestions').slideUp(500); 
+                $('.casheQuestions').slideUp(500); 
+                $('.bhanixQuestions').slideUp(500); 
+                $('.competitiveAnalysisQuestions').slideUp(500); 
         
-        clearInterval($scope.downloadTimer);
-        $scope.timeleft = 0;
-        document.getElementById('displayDIV').style.display = 'none';
+                quiz_topic = event.target.id;
+                //$scope.quizTopicsHighlighted(quiz_topic);
+        
+                quiz_topic_enabled = true;
+        
+                $scope.changeBackground(event);
+                document.getElementById('display-quiz-pages').style.display = "block";
+                document.getElementById('display-bhanix-quiz-page').style.display = 'block';
+                document.getElementById('display-cashe-quiz-page').style.display = 'none';
+                document.getElementById('display-fintech-quiz-page').style.display = 'none';
+                document.getElementById('display-competitive-analysis-quiz-page').style.display = 'none';
+        
+                document.getElementById('bhanix-quiz-tips').style.display = 'block';
+                document.getElementById('bhanix-quiz-page').style.display = 'none';
+                document.getElementById('displayBhanixQuizScore').style.display = 'none';
+                
+                clearInterval($scope.downloadTimer);
+                $scope.timeleft = 0;
+                document.getElementById('displayDIV').style.display = 'none';
+        }
+        
     }
 
     /* =================================================================*/
@@ -1047,6 +1133,7 @@ var ctrl = function($scope)
     /* bhanix quiz functionality starts here */
     $scope.startBhanixQuiz = function()
     {
+        quiz_running = true;
         current_quiz_name = 'bhanix';
         document.getElementById('displayWebsiteLinks').style.display = "none";
         $('.bhanixQuestions').slideDown(500);  
@@ -1144,6 +1231,20 @@ var ctrl = function($scope)
 
     $scope.displayCompetitiveAnalysisQuizTips = function(event)
     {
+        if(quiz_running == true)
+        {
+                if(confirm("Would you like to end the quiz?")==true)
+                {
+                        displayCompetitiveTips(event);
+                        quiz_running = false;
+                }
+        }
+        else
+        {
+                displayCompetitiveTips(event);
+        }
+        function displayCompetitiveTips(event)
+        {
                 document.getElementById('displayWebsiteLinks').style.display = "none";
                 $('.fintechQuestions').slideUp(500); 
                 $('.casheQuestions').slideUp(500); 
@@ -1173,10 +1274,13 @@ var ctrl = function($scope)
                 clearInterval($scope.downloadTimer);
                 
                 $scope.timeleft = 0;
+        }
+                
     }
 
     $scope.startCompetitiveAnalysisQuiz = function()
     {
+        quiz_running = true;
         current_quiz_name = 'competitive-analysis';
         document.getElementById('displayWebsiteLinks').style.display = "none";
         $('.competitiveAnalysisQuestions').slideDown(500);
