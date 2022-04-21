@@ -105,7 +105,7 @@ var ctrl = function($scope)
                 "rightOption" : 0
             },
             {
-                "qid" : 7, "Question" : "what is the fundamental belief of CASHe?", 
+                "qid" : 7, "Question" : "What is the fundamental belief of CASHe?", 
                 "options" :
                 [
                     "Technology should be built not to address immediate credit requirements",
