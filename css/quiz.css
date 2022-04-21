@@ -95,7 +95,7 @@ table
     background-color : rgb(72, 213, 77)
 }
 
-#fintech-submit-button
+#fintech-submit-button, #cashe-submit-button, #bhanix-submit-button, #competitive-analysis-submit-button
 {
     border-radius : 20%;
     position : absolute;
@@ -106,10 +106,12 @@ table
     right : 30px;    
     bottom : 30px;
 }
-#submit-button:hover
+
+#fintech-submit-button:hover, #cashe-submit-button:hover, #bhanix-submit-button:hover, #competitive-analysis-submit-button:hover
 {
     background-color : rgb(42, 81, 208);
 }
+
 .btn
 {
     height : 50px;
@@ -284,8 +286,7 @@ original code
         color : black;
         position : relative;
         font-size : 25px;
-        top : 150px;
-        
+        top : 150px;   
   }
   
 /* #options
@@ -358,4 +359,8 @@ original code
     position : absolute;
     left : 30px;    
     bottom : 30px;
+}
+.start-quiz .start-quiz-button:hover
+{
+    background-color : rgb(72, 213, 77);
 }
