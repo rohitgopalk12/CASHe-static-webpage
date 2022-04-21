@@ -22,9 +22,9 @@ div.CASHe-topics-list
     left : 0px;
     background-color : rgb(192,192,192);
 }
-div.word-doc{
+/* div.word-doc{
     overflow-y:auto;
-}
+} */
 #displayDIV, #displayWebsiteLinks
 {
     position : absolute;
@@ -47,7 +47,7 @@ a:visited , a:link
 
 }
 
-button
+/* button
 {
     background-color: transparent;
     border: none;
@@ -59,19 +59,19 @@ button
     font-size: 16px;
     margin: 4px 2px;
     cursor: pointer;
-}
+} */
 
-#vid2, #vid3, #vid4, #vid5, #vid6, #vid1
+/* #vid2, #vid3, #vid4, #vid5, #vid6, #vid1
 {
     cursor : pointer;
     display : none;
     height : 80px;
-}
+} */
 
-/* div
+div
 {
     padding : 2px;
-} */
+}
 
 body
 {
@@ -81,21 +81,7 @@ body
 {
     background-color : rgb(255,153,51); 
 }
-.changeBgColor
-{
-    background-color : blue !important;
-}
 
-.videos:focus
-{
-    background-color : blue;
-}
-
-/* .quiz-topics:hover, #quiz:hover
-{
-    /* background-color : orange; */
-    /* color : black; 
-} */
 .vid, .documentation, .ppt, .links-websites, #quiz, .word-doc, .pdf-doc
 {
     cursor : pointer;
@@ -116,8 +102,7 @@ body
     display  : none;
     color : white;
     height : 60px;
-    max-height : 60px;
-    
+    max-height : 60px; 
 }
 
 .word-doc, .pdf-doc, .ppt-docs, .links, .quiz-topics, .videos
@@ -257,10 +242,17 @@ a{
 {
     /*padding-top : 10%;*/
     padding-top : 6.5%;
+    cursor : pointer;
+    display : none;
+    height : 80px;
+
 }
 #vid3, #vid6
 {
     padding-top : 3.2%;
+    cursor : pointer;
+    display : none;
+    height : 80px;
 }
 /* --------------------------------------*/
 
