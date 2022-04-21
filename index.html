@@ -415,11 +415,21 @@
                         <p>Time limit : 5 minutes</p>
                     </div>
                     
+                    <!-- 
+                        
+                        original code
+                        <div id="fintechQuizStart" class="start-quiz" ng-click="startFintechQuiz()">
+                        <a href="#" class="prev" class="btn btn-info btn-lg">
+                            <div class="glyphicon"></div> Start Quiz
+                        </a>
+                    </div> -->
+
                     <div id="fintechQuizStart" class="start-quiz" ng-click="startFintechQuiz()">
-                        <a href="#" id="prev" class="btn btn-info btn-lg">
+                        <a href="#" id="fintech-start" class="btn btn-info btn-lg">
                             <div class="glyphicon"></div> Start Quiz
                         </a>
                     </div>
+
                 </div>
 
                 <!-- -------X---------X--------X -------X---------X--------X-------- -->
@@ -431,7 +441,7 @@
                     <!-- Previous button -->
                     <!-- ==================-->
                     <div id="fintech-previous-button" ng-hide="currentQ==1" ng-click="currentQ=currentQ-1">
-                        <a href="#" id="prev" class="btn btn-info btn-lg">
+                        <a href="#" class="prev" class="btn btn-info btn-lg">
                             <div class="glyphicon glyphicon-circle-arrow-left"></div>Previous
                         </a>
                     </div>
@@ -536,7 +546,7 @@
                     </div>
 
                     <div id="casheQuizStart" class="start-quiz" ng-click="startCasheQuiz()">
-                        <a href="#" id="prev" class="btn btn-info btn-lg">
+                        <a href="#" id="cashe-start" class="btn btn-info btn-lg">
                             <div class="glyphicon"></div> Start Quiz
                         </a>
                     </div>
@@ -548,7 +558,7 @@
                                     <!-- ==================-->
                 <div id="cashe-quiz-page">
                     <div id="cashe-previous-button" ng-hide="currentQ==6" ng-click="currentQ=currentQ-1">
-                        <a href="#" id="prev" class="btn btn-info btn-lg">
+                        <a href="#" class="prev" class="btn btn-info btn-lg">
                         <div class="glyphicon glyphicon-circle-arrow-left"></div> Previous
                         </a>
                     </div>  
@@ -640,7 +650,7 @@
                     </div>
 
                     <div id="bhanixQuizStart" class="start-quiz" ng-click="startBhanixQuiz()">
-                        <a href="#" id="prev" class="btn btn-info btn-lg">
+                        <a href="#" id="bhanix-start" class="btn btn-info btn-lg">
                             <div class="glyphicon"></div> <b>Start Quiz</b>
                         </a>
                     </div>
@@ -651,7 +661,7 @@
                                 <!-- Previous button -->
                                 <!-- ==================-->
                     <div ng-hide="currentQ==11" ng-click="currentQ=currentQ-1">
-                        <a href="#" id="prev" class="btn btn-info btn-lg">
+                        <a href="#" class="prev" class="btn btn-info btn-lg">
                             <div class="glyphicon glyphicon-circle-arrow-left"></div> <b>Previous</b>
                         </a>
                     </div>
@@ -746,7 +756,7 @@
                     </div>
 
                     <div id="competitiveAnalysisQuizStart" class="start-quiz" ng-click="startCompetitiveAnalysisQuiz()">
-                        <a href="#" id="prev" class="btn btn-info btn-lg">
+                        <a href="#" id="competitive-analysis-start" class="btn btn-info btn-lg">
                             <div class="glyphicon"></div> Start Quiz
                         </a>
                     </div>
@@ -757,7 +767,7 @@
                         <!-- Previous button -->
                         <!-- ==================-->
                     <div ng-hide="currentQ==16" ng-click="currentQ=currentQ-1">
-                        <a href="#" id="prev" class="btn btn-info btn-lg">
+                        <a href="#" class="prev" class="btn btn-info btn-lg">
                             <div class="glyphicon glyphicon-circle-arrow-left"></div> <b>Previous</b>
                         </a>
                     </div>

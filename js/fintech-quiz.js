@@ -9,6 +9,7 @@ var remSec = 0;
 
 var current_div = '';
 var current_div_clicked=false;
+var current_quiz_name = '';
 
 // ---------X----------X----------X---------X-----------X-----------X---------
 
@@ -275,6 +276,7 @@ var ctrl = function($scope)
         $scope.displayFintechQuizTips = function(event)
         {
             document.getElementById('displayWebsiteLinks').style.display = "none";
+            
             $('.fintechQuestions').slideUp(500); 
             $('.casheQuestions').slideUp(500); 
             $('.bhanixQuestions').slideUp(500); 
@@ -435,6 +437,7 @@ var ctrl = function($scope)
 
         $scope.startFintechQuiz = function()
         {
+            current_quiz_name = 'fintech';
             document.getElementById('displayWebsiteLinks').style.display = "none";
             $('.fintechQuestions').slideDown(500);
             $('.links').slideUp(500);
@@ -628,6 +631,7 @@ var ctrl = function($scope)
 
     $scope.startCasheQuiz = function()
     {
+        current_quiz_name = 'cashe';
         document.getElementById('displayWebsiteLinks').style.display = "none";
          $('.casheQuestions').slideDown(500);  
             $('.links').slideUp(500);
@@ -815,6 +819,7 @@ var ctrl = function($scope)
     /* bhanix quiz functionality starts here */
     $scope.startBhanixQuiz = function()
     {
+        current_quiz_name = 'bhanix';
         document.getElementById('displayWebsiteLinks').style.display = "none";
         $('.bhanixQuestions').slideDown(500);  
         $('.links').slideUp(500);
@@ -945,6 +950,7 @@ var ctrl = function($scope)
 
     $scope.startCompetitiveAnalysisQuiz = function()
     {
+        current_quiz_name = 'competitive-analysis';
         document.getElementById('displayWebsiteLinks').style.display = "none";
         $('.competitiveAnalysisQuestions').slideDown(500);
         $('.links').slideUp(500);

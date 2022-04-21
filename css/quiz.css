@@ -78,7 +78,7 @@ table
 {
     background-color : rgb(72, 213, 77)
 }
-#prev:link, #prev:visited, #prev:active:hover
+.prev:link, .prev:visited, .prev:active:hover
 {
     border-radius : 20%;
     color : white;
@@ -89,7 +89,7 @@ table
     left : 30px;    
     bottom : 30px;
 }
-#prev:hover
+.prev:hover
 {
     background-color : rgb(72, 213, 77)
 }
@@ -153,6 +153,18 @@ table
     left : 300px;
 }
 
+/* start button CSS */
+#fintech-start, #cashe-start, #bhanix-start, #competitive-analysis-start
+{
+    border-radius : 20%;
+    color : white;
+    font-weight : bold;
+    background-color : green;
+    border-color : green;
+    position : absolute;
+    left : 30px;    
+    bottom : 30px;
+}
 
 #fintech-countdown-timer, #cashe-countdown-timer, #bhanix-countdown-timer, #competitive-analysis-countdown-timer
 {
