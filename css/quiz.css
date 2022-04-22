@@ -140,11 +140,21 @@ table
 {
     display : none;
 }
-#fintechScoreText
+/* #fintechScoreText
 {
     color : black;
     text-align : center;
+    padding-left : 20%;
+    padding-right : 30%;
+} */
+.scoreDetails
+{
+    color : black;
+    text-align : center;
+    padding-left : 20%;
+    padding-right : 30%;
 }
+
 #fintechQuizScoreDisplay
 {
     display : none;
