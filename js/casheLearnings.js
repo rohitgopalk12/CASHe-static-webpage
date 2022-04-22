@@ -142,33 +142,33 @@ $(document).ready(function()
     {
         if(quiz_running == true)
         {
+                console.log("hi");
                 if(confirm("Would you like to end the quiz?")==true)
                 {
+                        quiz_running = false;
                         toggleAccordion = '.videos';
                         document.getElementById('display-quiz-pages').style.display="none";
                         document.getElementById('displayBlankPage').style.display="block";
                         slideAccordions(toggleAccordion);
                         slideUpQuizQuestions();
-                        quiz_running = false;
                 }
         }
         else
         {
-        
+                document.getElementById('displayBlankPage').style.display="block";
                 toggleAccordion = '.videos';
                 slideAccordions(toggleAccordion);
         }
         $('.word-docs').slideUp(500);
         $('.pdf-docs').slideUp(500);
-        document.getElementById('display-quiz-pages').style.display="none";
         document.getElementById('displayDIV').style.display="none";
-        document.getElementById('displayBlankPage').style.display="block";
     })
 
     $('.documentation').click(function()
     {   
         if(quiz_running == true)
         {
+            document.getElementById('document').style.backgroundColor = 'rgb(64,64,64)';
                 if(confirm("Would you like to end the quiz?")==true)
                 {
                         document.getElementById('display-quiz-pages').style.display="none";
@@ -185,9 +185,7 @@ $(document).ready(function()
                 toggleAccordion = '.documents';
                 slideAccordions(toggleAccordion);
         }  
-        document.getElementById('display-quiz-pages').style.display="none";
-                    document.getElementById('displayDIV').style.display="none";
-                    document.getElementById('displayBlankPage').style.display="block"; 
+        document.getElementById('displayDIV').style.display="none"; 
     })
 
     $('.word-doc').click(function()
@@ -247,6 +245,7 @@ $(document).ready(function()
     {
         if(quiz_running == true)
         {
+            document.getElementById('.ppt-doc').style.backgroundColor = 'rgb(64,64,64)';
                 if(confirm("Would you like to end the quiz?")==true)
                 {
                         document.getElementById('display-quiz-pages').style.display="none";
@@ -265,9 +264,8 @@ $(document).ready(function()
         }
         $('.word-docs').slideUp(500);
         $('.pdf-docs').slideUp(500);
-        document.getElementById('display-quiz-pages').style.display="none";
-                    document.getElementById('displayDIV').style.display="none";
-                    document.getElementById('displayBlankPage').style.display="block";
+        document.getElementById('displayDIV').style.display="none";
+                
     })
 
     $('.links-websites').click(function()
@@ -292,9 +290,7 @@ $(document).ready(function()
         }
         $('.word-docs').slideUp(500);
         $('.pdf-docs').slideUp(500);
-        document.getElementById('display-quiz-pages').style.display="none";
-                    document.getElementById('displayDIV').style.display="none";
-                    document.getElementById('displayBlankPage').style.display="block";
+        document.getElementById('displayDIV').style.display="none";
     })
 
     function slideUpQuizQuestions()
@@ -326,9 +322,7 @@ $(document).ready(function()
         }
         $('.word-docs').slideUp(500);
         $('.pdf-docs').slideUp(500);
-        document.getElementById('display-quiz-pages').style.display="none";
-                    document.getElementById('displayDIV').style.display="none";
-                    document.getElementById('displayBlankPage').style.display="block";
+        document.getElementById('displayDIV').style.display="none";
     })
 })
 
