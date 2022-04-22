@@ -99,17 +99,17 @@ function displayPages(id)
 {
    if(id=='vidRec' || id=='document' || id=='word' || id=='pdf' || id=='ppt-doc' || id=='websites' || id=='quiz')
    {
-       console.log("hello...")
         document.getElementById('displayBlankPage').style.display = "block";
    }
    else
    {
-        document.getElementById('displayBlankPage').style.display = "none";
-        document.getElementById('display-quiz-pages').style.display = "none";
-        document.getElementById('displayDIV').style.display = "block";
-        document.getElementById('displayWebsiteLinks').style.display = "none";
         document.getElementById('display').data = casheFiles.get(id);
+        document.getElementById('displayBlankPage').style.display = "none";
    }
+   
+   document.getElementById('display-quiz-pages').style.display = "none";
+   document.getElementById('displayDIV').style.display = "block";
+   document.getElementById('displayWebsiteLinks').style.display = "none";
 }
 
 //====================================================================================
@@ -142,7 +142,6 @@ $(document).ready(function()
     {
         if(quiz_running == true)
         {
-                console.log("hi");
                 if(confirm("Would you like to end the quiz?")==true)
                 {
                         quiz_running = false;
@@ -151,17 +150,25 @@ $(document).ready(function()
                         document.getElementById('displayBlankPage').style.display="block";
                         slideAccordions(toggleAccordion);
                         slideUpQuizQuestions();
+                        document.getElementById('displayDIV').style.display="none";
+        document.getElementById('display-quiz-pages').style.display = "none";
+        document.getElementById('displayWebsiteLinks').style.display = "none";
                 }
         }
         else
         {
                 document.getElementById('displayBlankPage').style.display="block";
+                document.getElementById('displayDIV').style.display="none";
+        document.getElementById('display-quiz-pages').style.display = "none";
+        document.getElementById('displayWebsiteLinks').style.display = "none";
                 toggleAccordion = '.videos';
                 slideAccordions(toggleAccordion);
         }
         $('.word-docs').slideUp(500);
         $('.pdf-docs').slideUp(500);
-        document.getElementById('displayDIV').style.display="none";
+        
+
+
     })
 
     $('.documentation').click(function()
@@ -181,12 +188,15 @@ $(document).ready(function()
         }
         else
         {
-            
+            document.getElementById('displayBlankPage').style.display="block";
                 toggleAccordion = '.documents';
                 slideAccordions(toggleAccordion);
         }  
+        document.getElementById('displayDIV').style.display="none";
+        document.getElementById('display-quiz-pages').style.display = "none";
+        document.getElementById('displayWebsiteLinks').style.display = "none";
         document.getElementById('displayDIV').style.display="none"; 
-        document.getElementById('displayBlankPage').style.display="block";
+        
     })
 
     $('.word-doc').click(function()
@@ -205,6 +215,7 @@ $(document).ready(function()
         }
         else
         {
+            document.getElementById('displayBlankPage').style.display="block";
                 toggleAccordion = '';
                 slideAccordions(toggleAccordion);
         }
@@ -212,7 +223,10 @@ $(document).ready(function()
         $('.pdf-docs').slideUp(500);
         document.getElementById('display-quiz-pages').style.display="none";
                     document.getElementById('displayDIV').style.display="none";
-                    document.getElementById('displayBlankPage').style.display="block";
+                    
+                   
+        
+        document.getElementById('displayWebsiteLinks').style.display = "none";
     })
 
     $('.pdf-doc').click(function()
@@ -232,14 +246,17 @@ $(document).ready(function()
         }
         else
         {
+            document.getElementById('displayBlankPage').style.display="block";
                 toggleAccordion = '';
                 slideAccordions(toggleAccordion);
         }
         document.getElementById('display-quiz-pages').style.display="none";
                     document.getElementById('displayDIV').style.display="none";
-                    document.getElementById('displayBlankPage').style.display="block";
         $('.pdf-docs').slideToggle(500);
         $('.word-docs').slideUp(500);
+        document.getElementById('displayDIV').style.display="none";
+        document.getElementById('display-quiz-pages').style.display = "none";
+        document.getElementById('displayWebsiteLinks').style.display = "none";
     })
 
     $('.ppt').click(function()
@@ -259,14 +276,17 @@ $(document).ready(function()
         }
         else
         {
-            
+            document.getElementById('displayBlankPage').style.display="block";
                 toggleAccordion = '.ppt-docs';
                 slideAccordions(toggleAccordion);
         }
         $('.word-docs').slideUp(500);
         $('.pdf-docs').slideUp(500);
         document.getElementById('displayDIV').style.display="none";
-        document.getElementById('displayBlankPage').style.display="block";
+        
+        document.getElementById('displayDIV').style.display="none";
+        document.getElementById('display-quiz-pages').style.display = "none";
+        document.getElementById('displayWebsiteLinks').style.display = "none";
                 
     })
 
@@ -293,6 +313,9 @@ $(document).ready(function()
         $('.word-docs').slideUp(500);
         $('.pdf-docs').slideUp(500);
         document.getElementById('displayDIV').style.display="none";
+        document.getElementById('displayDIV').style.display="none";
+        document.getElementById('display-quiz-pages').style.display = "none";
+        document.getElementById('displayWebsiteLinks').style.display = "none";
     })
 
     function slideUpQuizQuestions()
@@ -319,13 +342,16 @@ $(document).ready(function()
         }
         else
         {
+                document.getElementById('displayBlankPage').style.display="block";
                 toggleAccordion = '.quiz-topics';
                 slideAccordions(toggleAccordion);
         }
         $('.word-docs').slideUp(500);
         $('.pdf-docs').slideUp(500);
         document.getElementById('displayDIV').style.display="none";
-        document.getElementById('displayBlankPage').style.display="block";
+        document.getElementById('displayDIV').style.display="none";
+        document.getElementById('display-quiz-pages').style.display = "none";
+        document.getElementById('displayWebsiteLinks').style.display = "none";
     })
 })
 
