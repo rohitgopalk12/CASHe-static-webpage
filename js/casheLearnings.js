@@ -158,6 +158,8 @@ $(document).ready(function()
                 toggleAccordion = '.videos';
                 slideAccordions(toggleAccordion);
         }
+        $('.word-docs').slideUp(500);
+        $('.pdf-docs').slideUp(500);
         document.getElementById('display-quiz-pages').style.display="none";
         document.getElementById('displayDIV').style.display="none";
         document.getElementById('displayBlankPage').style.display="block";
@@ -208,6 +210,7 @@ $(document).ready(function()
                 slideAccordions(toggleAccordion);
         }
         $('.word-docs').slideToggle(500);
+        $('.pdf-docs').slideUp(500);
         document.getElementById('display-quiz-pages').style.display="none";
                     document.getElementById('displayDIV').style.display="none";
                     document.getElementById('displayBlankPage').style.display="block";
@@ -237,6 +240,7 @@ $(document).ready(function()
                     document.getElementById('displayDIV').style.display="none";
                     document.getElementById('displayBlankPage').style.display="block";
         $('.pdf-docs').slideToggle(500);
+        $('.word-docs').slideUp(500);
     })
 
     $('.ppt').click(function()
@@ -259,6 +263,8 @@ $(document).ready(function()
                 toggleAccordion = '.ppt-docs';
                 slideAccordions(toggleAccordion);
         }
+        $('.word-docs').slideUp(500);
+        $('.pdf-docs').slideUp(500);
         document.getElementById('display-quiz-pages').style.display="none";
                     document.getElementById('displayDIV').style.display="none";
                     document.getElementById('displayBlankPage').style.display="block";
@@ -284,6 +290,8 @@ $(document).ready(function()
                 toggleAccordion = '.links';
                 slideAccordions(toggleAccordion);
         }
+        $('.word-docs').slideUp(500);
+        $('.pdf-docs').slideUp(500);
         document.getElementById('display-quiz-pages').style.display="none";
                     document.getElementById('displayDIV').style.display="none";
                     document.getElementById('displayBlankPage').style.display="block";
@@ -316,6 +324,8 @@ $(document).ready(function()
                 toggleAccordion = '.quiz-topics';
                 slideAccordions(toggleAccordion);
         }
+        $('.word-docs').slideUp(500);
+        $('.pdf-docs').slideUp(500);
         document.getElementById('display-quiz-pages').style.display="none";
                     document.getElementById('displayDIV').style.display="none";
                     document.getElementById('displayBlankPage').style.display="block";
