@@ -99,6 +99,7 @@ function displayPages(id)
 {
    if(id=='vidRec' || id=='document' || id=='word' || id=='pdf' || id=='ppt-doc' || id=='websites' || id=='quiz')
    {
+       console.log("hello...")
         document.getElementById('displayBlankPage').style.display = "block";
    }
    else
@@ -153,6 +154,7 @@ $(document).ready(function()
         }
         else
         {
+        
                 toggleAccordion = '.videos';
                 slideAccordions(toggleAccordion);
         }
@@ -174,6 +176,7 @@ $(document).ready(function()
         }
         else
         {
+            
                 toggleAccordion = '.documents';
                 slideAccordions(toggleAccordion);
         }   
@@ -239,6 +242,7 @@ $(document).ready(function()
         }
         else
         {
+            
                 toggleAccordion = '.ppt-docs';
                 slideAccordions(toggleAccordion);
         }
@@ -260,6 +264,7 @@ $(document).ready(function()
         }
         else
         {
+            document.getElementById('displayBlankPage').style.display = "block";
                 toggleAccordion = '.links';
                 slideAccordions(toggleAccordion);
         }

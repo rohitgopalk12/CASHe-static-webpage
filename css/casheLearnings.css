@@ -25,7 +25,7 @@ div.CASHe-topics-list
 /* div.word-doc{
     overflow-y:auto;
 } */
-#displayDIV, #displayWebsiteLinks
+#displayDIV
 {
     position : absolute;
     height : 80%;
@@ -90,7 +90,7 @@ body
     height : 60px;
     max-height : 60px; 
 }
-#displayBlankPage
+#displayBlankPage, #displayWebsiteLinks
 {
     position : absolute;
     height : 70%;
@@ -104,7 +104,14 @@ body
 {
     position : absolute;
     top : 30%;
-    left : 10%;
+    left : 7%;
+    color : black;
+}
+.click-link
+{
+    position : absolute;
+    top : 45%;
+    left : 35%;
     color : black;
 }
 .videos, .word-doc, .word-docs, .ppt-docs, .pdf-doc, .pdf-docs, .links, .quiz-topics
