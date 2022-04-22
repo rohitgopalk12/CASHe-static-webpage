@@ -100,6 +100,13 @@ body
     display : none;
     border :4px solid black;
 }
+.navigateText
+{
+    position : absolute;
+    top : 30%;
+    left : 10px;
+    color : black;
+}
 .videos, .word-doc, .word-docs, .ppt-docs, .pdf-doc, .pdf-docs, .links, .quiz-topics
 {
     border-bottom : 1px solid silver;
