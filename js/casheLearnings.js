@@ -265,6 +265,7 @@ $(document).ready(function()
         $('.word-docs').slideUp(500);
         $('.pdf-docs').slideUp(500);
         document.getElementById('displayDIV').style.display="none";
+        document.getElementById('displayBlankPage').style.display="block";
                 
     })
 
