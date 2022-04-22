@@ -245,7 +245,7 @@ $(document).ready(function()
     {
         if(quiz_running == true)
         {
-            document.getElementById('.ppt-doc').style.backgroundColor = 'rgb(64,64,64)';
+            document.getElementById('ppt-doc').style.backgroundColor = 'rgb(64,64,64)';
                 if(confirm("Would you like to end the quiz?")==true)
                 {
                         document.getElementById('display-quiz-pages').style.display="none";
