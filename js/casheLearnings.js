@@ -222,7 +222,7 @@ $(document).ready(function()
                 {
                         document.getElementById('display-quiz-pages').style.display="none";
                         document.getElementById('displayBlankPage').style.display="block";
-                        toggleAccordion = '.word-docs';
+                        toggleAccordion = '';
                         slideUpQuizQuestions();
                         slideAccordions(toggleAccordion);
                         quiz_running = false;
@@ -230,10 +230,10 @@ $(document).ready(function()
         }
         else
         {
-                toggleAccordion = '.word-docs';
+                toggleAccordion = '';
                 slideAccordions(toggleAccordion);
         }
-            isDisplayed=false; 
+        $('.word-docs').slideToggle(500);
     })
 
     $('.pdf-doc').click(function()
@@ -244,7 +244,7 @@ $(document).ready(function()
                 {
                         document.getElementById('display-quiz-pages').style.display="none";
                         document.getElementById('displayBlankPage').style.display="block";
-                        toggleAccordion = '.pdf-docs';
+                        toggleAccordion = '';
                         slideUpQuizQuestions();
                         slideAccordions(toggleAccordion);
                         quiz_running = false;
@@ -252,10 +252,10 @@ $(document).ready(function()
         }
         else
         {
-                toggleAccordion = '.pdf-docs';
+                toggleAccordion = '';
                 slideAccordions(toggleAccordion);
         }
-
+        $('.pdf-docs').slideToggle(500);
         //    $('.pdf-docs').slideToggle(500);
         //     $('.videos').slideUp(500);
         //     $('.word-docs').slideUp(500);
@@ -353,7 +353,7 @@ $(document).ready(function()
                 {
                         document.getElementById('display-quiz-pages').style.display="none";
                         document.getElementById('displayBlankPage').style.display="block";
-                        toggleAccordion = '.quiz-topics';
+                        toggleAccordion = '';
                         slideAccordions(toggleAccordion);
                         quiz_running = false;
                         slideUpQuizQuestions();
@@ -685,10 +685,9 @@ var ctrl = function($scope)
                 function displayTheLinks()
                 {
                         document.getElementById('display-quiz-pages').style.display = "none";
-                        document.getElementById('displayBlankPage').style.display="block";
+                        document.getElementById('displayBlankPage').style.display="none";
                         document.getElementById('displayDIV').style.display = "none";
                         document.getElementById('displayWebsiteLinks').style.display = "block";
-
                         var id = event.target.id;
 
                         if(id=='cashe')
@@ -775,6 +774,7 @@ var ctrl = function($scope)
         var score=0;
         $scope.submitFintechQuiz = function(submit)
         {    
+            
             document.getElementById('displayWebsiteLinks').style.display = "none";  
             $('.fintechQuestions').slideUp(500); 
             $('.casheQuestions').slideUp(500); 
@@ -833,6 +833,7 @@ var ctrl = function($scope)
 
         $scope.displayFintechScore = function()
             {
+                quiz_running = false;
                     document.getElementById('displayFintechQuizScore').style.display = "block";
                     document.getElementById('fintech-quiz-page').style.display='none';
                                 /* score calculation takes place here */
@@ -1079,6 +1080,7 @@ var ctrl = function($scope)
 
     displayCasheScore = function()
         {
+            quiz_running = false;
             score=0;
         
             $scope.currentProgress =
@@ -1281,6 +1283,7 @@ var ctrl = function($scope)
 
     $scope.displayBhanixScore = function()
             {
+                quiz_running = false;
                 score=0;
         
                 $scope.currentProgress =
@@ -1564,6 +1567,7 @@ var ctrl = function($scope)
 
     function displayCompetitiveAnalysisScore()
     {
+        quiz_running = false;
         score=0;
         $scope.quizFeedback = '';
            // $scope.currentProgress =
