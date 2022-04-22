@@ -1,6 +1,7 @@
 
 const casheFiles = new Map();
-var accordions_list = ['.videos','.documents','.word-doc','.word-docs','.pdf-doc','.pdf-docs','.ppt-docs','.links','.quiz-topics']
+var accordions_list = ['.videos','.documents','.word-docs','.pdf-docs','.ppt-docs','.links','.quiz-topics']
+var documents_accordions = ['.word-docs','.pdf-docs'];
 
 //=====================================================================================
                                 /* youtube video links */
@@ -104,10 +105,17 @@ function displayInThePage(id)
 }
 function displayPages(id)
 {
-                document.getElementById('display-quiz-pages').style.display = "none";
-                document.getElementById('displayDIV').style.display = "block";
-                document.getElementById('display').data = casheFiles.get(id);
-                document.getElementById('displayWebsiteLinks').style.display = "none";
+   if(id=='vidRec' || id=='document' || id=='ppt-doc' || id=='websites' || id=='quiz')
+   {
+
+   }
+   else
+   {
+        document.getElementById('display-quiz-pages').style.display = "none";
+        document.getElementById('displayDIV').style.display = "block";
+        document.getElementById('displayWebsiteLinks').style.display = "none";
+        document.getElementById('display').data = casheFiles.get(id);
+   }
 }
 
 //====================================================================================
@@ -190,6 +198,22 @@ $(document).ready(function()
 
     $('.documentation').click(function()
     {   
+        $('.word-doc').click(function()
+        {
+            console.log("hi");
+            $('.word-doc').slideToggle(500); 
+            toggleAccordion = '.word-docs';
+            slideAccordions(toggleAccordion);
+        })
+
+        $('.pdf-doc').click(function()
+        {
+            console.log("hello");
+            $('.pdf-doc').slideToggle(500); 
+            toggleAccordion = '.pdf-docs';
+            slideAccordions(toggleAccordion);
+        })
+
         if(quiz_running == true)
         {
                 if(confirm("Would you like to end the quiz?")==true)
@@ -206,80 +230,63 @@ $(document).ready(function()
         {
                 toggleAccordion = '.documents';
                 slideAccordions(toggleAccordion);
-        }
-         
-        // original code
-        //$('.quiz-topics').slideUp(500);
-        //     $('.fintechQuestions').slideUp(500); 
-        //     $('.bhanixQuestions').slideUp(500);  
-        //     $('.casheQuestions').slideUp(500);  
-        //     $('.competitiveAnalysisQuestions').slideUp(500);   
+        }   
     })
 
-    $('.word-doc').click(function()
-    {
-        if(quiz_running == true)
-        {
-                if(confirm("Would you like to end the quiz?")==true)
-                {
-                        document.getElementById('display-quiz-pages').style.display="none";
-                        document.getElementById('displayBlankPage').style.display="block";
-                        toggleAccordion = '.word-docs';
-                        slideUpQuizQuestions();
-                        slideAccordions(toggleAccordion);
-                        quiz_running = false;
-                }
-        }
-        else
-        {
-                toggleAccordion = '.word-docs';
-                slideAccordions(toggleAccordion);
-        }
-            
-        //     $('.ppt-docs').slideUp(500);
-        //     $('.videos').slideUp(500);
-        //     $('.pdf-docs').slideUp(500);
-        //     $('.links').slideUp(500);
-        //     $('.quiz-topics').slideUp(500);
-        //     $('.fintechQuestions').slideUp(500); 
-        //     $('.bhanixQuestions').slideUp(500);  
-        //     $('.casheQuestions').slideUp(500);  
-        //     $('.competitiveAnalysisQuestions').slideUp(500);  
-            isDisplayed=false; 
-    })
+    // $('.word-doc').click(function()
+    // {
+    //     if(quiz_running == true)
+    //     {
+    //             if(confirm("Would you like to end the quiz?")==true)
+    //             {
+    //                     document.getElementById('display-quiz-pages').style.display="none";
+    //                     document.getElementById('displayBlankPage').style.display="block";
+    //                     toggleAccordion = '.word-docs';
+    //                     slideUpQuizQuestions();
+    //                     slideAccordions(toggleAccordion);
+    //                     quiz_running = false;
+    //             }
+    //     }
+    //     else
+    //     {
+    //             toggleAccordion = '.word-docs';
+    //             slideAccordions(toggleAccordion);
+    //     }
+    //         isDisplayed=false; 
+    // })
 
-    $('.pdf-doc').click(function()
-    {
-        if(quiz_running == true)
-        {
-                if(confirm("Would you like to end the quiz?")==true)
-                {
-                        document.getElementById('display-quiz-pages').style.display="none";
-                        document.getElementById('displayBlankPage').style.display="block";
-                        toggleAccordion = '.pdf-docs';
-                        slideUpQuizQuestions();
-                        slideAccordions(toggleAccordion);
-                        quiz_running = false;
-                }
-        }
-        else
-        {
-                toggleAccordion = '.pdf-docs';
-                slideAccordions(toggleAccordion);
-        }
+    // $('.pdf-doc').click(function()
+    // {
+    //     if(quiz_running == true)
+    //     {
+    //             if(confirm("Would you like to end the quiz?")==true)
+    //             {
+    //                     document.getElementById('display-quiz-pages').style.display="none";
+    //                     document.getElementById('displayBlankPage').style.display="block";
+    //                     toggleAccordion = '.pdf-docs';
+    //                     slideUpQuizQuestions();
+    //                     slideAccordions(toggleAccordion);
+    //                     quiz_running = false;
+    //             }
+    //     }
+    //     else
+    //     {
+    //             toggleAccordion = '.pdf-docs';
+    //             slideAccordions(toggleAccordion);
+    //     }
 
-        //    $('.pdf-docs').slideToggle(500);
-        //     $('.videos').slideUp(500);
-        //     $('.word-docs').slideUp(500);
-        //     $('.ppt-docs').slideUp(500);
-        //     $('.links').slideUp(500);
-        //     $('.quiz-topics').slideUp(500);
-        //     $('.fintechQuestions').slideUp(500);  
-        //     $('.bhanixQuestions').slideUp(500);  
-        //     $('.casheQuestions').slideUp(500);  
-        //     $('.competitiveAnalysisQuestions').slideUp(500);  
-            isDisplayed=false;
-    })
+    //     //    $('.pdf-docs').slideToggle(500);
+    //     //     $('.videos').slideUp(500);
+    //     //     $('.word-docs').slideUp(500);
+    //     //     $('.ppt-docs').slideUp(500);
+    //     //     $('.links').slideUp(500);
+    //     //     $('.quiz-topics').slideUp(500);
+    //     //     $('.fintechQuestions').slideUp(500);  
+    //     //     $('.bhanixQuestions').slideUp(500);  
+    //     //     $('.casheQuestions').slideUp(500);  
+    //     //     $('.competitiveAnalysisQuestions').slideUp(500);  
+    //         isDisplayed=false;
+    // })
 
     $('.ppt').click(function()
     {
@@ -323,6 +330,7 @@ $(document).ready(function()
                 if(confirm("Would you like to end the quiz?")==true)
                 {
                         document.getElementById('display-quiz-pages').style.display="none";
+                        document.getElementById('displayBlankPage').style.display="block";
                         toggleAccordion = '.links';
                         slideUpQuizQuestions();
                         slideAccordions(toggleAccordion);
@@ -406,50 +414,50 @@ var current_quiz_name = '';
 
 document.getElementById('vid1').style.backgroundColor = 'orange';
 var default_video_clicked = true;
-
+var ctrl = function($scope)
+{
 // ---------X----------X----------X---------X-----------X-----------X---------
 
 /* hovering functionality */
 /* ------------------------ */
 
-function hoverApplied(id,color)
-{
-    if(default_video_clicked == true)
+    function hoverApplied(id,color)
     {
-        document.getElementById('vid1').style.backgroundColor = 'orange';
-    }
-    else
-    {
-        document.getElementById(id).style.backgroundColor = color;
-        if(current_div_clicked == true)
+        if(default_video_clicked == true)
         {
-            document.getElementById(current_div).style.backgroundColor = 'orange';
-        } 
-    }
-    
-}
-
-function hoverLost(id,color)
-{
-    if(default_video_clicked == true)
-    {
-        document.getElementById('vid1').style.backgroundColor = 'orange';
-    }
-    else
-    {
-        document.getElementById(id).style.backgroundColor = color;
-        if(current_div_clicked == true)
-        {
-            document.getElementById(current_div).style.backgroundColor = 'orange';
+            document.getElementById('vid1').style.backgroundColor = 'orange';
         }
-    }
+        else
+        {
+            document.getElementById(id).style.backgroundColor = color;
+            if(current_div_clicked == true)
+            {
+                document.getElementById(current_div).style.backgroundColor = 'orange';
+            } 
+        }
         
-} 
+    }
+
+    function hoverLost(id,color)
+    {
+        if(default_video_clicked == true)
+        {
+            document.getElementById('vid1').style.backgroundColor = 'orange';
+        }
+        else
+        {
+            document.getElementById(id).style.backgroundColor = color;
+            if(current_div_clicked == true)
+            {
+                document.getElementById(current_div).style.backgroundColor = 'orange';
+            }
+        }
+            
+    } 
 
 // ---------X----------X----------X---------X-----------X-----------X---------
 
-var ctrl = function($scope)
-{
+
     document.getElementById('displayWebsiteLinks').style.display = "none";
         $scope.selections = [-1, -1,-1,-1,-1,
             -1,-1,-1,-1,-1,
@@ -662,6 +670,7 @@ var ctrl = function($scope)
                 function displayTheLinks()
                 {
                         document.getElementById('display-quiz-pages').style.display = "none";
+                        document.getElementById('displayBlankPage').style.display="block";
                         document.getElementById('displayDIV').style.display = "none";
                         document.getElementById('displayWebsiteLinks').style.display = "block";
 
@@ -681,7 +690,7 @@ var ctrl = function($scope)
         $scope.changeBackground = function(event)
         {
             default_video_clicked = false;
-            document.getElementById('vid1').style.backgroundColor="rgb(64,64,64)";
+            //document.getElementById('vid1').style.backgroundColor="rgb(64,64,64)";
             current_div = event.target.id;
             document.getElementById('displayWebsiteLinks').style.display = "none";
 
