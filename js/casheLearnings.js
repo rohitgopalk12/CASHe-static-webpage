@@ -1,4 +1,4 @@
-
+var default_video_clicked = true;
 const casheFiles = new Map();
 var accordions_list = ['.videos','.documents','.ppt-docs','.links','.quiz-topics']
 
@@ -158,6 +158,9 @@ $(document).ready(function()
                 toggleAccordion = '.videos';
                 slideAccordions(toggleAccordion);
         }
+        document.getElementById('display-quiz-pages').style.display="none";
+        document.getElementById('displayDIV').style.display="none";
+        document.getElementById('displayBlankPage').style.display="block";
     })
 
     $('.documentation').click(function()
@@ -179,7 +182,10 @@ $(document).ready(function()
             
                 toggleAccordion = '.documents';
                 slideAccordions(toggleAccordion);
-        }   
+        }  
+        document.getElementById('display-quiz-pages').style.display="none";
+                    document.getElementById('displayDIV').style.display="none";
+                    document.getElementById('displayBlankPage').style.display="block"; 
     })
 
     $('.word-doc').click(function()
@@ -202,6 +208,9 @@ $(document).ready(function()
                 slideAccordions(toggleAccordion);
         }
         $('.word-docs').slideToggle(500);
+        document.getElementById('display-quiz-pages').style.display="none";
+                    document.getElementById('displayDIV').style.display="none";
+                    document.getElementById('displayBlankPage').style.display="block";
     })
 
     $('.pdf-doc').click(function()
@@ -210,8 +219,9 @@ $(document).ready(function()
         {
                 if(confirm("Would you like to end the quiz?")==true)
                 {
-                        document.getElementById('display-quiz-pages').style.display="none";
-                        document.getElementById('displayBlankPage').style.display="block";
+                    document.getElementById('display-quiz-pages').style.display="none";
+                    document.getElementById('displayDIV').style.display="none";
+                    document.getElementById('displayBlankPage').style.display="block";
                         toggleAccordion = '';
                         slideUpQuizQuestions();
                         slideAccordions(toggleAccordion);
@@ -223,6 +233,9 @@ $(document).ready(function()
                 toggleAccordion = '';
                 slideAccordions(toggleAccordion);
         }
+        document.getElementById('display-quiz-pages').style.display="none";
+                    document.getElementById('displayDIV').style.display="none";
+                    document.getElementById('displayBlankPage').style.display="block";
         $('.pdf-docs').slideToggle(500);
     })
 
@@ -246,6 +259,9 @@ $(document).ready(function()
                 toggleAccordion = '.ppt-docs';
                 slideAccordions(toggleAccordion);
         }
+        document.getElementById('display-quiz-pages').style.display="none";
+                    document.getElementById('displayDIV').style.display="none";
+                    document.getElementById('displayBlankPage').style.display="block";
     })
 
     $('.links-websites').click(function()
@@ -268,6 +284,9 @@ $(document).ready(function()
                 toggleAccordion = '.links';
                 slideAccordions(toggleAccordion);
         }
+        document.getElementById('display-quiz-pages').style.display="none";
+                    document.getElementById('displayDIV').style.display="none";
+                    document.getElementById('displayBlankPage').style.display="block";
     })
 
     function slideUpQuizQuestions()
@@ -297,6 +316,9 @@ $(document).ready(function()
                 toggleAccordion = '.quiz-topics';
                 slideAccordions(toggleAccordion);
         }
+        document.getElementById('display-quiz-pages').style.display="none";
+                    document.getElementById('displayDIV').style.display="none";
+                    document.getElementById('displayBlankPage').style.display="block";
     })
 })
 
@@ -348,7 +370,7 @@ function hoverApplied(id,color)
     } 
 
 document.getElementById('vid1').style.backgroundColor = 'orange';
-var default_video_clicked = true;
+
 var ctrl = function($scope)
 {
 // ---------X----------X----------X---------X-----------X-----------X---------
@@ -625,7 +647,7 @@ var ctrl = function($scope)
         $scope.changeBackground = function(event)
         {
             default_video_clicked = false;
-            //document.getElementById('vid1').style.backgroundColor="rgb(64,64,64)";
+            document.getElementById('vid1').style.backgroundColor="rgb(64,64,64)";
             current_div = event.target.id;
             document.getElementById('displayWebsiteLinks').style.display = "none";
 
