@@ -82,6 +82,7 @@ var isDisplayed = false;
 var quiz_running = false;
 function displayInThePage(id)
 {
+        default_video_clicked = false;
         if(quiz_running == true)
         {
                 if(confirm("Would you like to end the quiz?")==true)
@@ -173,6 +174,7 @@ $(document).ready(function()
 
     $('.documentation').click(function()
     {   
+        default_video_clicked = false;
         if(quiz_running == true)
         {
             document.getElementById('document').style.backgroundColor = 'rgb(64,64,64)';
@@ -201,6 +203,7 @@ $(document).ready(function()
 
     $('.word-doc').click(function()
     {
+        default_video_clicked = false;
         if(quiz_running == true)
         {
                 if(confirm("Would you like to end the quiz?")==true)
@@ -231,6 +234,7 @@ $(document).ready(function()
 
     $('.pdf-doc').click(function()
     {
+        default_video_clicked = false;
         if(quiz_running == true)
         {
                 if(confirm("Would you like to end the quiz?")==true)
@@ -261,6 +265,7 @@ $(document).ready(function()
 
     $('.ppt').click(function()
     {
+        default_video_clicked = false;
         if(quiz_running == true)
         {
             document.getElementById('ppt-doc').style.backgroundColor = 'rgb(64,64,64)';
@@ -292,6 +297,7 @@ $(document).ready(function()
 
     $('.links-websites').click(function()
     {
+        default_video_clicked = false;
         if(quiz_running == true)
         {
                 if(confirm("Would you like to end the quiz?")==true)
@@ -328,6 +334,7 @@ $(document).ready(function()
 
     $('#quiz').click(function()
     {
+        default_video_clicked = false;
         if(quiz_running == true)
         {
                 if(confirm("Would you like to end the quiz?")==true)
