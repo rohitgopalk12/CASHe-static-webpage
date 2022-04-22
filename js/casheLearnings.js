@@ -1,6 +1,6 @@
 
 const casheFiles = new Map();
-var accordions_list = ['.videos','.documents','.word-docs','.pdf-docs','.ppt-docs','.links','.quiz-topics']
+var accordions_list = ['.videos','.documents','.ppt-docs','.links','.quiz-topics']
 var documents_accordions = ['.word-docs','.pdf-docs'];
 
 //=====================================================================================
@@ -95,22 +95,16 @@ function displayInThePage(id)
         {
                 displayPages(id);
         }
-        // function displayPages()
-        // {
-        //         document.getElementById('display-quiz-pages').style.display = "none";
-        //         document.getElementById('displayDIV').style.display = "block";
-        //         document.getElementById('display').data = casheFiles.get(id);
-        //         document.getElementById('displayWebsiteLinks').style.display = "none";
-        // }
 }
 function displayPages(id)
 {
-   if(id=='vidRec' || id=='document' || id=='ppt-doc' || id=='websites' || id=='quiz')
+   if(id=='vidRec' || id=='document' || id=='word' || id=='pdf' || id=='ppt-doc' || id=='websites' || id=='quiz')
    {
-
+        document.getElementById('displayBlankPage').style.display = "block";
    }
    else
    {
+        document.getElementById('displayBlankPage').style.display = "none";
         document.getElementById('display-quiz-pages').style.display = "none";
         document.getElementById('displayDIV').style.display = "block";
         document.getElementById('displayWebsiteLinks').style.display = "none";
@@ -130,13 +124,16 @@ function slideAccordions(toggleAccordion)
 {
         for(var i=0;i<accordions_list.length;i++)
         {
-                if(accordions_list[i] == toggleAccordion)
+            if(toggleAccordion != '')
                 {
-                        $(accordions_list[i]).slideToggle(500);  
-                }
-                else
-                {
-                        $(accordions_list[i]).slideUp(500);  
+                    if(accordions_list[i] == toggleAccordion)
+                    {
+                            $(toggleAccordion).slideToggle(500);  
+                    }
+                    else
+                    {
+                            $(accordions_list[i]).slideUp(500);  
+                    }
                 }
         }
 }
@@ -198,22 +195,6 @@ $(document).ready(function()
 
     $('.documentation').click(function()
     {   
-        $('.word-doc').click(function()
-        {
-            console.log("hi");
-            $('.word-doc').slideToggle(500); 
-            toggleAccordion = '.word-docs';
-            slideAccordions(toggleAccordion);
-        })
-
-        $('.pdf-doc').click(function()
-        {
-            console.log("hello");
-            $('.pdf-doc').slideToggle(500); 
-            toggleAccordion = '.pdf-docs';
-            slideAccordions(toggleAccordion);
-        })
-
         if(quiz_running == true)
         {
                 if(confirm("Would you like to end the quiz?")==true)
@@ -233,60 +214,60 @@ $(document).ready(function()
         }   
     })
 
-    // $('.word-doc').click(function()
-    // {
-    //     if(quiz_running == true)
-    //     {
-    //             if(confirm("Would you like to end the quiz?")==true)
-    //             {
-    //                     document.getElementById('display-quiz-pages').style.display="none";
-    //                     document.getElementById('displayBlankPage').style.display="block";
-    //                     toggleAccordion = '.word-docs';
-    //                     slideUpQuizQuestions();
-    //                     slideAccordions(toggleAccordion);
-    //                     quiz_running = false;
-    //             }
-    //     }
-    //     else
-    //     {
-    //             toggleAccordion = '.word-docs';
-    //             slideAccordions(toggleAccordion);
-    //     }
-    //         isDisplayed=false; 
-    // })
+    $('.word-doc').click(function()
+    {
+        if(quiz_running == true)
+        {
+                if(confirm("Would you like to end the quiz?")==true)
+                {
+                        document.getElementById('display-quiz-pages').style.display="none";
+                        document.getElementById('displayBlankPage').style.display="block";
+                        toggleAccordion = '.word-docs';
+                        slideUpQuizQuestions();
+                        slideAccordions(toggleAccordion);
+                        quiz_running = false;
+                }
+        }
+        else
+        {
+                toggleAccordion = '.word-docs';
+                slideAccordions(toggleAccordion);
+        }
+            isDisplayed=false; 
+    })
 
-    // $('.pdf-doc').click(function()
-    // {
-    //     if(quiz_running == true)
-    //     {
-    //             if(confirm("Would you like to end the quiz?")==true)
-    //             {
-    //                     document.getElementById('display-quiz-pages').style.display="none";
-    //                     document.getElementById('displayBlankPage').style.display="block";
-    //                     toggleAccordion = '.pdf-docs';
-    //                     slideUpQuizQuestions();
-    //                     slideAccordions(toggleAccordion);
-    //                     quiz_running = false;
-    //             }
-    //     }
-    //     else
-    //     {
-    //             toggleAccordion = '.pdf-docs';
-    //             slideAccordions(toggleAccordion);
-    //     }
+    $('.pdf-doc').click(function()
+    {
+        if(quiz_running == true)
+        {
+                if(confirm("Would you like to end the quiz?")==true)
+                {
+                        document.getElementById('display-quiz-pages').style.display="none";
+                        document.getElementById('displayBlankPage').style.display="block";
+                        toggleAccordion = '.pdf-docs';
+                        slideUpQuizQuestions();
+                        slideAccordions(toggleAccordion);
+                        quiz_running = false;
+                }
+        }
+        else
+        {
+                toggleAccordion = '.pdf-docs';
+                slideAccordions(toggleAccordion);
+        }
 
-    //     //    $('.pdf-docs').slideToggle(500);
-    //     //     $('.videos').slideUp(500);
-    //     //     $('.word-docs').slideUp(500);
-    //     //     $('.ppt-docs').slideUp(500);
-    //     //     $('.links').slideUp(500);
-    //     //     $('.quiz-topics').slideUp(500);
-    //     //     $('.fintechQuestions').slideUp(500);  
-    //     //     $('.bhanixQuestions').slideUp(500);  
-    //     //     $('.casheQuestions').slideUp(500);  
-    //     //     $('.competitiveAnalysisQuestions').slideUp(500);  
-    //         isDisplayed=false;
-    // })
+        //    $('.pdf-docs').slideToggle(500);
+        //     $('.videos').slideUp(500);
+        //     $('.word-docs').slideUp(500);
+        //     $('.ppt-docs').slideUp(500);
+        //     $('.links').slideUp(500);
+        //     $('.quiz-topics').slideUp(500);
+        //     $('.fintechQuestions').slideUp(500);  
+        //     $('.bhanixQuestions').slideUp(500);  
+        //     $('.casheQuestions').slideUp(500);  
+        //     $('.competitiveAnalysisQuestions').slideUp(500);  
+            isDisplayed=false;
+    })
 
     $('.ppt').click(function()
     {
@@ -306,7 +287,6 @@ $(document).ready(function()
         {
                 toggleAccordion = '.ppt-docs';
                 slideAccordions(toggleAccordion);
-                slideAllAccordions();
         }
 
         //     $('.ppt-docs').slideToggle(500);
@@ -412,16 +392,7 @@ var current_div = '';
 var current_div_clicked=false;
 var current_quiz_name = '';
 
-document.getElementById('vid1').style.backgroundColor = 'orange';
-var default_video_clicked = true;
-var ctrl = function($scope)
-{
-// ---------X----------X----------X---------X-----------X-----------X---------
-
-/* hovering functionality */
-/* ------------------------ */
-
-    function hoverApplied(id,color)
+function hoverApplied(id,color)
     {
         if(default_video_clicked == true)
         {
@@ -454,6 +425,50 @@ var ctrl = function($scope)
         }
             
     } 
+
+document.getElementById('vid1').style.backgroundColor = 'orange';
+var default_video_clicked = true;
+var ctrl = function($scope)
+{
+// ---------X----------X----------X---------X-----------X-----------X---------
+
+/* hovering functionality */
+/* ------------------------ */
+
+// original code
+    // function hoverApplied(id,color)
+    // {
+    //     if(default_video_clicked == true)
+    //     {
+    //         document.getElementById('vid1').style.backgroundColor = 'orange';
+    //     }
+    //     else
+    //     {
+    //         document.getElementById(id).style.backgroundColor = color;
+    //         if(current_div_clicked == true)
+    //         {
+    //             document.getElementById(current_div).style.backgroundColor = 'orange';
+    //         } 
+    //     }
+        
+    // }
+
+    // function hoverLost(id,color)
+    // {
+    //     if(default_video_clicked == true)
+    //     {
+    //         document.getElementById('vid1').style.backgroundColor = 'orange';
+    //     }
+    //     else
+    //     {
+    //         document.getElementById(id).style.backgroundColor = color;
+    //         if(current_div_clicked == true)
+    //         {
+    //             document.getElementById(current_div).style.backgroundColor = 'orange';
+    //         }
+    //     }
+            
+    // } 
 
 // ---------X----------X----------X---------X-----------X-----------X---------
 
