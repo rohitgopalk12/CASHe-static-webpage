@@ -78,7 +78,6 @@ casheFiles.set('ppt-doc-3','assets/FinTech-Financial-Sector.pdf');
                 /* function to display on the right part of the page */
                 //=====================================================
 
-var isDisplayed = false;
 var quiz_running = false;
 function displayInThePage(id)
 {
