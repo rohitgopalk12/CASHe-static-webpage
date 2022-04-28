@@ -70,8 +70,8 @@ casheFiles.set('ppt-doc-3','assets/FinTech-Financial-Sector.pdf');
                                         /* webiste links */
                                         //================
 
-casheFiles.set('cashe','https://www.cashe.co.in');
-casheFiles.set('bhanix','https://www.bhanixfinance.com');
+// casheFiles.set('cashe','https://www.cashe.co.in');
+// casheFiles.set('bhanix','https://www.bhanixfinance.com');
 
 //====================================================================================
 
