@@ -140,21 +140,11 @@ table
 {
     display : none;
 }
-/* #fintechScoreText
+#fintechScoreText
 {
     color : black;
     text-align : center;
-    padding-left : 20%;
-    padding-right : 30%;
-} */
-.scoreDetails
-{
-    color : black;
-    text-align : center;
-    padding-left : 20%;
-    padding-right : 30%;
 }
-
 #fintechQuizScoreDisplay
 {
     display : none;
@@ -286,7 +276,6 @@ original code
       border-radius: 50%;
       background: white;
   }
-
   .container input:checked ~ .checkmark {
     background-color: green;
   }*/
@@ -317,6 +306,22 @@ original code
     top : 10px;
     color : red;
     font-weight : bold;
+}
+#Cashe-quiz-tips
+{
+    display : none;
+}
+#displayCasheQuizPage
+{
+    position : absolute;
+    border : 4px solid black;
+    height : 70%;
+    width : 60%;
+    max-width: 60%;
+    top : 18.5%;
+    left : 28.5%;
+    left : 400px; 
+    display : none;
 }
 
 #displayFintechQuizScore

@@ -67,12 +67,6 @@ casheFiles.set('ppt-doc-3','assets/FinTech-Financial-Sector.pdf');
 
 //====================================================================================
 
-                                        /* webiste links */
-                                        //================
-
-// casheFiles.set('cashe','https://www.cashe.co.in');
-// casheFiles.set('bhanix','https://www.bhanixfinance.com');
-
 //====================================================================================
 
                 /* function to display on the right part of the page */
@@ -151,8 +145,8 @@ $(document).ready(function()
                         slideAccordions(toggleAccordion);
                         slideUpQuizQuestions();
                         document.getElementById('displayDIV').style.display="none";
-        document.getElementById('display-quiz-pages').style.display = "none";
-        document.getElementById('displayWebsiteLinks').style.display = "none";
+                        document.getElementById('display-quiz-pages').style.display = "none";
+                        document.getElementById('displayWebsiteLinks').style.display = "none";
                 }
         }
         else
@@ -413,7 +407,7 @@ document.getElementById('vid1').style.backgroundColor = 'orange';
 var ctrl = function($scope)
 {
 // ---------X----------X----------X---------X-----------X-----------X---------
-
+  
 /* hovering functionality */
 /* ------------------------ */
 
