@@ -84,9 +84,11 @@ function displayHidePages()
 
 function displayInThePage(id)
 {
+        console.log("pinky");
         default_video_clicked = false;
         if(quiz_running == true)
         {
+                console.log("donkey");
                 if(confirm("Would you like to end the quiz?")==true)
                 {
                         displayPages(id);
@@ -106,12 +108,12 @@ function displayPages(id)
    }
    else
    {
+        document.getElementById('displayDIV').style.display = "block";
         document.getElementById('display').data = casheFiles.get(id);
         document.getElementById('displayBlankPage').style.display = "none";
+        
    }
-   
    document.getElementById('display-quiz-pages').style.display = "none";
-   document.getElementById('displayDIV').style.display = "block";
    document.getElementById('displayWebsiteLinks').style.display = "none";
 }
 
@@ -143,14 +145,17 @@ $(document).ready(function()
 {
     $('#vidRec').click(function()
     {
+        console.log("113 hello");
         if(quiz_running == true)
         {
+            console.log("bolo");
                 if(confirm("Would you like to end the quiz?")==true)
                 {
                         quiz_running = false;
                         slideUpQuizQuestions();
                 }
         }
+        console.log("hello");
         toggleAccordion = '.videos';
         slideAccordions(toggleAccordion);
         $('.word-docs').slideUp(500);
@@ -161,6 +166,7 @@ $(document).ready(function()
     $('.documentation').click(function()
     {   
         default_video_clicked = false;
+        console.log("quiz running : "+quiz_running);
         if(quiz_running == true)
         {
             document.getElementById('document').style.backgroundColor = 'rgb(64,64,64)';
@@ -355,9 +361,10 @@ function hoverApplied(id,color)
     } 
 
 document.getElementById('vid1').style.backgroundColor = 'orange';
-
+document.getElementById('displayBlankPage').style.display = "none";
 var ctrl = function($scope)
 {
+
 // ---------X----------X----------X---------X-----------X-----------X---------
   
 /* hovering functionality */
@@ -400,6 +407,25 @@ var ctrl = function($scope)
 
 // ---------X----------X----------X---------X-----------X-----------X---------
 
+    $('#vidRec').click(function()
+    {
+        console.log("hello 123");
+        if(quiz_running == true)
+        {
+            console.log("bolo");
+                if(confirm("Would you like to end the quiz?")==true)
+                {
+                        quiz_running = false;
+                        slideUpQuizQuestions();
+                }
+        }
+        console.log("hello");
+        toggleAccordion = '.videos';
+        slideAccordions(toggleAccordion);
+        $('.word-docs').slideUp(500);
+        $('.pdf-docs').slideUp(500);
+        displayHidePages();
+    })
 
     document.getElementById('displayWebsiteLinks').style.display = "none";
         $scope.selections = [-1, -1,-1,-1,-1,
@@ -658,6 +684,7 @@ var ctrl = function($scope)
 
         $scope.displayFintechQuizTips = function(event)
         {
+            console.log("hello 456");
                 if(quiz_running == true)
                 {
                         if(confirm("Would you like to end the quiz?")==true)
@@ -836,7 +863,10 @@ var ctrl = function($scope)
 
         $scope.startFintechQuiz = function()
         {
-        quiz_running = true;
+            console.log("german shepherd");
+            document.getElementById('fintech-quiz-page').style.display = "block";
+            quiz_running = true;
+            console.log(quiz_running);
             current_quiz_name = 'fintech';
             document.getElementById('displayWebsiteLinks').style.display = "none";
            
@@ -874,7 +904,7 @@ var ctrl = function($scope)
                 -1, -1,-1,-1,-1];
 
 
-            document.getElementById('fintech-quiz-page').style.display = "block";
+            
             document.getElementById('fintech-quiz-tips').style.display = 'none';
 
             $scope.selectFintechAnswer = function(answerNo)
