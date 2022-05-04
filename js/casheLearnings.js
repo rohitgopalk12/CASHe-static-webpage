@@ -596,7 +596,7 @@ var ctrl = function($scope)
 
         var quiz_topic = '';
         var prev_quiz_topic_visited = false;  
-
+        var display_quiz_tips = false;
         /* ------------------------------------------------------------------*/
 
         $scope.displayFintechQuizTips = function(event)
@@ -613,6 +613,7 @@ var ctrl = function($scope)
                 {
                         displayFintechTips(event);
                 }
+
                 function displayFintechTips(event)
                 {
                         document.getElementById('displayWebsiteLinks').style.display = "none";
