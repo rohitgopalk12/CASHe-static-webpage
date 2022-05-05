@@ -107,11 +107,10 @@ body
     background-color : blue !important;
 }
 
-.videos:focus
+.videos.selected
 {
-    background-color : blue;
+    background-color : orange;
 }
-
 /* .quiz-topics:hover, #quiz:hover
 {
     /* background-color : orange; */
