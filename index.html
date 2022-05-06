@@ -38,6 +38,7 @@
 
             <!-- sub accordions of videos -->
             <!-- -------------------------- -->
+
             <div class="videos" id="vid1" onmouseover="hoverApplied(id,'rgb(255,153,51)')" onmouseout="hoverLost(id,'rgb(64,64,64)')" ng-click="changeBackground($event)" onclick="displayInThePage(id)">
                 Digital Transformation (Tech Panel)
             </div>
@@ -75,7 +76,7 @@
             <!-- Word Documents -->
             <!-- ===================-->
 
-            <div onmouseover="hoverApplied(id,'rgb(255,153,51)')" onmouseout="hoverLost(id,'rgb(64,64,64)')" id='word' ng-click="changeBackground($event)" class="word-doc documents">
+            <div onmouseover="hoverApplied(id,'rgb(255,153,51)')" onmouseout="hoverLost(id,'rgb(64,64,64)')" id='word' ng-click="changeBackground($event)" class="word-doc documents" onclick="displayInThePage(id)">
                 Word Documents
             </div>
 
@@ -188,7 +189,7 @@
             <!-- pdf documents  -->
             <!-- ==================-->
 
-            <div onmouseover="hoverApplied(id,'rgb(255,153,51)')" onmouseout="hoverLost(id,'rgb(64,64,64)')" id='pdf' ng-click="changeBackground($event)" class="left-nav-topics pdf-doc documents">
+            <div onmouseover="hoverApplied(id,'rgb(255,153,51)')" onmouseout="hoverLost(id,'rgb(64,64,64)')" id='pdf' ng-click="changeBackground($event)" class="left-nav-topics pdf-doc documents" onclick="displayInThePage(id)">
                 PDF Documents
             </div>
 
@@ -901,7 +902,6 @@
         <link rel="stylesheet" href="css/quiz.css">
         <link rel="stylesheet" href="css/styles.less">
         <script src="js/casheLearnings.js"></script>
-        <!-- <script src="js/fintech-quiz.js"></script> -->
     </body>
 
 </html>

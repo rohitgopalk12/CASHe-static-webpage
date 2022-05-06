@@ -82,6 +82,14 @@ function displayHidePages()
     document.getElementById('displayDIV').style.display="none"; 
 }
 
+function slideUpQuizQuestions()
+    {
+        $('.fintechQuestions').slideUp(500);  
+        $('.bhanixQuestions').slideUp(500);  
+        $('.casheQuestions').slideUp(500);  
+        $('.competitiveAnalysisQuestions').slideUp(500);
+    }
+
 function displayInThePage(id)
 {
         default_video_clicked = false;
@@ -98,18 +106,67 @@ function displayInThePage(id)
                 displayPages(id);
         }
 }
+var wordDocPdfDocSlideUp = true;
 function displayPages(id)
 {
    if(id=='vidRec' || id=='document' || id=='word' || id=='pdf' || id=='ppt-doc' || id=='websites' || id=='quiz')
    {
-        document.getElementById('displayBlankPage').style.display = "block";
+       switch(id)
+       {
+            case 'vidRec':
+                toggleAccordion = '.videos';
+                wordDocPdfDocSlideUp = true;
+                break;
+
+            case 'document':
+                toggleAccordion = '.documents';
+                wordDocPdfDocSlideUp = true;
+                break;
+
+            case 'word':
+                toggleAccordion = '';
+                wordDocPdfDocSlideUp = false;
+                $('.word-docs').slideToggle(500);
+                $('.pdf-docs').slideUp(500);
+                break;
+
+            case 'pdf':
+                toggleAccordion = '';
+                wordDocPdfDocSlideUp = false;
+                $('.word-docs').slideUp(500);
+                $('.pdf-docs').slideToggle(500);
+                break;
+
+            case 'ppt-doc':
+                toggleAccordion = '.ppt-docs';
+                wordDocPdfDocSlideUp = true;
+                break;
+
+            case 'websites':
+                toggleAccordion = '.links'
+                wordDocPdfDocSlideUp = true;
+                break;
+            
+            case 'quiz':
+                toggleAccordion = '.quiz-topics';
+                wordDocPdfDocSlideUp = true;
+                break;
+       }
+        if(wordDocPdfDocSlideUp == true)
+        {
+                    $('.word-docs').slideUp(500);
+                    $('.pdf-docs').slideUp(500);
+                    wordDocPdfDocSlideUp = false;
+        }
+        slideAccordions(toggleAccordion);
+        slideUpQuizQuestions();
+        displayHidePages();
    }
    else
    {
         document.getElementById('displayDIV').style.display = "block";
         document.getElementById('display').data = casheFiles.get(id);
-        document.getElementById('displayBlankPage').style.display = "none";
-        
+        document.getElementById('displayBlankPage').style.display = "none";   
    }
    document.getElementById('display-quiz-pages').style.display = "none";
    document.getElementById('displayWebsiteLinks').style.display = "none";
@@ -139,114 +196,125 @@ function slideAccordions(toggleAccordion)
                 }
         }
 }
-$(document).ready(function()
-{
-    $('#vidRec').click(function()
-    {
-        if(quiz_running == false)
-        {
-            toggleAccordion = '.videos';
-            slideAccordions(toggleAccordion);
-            slideUpQuizQuestions();
-            $('.word-docs').slideUp(500);
-            $('.pdf-docs').slideUp(500);
-            displayHidePages();
-        }
-    })
 
-    $('.documentation').click(function()
-    {   
-        if(quiz_running == false)
-        {
-            toggleAccordion = '.documents';
-            slideAccordions(toggleAccordion);
-            slideUpQuizQuestions();
-            $('.word-docs').slideUp(500);
-            $('.pdf-docs').slideUp(500);
-            displayHidePages();
-        }
-        default_video_clicked = false;
-    })
 
-    $('.word-doc').click(function()
-    {
-        if(quiz_running == false)
-        {
-            toggleAccordion = '';
-            slideAccordions(toggleAccordion);
-            $('.word-docs').slideToggle(500);
-            $('.pdf-docs').slideUp(500);
-            displayHidePages();
-        }
-        default_video_clicked = false;
-    })
+// $(document).ready(function()
+// {
+//     $('#vidRec').click(function()
+//     {
+//         if(quiz_running == false)
+//         {
+//             toggleAccordion = '.videos';
+//             slideAccordions(toggleAccordion);
+//             slideUpQuizQuestions();
+//             $('.word-docs').slideUp(500);
+//             $('.pdf-docs').slideUp(500);
+//             displayHidePages();
+//         }
+//     })
 
-    $('.pdf-doc').click(function()
-    {
-        if(quiz_running == false)
-        {
-            toggleAccordion = '';
-            slideAccordions(toggleAccordion);
-            slideUpQuizQuestions();
-            $('.word-docs').slideUp(500);
-            $('.pdf-docs').slideToggle(500);
-            displayHidePages();
-        }
-        default_video_clicked = false;
-    })
+//     $('.documentation').click(function()
+//     {   
+//         if(quiz_running == false)
+//         {
+//             toggleAccordion = '.documents';
+//             slideAccordions(toggleAccordion);
+//             slideUpQuizQuestions();
+//             $('.word-docs').slideUp(500);
+//             $('.pdf-docs').slideUp(500);
+//             displayHidePages();
+//         }
+//         default_video_clicked = false;
+//     })
 
-    $('.ppt').click(function()
-    {
-        if(quiz_running == false)
-        {
-            toggleAccordion = '.ppt-docs';
-            slideAccordions(toggleAccordion);
-            slideUpQuizQuestions();
-            $('.word-docs').slideUp(500);
-            $('.pdf-docs').slideUp(500);
-            displayHidePages();
-        }
-        default_video_clicked = false;     
-    })
+//     $('.word-doc').click(function()
+//     {
+//         if(quiz_running == false)
+//         {
+//             toggleAccordion = '';
+//             slideAccordions(toggleAccordion);
+//             $('.word-docs').slideToggle(500);
+//             $('.pdf-docs').slideUp(500);
+//             displayHidePages();
+//         }
+//         default_video_clicked = false;
+//     })
 
-    $('.links-websites').click(function()
-    {
-        if(quiz_running == false)
-        {
-            toggleAccordion = '.links';
-            slideAccordions(toggleAccordion);
-            slideUpQuizQuestions();
-            $('.word-docs').slideUp(500);
-            $('.pdf-docs').slideUp(500);
-            displayHidePages();
-        }
-        default_video_clicked = false;
-    })
+//     $('.pdf-doc').click(function()
+//     {
+//         if(quiz_running == false)
+//         {
+//             toggleAccordion = '';
+//             slideAccordions(toggleAccordion);
+//             slideUpQuizQuestions();
+//             $('.word-docs').slideUp(500);
+//             $('.pdf-docs').slideToggle(500);
+//             displayHidePages();
+//         }
+//         default_video_clicked = false;
+//     })
 
-    function slideUpQuizQuestions()
-    {
-        $('.fintechQuestions').slideUp(500);  
-        $('.bhanixQuestions').slideUp(500);  
-        $('.casheQuestions').slideUp(500);  
-        $('.competitiveAnalysisQuestions').slideUp(500);
-    }
+//     $('.ppt').click(function()
+//     {
+//         if(quiz_running == false)
+//         {
+//             toggleAccordion = '.ppt-docs';
+//             slideAccordions(toggleAccordion);
+//             slideUpQuizQuestions();
+//             $('.word-docs').slideUp(500);
+//             $('.pdf-docs').slideUp(500);
+//             displayHidePages();
+//         }
+//         default_video_clicked = false;     
+//     })
 
-    $('#quiz').click(function()
-    {
-        if(quiz_running == false)
-        {
-            toggleAccordion = '.quiz-topics';
-            slideAccordions(toggleAccordion);
-            slideUpQuizQuestions();
-            $('.word-docs').slideUp(500);
-            $('.pdf-docs').slideUp(500);
-            displayHidePages();
-        }
-        default_video_clicked = false;
-    })
+//     $('.links-websites').click(function()
+//     {
+//         if(quiz_running == false)
+//         {
+//             toggleAccordion = '.links';
+//             slideAccordions(toggleAccordion);
+//             slideUpQuizQuestions();
+//             $('.word-docs').slideUp(500);
+//             $('.pdf-docs').slideUp(500);
+//             displayHidePages();
+//         }
+//         default_video_clicked = false;
+//     })
 
-    $('.videos').slideDown(500);
-})
+//     function slideUpQuizQuestions()
+//     {
+//         $('.fintechQuestions').slideUp(500);  
+//         $('.bhanixQuestions').slideUp(500);  
+//         $('.casheQuestions').slideUp(500);  
+//         $('.competitiveAnalysisQuestions').slideUp(500);
+//     }
+
+//     $('#quiz').click(function()
+//     {
+//         if(quiz_running == false)
+//         {
+//             toggleAccordion = '.quiz-topics';
+//             slideAccordions(toggleAccordion);
+//             slideUpQuizQuestions();
+//             $('.word-docs').slideUp(500);
+//             $('.pdf-docs').slideUp(500);
+//             displayHidePages();
+//         }
+//         default_video_clicked = false;
+//     })
+
+//     $('.videos').slideDown(500);
+// })
+
+// function slideUpQuizQuestions()
+//     {
+//         $('.fintechQuestions').slideUp(500);  
+//         $('.bhanixQuestions').slideUp(500);  
+//         $('.casheQuestions').slideUp(500);  
+//         $('.competitiveAnalysisQuestions').slideUp(500);
+//     }
+//     $('.videos').slideDown(500);
 
 var fintechQuizApp = angular.module('casheLearningsApp',[]);
 var min=0;
@@ -299,7 +367,7 @@ document.getElementById('vid1').style.backgroundColor = 'orange';
 document.getElementById('displayBlankPage').style.display = "none";
 var ctrl = function($scope)
 {
-
+    $('.videos').slideDown(500);
 // ---------X----------X----------X---------X-----------X-----------X---------
   
 /* hovering functionality */
