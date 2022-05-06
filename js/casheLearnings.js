@@ -254,7 +254,6 @@ var ctrl = function($scope)
   
 $scope.wordDocPdfDocSlideUp = true;
 $scope.quiz_running  = false;
-$scope.pagesAreDisplayed = false;
 $scope.displayInThePage = function(event)
 {
     id = event.target.id;
@@ -264,14 +263,15 @@ $scope.displayInThePage = function(event)
                 if(confirm("Would you like to end the quiz?")==true)
                 {
                     $scope.quiz_running = false;
-                    $scope.pagesAreDisplayed = true;            
+                    $scope.pageToBeDisplayed(id);            
                 }
     }
     else
     {
-        $scope.pagesAreDisplayed = true;
+        $scope.pageToBeDisplayed(id);       
     }
-    if($scope.pagesAreDisplayed == true)
+}
+$scope.pageToBeDisplayed = function(id)      
     {
         if(id=='vidRec' || id=='document' || id=='word' || id=='pdf' || id=='ppt-doc' || id=='websites' || id=='quiz')
         {
@@ -324,7 +324,6 @@ $scope.displayInThePage = function(event)
             }
             slideAccordions(toggleAccordion);
             slideUpQuizQuestions();
-            //displayHidePages();
             document.getElementById('displayBlankPage').style.display="block";
             document.getElementById('displayDIV').style.display = "none";
         }
@@ -336,7 +335,7 @@ $scope.displayInThePage = function(event)
         }
         document.getElementById('display-quiz-pages').style.display = "none";
         document.getElementById('displayWebsiteLinks').style.display = "none";
-    }
+    
 }
 /* hovering functionality */
 /* ------------------------ */
