@@ -255,7 +255,13 @@
             <!-- ===========-->
 
             <div>
-                <div id="fintechQuiz" onmouseover="hoverApplied(id,'rgb(255,153,51)')" onmouseout="hoverLost(id,'rgb(64,64,64)')" class="quiz-topics" ng-click="changeBackground($event);displayInThePage($event);displayFintechQuizTips($event)">
+                <!-- 
+                    original code
+                    <div id="fintechQuiz" onmouseover="hoverApplied(id,'rgb(255,153,51)')" onmouseout="hoverLost(id,'rgb(64,64,64)')" class="quiz-topics" ng-click="changeBackground($event);displayInThePage($event);displayFintechQuizTips($event)">
+                    Fintech Eco System
+                </div> -->
+
+                <div id="fintechQuiz" onmouseover="hoverApplied(id,'rgb(255,153,51)')" onmouseout="hoverLost(id,'rgb(64,64,64)')" class="quiz-topics" ng-click="changeBackground($event);displayInThePage($event);displayQuizTips($event)">
                     Fintech Eco System
                 </div>
 
@@ -286,7 +292,12 @@
             <!-- CASHe Quiz -->
             <!-- ==============-->
             <div>
-                <div id="casheQuiz" onmouseover="hoverApplied(id,'rgb(255,153,51)')" onmouseout="hoverLost(id,'rgb(64,64,64)')" class="quiz-topics" ng-click="displayCasheQuizTips($event)">
+                <!-- original code
+                    <div id="casheQuiz" onmouseover="hoverApplied(id,'rgb(255,153,51)')" onmouseout="hoverLost(id,'rgb(64,64,64)')" class="quiz-topics" ng-click="displayCasheQuizTips($event)">
+                    CASHe
+                </div> -->
+
+                <div id="casheQuiz" onmouseover="hoverApplied(id,'rgb(255,153,51)')" onmouseout="hoverLost(id,'rgb(64,64,64)')" class="quiz-topics" ng-click="displayQuizTips($event)">
                     CASHe
                 </div>
 
@@ -317,7 +328,12 @@
             <!-- Bhanix Quiz -->
             <!-- =================-->
             <div>
-                <div id="bhanixQuiz" onmouseover="hoverApplied(id,'rgb(255,153,51)')" onmouseout="hoverLost(id,'rgb(64,64,64)')" class="quiz-topics" ng-click="displayBhanixQuizTips($event)">
+                <!-- original code
+                    <div id="bhanixQuiz" onmouseover="hoverApplied(id,'rgb(255,153,51)')" onmouseout="hoverLost(id,'rgb(64,64,64)')" class="quiz-topics" ng-click="displayBhanixQuizTips($event)">
+                    Bhanix
+                </div> -->
+
+                <div id="bhanixQuiz" onmouseover="hoverApplied(id,'rgb(255,153,51)')" onmouseout="hoverLost(id,'rgb(64,64,64)')" class="quiz-topics" ng-click="displayQuizTips($event)">
                     Bhanix
                 </div>
 
@@ -347,9 +363,15 @@
             			<!-- Competitive Analysis 
                         =======================  -->
             <div>
-                <div id="competitiveAnalysisQuiz" onmouseover="hoverApplied(id,'rgb(255,153,51)')" onmouseout="hoverLost(id,'rgb(64,64,64)')" class="quiz-topics" ng-click="displayCompetitiveAnalysisQuizTips($event)">
+                <!-- original code
+                    <div id="competitiveAnalysisQuiz" onmouseover="hoverApplied(id,'rgb(255,153,51)')" onmouseout="hoverLost(id,'rgb(64,64,64)')" class="quiz-topics" ng-click="displayCompetitiveAnalysisQuizTips($event)">
                 Competitive Analysis
+                </div> -->
+
+                <div id="competitiveAnalysisQuiz" onmouseover="hoverApplied(id,'rgb(255,153,51)')" onmouseout="hoverLost(id,'rgb(64,64,64)')" class="quiz-topics" ng-click="displayQuizTips($event)">
+                    Competitive Analysis
                 </div>
+
 
                 <div class="competitiveAnalysisQuestions" onmouseover="hoverApplied(id,'rgb(255,153,51)')" onmouseout="hoverLost(id,'rgb(64,64,64)')" id="competitive_16" value="5" ng-click="jumpToQuestion($event)">
                     How much is MoneyView's Maximum Loan Ticket Size
@@ -420,11 +442,18 @@
                         <p>Time limit : 5 minutes</p>
                     </div>
 
-                    <div id="fintechQuizStart" class="start-quiz" ng-click="startFintechQuiz()">
+                    <div id="fintechQuizStart" class="start-quiz" ng-click="startQuiz('fintechQuiz')">
                         <a href="#" class="btn btn-info btn-lg start-quiz-button">
                             <div class="glyphicon"></div> Start Quiz
                         </a>
                     </div>
+
+                    <!-- original code
+                        <div id="fintechQuizStart" class="start-quiz" ng-click="startFintechQuiz()">
+                        <a href="#" class="btn btn-info btn-lg start-quiz-button">
+                            <div class="glyphicon"></div> Start Quiz
+                        </a>
+                    </div> -->
 
                 </div>
 
@@ -462,8 +491,8 @@
                         </p><br />
                         
                         <table align="center" ng-init="currentQ=1">
-                            
-                            <tr>
+                
+                                <tr>
                                 <td ng-model="selections[currentQ-1]" ng-click="selectFintechAnswer($index)" 
                                 ng-repeat="op in questions[currentQ-1].options" class="option">
                                 <input ng-checked="selections[currentQ-1] === $index" type="radio"
@@ -471,6 +500,10 @@
                                 {{op}}
                                 </td>
                             </tr>
+
+                          
+
+
                         </table>
                     </div>
 
@@ -547,19 +580,20 @@
                         <p>Time limit : 5 minutes</p>
                     </div>
 
-                    <!-- 
-                        original code
+
+                    <!-- original code
                         <div id="casheQuizStart" class="start-quiz" ng-click="startCasheQuiz()">
-                        <a href="#" id="cashe-start" class="btn btn-info btn-lg">
+                        <a href="#" class="btn btn-info btn-lg start-quiz-button">
                             <div class="glyphicon"></div> Start Quiz
                         </a>
                     </div> -->
 
-                    <div id="casheQuizStart" class="start-quiz" ng-click="startCasheQuiz()">
+                    <div id="casheQuizStart" class="start-quiz" ng-click="startQuiz('casheQuiz')">
                         <a href="#" class="btn btn-info btn-lg start-quiz-button">
                             <div class="glyphicon"></div> Start Quiz
                         </a>
                     </div>
+
 
                 </div>
             
@@ -669,15 +703,15 @@
                         <p>Time limit : 5 minutes</p>
                     </div>
 
-                    <!-- 
-                        original code
+
+                    <!-- original code
                         <div id="bhanixQuizStart" class="start-quiz" ng-click="startBhanixQuiz()">
-                        <a href="#" id="bhanix-start" class="btn btn-info btn-lg">
+                        <a href="#" class="btn btn-info btn-lg start-quiz-button">
                             <div class="glyphicon"></div> <b>Start Quiz</b>
                         </a>
                     </div> -->
 
-                    <div id="bhanixQuizStart" class="start-quiz" ng-click="startBhanixQuiz()">
+                    <div id="bhanixQuizStart" class="start-quiz" ng-click="startQuiz('bhanixQuiz')">
                         <a href="#" class="btn btn-info btn-lg start-quiz-button">
                             <div class="glyphicon"></div> <b>Start Quiz</b>
                         </a>
@@ -792,15 +826,14 @@
                         <p>Time limit : 5 minutes</p>
                     </div>
 
-                    <!-- 
-                        original code
+                    <!-- original code
                         <div id="competitiveAnalysisQuizStart" class="start-quiz" ng-click="startCompetitiveAnalysisQuiz()">
-                        <a href="#" id="competitive-analysis-start" class="btn btn-info btn-lg">
+                        <a href="#" class="btn btn-info btn-lg start-quiz-button">
                             <div class="glyphicon"></div> Start Quiz
                         </a>
                     </div> -->
 
-                    <div id="competitiveAnalysisQuizStart" class="start-quiz" ng-click="startCompetitiveAnalysisQuiz()">
+                    <div id="competitiveAnalysisQuizStart" class="start-quiz" ng-click="startQuiz('competitiveAnalysisQuiz')">
                         <a href="#" class="btn btn-info btn-lg start-quiz-button">
                             <div class="glyphicon"></div> Start Quiz
                         </a>
