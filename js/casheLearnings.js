@@ -89,91 +89,7 @@ function slideUpQuizQuestions()
         $('.casheQuestions').slideUp(500);  
         $('.competitiveAnalysisQuestions').slideUp(500);
     }
-$scope.wordDocPdfDocSlideUp = true;
-$scope.quiz_running  = false;
-$scope.pagesAreDisplayed = false;
-$scope.displayInThePage = function(event)
-{
-    default_video_clicked = false;
-    if($scope.quiz_running == true)
-    {
-                if(confirm("Would you like to end the quiz?")==true)
-                {
-                    $scope.quiz_running = false;
-                    $scope.pagesAreDisplayed = true;            
-                }
-    }
-    else
-    {
-        $scope.pagesAreDisplayed = true;
-    }
-    if($scope.pagesAreDisplayed == true)
-    {
-        if(id=='vidRec' || id=='document' || id=='word' || id=='pdf' || id=='ppt-doc' || id=='websites' || id=='quiz')
-        {
-            switch(id)
-            {
-                case 'vidRec':
-                    toggleAccordion = '.videos';
-                    $scope.wordDocPdfDocSlideUp = true;
-                    break;
 
-                case 'document':
-                    toggleAccordion = '.documents';
-                    $scope.wordDocPdfDocSlideUp = true;
-                    break;
-
-                case 'word':
-                    toggleAccordion = '';
-                    $scope.wordDocPdfDocSlideUp = false;
-                    $('.word-docs').slideToggle(500);
-                    $('.pdf-docs').slideUp(500);
-                    break;
-
-                case 'pdf':
-                    toggleAccordion = '';
-                    $scope.wordDocPdfDocSlideUp = false;
-                    $('.word-docs').slideUp(500);
-                    $('.pdf-docs').slideToggle(500);
-                    break;
-
-                case 'ppt-doc':
-                    toggleAccordion = '.ppt-docs';
-                    $scope.wordDocPdfDocSlideUp = true;
-                    break;
-
-                case 'websites':
-                    toggleAccordion = '.links'
-                    $scope.wordDocPdfDocSlideUp = true;
-                    break;
-                
-                case 'quiz':
-                    toggleAccordion = '.quiz-topics';
-                    $scope.wordDocPdfDocSlideUp = true;
-                    break;
-            }
-            if($scope.wordDocPdfDocSlideUp == true)
-            {
-                        $('.word-docs').slideUp(500);
-                        $('.pdf-docs').slideUp(500);
-                        $scope.wordDocPdfDocSlideUp = false;
-            }
-            slideAccordions(toggleAccordion);
-            slideUpQuizQuestions();
-            //displayHidePages();
-            document.getElementById('displayBlankPage').style.display="block";
-            document.getElementById('displayDIV').style.display = "none";
-        }
-        else
-        {
-                document.getElementById('displayDIV').style.display = "block";
-                document.getElementById('display').data = casheFiles.get(id);
-                document.getElementById('displayBlankPage').style.display = "none";   
-        }
-        document.getElementById('display-quiz-pages').style.display = "none";
-        document.getElementById('displayWebsiteLinks').style.display = "none";
-    }
-}
 
 // function displayInThePage(id)
 // {
@@ -336,6 +252,92 @@ var ctrl = function($scope)
     $('.videos').slideDown(500);
 // ---------X----------X----------X---------X-----------X-----------X---------
   
+$scope.wordDocPdfDocSlideUp = true;
+$scope.quiz_running  = false;
+$scope.pagesAreDisplayed = false;
+$scope.displayInThePage = function(event)
+{
+    id = event.target.id;
+    default_video_clicked = false;
+    if($scope.quiz_running == true)
+    {
+                if(confirm("Would you like to end the quiz?")==true)
+                {
+                    $scope.quiz_running = false;
+                    $scope.pagesAreDisplayed = true;            
+                }
+    }
+    else
+    {
+        $scope.pagesAreDisplayed = true;
+    }
+    if($scope.pagesAreDisplayed == true)
+    {
+        if(id=='vidRec' || id=='document' || id=='word' || id=='pdf' || id=='ppt-doc' || id=='websites' || id=='quiz')
+        {
+            switch(id)
+            {
+                case 'vidRec':
+                    toggleAccordion = '.videos';
+                    $scope.wordDocPdfDocSlideUp = true;
+                    break;
+
+                case 'document':
+                    toggleAccordion = '.documents';
+                    $scope.wordDocPdfDocSlideUp = true;
+                    break;
+
+                case 'word':
+                    toggleAccordion = '';
+                    $scope.wordDocPdfDocSlideUp = false;
+                    $('.word-docs').slideToggle(500);
+                    $('.pdf-docs').slideUp(500);
+                    break;
+
+                case 'pdf':
+                    toggleAccordion = '';
+                    $scope.wordDocPdfDocSlideUp = false;
+                    $('.word-docs').slideUp(500);
+                    $('.pdf-docs').slideToggle(500);
+                    break;
+
+                case 'ppt-doc':
+                    toggleAccordion = '.ppt-docs';
+                    $scope.wordDocPdfDocSlideUp = true;
+                    break;
+
+                case 'websites':
+                    toggleAccordion = '.links'
+                    $scope.wordDocPdfDocSlideUp = true;
+                    break;
+                
+                case 'quiz':
+                    toggleAccordion = '.quiz-topics';
+                    $scope.wordDocPdfDocSlideUp = true;
+                    break;
+            }
+            if($scope.wordDocPdfDocSlideUp == true)
+            {
+                        $('.word-docs').slideUp(500);
+                        $('.pdf-docs').slideUp(500);
+                        $scope.wordDocPdfDocSlideUp = false;
+            }
+            slideAccordions(toggleAccordion);
+            slideUpQuizQuestions();
+            //displayHidePages();
+            document.getElementById('displayBlankPage').style.display="block";
+            document.getElementById('displayDIV').style.display = "none";
+        }
+        else
+        {
+                document.getElementById('displayDIV').style.display = "block";
+                document.getElementById('display').data = casheFiles.get(id);
+                document.getElementById('displayBlankPage').style.display = "none";   
+        }
+        document.getElementById('display-quiz-pages').style.display = "none";
+        document.getElementById('displayWebsiteLinks').style.display = "none";
+    }
+}
 /* hovering functionality */
 /* ------------------------ */
 
