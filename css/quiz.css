@@ -307,10 +307,10 @@ original code
     color : red;
     font-weight : bold;
 }
-#Cashe-quiz-tips
+/* #Cashe-quiz-tips
 {
     display : none;
-}
+} */
 #displayCasheQuizPage
 {
     position : absolute;
@@ -321,7 +321,7 @@ original code
     top : 18.5%;
     left : 28.5%;
     left : 400px; 
-    display : none;
+    /* display : none; */
 }
 
 #displayFintechQuizScore
@@ -329,10 +329,10 @@ original code
     display : none;
 }
 
-#fintech-quiz-page
+/* #fintech-quiz-page
 {
     display :none
-}
+} */
 #fintechQuizStart, #casheQuizStart, #bhanixQuizStart, #competitiveAnalysisQuizStart
 {
     position : relative;

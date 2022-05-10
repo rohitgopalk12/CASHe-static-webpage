@@ -46,7 +46,6 @@ div.word-doc{
 
 #display-quiz-pages
 {
-    display : none;
     position : absolute;
     border : 4px solid black;
     height : 70%;
@@ -244,6 +243,7 @@ a{
 /* original code */
 #display-fintech-quiz-page #fintech-quiz-tips,#display-cashe-quiz-page #cashe-quiz-tips,#display-bhanix-quiz-page #bhanix-quiz-tips, #display-competitive-analysis-quiz-page #competitive-analysis-quiz-tips
 {
+    display : block;
     position : absolute;
     top : 20%;
     left : 30%;
@@ -264,6 +264,7 @@ a{
 
 #display-fintech-quiz-page #displayFintechQuizScore, #display-cashe-quiz-page #displayCasheQuizScore, #display-bhanix-quiz-page #displayBhanixQuizScore, #display-competitive-analysis-quiz-page #displayCompetitiveAnalysisQuizScore
 {
+    display : block;
     position : absolute;
     top : 27%;
     left : 7%;
