@@ -449,7 +449,7 @@
         <!-- =========================================================-->
 
         <div ng-show="displayVideosDocsPage == true" id="displayDIV">
-            <object id="display" height="95%" width="95%" data="https://www.youtube.com/embed/Pl7XP8o7v6g"></object>
+            <object id="display" height="95%" width="95%" data="https://www.youtube.com/embed/Pl7XP8o7v6g?autoplay=0"></object>
         </div>
 
         <!-- ======================================================================= -->
@@ -458,20 +458,21 @@
         <!-- The Fintech Quiz Page -->
         <!-- ------------------------- -->
 
-            <div ng-show="displayFintechQuizPage == true" id="display-fintech-quiz-page">
+            <div id="display-fintech-quiz-page">
             <!-- -------X---------X--------X -------X---------X--------X-------- -->
 
                 <!-- Display fintech quiz tips page -->
                 <!-- ===========================-->
-
-                <div ng-show="displayFintechQuizTips == true" id='fintech-quiz-tips' >
+                
+                <div id='fintech-quiz-tips'>
+                <!-- <div ng-show="displayFintechQuizTips == true" id='fintech-quiz-tips' > -->
                     <div class='tips' align="center">
                         <p>Welcome to Fintech Ecosystem Quiz !!</p><br />
                         <p>This Quiz contains 5 Questions</p><br />
                         <p>Each Question has two options</p><br />
                         <p>Each correct option carries 1 point</p><br />
                         <p>Try to answer as many questions as possible</p><br />
-                        <p>Time limit : 5 minutes</p>
+                        <p>Time limit : 10 minutes</p>
                     </div>
 
                     <div id="fintechQuizStart" class="start-quiz" ng-click="startQuiz('fintechQuiz')">
@@ -493,7 +494,7 @@
                                 <!-- Fintech Quiz Page -->
                                 <!--======================-->
 
-                <div ng-show="fintechQuizPage == true" id="fintech-quiz-page">
+                <div id="fintech-quiz-page">
 
                     <!-- Previous button -->
                     <!-- ==================-->
@@ -571,7 +572,7 @@
                             </a>
                         </div>
 
-                        <input id="fintech-submit-button" ng-show="currentQ==5" ng-click="submitFintechQuiz(false)"
+                        <input id="fintech-submit-button" ng-show="currentQ==5" ng-click="submitQuiz('fintechQuiz',false)"
                             class="btn btn-primary" type="submit" value="Submit">
                         </input>
                     </div>
@@ -581,10 +582,11 @@
                 <!-- Display fintech quiz score -->
                 <!-- ================================-->
 
-                <div ng-show="displayFintechQuizScorePage == true" align="center" id="displayFintechQuizScore">
+                <div align="center" id="displayFintechQuizScore">
+                <!--<div ng-show="displayFintechQuizScorePage == true" align="center" id="displayFintechQuizScore">-->
                     <h1 id="fintechScoreText">Congratulations on completing Fintech Eco System Quiz !!</h1>
-                    <h1 id="score"></h1>
-                    <h1 id="feedback"></h1>
+                    <h1 id="fintech-quiz-score"></h1>
+                    <h1 id="fintech-quiz-feedback"></h1>
                 </div>
 
                 <!-- -------X---------X--------X -------X---------X--------X----------- -->
@@ -596,20 +598,21 @@
             <!-- CASHe Quiz Page -->
             <!-- ===========================-->
 
-            <div ng-show="displayCasheQuizPage == true" id="display-cashe-quiz-page" ng-init="currentQ=6">
+            <div id="display-cashe-quiz-page" ng-init="currentQ=6">
 
                 <!-- -------X---------X--------X -------X---------X--------X-------- -->
 
                         <!-- Display CASHE quiz tips page -->
                         <!-- ===========================-->
-                <div ng-show="displayCasheQuizTips == true" id='cashe-quiz-tips' >
+                <div id='cashe-quiz-tips' >
+                <!-- <div ng-show="displayCasheQuizTips == true" id='cashe-quiz-tips' > -->
                     <div class="tips" align="center">
                         <p>Welcome to CASHe Quiz !!</p><br />
                         <p>This Quiz contains 5 Questions</p><br />
                         <p>Each Question has two options</p><br />
                         <p>Each correct option carries 1 point</p><br />
                         <p>Try to answer as many questions as possible</p><br />
-                        <p>Time limit : 5 minutes</p>
+                        <p>Time limit : 10 minutes</p>
                     </div>
 
 
@@ -633,7 +636,8 @@
 
                                     <!-- Previous button -->
                                     <!-- ==================-->
-                <div ng-show="casheQuizPage == true" id="cashe-quiz-page">
+                <div id="cashe-quiz-page">
+                <!-- <div ng-show="casheQuizPage == true" id="cashe-quiz-page"> -->
                     <!-- <div id="cashe-previous-button" ng-hide="currentQ==6" ng-click="currentQ=currentQ-1">
                         <a href="#" id="cashe-prev" class="btn btn-info btn-lg">
                         <div class="glyphicon glyphicon-circle-arrow-left"></div> Previous
@@ -701,7 +705,7 @@ s
                             </a>
                         </div>
 
-                        <input id="cashe-submit-button" ng-show="currentQ==10" ng-click="submitCasheQuiz(false)"
+                        <input id="cashe-submit-button" ng-show="currentQ==10" ng-click="submitQuiz('casheQuiz',false)"
                             class="btn btn-primary" type="submit" value="Submit">
                         </input>
                     </div>
@@ -711,7 +715,7 @@ s
 
                 <!-- Display CASHe quiz score -->
                 <!-- ================================-->
-                <div ng-show="displayCasheQuizScore == true" align="center" id="displayCasheQuizScore">
+                <div align="center" id="displayCasheQuizScore">
                     <h1 id="fintechScoreText">Congratulations on completing CASHe Quiz !!</h1>
                     <h1 id="cashe-quiz-score"></h1>
                     <h1 id="cashe-quiz-feedback"></h1>
@@ -723,16 +727,16 @@ s
 
             <!-- ======================================================================= -->
 
-            <div ng-show="displayBhanixQuizPage == true" id="display-bhanix-quiz-page">
+            <div id="display-bhanix-quiz-page">
 
-                <div ng-show="displayBhanixQuizTips == true" id='bhanix-quiz-tips'>
+                <div id='bhanix-quiz-tips'>
                     <div class="tips" align="center">
                         <p>Welcome to Bhanix Quiz !!</p><br />
                         <p>This Quiz contains 5 Questions</p><br />
                         <p>Each Question has two options</p><br />
                         <p>Each correct option carries 1 point</p><br />
                         <p>Try to answer as many questions as possible</p><br />
-                        <p>Time limit : 5 minutes</p>
+                        <p>Time limit : 10 minutes</p>
                     </div>
 
 
@@ -752,7 +756,7 @@ s
 
                 </div>
             
-                <div ng-show="bhanixQuizPage == true" id="bhanix-quiz-page">
+                <div id="bhanix-quiz-page">
             
                                 <!-- Previous button -->
                                 <!-- ==================-->
@@ -825,7 +829,7 @@ s
                             </a>
                         </div>
             
-                        <input id="bhanix-submit-button" ng-show="currentQ==15" ng-click="submitBhanixQuiz(false)"
+                        <input id="bhanix-submit-button" ng-show="currentQ==15" ng-click="submitQuiz('bhanixQuiz',false)"
                             class="btn btn-primary" type="submit" value="Submit">
                         </input>
                     </div>
@@ -834,7 +838,7 @@ s
                                     <!-- Display Bhanix quiz score -->
                                     <!-- ================================-->
             
-                <div ng-show="displayBhanixQuizScore == true" align="center" id="displayBhanixQuizScore">
+                <div align="center" id="displayBhanixQuizScore">
                     <h1>Congratulations on completing BHANIX Quiz !!</h1>
                     <h1 id="bhanix-quiz-score"></h1>
                     <h1 id="bhanix-quiz-feedback"></h1>
@@ -842,20 +846,20 @@ s
             </div>
 
             <!-- ================================================================================= -->
-            <div ng-show="displayCompetitiveAnalysisQuizPage == true" id="display-competitive-analysis-quiz-page" ng-init="currentQ=16">
+            <div id="display-competitive-analysis-quiz-page" ng-init="currentQ=16">
 
                 <!-- -------X---------X--------X -------X---------X--------X-------- -->
 
                         <!-- Display Competitive Analysis quiz tips page -->
                         <!-- ===========================-->
-                <div ng-show="displayCompetitiveAnalysisQuizTips == true" id="competitive-analysis-quiz-tips" >
+                <div id="competitive-analysis-quiz-tips" >
                     <div class='tips' align="center">
                         <p>Welcome to Competitive Analysis Quiz !!</p><br />
                         <p>This Quiz contains 5 Questions</p><br />
                         <p>Each Question has two options</p><br />
                         <p>Each correct option carries 1 point</p><br />
                         <p>Try to answer as many questions as possible</p><br />
-                        <p>Time limit : 5 minutes</p>
+                        <p>Time limit : 10 minutes</p>
                     </div>
 
                     <!-- original code
@@ -874,7 +878,7 @@ s
 
                 </div>
 
-                <div ng-show="competitiveAnalysisQuizPage == true" id="competitive-analysis-quiz-page">
+                <div id="competitive-analysis-quiz-page">
             
                         <!-- Previous button -->
                         <!-- ==================-->
@@ -946,7 +950,7 @@ s
                             </a>
                         </div>
             
-                        <input id="competitive-analysis-submit-button" ng-show="currentQ==20" ng-click="submitCompetitiveAnalysisQuiz(false)"
+                        <input id="competitive-analysis-submit-button" ng-show="currentQ==20" ng-click="submitQuiz('competitiveAnalysisQuiz',false)"
                             class="btn btn-primary" type="submit" value="Submit">
                         </input>
                     </div>
@@ -955,7 +959,7 @@ s
                             <!-- Display Bhanix quiz score -->
                             <!-- ================================-->
     
-                <div ng-show="displayCompetitiveAnalysisQuizScore == true" align="center" id="displayCompetitiveAnalysisQuizScore">
+                <div align="center" id="displayCompetitiveAnalysisQuizScore">
                     <h1>Congratulations on completing Competitive Analysis Quiz !!</h1>
                     <h1 id="competitive-analysis-quiz-score"></h1>
                     <h1 id="competitive-analysis-quiz-feedback"></h1>

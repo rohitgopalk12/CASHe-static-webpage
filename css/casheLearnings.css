@@ -98,8 +98,8 @@ body
     font-family : tahoma;
 }
 .vid:hover, .videos:hover, .word-doc:hover, .word-docs:hover, .pdf-doc:hover, .pdf-docs:hover, .ppt-docs:hover, .links:hover, .links-websites:hover, .ppt:hover, .documentation:hover, .fintechQuestions:hover, .casheQuestions:hover, .bhanixQuestions:hover, .competitiveAnalysisQuestions:hover, #quiz:hover
-{
-    background-color : rgb(255,153,51); 
+{ 
+    background-color : rgb(255,153,51);
 }
 .changeBgColor
 {
@@ -261,7 +261,10 @@ a{
     color : blue;
     text-decoration : underline;
 }
-
+#display-fintech-quiz-page #fintech-quiz-page
+{
+    display : block;
+}
 #display-fintech-quiz-page #displayFintechQuizScore, #display-cashe-quiz-page #displayCasheQuizScore, #display-bhanix-quiz-page #displayBhanixQuizScore, #display-competitive-analysis-quiz-page #displayCompetitiveAnalysisQuizScore
 {
     display : block;
