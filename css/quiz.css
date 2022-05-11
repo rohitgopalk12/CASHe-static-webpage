@@ -136,10 +136,10 @@ table
     display : none;
 } */
 
-#displayFintechQuizScore
+/* #displayFintechQuizScore
 {
     display : none;
-}
+} */
 #fintechScoreText
 {
     color : black;
@@ -279,14 +279,15 @@ original code
   .container input:checked ~ .checkmark {
     background-color: green;
   }*/
-    .quiz-question
-  {
+  
+.quiz-question
+{
         text-align : center;
         color : black;
         position : relative;
         font-size : 25px;
         top : 150px;   
-  }
+}
   
 /* #options
 {
@@ -324,10 +325,10 @@ original code
     /* display : none; */
 }
 
-#displayFintechQuizScore
+/* #displayFintechQuizScore
 {
     display : none;
-}
+} */
 
 /* #fintech-quiz-page
 {
