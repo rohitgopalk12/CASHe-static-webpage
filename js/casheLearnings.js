@@ -950,6 +950,14 @@ var ctrl = function($scope)
                     {
                         document.getElementById($scope.quiz+"-countdown-timer").style.color = "red";
                     }
+                    else
+                    {
+                        document.getElementById($scope.quiz+"-countdown-timer").style.color = "black";
+                    }
+                }
+                else
+                {
+                    document.getElementById($scope.quiz+"-countdown-timer").style.color = "black";
                 }
                 document.getElementById($scope.quiz+"-countdown-timer").style.fontWeight = "bold";
                 document.getElementById($scope.quiz+"-countdown-timer").style.fontSize = "20px";
