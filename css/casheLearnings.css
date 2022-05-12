@@ -110,10 +110,6 @@ body
     background-color : blue !important;
 }
 
-.videos.selected
-{
-    background-color : orange;
-}
 /* .quiz-topics:hover, #quiz:hover
 {
     /* background-color : orange; */
@@ -380,3 +376,8 @@ a{
     background: orange; 
     border-radius: 10px;
   }
+
+.unselected
+{
+    background-color : 'rgb(255,153,51)';
+}

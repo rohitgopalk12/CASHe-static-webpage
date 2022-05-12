@@ -106,43 +106,125 @@ function slideAccordions(toggleAccordion)
 
 var fintechQuizApp = angular.module('casheLearningsApp',[]);
 
-function hoverApplied(id,color)
-{
-    if(default_video_clicked == true)
-    {
-        document.getElementById('vid1').style.backgroundColor = 'orange';
-    }
-    else
-    {
-        document.getElementById(id).style.backgroundColor = color;
-        if(current_div_clicked == true)
-        {
-            document.getElementById(current_div).style.backgroundColor = 'orange';
-        } 
-    }
-}
+// function hoverApplied(id,color)
+// {
+//     if(default_video_clicked == true)
+//     {
+//         document.getElementById('vid1').style.backgroundColor = 'orange';
+//     }
+//     else
+//     {
+//         document.getElementById(id).style.backgroundColor = color;
+//         if(current_div_clicked == true)
+//         {
+//             document.getElementById(current_div).style.backgroundColor = 'orange';
+//         } 
+//     }
+// }
 
-function hoverLost(id,color)
-{
-    if(default_video_clicked == true)
-    {
-        document.getElementById('vid1').style.backgroundColor = 'orange';
-    }
-    else
-    {
-        document.getElementById(id).style.backgroundColor = color;
-        if(current_div_clicked == true)
-        {
-            document.getElementById(current_div).style.backgroundColor = 'orange';
-        }
-    }
-} 
+// function hoverLost(id,color)
+// {
+//     if(default_video_clicked == true)
+//     {
+//         document.getElementById('vid1').style.backgroundColor = 'orange';
+//     }
+//     else
+//     {
+//         document.getElementById(id).style.backgroundColor = color;
+//         if(current_div_clicked == true)
+//         {
+//             document.getElementById(current_div).style.backgroundColor = 'orange';
+//         }
+//     }
+// } 
 
-document.getElementById('vid1').style.backgroundColor = 'orange';
+var prev_index=0;
 // document.getElementById('displayBlankPage').style.display = "none";
+fintechQuizApp.controller('videoRecordingsController',function($scope,$rootScope)
+{
+    $('.videos').slideDown(500);
+    //$scope.bgColor = $scope.videoRecordings[0].backgroundColor;
+
+    $scope.videoRecordings = 
+    [
+        {id:'vid1', name : 'Digital Transformation (Tech Panel)', backgroundColor : 'orange', hoverOn : 'rgb(255,153,51)'},
+        {id:'vid2', name : 'About CASHe', backgroundColor : 'orange', hoverOn : 'rgb(255,153,51)'},
+        {id:'vid3', name : 'Pandaemic Fuels Tech Inclusion in the Financial Sector', backgroundColor : 'orange', hoverOn : 'rgb(255,153,51)'},
+        {id:'vid4', name : 'V Raman Kumar talks about growth ahead', backgroundColor : 'orange', hoverOn : 'rgb(255,153,51)'},
+        {id:'vid5', name : 'Building a Digital-first Customer Acquisition', backgroundColor : 'orange', hoverOn : 'rgb(255,153,51)'},
+        {id:'vid6', name : 'Is Buy Now Pay Later A Good Idea For Consumers?', backgroundColor : 'orange', hoverOn : 'rgb(255,153,51)'}
+    ]
+
+    $scope.hoverOnColor = 'rgb(255,153,51)';
+    $scope.hoverOffColor = 'rgb(64,64,64)';
+    $scope.hoverApplied = function(event,color)
+    {
+        id = event.target.id;
+        if(default_video_clicked == true)
+        {
+            $scope.bgColor = videoRecordings[0].backgroundColor;
+            document.getElementById('vid1').style.backgroundColor = 'orange';
+        }
+        else
+        {
+            document.getElementById(id).style.backgroundColor = color;
+            if(current_div_clicked == true)
+            {
+                $scope.hoverOnColor = 'orange';
+                $scope.hoverOffColor = 'orange';
+                document.getElementById(current_div).style.backgroundColor = 'orange';
+            }
+        }
+
+        $scope.bgColor={'background-color':'rgb(255,153,51)'};
+    }
+
+    $scope.hoverLost = function(event,color)
+    {
+        $scope.bgColor={'background-color':'rgb(255,153,51)'};
+    }
+
+    $scope.selectedTopic = '';
+    
+    $scope.changeBackgroundTopic = function(vid)
+    {
+        console.log("hi");
+        console.log("vid : "+vid);
+        
+        $scope.selectedTopic = vid; 
+        console.log("selected topic : "+$scope.selectedTopic);
+    }
+    
+
+});
 
 var ctrl = function($scope)
 {
+    
+    //document.getElementById('vid1').style.backgroundColor = 'orange';
+    $scope.videoRecordings = 
+    [
+        {name : 'Digital Transformation (Tech Panel)', backgroundColor : 'rgb(255,153,51)'},
+        {name : 'About CASHe', backgroundColor : 'rgb(255,153,51)'},
+        {name : 'Pandaemic Fuels Tech Inclusion in the Financial Sector', backgroundColor : 'rgb(255,153,51)'},
+        {name : 'V Raman Kumar talks about growth ahead', backgroundColor : 'rgb(255,153,51)'},
+        {name : 'Building a Digital-first Customer Acquisition', backgroundColor : 'rgb(255,153,51)'},
+        {name : 'Is Buy Now Pay Later A Good Idea For Consumers?', backgroundColor : 'rgb(255,153,51)'}
+    ]
+
+    $scope.changeBackgroundColor = function(sub_accordion,hoverOn) 
+    {
+        console.log("hey dude");
+        if(hoverOn == true)
+        {
+            $scope.bgColor = {color: sub_accordion.backgroundColor};
+        }
+        else
+        {
+            $scope.bgColor = {color: 'rgb(64,64,64)'};
+        }
+    };
+
     $scope.intervalCleared = false;
     $scope.startQ=1;
     $scope.prevButton = false;
@@ -193,8 +275,21 @@ var ctrl = function($scope)
         $('.competitiveAnalysisQuestions').slideUp(500);
     }
 
-    $scope.displayInThePage = function(event)
+    $scope.video_clicked = [true,false,false,false,false,false];
+    $scope.prev_index = 1;
+    $scope.displayInThePage = function(index,event)
     {
+        console.log("prev index : "+$scope.prev_index);
+        if($scope.video_clicked[$scope.prev_index] == true)
+        {
+             $scope.video_clicked[$scope.prev_index] = false;
+        }
+        $scope.current_index = index;
+        $scope.video_clicked[$scope.current_index] = true;
+        
+
+        console.log("current : "+$scope.video_clicked[$scope.current_index]);
+        console.log("prev : "+$scope.video_clicked[$scope.prev_index]);
         id = event.target.id;
         default_video_clicked = false;
         if($scope.quiz_running == true)
@@ -531,11 +626,23 @@ var ctrl = function($scope)
         }
     }
 
-    $scope.changeBackground = function(event)
+    
+    $scope.changeBackground = function(index,event)
     {
+        if($scope.video_clicked[prev_index] == true)
+        {
+            $scope.video_clicked[prev_index] == false;
+        }
+        if($scope.video_clicked[index] == false)
+        {
+            $scope.video_clicked[index]=true;
+        }
+        prev_index = index;
         default_video_clicked = false;
+        //console.log("hi : "+event.target.id);
         document.getElementById('vid1').style.backgroundColor="rgb(64,64,64)";
         current_div = event.target.id;
+        console.log("current div is : "+current_div);
         $scope.displayWebsiteLinksPage = false;
         current_div_clicked = true;
         if(prev_accordion_visited==true)

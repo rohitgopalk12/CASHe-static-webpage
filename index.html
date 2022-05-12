@@ -34,14 +34,24 @@
                                         <!-- ----------------- -->
 
             
-            <div id="vidRec" onmouseover="hoverApplied(id,'rgb(255,153,51)')" onmouseout="hoverLost(id,'rgb(64,64,64)')" ng-click="changeBackground($event);displayInThePage($event)" class="left-nav-topics vid">
+            <div id="vidRec" onmouseover="hoverApplied(id,'rgb(255,153,51)')" onmouseout="hoverLost(id,'rgb(64,64,64)')" ng-click="changeBackground($index,$event);displayInThePage($index,$event)" class="left-nav-topics vid">
                 VIDEO RECORDINGS <div class="align"></div>
             </div> 
 
+            <!-- original code -->
+                <div id="vid{{$index+1}}" ng-controller="videoRecordingsController" class="videos" ng-repeat="vid in videoRecordings" ng-style="bgColor" ng-mouseleave="video_clicked[$index]==true ? bgColor={'background-color': 'orange' } : bgColor={'background-color': 'rgb(64,64,64)'}" ng-mouseover="video_clicked[$index]==true ? bgColor={'background-color': 'orange' } : bgColor={'background-color': 'rgb(255,153,51)'}" ng-click="changeBackgroundTopic(vid.name);displayInThePage($index,$event);video_clicked[current_index]==true ? bgColor={'background-color': 'orange' } : bgColor={'background-color': 'rgb(64,64,64)'};video_clicked[prev_index]==true ? bgColor={'background-color': 'orange' } : bgColor={'background-color': 'rgb(64,64,64)'}">
+                {{vid.name}}
+            </div>
+
+            <!-- <div id="vid{{$index+1}}" ng-controller="videoRecordingsController" class="videos" ng-repeat="vid in videoRecordings" ng-class="{selected : vid.name === selectedTopic}" ng-click="changeBackgroundTopic(vid.name)">
+                {{vid.name}}
+            </div> -->
+
+ 
             <!-- sub accordions of videos -->
             <!-- -------------------------- -->
 
-            <div class="videos" id="vid1" onmouseover="hoverApplied(id,'rgb(255,153,51)')" onmouseout="hoverLost(id,'rgb(64,64,64)')" ng-click="changeBackground($event);displayInThePage($event)">
+            <!-- <div class="videos" id="vid1" onmouseover="hoverApplied(id,'rgb(255,153,51)')" onmouseout="hoverLost(id,'rgb(64,64,64)')" ng-click="changeBackground($event);displayInThePage($event)">
                 Digital Transformation (Tech Panel)
             </div>
 
@@ -63,7 +73,7 @@
 
             <div class="videos" id="vid6" onmouseover="hoverApplied(id,'rgb(255,153,51)')" onmouseout="hoverLost(id,'rgb(64,64,64)')" ng-click="changeBackground($event);displayInThePage($event)">
                     Is Buy Now Pay Later A Good Idea For Consumers?
-            </div>
+            </div> -->
 
             <!-- ==========================================================================-->
 

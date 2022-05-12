@@ -364,3 +364,8 @@ original code
 {
     background-color : rgb(72, 213, 77);
 }
+
+.selected
+{
+    background-color : orange;
+}
