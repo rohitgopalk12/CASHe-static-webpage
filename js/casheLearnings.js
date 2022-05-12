@@ -625,7 +625,6 @@ var ctrl = function($scope)
             switch(id)
             {
                 case 'fintechQuiz':
-                    console.log("hey man going");
                     document.getElementById('fintech-quiz-tips').style.display = 'block';
                     document.getElementById('display-fintech-quiz-page').style.display = 'block';
                     document.getElementById('fintech-quiz-page').style.display = 'none';
@@ -687,7 +686,6 @@ var ctrl = function($scope)
             }
             else
             {
-                console.log("amala can drive");
                 $scope.scoreIsDisplayed = false;
             }
         }
@@ -717,7 +715,6 @@ var ctrl = function($scope)
                     break;
     
                 case 'casheQuiz':
-                    console.log("get set go");
                     document.getElementById('cashe-quiz-page').style.display = 'none';
                     document.getElementById('displayCasheQuizScore').style.display = 'block';
                     document.getElementById('cashe-quiz-tips').style.display = 'none';
@@ -743,13 +740,11 @@ var ctrl = function($scope)
             }
             for(var i=startQ-1 ; i<startQ+4 ; i++)
             {
-                console.log("hello doctor");
                 if($scope.selections[i] == $scope.questions[i].rightOption)
                 {
                     score++;
                 } 
             }
-            console.log("my score : "+score);
             document.getElementById($scope.quiz_score+'-quiz-score').innerHTML = "<h1>Score : "+score+"/5</h1>";
 
             if(score<=1)
@@ -771,158 +766,6 @@ var ctrl = function($scope)
         }
     }
     /* ---------------------------------------------------------------------------------*/ 
-
-    
-    // $scope.submitFintechQuiz = function(auto_submit)
-    // {    
-    //     console.log("done");
-    //     //$scope.quiz_running = false;
-    //     $scope.displayWebsiteLinksPage = false;
-    //     score=0;
-    //     $scope.quizFeedback = '';
-    //     if(auto_submit == false)
-    //     {
-    //         if(confirm("Are you sure you want to submit?")==true)
-    //         {
-    //             $('.fintechQuestions').slideUp(500); 
-    //             $('.casheQuestions').slideUp(500); 
-    //             $('.bhanixQuestions').slideUp(500); 
-    //             $('.competitiveAnalysisQuestions').slideUp(500); 
-    //             clearInterval(timer);
-    //             $scope.quiz_running = false;
-    //             $scope.fintechQuizPage = false;
-    //             $scope.scoreIsDisplayed = true;
-    //             $scope.displayFintechQuizScorePage = true;
-    //         }
-    //         else
-    //         {
-    //             $scope.scoreIsDisplayed = false;
-    //         }
-    //     }
-    //     else
-    //     {
-    //         $('.fintechQuestions').slideUp(500); 
-    //         $('.casheQuestions').slideUp(500); 
-    //         $('.bhanixQuestions').slideUp(500); 
-    //         $('.competitiveAnalysisQuestions').slideUp(500); 
-    //         $scope.quiz_running = false;
-    //         $scope.scoreIsDisplayed = true;
-    //     }   
-    //     if($scope.scoreIsDisplayed == true)
-    //     {
-    //         $scope.displayFintechQuizPage = true;
-    //         for(var i=0 ; i<5 ; i++)
-    //         {
-    //             console.log("hello doctor");
-    //             if($scope.selections[i] == $scope.questions[i].rightOption)
-    //             {
-    //                 score++;
-    //             } 
-    //         }
-    //         console.log("my score : "+score);
-    //         document.getElementById('score').innerHTML = "<h1>Score : "+score+"/5</h1>";
-
-    //         if(score<=1)
-    //         {
-    //             document.getElementById('feedback').innerHTML= "Feedback : "+scoreFeedback[0];
-    //         }
-    //         else if(score>1 && score<=2)
-    //         {
-    //             document.getElementById('feedback').innerHTML = "Feedback : "+scoreFeedback[1];
-    //         }
-    //         else if(score>2 && score<=3)
-    //         {
-    //             document.getElementById('feedback').innerHTML = "Feedback : "+scoreFeedback[2];
-    //         }
-    //         else
-    //         {
-    //             document.getElementById('feedback').innerHTML = "Feedback : "+scoreFeedback[3];
-    //         }  
-    //         // $scope.displayFintechQuizTips = false;
-    //         // $scope.fintechQuizPage = false;
-    //     }
-    // }
-
-    // $scope.displayFintechScore = function()
-    // {
-    //     console.log("quiz page : "+$scope.fintechQuizPage);
-    //     $scope.fintechQuizPage = false;
-    //     console.log("my grace");
-    //     $scope.displayFintechQuizPage = true;
-    //     $scope.displayFintechQuizScorePage = true;
-    //     console.log("quiz score page : "+$scope.displayFintechQuizScorePage)
-        
-    //     $scope.displayFintechQuizTips = false; 
-        
-    //     $scope.currentProgress =
-    //     {
-    //         width : "0%"
-    //     }
-              
-    //     for(var i=0 ; i<5 ; i++)
-    //     {
-    //         console.log("hello doctor");
-    //         if($scope.selections[i] == $scope.questions[i].rightOption)
-    //         {
-    //             score++;
-    //         } 
-    //     }
-    //     console.log("my score : "+score);
-    //     document.getElementById('score').innerHTML = "<h1>Score : "+score+"/5</h1>";
-
-    //     if(score<=1)
-    //     {
-    //         document.getElementById('feedback').innerHTML= "Feedback : "+scoreFeedback[0];
-    //     }
-    //     else if(score>1 && score<=2)
-    //     {
-    //         document.getElementById('feedback').innerHTML = "Feedback : "+scoreFeedback[1];
-    //     }
-    //     else if(score>2 && score<=3)
-    //     {
-    //         document.getElementById('feedback').innerHTML = "Feedback : "+scoreFeedback[2];
-    //     }
-    //     else
-    //     {
-    //         document.getElementById('feedback').innerHTML = "Feedback : "+scoreFeedback[3];
-    //     }  
-    // }
-
-        // original code
-        // $scope.displayFintechScore = function()
-        // {
-        //         //$scope.quiz_running = false;
-        //             //$scope.displayFintechQuizScore = true;
-        //             //document.getElementById('displayFintechQuizScore').style.display = "block";
-        //             //$scope.fintechQuizPage = false;
-        //             //document.getElementById('fintech-quiz-page').style.display='none';
-        //                         /* score calculation takes place here */
-        //             for(var i=0 ; i<5 ; i++)
-        //             {
-        //                 if($scope.selections[i] == $scope.questions[i].rightOption)
-        //                 {
-        //                     score++;
-        //                 } 
-        //             }
-        //             document.getElementById('score').innerHTML = "<h1>Score : "+score+"/5</h1>";
-
-        //             if(score<=1)
-        //             {
-        //                 document.getElementById('feedback').innerHTML= "Feedback : "+scoreFeedback[0];
-        //             }
-        //             else if(score>1 && score<=2)
-        //             {
-        //                 document.getElementById('feedback').innerHTML = "Feedback : "+scoreFeedback[1];
-        //             }
-        //             else if(score>2 && score<=3)
-        //             {
-        //                 document.getElementById('feedback').innerHTML = "Feedback : "+scoreFeedback[2];
-        //             }
-        //             else
-        //             {
-        //                 document.getElementById('feedback').innerHTML = "Feedback : "+scoreFeedback[3];
-        //             }
-        //     }
 
     $scope.currentQ=1;   
         // jump to Question
@@ -1017,7 +860,6 @@ var ctrl = function($scope)
         switch(id)
         {
             case 'fintechQuiz':
-                console.log("fintech quiz start");
                 document.getElementById('fintech-quiz-tips').style.display = 'none';
                 document.getElementById('fintech-quiz-page').style.display = 'block';
                 $scope.topicQuestions = '.fintechQuestions';
@@ -1048,7 +890,6 @@ var ctrl = function($scope)
         $($scope.topicQuestions).slideDown(500);
         $scope.selectAnswer = function(answerNo)
         {
-            console.log("my current Q is now is : "+$scope.currentQ);
             $scope.selections[$scope.currentQ-1] = answerNo;
             if($scope.status[$scope.currentQ-1] == false)
             {
