@@ -13,12 +13,13 @@
 div.CASHe-topics-list
 {
     position : absolute;
-    top : 12.5%;
-    height : 87.5%;
+    top : 12.4%;
+    height : 87.6%;
     overflow-x: hidden;
     width : 25%;
     left : 0px;
-    background-color : rgb(192,192,192);
+    background-color : white;
+    border-top : 1px solid black;
 }
 div.word-doc{
     overflow-y:auto;
@@ -119,7 +120,7 @@ body
 {
     cursor : pointer;
     font-weight : bold;
-    border-bottom : 1px solid silver;
+    border : 1px solid black;
     font-size : 15x;
     background-color : rgb(64,64,64);
     color : white;
@@ -130,7 +131,7 @@ body
 }
 .videos, .word-doc, .word-docs, .ppt-docs, .pdf-doc, .pdf-docs, .links, .quiz-topics
 {
-    border-bottom : 1px solid silver;
+    border : 1px solid black;
     cursor : pointer;
     display  : none;
     color : white;
@@ -149,6 +150,12 @@ body
     padding-right : 15px;
     color : white;
 }
+
+.fintechQuestions, .casheQuestions, .bhanixQuestions, .competitiveAnalysisQuestions
+{
+    border : 1px solid black;
+}
+
 .videos 
 {
     font-weight : bold;

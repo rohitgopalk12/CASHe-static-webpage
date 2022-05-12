@@ -80,9 +80,12 @@ casheFiles.set('ppt-doc-3','assets/FinTech-Financial-Sector.pdf');
                 //===================================================
 
 var toggleAccordion = '';
-var downloadTimer = 0;
-var timeleft = 0;
 var timer = 0;
+var min=0;
+var sec=0;
+var current_div = '';
+var current_div_clicked=false;
+
 function slideAccordions(toggleAccordion)
 {
     for(var i=0;i<accordions_list.length;i++)
@@ -102,17 +105,6 @@ function slideAccordions(toggleAccordion)
 }
 
 var fintechQuizApp = angular.module('casheLearningsApp',[]);
-var min=0;
-var remSec = 0;
-
-/* Quiz Questions and answers */
-
-/* JavaScript functions */
-/*=========================*/
-
-var current_div = '';
-var current_div_clicked=false;
-var current_quiz_name = '';
 
 function hoverApplied(id,color)
 {
@@ -210,11 +202,18 @@ var ctrl = function($scope)
             if(confirm("Would you like to end the quiz?")==true)
             {
                 $scope.quiz_running = false;
-                $scope.pageToBeDisplayed(id);            
+                 
+                $scope.quizTipsAreDisplayed = false;
+                current_div = id;
+                document.getElementById($scope.running_quiz).style.backgroundColor = 'rgb(64,64,64)';
+                $scope.pageToBeDisplayed(id);  
             }
             else
             {
                 $scope.quizTipsAreDisplayed = false;
+                current_div = $scope.running_quiz;
+                document.getElementById($scope.running_quiz).style.backgroundColor = 'orange';
+                document.getElementById(id).style.backgroundColor = 'rgb(64,64,64)';
             }
         }
         else
@@ -295,26 +294,27 @@ var ctrl = function($scope)
             $scope.displayVideosDocsPage = true;
             $scope.displayNavigateTipPage = false;
             document.getElementById('display').data = casheFiles.get(id);
-            $scope.displayWebsiteLinksPage = false;
-                // document.getElementById('displayBlankPage').style.display = "none";   
+            $scope.displayWebsiteLinksPage = false;  
         }
-        //document.getElementById('display-quiz-pages').style.display = "none";
-        //document.getElementById('displayWebsiteLinks').style.display = "none";
     }
 // ---------X----------X----------X---------X-----------X-----------X---------
 
-    
     $scope.displayWebsiteLinksPage = false;
-    //document.getElementById('displayWebsiteLinks').style.display = "none";
-    $scope.selections = [-1, -1,-1,-1,-1,
-            -1,-1,-1,-1,-1,
-            -1,-1,-1,-1,-1,
-            -1, -1,-1,-1,-1];
+    $scope.selections = 
+    [
+        -1, -1,-1,-1,-1,
+        -1,-1,-1,-1,-1,
+        -1,-1,-1,-1,-1,
+        -1, -1,-1,-1,-1
+    ];
 
-    $scope.status = [false,false,false,false,false,
-            false,false,false,false,false,
-            false,false,false,false,false,
-            false,false,false,false,false];
+    $scope.status = 
+    [
+        false,false,false,false,false,
+        false,false,false,false,false,
+        false,false,false,false,false,
+        false,false,false,false,false
+    ];
         
     var progress = 0;
     $scope.width = "";
@@ -489,7 +489,6 @@ var ctrl = function($scope)
     ];
         
     var scoreFeedback = ['Poor','Average','Good','Excellent'];
-    $scope.casheQuizTips = false;
 
     var prev_div = 0;
     var prev_accordion_visited = false;
@@ -658,8 +657,6 @@ var ctrl = function($scope)
             }
             document.getElementById($scope.quiz+"-countdown-timer").innerHTML = '';
             clearInterval(timer);
-
-            timeleft = 0;
             $scope.displayVideosDocsPage = false;
             $scope.quizTipsAreDisplayed = false;
         }
