@@ -5,12 +5,12 @@ var accordions_list = ['.videos','.documents','.ppt-docs','.links','.quiz-topics
 //=====================================================================================
                                 /* youtube video links */
                                 /* ============================== */
-casheFiles.set('vid1','https://www.youtube.com/embed/Pl7XP8o7v6g?autoplay=0');
-casheFiles.set('vid2','https://www.youtube.com/embed/JvNvINEgW1s?autoplay=0');
-casheFiles.set('vid3','https://www.youtube.com/embed/ww_83m_bB_U?autoplay=0');
-casheFiles.set('vid4','https://www.youtube.com/embed/C1E5tHaZaks?autoplay=0');
-casheFiles.set('vid5','https://www.youtube.com/embed/7jS9JMxg5R4?autoplay=0');
-casheFiles.set('vid6','https://www.youtube.com/embed/z_zj2OmTRJk?autoplay=0');
+casheFiles.set('vid1','https://www.youtube.com/embed/Pl7XP8o7v6g');
+casheFiles.set('vid2','https://www.youtube.com/embed/JvNvINEgW1s');
+casheFiles.set('vid3','https://www.youtube.com/embed/ww_83m_bB_U');
+casheFiles.set('vid4','https://www.youtube.com/embed/C1E5tHaZaks');
+casheFiles.set('vid5','https://www.youtube.com/embed/7jS9JMxg5R4');
+casheFiles.set('vid6','https://www.youtube.com/embed/z_zj2OmTRJk');
 
 //=====================================================================================
 
