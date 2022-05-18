@@ -101,13 +101,9 @@ body
 {
     font-family : tahoma;
 }
-.vid:hover, .videos:hover, .word-doc:hover, .word-docs:hover, .pdf-doc:hover, .pdf-docs:hover, .ppt-docs:hover, .links:hover, .links-websites:hover, .ppt:hover, .documentation:hover, .fintechQuestions:hover, .casheQuestions:hover, .bhanixQuestions:hover, .competitiveAnalysisQuestions:hover, #quiz:hover
+.vid:hover, .videos:hover, .word-doc:hover, .documents:hover, .word-docs:hover, .pdf-doc:hover, .pdf-docs:hover, .ppt-docs:hover, .links:hover, .links-websites:hover, .ppt:hover, .documentation:hover, .fintechQuestions:hover, .casheQuestions:hover, .bhanixQuestions:hover, .competitiveAnalysisQuestions:hover, #quiz:hover, .quiz:hover, .quiz-topics:hover
 { 
     background-color : rgb(255,153,51);
-}
-.changeBgColor
-{
-    background-color : blue !important;
 }
 
 /* .quiz-topics:hover, #quiz:hover
@@ -115,7 +111,7 @@ body
     /* background-color : orange; */
     /* color : black; 
 } */
-.vid, .documentation, .ppt, .links-websites, #quiz, .word-doc, .pdf-doc
+.vid, .documentation, .ppt, .links-websites, #quiz, .word-doc, .pdf-doc, .documents
 {
     cursor : pointer;
     font-weight : bold;
@@ -128,22 +124,20 @@ body
     height : 60px;
     max-height : 60px; 
 }
-.videos, .word-doc, .word-docs, .ppt-docs, .pdf-doc, .pdf-docs, .links, .quiz-topics
+.videos, .word-doc, .word-docs, .ppt-docs, .pdf-doc, .pdf-docs, .links, .quiz-topics, .documents
 {
     border : 1px solid black;
     cursor : pointer;
     display  : none;
     color : white;
     height : 60px;
-    max-height : 60px;
-    
+    max-height : 60px;   
 }
-
 .word-doc, .pdf-doc, .ppt-docs, .links, .quiz-topics, .videos
 {
     padding-left : 40px;
 }
-.word-docs, .pdf-docs, .fintechQuestions, .casheQuestions, .bhanixQuestions, .competitiveAnalysisQuestions
+.word-docs, .pdf-docs, .fintechQuestions, .casheQuestions, .bhanixQuestions, .competitiveAnalysisQuestions, .documents
 {
     padding-left : 60px;
     padding-right : 15px;
@@ -158,7 +152,6 @@ body
 .videos 
 {
     font-weight : bold;
-    height : 50px;
 }
 #fintechQuiz, #casheQuiz, #bhanixQuiz, #competitiveAnalysisQuiz
 {
@@ -209,11 +202,11 @@ body
     right : 2px;
 }
 
-.word-doc, .pdf-doc, .ppt-docs, .links, .videos, .quiz-topics, .word-docs, .pdf-docs
+.word-doc, .pdf-doc, .ppt-docs, .links, .videos, .quiz-topics, .word-docs, .pdf-docs, .documents
 {
     background-color : rgb(64,64,64);
 }
-.word-doc, .pdf-doc
+.word-doc, .pdf-doc, .documents
 {
     text-transform : uppercase;
     font-weight : bold;
@@ -241,7 +234,7 @@ a{
 /* original code */
 #display-fintech-quiz-page #fintech-quiz-tips,#display-cashe-quiz-page #cashe-quiz-tips,#display-bhanix-quiz-page #bhanix-quiz-tips, #display-competitive-analysis-quiz-page #competitive-analysis-quiz-tips
 {
-    display : block;
+    /* display : block; */
     position : absolute;
     top : 20%;
     left : 30%;
@@ -379,5 +372,27 @@ a{
 
 .unselected
 {
+    background-color : 'rgb(64,64,64)';
+}
+.hoverOn
+{
     background-color : 'rgb(255,153,51)';
 }
+/* .videos
+{
+    
+    transition: all linear 3s;
+    max-height : 60px;
+}
+
+.videos.ng-hide
+{
+        height : 0px;
+        overflow-y: hidden;
+  }
+  .videos.ng-hide-add, .videos.ng-hide-remove
+  {
+        display:block !important;
+        overflow-y: hidden;
+  }
+   */

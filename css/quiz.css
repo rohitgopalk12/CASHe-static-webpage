@@ -124,7 +124,7 @@ table
     top : 10px;
     color : black;
     font-weight : bold;
-    display : none;
+    display : block;
 }
 
 /* .tips
@@ -365,7 +365,19 @@ original code
     background-color : rgb(72, 213, 77);
 }
 
-.selected
+.videos.selected,.documents.selected,.word-docs.selected,.pdf-docs.selected,.ppt-docs.selected,.quiz-topics.selected
+{
+    background-color : orange;
+}
+.vid.selected,.ppt-docs.selected,.ppt.selected, .documentation.selected, .links-websites.selected
+{
+    background-color : orange;
+}
+.links.selected, .quizzes.selected
+{
+    background-color : orange;
+}
+.fintechQuestions.selected,.casheQuestions.selected,.bhanixQuestions.selected,.competitiveAnalysisQuestions.selected
 {
     background-color : orange;
 }

@@ -8,12 +8,18 @@
         <title>CASHe learnings</title>
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css">
         <link rel="stylesheet" href="css/casheLearnings.css">
-        <script src="js/jquery-3.6.0.min.js"></script>
+        
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular-animate.js"></script>
+
+        
         <script src="js/angular.min.js"></script>
+        <script src="js/jquery-3.6.0.min.js"></script>
+
         <link rel="shortcut icon" href="#">
     </head>
 
-    <body ng-app="casheLearningsApp" ng-controller="quizController" >
+    <body ng-app="casheLearningsApp" ng-controller="quizController">
 
         <!-- ==========================================================================-->
 
@@ -33,65 +39,63 @@
                                         <!-- Video recordings -->
                                         <!-- ----------------- -->
 
-            
-            <div id="vidRec" onmouseover="hoverApplied(id,'rgb(255,153,51)')" onmouseout="hoverLost(id,'rgb(64,64,64)')" ng-click="changeBackground($index,$event);displayInThePage($index,$event)" class="left-nav-topics vid">
-                VIDEO RECORDINGS <div class="align"></div>
-            </div> 
-
-            <!-- original code -->
-                <div id="vid{{$index+1}}" ng-controller="videoRecordingsController" class="videos" ng-repeat="vid in videoRecordings" ng-style="bgColor" ng-mouseleave="video_clicked[$index]==true ? bgColor={'background-color': 'orange' } : bgColor={'background-color': 'rgb(64,64,64)'}" ng-mouseover="video_clicked[$index]==true ? bgColor={'background-color': 'orange' } : bgColor={'background-color': 'rgb(255,153,51)'}" ng-click="changeBackgroundTopic(vid.name);displayInThePage($index,$event);video_clicked[current_index]==true ? bgColor={'background-color': 'orange' } : bgColor={'background-color': 'rgb(64,64,64)'};video_clicked[prev_index]==true ? bgColor={'background-color': 'orange' } : bgColor={'background-color': 'rgb(64,64,64)'}">
-                {{vid.name}}
+            <div>
+                <div id="vidRec" ng-class="{selected : videoRecordingTitle == videoRecording}" ng-click="changeBackgroundTopic(videoRecording,$event);displayInThePage($index,$event)" class="vid">
+                    {{videoRecording}}
+                </div> 
+        
+                <!-- <div ng-repeat="vid in videoRecordings" ng-show="showVideos" ng-click="changeBackgroundTopic(vid.name);displayInThePage($index,$event)" id="vid{{$index+1}}" class="videos" >-->
+                <!-- <div ng-class="{selected : vid.name === videoTopic}" ng-repeat="vid in videoRecordings" ng-show="showVideos" ng-click="changeBackgroundTopic(vid.name)" id="vid{{$index+1}}" class="videos" > -->
+                <div ng-init="videosAutoSlideDown($index)" ng-repeat="vid in videoRecordings">
+                    <div ng-class="{selected : selectedVideo == $index}" class="videos" id="vid{{$index+1}}"  ng-click="changeBackgroundTopic($index,$event);displayInThePage($index,$event)">
+                        {{vid.name}}
+                    </div>
+                </div>
             </div>
-
-            <!-- <div id="vid{{$index+1}}" ng-controller="videoRecordingsController" class="videos" ng-repeat="vid in videoRecordings" ng-class="{selected : vid.name === selectedTopic}" ng-click="changeBackgroundTopic(vid.name)">
-                {{vid.name}}
-            </div> -->
-
- 
-            <!-- sub accordions of videos -->
-            <!-- -------------------------- -->
-
-            <!-- <div class="videos" id="vid1" onmouseover="hoverApplied(id,'rgb(255,153,51)')" onmouseout="hoverLost(id,'rgb(64,64,64)')" ng-click="changeBackground($event);displayInThePage($event)">
-                Digital Transformation (Tech Panel)
-            </div>
-
-            <div class="videos" id="vid2" onmouseover="hoverApplied(id,'rgb(255,153,51)')" onmouseout="hoverLost(id,'rgb(64,64,64)')" ng-click="changeBackground($event);displayInThePage($event)">
-                About CASHe
-            </div>
-
-            <div class="videos" id="vid3" onmouseover="hoverApplied(id,'rgb(255,153,51)')" onmouseout="hoverLost(id,'rgb(64,64,64)')" ng-click="changeBackground($event);displayInThePage($event)">
-                    Pandaemic Fuels Tech Inclusion in the Financial Sector
-            </div>
-
-            <div class="videos" id="vid4" onmouseover="hoverApplied(id,'rgb(255,153,51)')" onmouseout="hoverLost(id,'rgb(64,64,64)')" ng-click="changeBackground($event);displayInThePage($event)">
-                    V Raman Kumar talks about growth ahead
-            </div>
-
-            <div class="videos" id="vid5" onmouseover="hoverApplied(id,'rgb(255,153,51)')" onmouseout="hoverLost(id,'rgb(64,64,64)')" ng-click="changeBackground($event);displayInThePage($event)">
-                    Building a Digital-first Customer Acquisition
-            </div>
-
-            <div class="videos" id="vid6" onmouseover="hoverApplied(id,'rgb(255,153,51)')" onmouseout="hoverLost(id,'rgb(64,64,64)')" ng-click="changeBackground($event);displayInThePage($event)">
-                    Is Buy Now Pay Later A Good Idea For Consumers?
-            </div> -->
 
             <!-- ==========================================================================-->
 
             <!-- Documentation -->
             <!-- ===================-->
 
-            <div onmouseover="hoverApplied(id,'rgb(255,153,51)')" onmouseout="hoverLost(id,'rgb(64,64,64)')" ng-click="changeBackground($event);displayInThePage($event)" class="left-nav-topics documentation" id="document">
+            <!-- original code
+                <div onmouseover="hoverApplied(id,'rgb(255,153,51)')" onmouseout="hoverLost(id,'rgb(64,64,64)')" ng-click="changeBackground($event);displayInThePage($event)" class="left-nav-topics documentation" id="document">
                 DOCUMENTATION
+            </div> -->
+
+            <div id="document" ng-class="{selected : selectedDocumentation == documentation}" ng-click="changeBackgroundTopic(documentation,$event);displayInThePage($index,$event)" class="documentation">
+                {{documentation}}
             </div>
 
             <!-- ---------X-----------------X----------------------X---------------X--------------X -->
-            <!-- Word Documents -->
+            <!-- Word and PDF Documents  -->
             <!-- ===================-->
 
-            <div onmouseover="hoverApplied(id,'rgb(255,153,51)')" onmouseout="hoverLost(id,'rgb(64,64,64)')" id='word' ng-click="changeBackground($event);displayInThePage($event)" class="word-doc documents">
-                Word Documents
+            <div ng-repeat="doc in documentsOfCashe">
+                <!-- <div ng-class="{selected : selectedSubAccordion == $index}" class="word-doc documents" id="" ng-click="changeBackgroundTopic($index);displayInThePage($index,$event)"> -->
+                <div ng-class="{selected : selectedDoc == $index}" id="{{doc.id}}" class="documents" ng-click="changeBackgroundTopic($index,$event);displayInThePage($index,$event)">
+                    {{doc.name}}
+                </div>
+
+                <div ng-repeat="wordDoc in doc.word_documents">
+                    <div ng-class="{selected : selectedWordDoc == $index}" id="{{wordDoc.wordID}}" class="word-docs" ng-click="changeBackgroundTopic($index,$event);displayInThePage($index,$event)">
+                        {{wordDoc.word_doc}}
+                    </div>
+                </div>
+
+                <div ng-repeat="pdfDoc in doc.pdf_documents">
+                    <div ng-click="changeBackgroundTopic($index,$event);displayInThePage($index,$event)" ng-class="{selected : selectedPdfDoc == $index}" id="{{pdfDoc.pdfID}}" class="pdf-docs">
+                        {{pdfDoc.pdf_doc}}
+                    </div>
+                </div>
             </div>
 
+            <!-- ---------------------------------------------------------------------- -->
+
+            <!-- <div onmouseover="hoverApplied(id,'rgb(255,153,51)')" onmouseout="hoverLost(id,'rgb(64,64,64)')" id='word' ng-click="changeBackground($event);displayInThePage($event)" class="word-doc documents">
+                Word Documents
+            </div> -->
+<!-- 
             <div ng-click="changeBackground($event);displayInThePage($event)" onmouseover="hoverApplied(id,'rgb(255,153,51)')" onmouseout="hoverLost(id,'rgb(64,64,64)')" class="topics word-docs" id="word-doc-1">
                 3 reasons BNPL is a hit among young shoppers this festive season
             </div>
@@ -194,13 +198,13 @@
 
             <div ng-click="changeBackground($event);displayInThePage($event)" onmouseover="hoverApplied(id,'rgb(255,153,51)')" onmouseout="hoverLost(id,'rgb(64,64,64)')" class="topics word-docs" id="word-doc-26">
                 With 10x growth for BNPL products during sales
-            </div>
+            </div> -->
 
             <!-- --------X-------------X------------X-----------------X----------------X-------    -->
 
             <!-- pdf documents  -->
             <!-- ==================-->
-
+<!-- 
             <div onmouseover="hoverApplied(id,'rgb(255,153,51)')" onmouseout="hoverLost(id,'rgb(64,64,64)')" id='pdf' ng-click="changeBackground($event);displayInThePage($event)" class="left-nav-topics pdf-doc documents">
                 PDF Documents
             </div>
@@ -215,18 +219,29 @@
 
             <div ng-click="changeBackground($event);displayInThePage($event)" onmouseover="hoverApplied(id,'rgb(255,153,51)')" onmouseout="hoverLost(id,'rgb(64,64,64)')" class="topics pdf-docs" id="pdf-doc-3">
                 FinTech – Financial Sector
-            </div>
+            </div> -->
 
             <!-- --------X-------------X------------X-----------------X----------------X -->
 
             <!-- ppt documents -->
             <!-- =================-->
 
-            <div onmouseover="hoverApplied(id,'rgb(255,153,51)')" onmouseout="hoverLost(id,'rgb(64,64,64)')" id='ppt-doc' ng-click="changeBackground($event);displayInThePage($event)" class="left-nav-topics ppt">
-                PPT PRESENTATION
+            <div id='ppt-doc' ng-class="{selected : selectedPptTitle == pptTitle}" ng-click="changeBackgroundTopic(pptTitle,$event);displayInThePage($index,$event)" class="ppt">
+                {{pptTitle}}
             </div>
 
-            <div ng-click="changeBackground($event);displayInThePage($event)" onmouseover="hoverApplied(id,'rgb(255,153,51)')" onmouseout="hoverLost(id,'rgb(64,64,64)')" class="ppt-docs" id="ppt-doc-1">
+            <div ng-repeat="ppt in pptDocuments">
+                <div ng-class="{selected : selectedPptDoc == $index}" class="ppt-docs" id="ppt-doc-{{$index+1}}" ng-click="changeBackgroundTopic($index,$event);displayInThePage($index,$event)" >   
+                    {{ppt}}
+                </div>
+            </div>
+
+
+            <!-- <div onmouseover="hoverApplied(id,'rgb(255,153,51)')" onmouseout="hoverLost(id,'rgb(64,64,64)')" id='ppt-doc' ng-click="changeBackground($event);displayInThePage($event)" class="left-nav-topics ppt">
+                PPT PRESENTATION
+            </div> -->
+
+            <!-- <div ng-click="changeBackground($event);displayInThePage($event)" onmouseover="hoverApplied(id,'rgb(255,153,51)')" onmouseout="hoverLost(id,'rgb(64,64,64)')" class="ppt-docs" id="ppt-doc-1">
                 BHANIX & CASHe
             </div>
 
@@ -236,43 +251,81 @@
 
             <div ng-click="changeBackground($event);displayInThePage($event)" onmouseover="hoverApplied(id,'rgb(255,153,51)')" onmouseout="hoverLost(id,'rgb(64,64,64)')" class="ppt-docs" id="ppt-doc-3">
                 FINTECH - FINANCIAL SECTOR
-            </div>
+            </div> -->
 
             <!-- --------X-------------X------------X-----------------X----------------X -->
 
             <!-- website Links -->
             <!-- ==================-->
 
-            <div onmouseover="hoverApplied(id,'rgb(255,153,51)')" onmouseout="hoverLost(id,'rgb(64,64,64)')" id='websites' ng-click="changeBackground($event);displayInThePage($event)" class="left-nav-topics links-websites">
-                LINKS
+            <div id='websites' ng-class="{selected : selectedLinksTitle == linksTitle}" ng-click="changeBackgroundTopic(linksTitle,$event);displayInThePage($index,$event)" class="links-websites">
+                {{linksTitle}}
             </div>
 
-            <div ng-click="changeBackground($event);displayLinks($event)" onmouseover="hoverApplied(id,'rgb(255,153,51)')" onmouseout="hoverLost(id,'rgb(64,64,64)')" id="cashe" class="links">
+            <div ng-repeat="links in linksWebsites">
+                <div ng-class="{selected : selectedLinks === $index}" ng-click="changeBackgroundTopic($index,$event);displayLinks($event)" id="{{links.ID}}" class="links">
+                    {{links.name}}
+                </div>
+            </div>
+            <!-- <div ng-click="changeBackgroundTopic($index,$event);displayLinks($event)" id="cashe" class="links">
                 CASHe
             </div>
 
-            <div ng-click="changeBackground($event);displayLinks($event)" onmouseover="hoverApplied(id,'rgb(255,153,51)')" onmouseout="hoverLost(id,'rgb(64,64,64)')" id="bhanix" class="links">
+            <div ng-click="changeBackground($index,$event);displayLinks($event)" id="bhanix" class="links">
                 Bhanix Finance
-            </div>
+            </div> -->
 
             <!----------X-------------X------------X-----------------X----------------X  -->
 
             <!-- QUIZ -->
             <!-- ===========-->
-            <div onmouseover="hoverApplied(id,'rgb(255,153,51)')" onmouseout="hoverLost(id,'rgb(64,64,64)')" ng-click="changeBackground($event);displayInThePage($event)" class="left-nav-topics" id="quiz">
-                QUIZ
+            <div ng-class="{selected : selectedQuizTitle === quizTitle}" ng-click="changeBackgroundTopic(quizTitle,$event);displayInThePage($index,$event)" class="quizzes" id="quiz">
+                {{quizTitle}}
             </div>
 
             <!-- Fintech Quiz -->
             <!-- ===========-->
 
-            <div>
+            <div ng-repeat="quizNames in quizTopicsList">
+                <div id="{{quizNames.quizID}}" ng-class="{selected : selectedQuizTopics == $index}" class="quiz-topics" ng-click="changeBackgroundTopic($index,$event);displayQuizTips($event)">
+                    {{quizNames.quizName}}
+                </div>
 
+                <div ng-init="firstQuestionSelectedByDefault($index,$event)" ng-repeat="fintech in quizNames.fintechQuestionaire">
+                    <div id="{{fintech.questionID}}" ng-class="{selected : selectedFintechQuestion == $index}" class="fintechQuestions" ng-click="changeBackgroundTopic($index,$event);jumpToQuestion($event)">
+                        {{fintech.questionName}}
+                    </div>
+                </div>
+    
+               <div ng-repeat="cashe in quizNames.casheQuestionaire">
+                    <div id="{{cashe.questionID}}" ng-class="{selected : selectedCasheQuestion == $index}" class="casheQuestions" ng-click="changeBackgroundTopic($index,$event);jumpToQuestion($event)">
+                        {{cashe.questionName}}
+                    </div>
+                </div>
+    
+                <div ng-repeat="bhanix in quizNames.bhanixQuestionaire">
+                    <div id="{{bhanix.questionID}}" ng-class="{selected : selectedBhanixQuestion == $index}" class="bhanixQuestions" ng-click="changeBackgroundTopic($index,$event);jumpToQuestion($event)">
+                        {{bhanix.questionName}}
+                    </div>
+                </div>
+    
+                <div ng-repeat="competitiveAnalysis in quizNames.competitiveAnalysisQuestionaire">
+                    <div id="{{competitiveAnalysis.questionID}}" ng-class="{selected : selectedCompetitiveAnalysisQuestion == $index}" class="competitiveAnalysisQuestions" ng-click="changeBackgroundTopic($index,$event);jumpToQuestion($event)">
+                        {{competitiveAnalysis.questionName}}
+                    </div>
+                </div>
+            </div>
+
+            
+
+
+
+            <!-- <div>
                 <div id="fintechQuiz" onmouseover="hoverApplied(id,'rgb(255,153,51)')" onmouseout="hoverLost(id,'rgb(64,64,64)')" class="quiz-topics" ng-click="changeBackground($event);displayQuizTips($event)">
                     Fintech Eco System
                 </div>
 
-                <!-- Fintech eco system questions -->
+                Fintech eco system questions
                 <div class="fintechQuestions" onmouseover="hoverApplied(id,'rgb(255,153,51)')" onmouseout="hoverLost(id,'rgb(64,64,64)')" value="1" id="fintech_1" ng-click="jumpToQuestion($event)">
                     When to choose Buy Now Pay later?
                 </div>
@@ -292,18 +345,18 @@
                 <div class="fintechQuestions" onmouseover="hoverApplied(id,'rgb(255,153,51)')" onmouseout="hoverLost(id,'rgb(64,64,64)')" id="fintech_5" value="5" ng-click="jumpToQuestion($event)">
                     Competition, collaboration and convergence makes healthy relationship between bank and NBFC
                 </div>
-            </div>
+            </div> -->
 
             <!-- --------X-------------X------------X-----------------X----------------X -->
 
             <!-- CASHe Quiz -->
             <!-- ==============-->
-            <div>
+            <!-- <div>
                 <div id="casheQuiz" onmouseover="hoverApplied(id,'rgb(255,153,51)')" onmouseout="hoverLost(id,'rgb(64,64,64)')" class="quiz-topics"  ng-click="changeBackground($event);displayQuizTips($event)">
                     CASHe
                 </div>
 
-                <!-- CASHe questions -->
+                CASHe questions
                 <div class="casheQuestions" onmouseover="hoverApplied(id,'rgb(255,153,51)')" onmouseout="hoverLost(id,'rgb(64,64,64)')" id="cashe_6" value="11" ng-click="jumpToQuestion($event)">
                     What Is CASHe’s mission?
                 </div>
@@ -324,17 +377,17 @@
                     Bhanix was established on?
                 </div>
             </div>
-            <!-- --------X-------------X------------X-----------------X----------------X -->
+             --------X-------------X------------X-----------------X----------------X -->
 
 
             <!-- Bhanix Quiz -->
             <!-- =================-->
-            <div>
+            <!-- <div>
                 <div id="bhanixQuiz" onmouseover="hoverApplied(id,'rgb(255,153,51)')" onmouseout="hoverLost(id,'rgb(64,64,64)')" class="quiz-topics"  ng-click="changeBackground($event);displayQuizTips($event)">
                     Bhanix
                 </div>
 
-                <!-- Bhanix Questions -->
+                Bhanix Questions 
                 <div class="bhanixQuestions" onmouseover="hoverApplied(id,'rgb(255,153,51)')" onmouseout="hoverLost(id,'rgb(64,64,64)')" id="bhanix_11" value="5" ng-click="jumpToQuestion($event)">
                     What is full form of NBFC?
                 </div>
@@ -354,11 +407,11 @@
                 <div class="bhanixQuestions" onmouseover="hoverApplied(id,'rgb(255,153,51)')" onmouseout="hoverLost(id,'rgb(64,64,64)')" id="bhanix_15" value="5" ng-click="jumpToQuestion($event)">
                     Who is the founder of CASHe?
                 </div>
-            </div>
+            </div> -->
             <!-- --------X-------------X------------X-----------------X----------------X -->
 
             			<!-- Competitive Analysis 
-                        =======================  -->
+                         ======================= 
             <div>
                 <div id="competitiveAnalysisQuiz" onmouseover="hoverApplied(id,'rgb(255,153,51)')" onmouseout="hoverLost(id,'rgb(64,64,64)')" class="quiz-topics"  ng-click="changeBackground($event);displayQuizTips($event)">
                     Competitive Analysis
@@ -384,7 +437,7 @@
                 <div class="competitiveAnalysisQuestions" onmouseover="hoverApplied(id,'rgb(255,153,51)')" onmouseout="hoverLost(id,'rgb(64,64,64)')" id="competitive_20" value="5" ng-click="jumpToQuestion($event)">
                     PostPe card has a credit limit of upto
                 </div>
-            </div>
+            </div> -->
             <!-- --------X-------------X------------X-----------------X----------------X ---- -->
         </div>
 
@@ -393,10 +446,10 @@
      <!-- display website links -->
      <!-- ------------------------ -->
 
-        <div ng-show="displayWebsiteLinksPage == true" id="displayWebsiteLinks" align="center">
-            <h2 style="color:black">Please click on the below link to navigate to the official site</h2>
-            <h3 style="color:black"><a ng-href="{{links}}" target="_blank" id="link">{{links}}</a></h3>
-        </div>
+    <div ng-show="displayWebsiteLinksPage == true" id="displayWebsiteLinks" align="center">
+        <h2 style="color:black">Please click on the below link to navigate to the official site</h2>
+        <h3 style="color:black"><a ng-href="{{websitelink}}" target="_blank" id="link">{{websitelink}}</a></h3>
+    </div>
 
     <!-- ======================================================================= -->
     <div ng-show="displayNavigateTipPage == true" id="displayBlankPage">
@@ -408,54 +461,54 @@
         <!-- display videos, documentations, ppts, links and quiz -->
         <!-- =========================================================-->
 
-        <div ng-show="displayVideosDocsPage == true" id="displayDIV">
-            <object id="display" height="95%" width="95%" data="https://www.youtube.com/embed/Pl7XP8o7v6g"></object>
-        </div>
+    <div ng-show="displayVideosDocsPage == true" id="displayDIV">
+        <object id="display" height="95%" width="95%" data="https://www.youtube.com/embed/Pl7XP8o7v6g"></object>
+    </div>
 
         <!-- ======================================================================= -->
-        <div ng-show="displayQuizPages == true" id="display-quiz-pages">
+    <div ng-show="displayQuizPages==true" id="display-quiz-pages">
 
         <!-- The Fintech Quiz Page -->
         <!-- ------------------------- -->
 
-            <div id="display-fintech-quiz-page">
+        <div ng-show="displayFintechQuizPage==true" id="display-fintech-quiz-page">
             <!-- -------X---------X--------X -------X---------X--------X-------- -->
 
                 <!-- Display fintech quiz tips page -->
                 <!-- ===========================-->
                 
-                <div id='fintech-quiz-tips'>
+            <div ng-show="displayFintechQuizTips==true" id='fintech-quiz-tips'>
                 <!-- <div ng-show="displayFintechQuizTips == true" id='fintech-quiz-tips' > -->
-                    <div class='tips' align="center">
-                        <p>Welcome to Fintech Ecosystem Quiz !!</p><br />
-                        <p>This Quiz contains 5 Questions</p><br />
-                        <p>Each Question has two options</p><br />
-                        <p>Each correct option carries 1 point</p><br />
-                        <p>Try to answer as many questions as possible</p><br />
-                        <p>Time limit : 10 minutes</p>
-                    </div>
-
-                    <div id="fintechQuizStart" class="start-quiz" ng-click="startQuiz('fintechQuiz')">
-                        <a href="#" class="btn btn-info btn-lg start-quiz-button">
-                            <div class="glyphicon"></div> Start Quiz
-                        </a>
-                    </div>
+                <div class='tips' align="center">
+                    <p>Welcome to Fintech Ecosystem Quiz !!</p><br />
+                    <p>This Quiz contains 5 Questions</p><br />
+                    <p>Each Question has two options</p><br />
+                    <p>Each correct option carries 1 point</p><br />
+                    <p>Try to answer as many questions as possible</p><br />
+                    <p>Time limit : 10 minutes</p>
                 </div>
+
+                <div id="fintechQuizStart" class="start-quiz" ng-click="startQuiz('fintechQuiz')">
+                    <a href="#" class="btn btn-info btn-lg start-quiz-button">
+                        <div class="glyphicon"></div> Start Quiz
+                    </a>
+                </div>
+            </div>
 
                 <!-- -------X---------X--------X -------X---------X--------X-------- -->
                                 <!-- Fintech Quiz Page -->
                                 <!--======================-->
 
-                <div id="fintech-quiz-page">
+            <div ng-show="fintechQuizPage==true" id="fintech-quiz-page">
 
                     <!-- Previous button -->
                     <!-- ==================-->
 
-                    <div id="fintech-previous-button" ng-hide="currentQ==1" ng-click="currentQ=currentQ-1">
-                        <a href="#" class="btn btn-info btn-lg prev">
-                            <div class="glyphicon glyphicon-circle-arrow-left"></div>Previous
-                        </a>
-                    </div>
+                <div id="fintech-previous-button" ng-hide="currentQ==1" ng-click="currentQ=currentQ-1">
+                    <a href="#" class="btn btn-info btn-lg prev">
+                        <div class="glyphicon glyphicon-circle-arrow-left"></div>Previous
+                    </a>
+                </div>
 
 
                     <!-- -------X---------X--------X -------X---------X--------X---------- -->
@@ -463,141 +516,135 @@
                     <!-- question and options -->
                     <!-- ===========================-->
 
-                    <div>
+                <div>
 
                         <!-- question -->
-                        <p ng-init="currentQ=1" class="quiz-question">
-                            {{questions[currentQ-1].Question}}
-                        </p><br />
+                    <p ng-init="currentQ=1" class="quiz-question">
+                        {{questions[currentQ-1].Question}}
+                    </p><br />
                         
-                        <table align="center" ng-init="currentQ=1">
-                
-                                <tr>
-                                <td ng-model="selections[currentQ-1]" ng-click="selectAnswer($index)" 
+                    <table align="center" ng-init="currentQ=1">
+                        <tr>
+                            <td ng-model="selections[currentQ-1]" ng-click="selectAnswer($index)" 
                                 ng-repeat="op in questions[currentQ-1].options" class="option">
                                 <input ng-checked="selections[currentQ-1] === $index" type="radio"
                                 name="fintech_option_quiz" ng-value="op">
                                 {{op}}
-                                </td>
-                            </tr>
-
-                          
-
-
-                        </table>
-                    </div>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
 
                     <!-- -------X---------X--------X -------X---------X--------X---------- -->
 
                     <!-- progress bar -->
                     <!-- =================-->
-                    <center>
-                        <div ng-show="currentQ>0" id="fintech-progressBar" class="progress">
-                            <div class="progress-bar progress-bar-success" role="progressbar" aria-valuemin="0"
-                                aria-valuemax="100" ng-style="currentProgress">
-                            </div>
+                <center>
+                    <div ng-show="currentQ>0" id="fintech-progressBar" class="progress">
+                        <div class="progress-bar progress-bar-success" role="progressbar" aria-valuemin="0"
+                            aria-valuemax="100" ng-style="currentProgress">
                         </div>
-                    </center>
+                    </div>
+                </center>
 
                     <!-- -------X---------X--------X -------X---------X--------X-------------- -->
 
                     <!-- countdown timer and next button -->
                     <!-- ================================-->
 
-                    <div class="timer-next-button">
+                <div class="timer-next-button">
 
                         <!-- count down timer -->
-                        <div ng-show="countDown" id="countdown" class="background-of-countdown">
-                            <p class="countdown-timer-text">Time left off</p>
-                            <h1 id="fintech-countdown-timer"></h1>
-                        </div>
+                    <div ng-show="countDown" id="countdown" class="background-of-countdown">
+                        <p class="countdown-timer-text">Time left off</p>
+                        <h1 ng-style="{'color':foregroundColor,'font-weight':fontWeight,'font-size':fontSize,'top':top}" id="fintech-countdown-timer"></h1>
+                    </div>
 
                         <!-- next button -->
-                        <div id="fintech-next-button" ng-hide="currentQ==5" ng-click="currentQ=currentQ+1">
-                            <a href="#" class="btn btn-info btn-lg next">
-                                Next&nbsp;<div class="glyphicon glyphicon-circle-arrow-right"></div>
-                            </a>
-                        </div>
-
-                        <input id="fintech-submit-button" ng-show="currentQ==5" ng-click="submitQuiz('fintechQuiz',false)"
-                            class="btn btn-primary" type="submit" value="Submit">
-                        </input>
+                    <div id="fintech-next-button" ng-hide="currentQ==5" ng-click="currentQ=currentQ+1">
+                        <a href="#" class="btn btn-info btn-lg next">
+                            Next&nbsp;<div class="glyphicon glyphicon-circle-arrow-right"></div>
+                        </a>
                     </div>
+
+                    <input id="fintech-submit-button" ng-show="currentQ==5" ng-click="submitQuiz('fintechQuiz',false)"
+                    class="btn btn-primary" type="submit" value="Submit">
+                    </input>
                 </div>
+            </div>
                 <!-- -------X---------X--------X -------X---------X--------X----------- -->
 
                 <!-- Display fintech quiz score -->
                 <!-- ================================-->
 
-                <div align="center" id="displayFintechQuizScore">
+            <div align="center" ng-show="displayFintechQuizScore==true" id="displayFintechQuizScore">
                 <!--<div ng-show="displayFintechQuizScorePage == true" align="center" id="displayFintechQuizScore">-->
-                    <h1 id="fintechScoreText">Congratulations on completing Fintech Eco System Quiz !!</h1>
-                    <h1 id="fintech-quiz-score"></h1>
-                    <h1 id="fintech-quiz-feedback"></h1>
-                </div>
+                <h1 id="fintechScoreText">Congratulations on completing Fintech Eco System Quiz !!</h1>
+                <h1 id="fintech-quiz-score"></h1>
+                <h1 id="fintech-quiz-feedback"></h1>
+            </div>
 
                 <!-- -------X---------X--------X -------X---------X--------X----------- -->
 
-            </div>
+        </div>
 
             <!-- ======================================================================= -->
 
             <!-- CASHe Quiz Page -->
             <!-- ===========================-->
 
-            <div id="display-cashe-quiz-page" ng-init="currentQ=6">
+        <div ng-show="displayCasheQuizPage == true" id="display-cashe-quiz-page" ng-init="currentQ=6">
 
                 <!-- -------X---------X--------X -------X---------X--------X-------- -->
 
                         <!-- Display CASHE quiz tips page -->
                         <!-- ===========================-->
-                <div id='cashe-quiz-tips' >
+            <div ng-show="displayCasheQuizTips==true" id='cashe-quiz-tips' >
                 <!-- <div ng-show="displayCasheQuizTips == true" id='cashe-quiz-tips' > -->
-                    <div class="tips" align="center">
-                        <p>Welcome to CASHe Quiz !!</p><br />
-                        <p>This Quiz contains 5 Questions</p><br />
-                        <p>Each Question has two options</p><br />
-                        <p>Each correct option carries 1 point</p><br />
-                        <p>Try to answer as many questions as possible</p><br />
-                        <p>Time limit : 10 minutes</p>
-                    </div>
-
-                    <div id="casheQuizStart" class="start-quiz" ng-click="startQuiz('casheQuiz')">
-                        <a href="#" class="btn btn-info btn-lg start-quiz-button">
-                            <div class="glyphicon"></div> Start Quiz
-                        </a>
-                    </div>
-
-
+                <div class="tips" align="center">
+                    <p>Welcome to CASHe Quiz !!</p><br />
+                    <p>This Quiz contains 5 Questions</p><br />
+                    <p>Each Question has two options</p><br />
+                    <p>Each correct option carries 1 point</p><br />
+                    <p>Try to answer as many questions as possible</p><br />
+                    <p>Time limit : 10 minutes</p>
                 </div>
+
+                <div id="casheQuizStart" class="start-quiz" ng-click="startQuiz('casheQuiz')">
+                    <a href="#" class="btn btn-info btn-lg start-quiz-button">
+                        <div class="glyphicon"></div> Start Quiz
+                    </a>
+                </div>
+
+            </div>
             
                 <!-- -------X---------X--------X -------X---------X--------X-------- -->
 
                                     <!-- Previous button -->
                                     <!-- ==================-->
-                <div id="cashe-quiz-page">
-                    <div id="cashe-previous-button" ng-hide="currentQ==6" ng-click="currentQ=currentQ-1">
-                        <a href="#" class="btn btn-info btn-lg prev">
+            <div ng-show="casheQuizPage == true" id="cashe-quiz-page">
+                <div id="cashe-previous-button" ng-hide="currentQ==6" ng-click="currentQ=currentQ-1">
+                    <a href="#" class="btn btn-info btn-lg prev">
                         <div class="glyphicon glyphicon-circle-arrow-left"></div> Previous
-                        </a>
-                    </div>  
+                    </a>
+                </div>  
                 <!-- -------X---------X--------X -------X---------X--------X---------- -->
 
                                     <!-- question and options -->
                                     <!-- ===========================-->
-                    <div>
-                        <p class="quiz-question">{{questions[currentQ-1].Question}}</p><br />
-                        <table align="center" ng-init="currentQ=6">
-                            <tr>
-                                <td ng-model="selections[currentQ-1]" ng-click="selectAnswer($index)" 
-                                    ng-repeat="op in questions[currentQ-1].options" class="option">
-                                    <input ng-checked="selections[currentQ-1] === $index" type="radio"
+                <div>
+                    <p class="quiz-question">{{questions[currentQ-1].Question}}</p><br />
+                    <table align="center" ng-init="currentQ=6">
+                        <tr>
+                            <td ng-model="selections[currentQ-1]" ng-click="selectAnswer($index)" 
+                            ng-repeat="op in questions[currentQ-1].options" class="option">
+                                <input ng-checked="selections[currentQ-1] === $index" type="radio"
                                     name="cashe_option_quiz" id="{{op}}" ng-value="op">
                                     {{op}}
-                                </td>
-                            </tr>
-                        </table>
-                    </div>            
+                            </td>
+                        </tr>
+                    </table>
+                </div>            
 
 
                 <!-- -------X---------X--------X -------X---------X--------X---------- -->
@@ -605,87 +652,85 @@
                                             <!-- progress bar -->
                                             <!-- =================-->
 
-                    <center>
-                        <div ng-show="currentQ>0" id="cashe-progressBar" class="progress">
-                            <div class="progress-bar progress-bar-success" role="progressbar" aria-valuemin="0"
-                                aria-valuemax="100" ng-style="currentProgress">
-                            </div>
+                <center>
+                    <div ng-show="currentQ>0" id="cashe-progressBar" class="progress">
+                        <div class="progress-bar progress-bar-success" role="progressbar" aria-valuemin="0"
+                        aria-valuemax="100" ng-style="currentProgress">
                         </div>
-                    </center>
+                    </div>
+                </center>
 
                 <!-- -------X---------X--------X -------X---------X--------X-------------- -->
 
                                     <!-- countdown timer and next button -->
                                     <!-- ================================-->
 
-                    <div class="timer-next-button">
+                <div class="timer-next-button">
 
                         <!-- count down timer -->
-                        <div ng-show="countDown" id="countdown" class="background-of-countdown">
-                            <p class="countdown-timer-text">Time left off</p>
-                            <h1 id="cashe-countdown-timer"></h1>
-                        </div>
+                    <div ng-show="countDown" id="countdown" class="background-of-countdown">
+                        <p class="countdown-timer-text">Time left off</p>
+                        <h1 ng-style="{'color':foregroundColor,'font-weight':fontWeight,'font-size':fontSize,'top':top}" id="cashe-countdown-timer"></h1>
+                    </div>
 
                         <!-- next button -->
-                        <div id="fintech-next-button" ng-hide="currentQ==10" ng-click="currentQ=currentQ+1">
-                            <a href="#" class="btn btn-info btn-lg next">
-                                Next&nbsp;<div class="glyphicon glyphicon-circle-arrow-right"></div>  
-                            </a>
-                        </div>
-
-                        <input id="cashe-submit-button" ng-show="currentQ==10" ng-click="submitQuiz('casheQuiz',false)"
-                            class="btn btn-primary" type="submit" value="Submit">
-                        </input>
+                    <div id="fintech-next-button" ng-hide="currentQ==10" ng-click="currentQ=currentQ+1">
+                        <a href="#" class="btn btn-info btn-lg next">
+                            Next&nbsp;<div class="glyphicon glyphicon-circle-arrow-right"></div>  
+                        </a>
                     </div>
+
+                    <input id="cashe-submit-button" ng-show="currentQ==10" ng-click="submitQuiz('casheQuiz',false)"
+                        class="btn btn-primary" type="submit" value="Submit">
+                    </input>
                 </div>
+            </div>
 
                 <!-- -------X---------X--------X -------X---------X--------X----------- -->
 
                 <!-- Display CASHe quiz score -->
                 <!-- ================================-->
-                <div align="center" id="displayCasheQuizScore">
-                    <h1 id="fintechScoreText">Congratulations on completing CASHe Quiz !!</h1>
-                    <h1 id="cashe-quiz-score"></h1>
-                    <h1 id="cashe-quiz-feedback"></h1>
-                </div>
+            <div ng-show="displayCasheQuizScore==true" align="center" id="displayCasheQuizScore">
+                <h1 id="fintechScoreText">Congratulations on completing CASHe Quiz !!</h1>
+                <h1 id="cashe-quiz-score"></h1>
+                <h1 id="cashe-quiz-feedback"></h1>
+            </div>
 
                 <!-- -------X---------X--------X -------X---------X--------X----------- -->
 
-            </div>
+        </div>
 
             <!-- ======================================================================= -->
 
-            <div id="display-bhanix-quiz-page">
+        <div ng-show="displayBhanixQuizPage==true" id="display-bhanix-quiz-page">
 
-                <div id='bhanix-quiz-tips'>
-                    <div class="tips" align="center">
-                        <p>Welcome to Bhanix Quiz !!</p><br />
-                        <p>This Quiz contains 5 Questions</p><br />
-                        <p>Each Question has two options</p><br />
-                        <p>Each correct option carries 1 point</p><br />
-                        <p>Try to answer as many questions as possible</p><br />
-                        <p>Time limit : 10 minutes</p>
-                    </div>
-
-                    <div id="bhanixQuizStart" class="start-quiz" ng-click="startQuiz('bhanixQuiz')">
-                        <a href="#" class="btn btn-info btn-lg start-quiz-button">
-                            <div class="glyphicon"></div> <b>Start Quiz</b>
-                        </a>
-                    </div>
-
-
+            <div ng-show="displayBhanixQuizTips==true" id='bhanix-quiz-tips'>
+                <div class="tips" align="center">
+                    <p>Welcome to Bhanix Quiz !!</p><br />
+                    <p>This Quiz contains 5 Questions</p><br />
+                    <p>Each Question has two options</p><br />
+                    <p>Each correct option carries 1 point</p><br />
+                    <p>Try to answer as many questions as possible</p><br />
+                    <p>Time limit : 10 minutes</p>
                 </div>
+
+                <div id="bhanixQuizStart" class="start-quiz" ng-click="startQuiz('bhanixQuiz')">
+                    <a href="#" class="btn btn-info btn-lg start-quiz-button">
+                        <div class="glyphicon"></div> <b>Start Quiz</b>
+                    </a>
+                </div>
+            </div>
             
-                <div id="bhanix-quiz-page">
+            <div ng-show="bhanixQuizPage==true" id="bhanix-quiz-page">
             
                                 <!-- Previous button -->
                                 <!-- ==================-->
 
-                    <div ng-hide="currentQ==11" ng-click="currentQ=currentQ-1">
-                        <a href="#" class="btn btn-info btn-lg prev">
-                            <div class="glyphicon glyphicon-circle-arrow-left"></div> <b>Previous</b>
-                        </a>
-                    </div>
+                <div ng-hide="currentQ==11" ng-click="currentQ=currentQ-1">
+                    <a href="#" class="btn btn-info btn-lg prev">
+                        <div class="glyphicon glyphicon-circle-arrow-left"></div> <b>Previous</b>
+                    </a>
+                </div>
 
             
             <!-- -------X---------X--------X -------X---------X--------X---------- -->
@@ -693,109 +738,107 @@
                                 <!-- question and options -->
                                 <!-- ===========================-->
             
-                    <div>
+                <div>
             
                         <!-- question -->
-                        <p ng-init="currentQ=11" class="quiz-question">
-                            {{questions[currentQ-1].Question}}
-                        </p><br />
+                    <p ng-init="currentQ=11" class="quiz-question">
+                        {{questions[currentQ-1].Question}}
+                    </p><br />
             
-                        <table align="center" ng-init="currentQ=11">
-                            <tr>
-                                <td ng-model="selections[currentQ-1]" ng-click="selectAnswer($index)" 
-                                ng-repeat="op in questions[currentQ-1].options" class="option">
-                                <input ng-checked="selections[currentQ-1] === $index" type="radio"
+                    <table align="center" ng-init="currentQ=11">
+                        <tr>
+                            <td ng-model="selections[currentQ-1]" ng-click="selectAnswer($index)" 
+                            ng-repeat="op in questions[currentQ-1].options" class="option">
+                            <input ng-checked="selections[currentQ-1] === $index" type="radio"
                                 name="bhanix_option_quiz" id="{{op}}" ng-value="op">
                                 {{op}}
-                                </td>
-                            </tr>
-                        </table>
-                    </div>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
             
             <!-- -------X---------X--------X -------X---------X--------X---------- -->
             
                                                 <!-- progress bar -->
                                                 <!-- =================-->
-                    <center>
-                        <div id="bhanix-progressBar" class="progress">
-                            <div class="progress-bar progress-bar-success" role="progressbar" aria-valuemin="0"
-                                aria-valuemax="100" ng-style="currentProgress">
-                            </div>
+                <center>
+                    <div id="bhanix-progressBar" class="progress">
+                        <div class="progress-bar progress-bar-success" role="progressbar" aria-valuemin="0"
+                            aria-valuemax="100" ng-style="currentProgress">
                         </div>
-                    </center>
+                    </div>
+                </center>
             
             <!-- -------X---------X--------X -------X---------X--------X-------------- -->
             
                                         <!-- countdown timer and next button -->
                                         <!-- ================================-->
             
-                    <div class="timer-next-button">
+                <div class="timer-next-button">
             
                         <!-- count down timer -->
-                        <div ng-show="countDown" id="countdown" class="background-of-countdown">
-                            <p class="countdown-timer-text">Time left off</p>
-                            <h1 id="bhanix-countdown-timer"></h1>
-                        </div>
+                    <div ng-show="countDown" id="countdown" class="background-of-countdown">
+                        <p class="countdown-timer-text">Time left off</p>
+                        <h1 ng-style="{'color':foregroundColor,'font-weight':fontWeight,'font-size':fontSize,'top':top}" id="bhanix-countdown-timer"></h1>
+                    </div>
             
                         <!-- next button -->
-                        <div id="next-button" ng-hide="currentQ==15" ng-click="currentQ=currentQ+1">
-                            <a href="#" class="btn btn-info btn-lg next">
-                                Next&nbsp;<div class="glyphicon glyphicon-circle-arrow-right"></div>
-                            </a>
-                        </div>
-            
-                        <input id="bhanix-submit-button" ng-show="currentQ==15" ng-click="submitQuiz('bhanixQuiz',false)"
-                            class="btn btn-primary" type="submit" value="Submit">
-                        </input>
+                    <div id="next-button" ng-hide="currentQ==15" ng-click="currentQ=currentQ+1">
+                        <a href="#" class="btn btn-info btn-lg next">
+                            Next&nbsp;<div class="glyphicon glyphicon-circle-arrow-right"></div>
+                        </a>
                     </div>
+            
+                    <input id="bhanix-submit-button" ng-show="currentQ==15" ng-click="submitQuiz('bhanixQuiz',false)"
+                        class="btn btn-primary" type="submit" value="Submit">
+                    </input>
                 </div>
+            </div>
             
                                     <!-- Display Bhanix quiz score -->
                                     <!-- ================================-->
             
-                <div align="center" id="displayBhanixQuizScore">
-                    <h1>Congratulations on completing BHANIX Quiz !!</h1>
-                    <h1 id="bhanix-quiz-score"></h1>
-                    <h1 id="bhanix-quiz-feedback"></h1>
-                </div>
+            <div ng-show="displayBhanixQuizScore==true" align="center" id="displayBhanixQuizScore">
+                <h1>Congratulations on completing BHANIX Quiz !!</h1>
+                <h1 id="bhanix-quiz-score"></h1>
+                <h1 id="bhanix-quiz-feedback"></h1>
             </div>
+        </div>
 
             <!-- ================================================================================= -->
-            <div id="display-competitive-analysis-quiz-page" ng-init="currentQ=16">
+        <div ng-show="displayCompetitiveAnalysisQuizPage==true" id="display-competitive-analysis-quiz-page" ng-init="currentQ=16">
 
                 <!-- -------X---------X--------X -------X---------X--------X-------- -->
 
                         <!-- Display Competitive Analysis quiz tips page -->
                         <!-- ===========================-->
-                <div id="competitive-analysis-quiz-tips" >
-                    <div class='tips' align="center">
-                        <p>Welcome to Competitive Analysis Quiz !!</p><br />
-                        <p>This Quiz contains 5 Questions</p><br />
-                        <p>Each Question has two options</p><br />
-                        <p>Each correct option carries 1 point</p><br />
-                        <p>Try to answer as many questions as possible</p><br />
-                        <p>Time limit : 10 minutes</p>
-                    </div>
-
-                    <div id="competitiveAnalysisQuizStart" class="start-quiz" ng-click="startQuiz('competitiveAnalysisQuiz')">
-                        <a href="#" class="btn btn-info btn-lg start-quiz-button">
-                            <div class="glyphicon"></div> Start Quiz
-                        </a>
-                    </div>
-
-
+            <div ng-show="displayCompetitiveAnalysisQuizTips==true" id="competitive-analysis-quiz-tips" >
+                <div class='tips' align="center">
+                    <p>Welcome to Competitive Analysis Quiz !!</p><br />
+                    <p>This Quiz contains 5 Questions</p><br />
+                    <p>Each Question has two options</p><br />
+                    <p>Each correct option carries 1 point</p><br />
+                    <p>Try to answer as many questions as possible</p><br />
+                    <p>Time limit : 10 minutes</p>
                 </div>
 
-                <div id="competitive-analysis-quiz-page">
+                <div id="competitiveAnalysisQuizStart" class="start-quiz" ng-click="startQuiz('competitiveAnalysisQuiz')">
+                    <a href="#" class="btn btn-info btn-lg start-quiz-button">
+                        <div class="glyphicon"></div> Start Quiz
+                    </a>
+                </div>
+            </div>
+
+            <div ng-show="competitiveAnalysisQuizPage==true" id="competitive-analysis-quiz-page">
             
                         <!-- Previous button -->
                         <!-- ==================-->
 
-                    <div ng-hide="currentQ==16" ng-click="currentQ=currentQ-1">
-                        <a href="#" class="btn btn-info btn-lg prev">
-                            <div class="glyphicon glyphicon-circle-arrow-left"></div> <b>Previous</b>
-                        </a>
-                    </div>
+                <div ng-hide="currentQ==16" ng-click="currentQ=currentQ-1">
+                    <a href="#" class="btn btn-info btn-lg prev">
+                        <div class="glyphicon glyphicon-circle-arrow-left"></div> <b>Previous</b>
+                    </a>
+                </div>
 
     
     <!-- -------X---------X--------X -------X---------X--------X---------- -->
@@ -803,74 +846,76 @@
                         <!-- question and options -->
                         <!-- ===========================-->
     
-                    <div>
+                <div>
                         <!-- question -->
-                        <p ng-init="currentQ=16" class="quiz-question">
-                            {{questions[currentQ-1].Question}}
-                        </p><br />
+                    <p ng-init="currentQ=16" class="quiz-question">
+                        {{questions[currentQ-1].Question}}
+                    </p><br />
         
-                        <table align="center" ng-init="currentQ=16">
-                            <tr>
-                                <td ng-model="selections[currentQ-1]" ng-click="selectAnswer($index)" 
-                                    ng-repeat="op in questions[currentQ-1].options" class="option">
-                                    <input ng-checked="selections[currentQ-1] === $index" type="radio"
-                                    name="competitive_analysis_option_quiz" id="{{op}}" ng-value="op">
-                                    {{op}}
-                                </td>
-                            </tr>
-                        </table>
-                    </div>
+                    <table align="center" ng-init="currentQ=16">
+                        <tr>
+                            <td ng-model="selections[currentQ-1]" ng-click="selectAnswer($index)" 
+                                ng-repeat="op in questions[currentQ-1].options" class="option">
+                                <input ng-checked="selections[currentQ-1] === $index" type="radio"
+                                name="competitive_analysis_option_quiz" id="{{op}}" ng-value="op">
+                                {{op}}
+                            </td>
+                        </tr>
+                    </table>
+                </div>
     
     <!-- -------X---------X--------X -------X---------X--------X---------- -->
     
                                         <!-- progress bar -->
                                         <!-- =================-->
-                    <center>
-                        <div id="competitive-analysis-progressBar" class="progress">
-                            <div class="progress-bar progress-bar-success" role="progressbar" aria-valuemin="0"
-                                aria-valuemax="100" ng-style="currentProgress">
-                            </div>
+                <center>
+                    <div id="competitive-analysis-progressBar" class="progress">
+                        <div class="progress-bar progress-bar-success" role="progressbar" aria-valuemin="0"
+                            aria-valuemax="100" ng-style="currentProgress">
                         </div>
-                    </center>
+                    </div>
+                </center>
     
     <!-- -------X---------X--------X -------X---------X--------X-------------- -->
     
                                 <!-- countdown timer and next button -->
                                 <!-- ================================-->
     
-                    <div class="timer-next-button">
+                <div class="timer-next-button">
             
                         <!-- count down timer -->
-                        <div ng-show="countDown" id="countdown" class="background-of-countdown">
-                            <p class="countdown-timer-text">Time left off</p>
-                            <h1 id="competitive-analysis-countdown-timer"></h1>
-                        </div>
+                    <div ng-show="countDown" id="countdown" class="background-of-countdown">
+                        <p class="countdown-timer-text">Time left off</p>
+                        <h1 ng-style="{'color':foregroundColor,'font-weight':fontWeight,'font-size':fontSize,'top':top}" id="competitive-analysis-countdown-timer"></h1>
+                    </div>
             
                         <!-- next button -->
-                        <div id="next-button" ng-hide="currentQ==20" ng-click="currentQ=currentQ+1">
-                            <a href="#" class="btn btn-info btn-lg next">
-                                Next&nbsp;<div class="glyphicon glyphicon-circle-arrow-right"></div>
-                            </a>
-                        </div>
-            
-                        <input id="competitive-analysis-submit-button" ng-show="currentQ==20" ng-click="submitQuiz('competitiveAnalysisQuiz',false)"
-                            class="btn btn-primary" type="submit" value="Submit">
-                        </input>
+                    <div id="next-button" ng-hide="currentQ==20" ng-click="currentQ=currentQ+1">
+                        <a href="#" class="btn btn-info btn-lg next">
+                            Next&nbsp;<div class="glyphicon glyphicon-circle-arrow-right"></div>
+                        </a>
                     </div>
+            
+                    <input id="competitive-analysis-submit-button" ng-show="currentQ==20" ng-click="submitQuiz('competitiveAnalysisQuiz',false)"
+                        class="btn btn-primary" type="submit" value="Submit">
+                    </input>
                 </div>
+            </div>
     
                             <!-- Display Bhanix quiz score -->
                             <!-- ================================-->
     
-                <div align="center" id="displayCompetitiveAnalysisQuizScore">
-                    <h1>Congratulations on completing Competitive Analysis Quiz !!</h1>
-                    <h1 id="competitive-analysis-quiz-score"></h1>
-                    <h1 id="competitive-analysis-quiz-feedback"></h1>
-                </div>
+            <div ng-show="displayCompetitiveAnalysisQuizScore==true" align="center" id="displayCompetitiveAnalysisQuizScore">
+                <h1>Congratulations on completing Competitive Analysis Quiz !!</h1>
+                <h1 id="competitive-analysis-quiz-score"></h1>
+                <h1 id="competitive-analysis-quiz-feedback"></h1>
             </div>
         </div>
+    
         <!-- ==============================================================================-->
 
         <link rel="stylesheet" href="css/quiz.css">
         <link rel="stylesheet" href="css/styles.less">
         <script src="js/casheLearnings.js"></script>
+    </body>
+</html>
