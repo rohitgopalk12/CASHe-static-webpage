@@ -1,0 +1,97 @@
+<div ng-show="displayFintechQuizTips==true" id='fintech-quiz-tips'>
+    <div class='tips' align="center">
+        <p>Welcome to Fintech Ecosystem Quiz !!</p><br />
+        <p>This Quiz contains 5 Questions</p><br />
+        <p>Each Question has two options</p><br />
+        <p>Each correct option carries 1 point</p><br />
+        <p>Try to answer as many questions as possible</p><br />
+        <p>Time limit : 10 minutes</p>
+    </div>
+
+    <div id="fintechQuizStart" class="start-quiz" ng-click="startQuiz('fintechQuiz')">
+        <a href="#" class="btn btn-info btn-lg start-quiz-button">
+            <div class="glyphicon"></div> Start Quiz
+        </a>
+    </div>
+</div>
+
+<div ng-show="fintechQuizPage==true" id="fintech-quiz-page">
+
+    <!-- Previous button -->
+    <!-- ==================-->
+
+    <div id="fintech-previous-button" ng-hide="currentQ==1" ng-click="questionDecrement();currentQ=currentQ-1">
+        <a href="#" class="btn btn-info btn-lg prev">
+            <div class="glyphicon glyphicon-circle-arrow-left"></div>Previous
+        </a>
+    </div>
+
+
+    <!-- -------X---------X--------X -------X---------X--------X---------- -->
+
+    <!-- question and options -->
+    <!-- ===========================-->
+
+    <div>   
+
+        <!-- question -->
+        <p ng-init="currentQ=1" class="quiz-question">
+            {{questions[currentQ-1].Question}}
+        </p><br />
+        
+        <table align="center" ng-init="currentQ=1">
+            <tr>
+                <td ng-model="selections[currentQ-1]" ng-click="selectAnswer($index)" 
+                    ng-repeat="op in questions[currentQ-1].options" class="option">
+                    <input ng-checked="selections[currentQ-1] === $index" type="radio"
+                    name="fintech_option_quiz" ng-value="op">
+                    {{op}}
+                </td>
+            </tr>
+        </table>
+    </div>
+
+    <!-- -------X---------X--------X -------X---------X--------X---------- -->
+
+    <!-- progress bar -->
+    <!-- =================-->
+    <center>
+        <div ng-show="currentQ>0" id="fintech-progressBar" class="progress">
+            <div class="progress-bar progress-bar-success" role="progressbar" aria-valuemin="0"
+                aria-valuemax="100" ng-style="currentProgress">
+            </div>
+        </div>
+    </center>
+
+    <!-- -------X---------X--------X -------X---------X--------X-------------- -->
+
+    <!-- countdown timer and next button -->
+    <!-- ================================-->
+
+    <div class="timer-next-button">
+
+        <!-- count down timer -->
+        <div ng-show="countDown" id="countdown" class="background-of-countdown">
+            <p class="countdown-timer-text">Time left off</p>
+            <h1 ng-style="{'color':foregroundColor,'font-weight':fontWeight,'font-size':fontSize,'top':top}" id="fintech-countdown-timer"></h1>
+        </div>
+
+        <!-- next button -->
+        <div id="fintech-next-button" ng-hide="currentQ==5" ng-click="questionIncrement();currentQ=currentQ+1">
+            <a href="#" class="btn btn-info btn-lg next">
+                Next&nbsp;<div class="glyphicon glyphicon-circle-arrow-right"></div>
+            </a>
+        </div>
+
+        <input id="fintech-submit-button" ng-show="currentQ==5" ng-click="submitQuiz('fintechQuiz',false)"
+        class="btn btn-primary" type="submit" value="Submit">
+        </input>
+    </div>
+</div>
+
+<div align="center" ng-show="displayFintechQuizScorePage==true" id="displayFintechQuizScore">
+    <!--<div ng-show="displayFintechQuizScorePage == true" align="center" id="displayFintechQuizScore">-->
+    <h1 id="fintechScoreText">Congratulations on completing Fintech Eco System Quiz !!</h1>
+    <h1 id="fintech-quiz-score"></h1>
+    <h1 id="fintech-quiz-feedback"></h1>
+</div>

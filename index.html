@@ -279,10 +279,10 @@
 
             <!-- QUIZ -->
             <!-- ===========-->
-            <div ng-class="{selected : selectedQuizTitle === quizTitle}" ng-click="changeBackgroundTopic(quizTitle,$event);displayInThePage($index,$event)" class="quizzes" id="quiz">
+            <div id="quiz" ng-class="{selected : selectedQuizTitle === quizTitle}" ng-click="changeBackgroundTopic(quizTitle,$event);displayInThePage($index,$event)" class="quizzes">
                 {{quizTitle}}
             </div>
-
+            
             <!-- Fintech Quiz -->
             <!-- ===========-->
 
@@ -504,7 +504,7 @@
                     <!-- Previous button -->
                     <!-- ==================-->
 
-                <div id="fintech-previous-button" ng-hide="currentQ==1" ng-click="currentQ=currentQ-1">
+                <div id="fintech-previous-button" ng-hide="currentQ==1" ng-click="questionDecrement();currentQ=currentQ-1">
                     <a href="#" class="btn btn-info btn-lg prev">
                         <div class="glyphicon glyphicon-circle-arrow-left"></div>Previous
                     </a>
@@ -561,7 +561,7 @@
                     </div>
 
                         <!-- next button -->
-                    <div id="fintech-next-button" ng-hide="currentQ==5" ng-click="currentQ=currentQ+1">
+                    <div id="fintech-next-button" ng-hide="currentQ==5" ng-click="questionIncrement();currentQ=currentQ+1">
                         <a href="#" class="btn btn-info btn-lg next">
                             Next&nbsp;<div class="glyphicon glyphicon-circle-arrow-right"></div>
                         </a>
@@ -577,7 +577,7 @@
                 <!-- Display fintech quiz score -->
                 <!-- ================================-->
 
-            <div align="center" ng-show="displayFintechQuizScore==true" id="displayFintechQuizScore">
+            <div align="center" ng-show="displayFintechQuizScorePage==true" id="displayFintechQuizScore">
                 <!--<div ng-show="displayFintechQuizScorePage == true" align="center" id="displayFintechQuizScore">-->
                 <h1 id="fintechScoreText">Congratulations on completing Fintech Eco System Quiz !!</h1>
                 <h1 id="fintech-quiz-score"></h1>
@@ -623,7 +623,7 @@
                                     <!-- Previous button -->
                                     <!-- ==================-->
             <div ng-show="casheQuizPage == true" id="cashe-quiz-page">
-                <div id="cashe-previous-button" ng-hide="currentQ==6" ng-click="currentQ=currentQ-1">
+                <div id="cashe-previous-button" ng-hide="currentQ==6" ng-click="questionDecrement();currentQ=currentQ-1">
                     <a href="#" class="btn btn-info btn-lg prev">
                         <div class="glyphicon glyphicon-circle-arrow-left"></div> Previous
                     </a>
@@ -674,7 +674,7 @@
                     </div>
 
                         <!-- next button -->
-                    <div id="fintech-next-button" ng-hide="currentQ==10" ng-click="currentQ=currentQ+1">
+                    <div id="fintech-next-button" ng-hide="currentQ==10" ng-click="questionIncrement();currentQ=currentQ+1">
                         <a href="#" class="btn btn-info btn-lg next">
                             Next&nbsp;<div class="glyphicon glyphicon-circle-arrow-right"></div>  
                         </a>
@@ -726,7 +726,7 @@
                                 <!-- Previous button -->
                                 <!-- ==================-->
 
-                <div ng-hide="currentQ==11" ng-click="currentQ=currentQ-1">
+                <div ng-hide="currentQ==11" ng-click="questionDecrement();currentQ=currentQ-1">
                     <a href="#" class="btn btn-info btn-lg prev">
                         <div class="glyphicon glyphicon-circle-arrow-left"></div> <b>Previous</b>
                     </a>
@@ -783,7 +783,7 @@
                     </div>
             
                         <!-- next button -->
-                    <div id="next-button" ng-hide="currentQ==15" ng-click="currentQ=currentQ+1">
+                    <div id="next-button" ng-hide="currentQ==15" ng-click="questionIncrement();currentQ=currentQ+1">
                         <a href="#" class="btn btn-info btn-lg next">
                             Next&nbsp;<div class="glyphicon glyphicon-circle-arrow-right"></div>
                         </a>
@@ -834,7 +834,7 @@
                         <!-- Previous button -->
                         <!-- ==================-->
 
-                <div ng-hide="currentQ==16" ng-click="currentQ=currentQ-1">
+                <div ng-hide="currentQ==16" ng-click="questionDecrement();currentQ=currentQ-1">
                     <a href="#" class="btn btn-info btn-lg prev">
                         <div class="glyphicon glyphicon-circle-arrow-left"></div> <b>Previous</b>
                     </a>
@@ -890,7 +890,7 @@
                     </div>
             
                         <!-- next button -->
-                    <div id="next-button" ng-hide="currentQ==20" ng-click="currentQ=currentQ+1">
+                    <div id="next-button" ng-hide="currentQ==20" ng-click="questionIncrement();currentQ=currentQ+1">
                         <a href="#" class="btn btn-info btn-lg next">
                             Next&nbsp;<div class="glyphicon glyphicon-circle-arrow-right"></div>
                         </a>

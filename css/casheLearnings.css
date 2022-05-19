@@ -255,10 +255,9 @@ a{
 #display-fintech-quiz-page #fintech-quiz-page
 {
     display : block;
-}
+} 
 #display-fintech-quiz-page #displayFintechQuizScore, #display-cashe-quiz-page #displayCasheQuizScore, #display-bhanix-quiz-page #displayBhanixQuizScore, #display-competitive-analysis-quiz-page #displayCompetitiveAnalysisQuizScore
 {
-    display : block;
     position : absolute;
     top : 27%;
     left : 7%;
@@ -396,3 +395,11 @@ a{
         overflow-y: hidden;
   }
    */
+   #quizLink
+   {
+        text-decoration : none;
+   }
+   .quizzes.selected
+   {
+    background-color : orange;
+   }

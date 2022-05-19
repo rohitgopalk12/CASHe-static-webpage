@@ -136,10 +136,10 @@ table
     display : none;
 } */
 
-#displayFintechQuizScore
+/* #displayFintechQuizScore
 {
     display : none;
-}
+} */
 #fintechScoreText
 {
     color : black;
@@ -330,10 +330,10 @@ original code
     display : none;
 } */
 
-/* #fintech-quiz-page
+#fintech-quiz-page
 {
-    display :none
-} */
+    display :block
+} 
 #fintechQuizStart, #casheQuizStart, #bhanixQuizStart, #competitiveAnalysisQuizStart
 {
     position : relative;
@@ -373,7 +373,7 @@ original code
 {
     background-color : orange;
 }
-.links.selected, .quizzes.selected
+.links.selected,.quizzes.selected
 {
     background-color : orange;
 }
