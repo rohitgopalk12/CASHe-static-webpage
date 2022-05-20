@@ -597,7 +597,6 @@ var ctrl = function($scope)
     {
         // $scope.bgColor = $scope.video_clicked[current_index] == true ? $scope.bgColor={'background-color':'orange'} : $scope.bgColor={'background-color':'rgb(64,64,64)'} 
         // $scope.bgColor = $scope.video_clicked[prev_index] == false ? $scope.bgColor={'background-color':'rgb(64,64,64)'} : $scope.bgColor={'background-color':'orange'} 
-        
         console.log("he went there");
         id = event.target.id;
         default_video_clicked = false;
@@ -606,7 +605,6 @@ var ctrl = function($scope)
             if(confirm("Would you like to end the quiz?")==true)
             {
                 $scope.quiz_running = false;
-                 
                 $scope.quizTipsAreDisplayed = false;
                 current_div = id;
                 console.log("running Quiz : "+$scope.running_quiz);
@@ -636,6 +634,9 @@ var ctrl = function($scope)
                     case 'websites':
                         $scope.selectedLinksTitle = -1;
                         break;
+
+                    case 'quiz':
+                        $scope.selectedQuizTitle = -1;
 
                 }
                 switch($scope.running_quiz)
@@ -1655,7 +1656,7 @@ var ctrl = function($scope)
     
                 case 'casheQuiz':
                     $scope.displayCasheQuizPage = true;
-                    $scope.displayCasheQuizScore = true;
+                    $scope.displayCasheQuizScorePage = true;
 
                     // document.getElementById('cashe-quiz-page').style.display = 'none';
                     // document.getElementById('displayCasheQuizScore').style.display = 'block';
@@ -1666,7 +1667,7 @@ var ctrl = function($scope)
     
                 case 'bhanixQuiz':
                     $scope.displayBhanixQuizPage = true;
-                    $scope.displayBhanixQuizScore = true;
+                    $scope.displayBhanixQuizScorePage = true;
 
                     // document.getElementById('bhanix-quiz-page').style.display = 'none';
                     // document.getElementById('displayBhanixQuizScore').style.display = 'block';

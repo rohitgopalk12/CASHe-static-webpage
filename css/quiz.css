@@ -136,10 +136,10 @@ table
     display : none;
 } */
 
-#displayFintechQuizScore
+/* #displayFintechQuizScore
 {
-    display : block;
-}
+    display : none;
+} */
 #fintechScoreText
 {
     color : black;
