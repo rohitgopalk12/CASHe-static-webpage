@@ -133,11 +133,11 @@ body
     height : 60px;
     max-height : 60px;   
 }
-.word-doc, .pdf-doc, .ppt-docs, .links, .quiz-topics, .videos
+.word-doc, .pdf-doc, .ppt-docs, .links, .quiz-topics, .videos, .documents
 {
     padding-left : 40px;
 }
-.word-docs, .pdf-docs, .fintechQuestions, .casheQuestions, .bhanixQuestions, .competitiveAnalysisQuestions, .documents
+.word-docs, .pdf-docs, .fintechQuestions, .casheQuestions, .bhanixQuestions, .competitiveAnalysisQuestions
 {
     padding-left : 60px;
     padding-right : 15px;

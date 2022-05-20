@@ -172,9 +172,9 @@ var ctrl = function($scope)
     var current_file = 0;
     $scope.slideAccordions = function(toggleAccordion)
     {
-        for(var i=0;i<accordions_list.length;i++)
+        if(toggleAccordion != '')
         {
-            if(toggleAccordion != '')
+            for(var i=0;i<accordions_list.length;i++)
             {
                 if(accordions_list[i] == toggleAccordion)
                 {
@@ -250,7 +250,7 @@ var ctrl = function($scope)
     $scope.documentsOfCashe = 
     [
             {
-                id:'word',name : 'Word Documents', word_documents : 
+                id:'word',name : 'Word Documents', class_name : "word-doc", word_documents : 
                 [
                 {wordID : 'word-doc-1', word_doc : '3 reasons BNPL is a hit among young shoppers this festive season'},
                 {wordID : 'word-doc-2', word_doc : '5 apps to consider for micro loans this festive season'},
@@ -281,7 +281,7 @@ var ctrl = function($scope)
                 ]
             },
             {
-                id:'pdf',name : 'PDF Documents', pdf_documents : 
+                id:'pdf',name : 'PDF Documents', class_name : "pdf-doc", pdf_documents : 
                 [
                     {pdfID : 'pdf-doc-1', pdf_doc : 'BHANIX & CASHe'},
                     {pdfID : 'pdf-doc-2', pdf_doc : 'BUY NOW PAY LATER'},
@@ -591,6 +591,7 @@ var ctrl = function($scope)
     //prev_index = 1;
     //var prev_index = 0;
     var current_index = 0;
+    var pagesTobeDisplayed = 0;
     $scope.quiz_running = false;
     $scope.displayInThePage = function(index,event)
     {
@@ -611,10 +612,12 @@ var ctrl = function($scope)
                 console.log("running Quiz : "+$scope.running_quiz);
 
                 //document.getElementById($scope.running_quiz).style.backgroundColor = 'rgb(64,64,64)';
-                $scope.pageToBeDisplayed(id);  
+                //$scope.pageToBeDisplayed(id);  
+                pagesTobeDisplayed = true;
             }
             else
             {
+                pagesTobeDisplayed = false;
                 console.log("bolo man");
                 switch(id)
                 {
@@ -666,20 +669,18 @@ var ctrl = function($scope)
         else
         {
             console.log("hello guru");
-            $scope.pageToBeDisplayed(id);       
+            //$scope.pageToBeDisplayed(id);  
+            pagesTobeDisplayed = true;     
         }
-    }
-
-    $scope.pageToBeDisplayed = function(id)      
-    {
-        if(id=='vidRec' || id=='document' || id=='word' || id=='pdf' || id=='ppt-doc' || id=='websites' || id=='quiz')
+        if(pagesTobeDisplayed == true)
         {
-            console.log("hello uma devi garu");
             switch(id)
             {
                 case 'vidRec':
                     //document.getElementById('display').data = casheFiles.get("vid1");
                     toggleAccordion = '.videos';
+                    $scope.slideAccordions(toggleAccordion);
+                    $scope.displayNavigateTipPage = true;
                     $scope.wordDocPdfDocSlideUp = true;
                     break;
 
@@ -687,37 +688,47 @@ var ctrl = function($scope)
                     //document.getElementById('display').data = casheFiles.get("vid1");
                     //$scope.selectedDoc = -1;
                     toggleAccordion = '.documents';
+                    $scope.slideAccordions(toggleAccordion);
+                    $scope.displayNavigateTipPage = true;
                     $scope.wordDocPdfDocSlideUp = true;
                     break;
 
                 case 'word':
                     toggleAccordion = '';
+                    $scope.slideAccordions(toggleAccordion);
                     $scope.selectedWordDoc = -1;
                     //document.getElementById('display').data = casheFiles.get("vid1");
-                    document.getElementById('display').data = casheFiles.get(current_file);
+                    //document.getElementById('display').data = casheFiles.get(current_file);
                     $scope.wordDocPdfDocSlideUp = false;
+                    $scope.displayNavigateTipPage = true;
                     $('.word-docs').slideToggle(500);
                     $('.pdf-docs').slideUp(500);
                     break;
 
                 case 'pdf':
                     toggleAccordion = '';
+                    $scope.slideAccordions(toggleAccordion);
                     $scope.selectedPdfDoc = -1;
                     //document.getElementById('display').data = casheFiles.get('vid1');
                     $scope.wordDocPdfDocSlideUp = false;
                     $('.word-docs').slideUp(500);
+                    $scope.displayNavigateTipPage = true;
                     $('.pdf-docs').slideToggle(500);
                     break;
 
                 case 'ppt-doc':
                     //document.getElementById('display').data = casheFiles.get('vid1');
                     toggleAccordion = '.ppt-docs';
+                    $scope.slideAccordions(toggleAccordion);
+                    $scope.displayNavigateTipPage = true;
                     $scope.wordDocPdfDocSlideUp = true;
                     break;
 
                 case 'websites':
                     //document.getElementById('display').data = casheFiles.get('vid1');
                     toggleAccordion = '.links'
+                    $scope.slideAccordions(toggleAccordion);
+                    $scope.displayNavigateTipPage = true;
                     $scope.wordDocPdfDocSlideUp = true;
                     break;
                 
@@ -726,39 +737,120 @@ var ctrl = function($scope)
                     
                     //document.getElementById('display').data = casheFiles.get('vid1');
                     toggleAccordion = '.quiz-topics';
+                    $scope.slideAccordions(toggleAccordion);
+                    $scope.displayNavigateTipPage = true;
                     $scope.wordDocPdfDocSlideUp = true;
                     break;
+
+                default:
+                    //$scope.displayQuizPages = false;
+                    $scope.displayVideosDocsPage = true;
+                     //$scope.displayNavigateTipPage = false;
+                    console.log("id : "+id);
+                    document.getElementById('display').data = casheFiles.get(id);
+                    //$scope.displayWebsiteLinksPage = false; 
+                    
             }
             if($scope.wordDocPdfDocSlideUp == true)
             {
-                        $('.word-docs').slideUp(500);
-                        $('.pdf-docs').slideUp(500);
-                        $scope.wordDocPdfDocSlideUp = false;
+                    $('.word-docs').slideUp(500);
+                    $('.pdf-docs').slideUp(500);
+                    $scope.wordDocPdfDocSlideUp = false;
             }
-            console.log("---ram gopal rao----")
-            $scope.slideAccordions(toggleAccordion);
             $scope.slideUpQuizQuestions();
             $scope.displayQuizPages=false;
-            $scope.displayVideosDocsPage = false;
-            $scope.displayNavigateTipPage = true;
             $scope.displayWebsiteLinksPage = false;
-            console.log("gole gole");
-            id='vid1';
-            document.getElementById('display').data = casheFiles.get(current_file);
-        }
-        else
-        {
-            console.log("great gatsby");
-            console.log("hey man");
-            $scope.displayQuizPages = false;
-            $scope.displayVideosDocsPage = true;
-            $scope.displayNavigateTipPage = false;
-            console.log("id : "+id);
-            document.getElementById('display').data = casheFiles.get(id);
-            current_file = id;
-            $scope.displayWebsiteLinksPage = false;  
         }
     }
+
+    // $scope.pageToBeDisplayed = function(id)      
+    // {
+        // if(id=='vidRec' || id=='document' || id=='word' || id=='pdf' || id=='ppt-doc' || id=='websites' || id=='quiz')
+        // {
+        //     console.log("hello uma devi garu");
+            // switch(id)
+            // {
+            //     case 'vidRec':
+            //         //document.getElementById('display').data = casheFiles.get("vid1");
+            //         toggleAccordion = '.videos';
+            //         $scope.wordDocPdfDocSlideUp = true;
+            //         break;
+
+            //     case 'document':
+            //         //document.getElementById('display').data = casheFiles.get("vid1");
+            //         //$scope.selectedDoc = -1;
+            //         toggleAccordion = '.documents';
+            //         $scope.wordDocPdfDocSlideUp = true;
+            //         break;
+
+            //     case 'word':
+            //         toggleAccordion = '';
+            //         $scope.selectedWordDoc = -1;
+            //         //document.getElementById('display').data = casheFiles.get("vid1");
+            //         document.getElementById('display').data = casheFiles.get(current_file);
+            //         $scope.wordDocPdfDocSlideUp = false;
+            //         $('.word-docs').slideToggle(500);
+            //         $('.pdf-docs').slideUp(500);
+            //         break;
+
+            //     case 'pdf':
+            //         toggleAccordion = '';
+            //         $scope.selectedPdfDoc = -1;
+            //         //document.getElementById('display').data = casheFiles.get('vid1');
+            //         $scope.wordDocPdfDocSlideUp = false;
+            //         $('.word-docs').slideUp(500);
+            //         $('.pdf-docs').slideToggle(500);
+            //         break;
+
+            //     case 'ppt-doc':
+            //         //document.getElementById('display').data = casheFiles.get('vid1');
+            //         toggleAccordion = '.ppt-docs';
+            //         $scope.wordDocPdfDocSlideUp = true;
+            //         break;
+
+            //     case 'websites':
+            //         //document.getElementById('display').data = casheFiles.get('vid1');
+            //         toggleAccordion = '.links'
+            //         $scope.wordDocPdfDocSlideUp = true;
+            //         break;
+                
+            //     case 'quiz':
+            //         console.log("100% yes");
+                    
+            //         //document.getElementById('display').data = casheFiles.get('vid1');
+            //         toggleAccordion = '.quiz-topics';
+            //         $scope.wordDocPdfDocSlideUp = true;
+            //         break;
+            // }
+            // if($scope.wordDocPdfDocSlideUp == true)
+            // {
+            //             $('.word-docs').slideUp(500);
+            //             $('.pdf-docs').slideUp(500);
+            //             $scope.wordDocPdfDocSlideUp = false;
+            // }
+            // console.log("---ram gopal rao----")
+            // $scope.slideAccordions(toggleAccordion);
+            // $scope.slideUpQuizQuestions();
+            // $scope.displayQuizPages=false;
+            // $scope.displayVideosDocsPage = false;
+            // $scope.displayNavigateTipPage = true;
+            // $scope.displayWebsiteLinksPage = false;
+            // console.log("gole gole");
+            // id='vid1';
+            //document.getElementById('display').data = casheFiles.get(current_file);
+        // }
+        // else
+    //     // {
+    //     //     console.log("great gatsby");
+    //         console.log("hey man");
+    //         $scope.displayQuizPages = false;
+    //         $scope.displayVideosDocsPage = true;
+    //         $scope.displayNavigateTipPage = false;
+    //         console.log("id : "+id);
+    //         document.getElementById('display').data = casheFiles.get(id);
+    //         $scope.displayWebsiteLinksPage = false;  
+    // //     }
+    // }
 // ---------X----------X----------X---------X-----------X-----------X---------
 
     $scope.displayWebsiteLinksPage = false;
