@@ -279,10 +279,15 @@
 
             <!-- QUIZ -->
             <!-- ===========-->
-            <div id="quiz" ng-class="{selected : selectedQuizTitle === quizTitle}" ng-click="changeBackgroundTopic(quizTitle,$event);displayInThePage($index,$event)" class="quizzes">
-                {{quizTitle}}
-            </div>
-            
+            <div class="quizzTitle" ng-class="{selected : selectedQuizTitle == quizTitle}">
+                <div id="quiz"   ng-click="changeBackgroundTopic(quizTitle,$event);displayInThePage($index,$event)">
+                    {{quizTitle}}
+                </div>
+           </div> 
+            <!-- <div id='websites' ng-class="{selected : selectedLinksTitle == linksTitle}" ng-click="changeBackgroundTopic(linksTitle,$event);displayInThePage($index,$event)" class="links-websites">
+                {{linksTitle}}
+            </div> -->
+
             <!-- Fintech Quiz -->
             <!-- ===========-->
 
@@ -668,13 +673,13 @@
                 <div class="timer-next-button">
 
                         <!-- count down timer -->
-                    <div ng-show="countDown" id="countdown" class="background-of-countdown">
+                    <div ng-show="countDown" id="casheCountDown" class="background-of-countdown">
                         <p class="countdown-timer-text">Time left off</p>
                         <h1 ng-style="{'color':foregroundColor,'font-weight':fontWeight,'font-size':fontSize,'top':top}" id="cashe-countdown-timer"></h1>
                     </div>
 
                         <!-- next button -->
-                    <div id="fintech-next-button" ng-hide="currentQ==10" ng-click="questionIncrement();currentQ=currentQ+1">
+                    <div id="cashe-next-button" ng-hide="currentQ==10" ng-click="questionIncrement();currentQ=currentQ+1">
                         <a href="#" class="btn btn-info btn-lg next">
                             Next&nbsp;<div class="glyphicon glyphicon-circle-arrow-right"></div>  
                         </a>
@@ -691,7 +696,7 @@
                 <!-- Display CASHe quiz score -->
                 <!-- ================================-->
             <div ng-show="displayCasheQuizScore==true" align="center" id="displayCasheQuizScore">
-                <h1 id="fintechScoreText">Congratulations on completing CASHe Quiz !!</h1>
+                <h1 id="casheScoreText">Congratulations on completing CASHe Quiz !!</h1>
                 <h1 id="cashe-quiz-score"></h1>
                 <h1 id="cashe-quiz-feedback"></h1>
             </div>
@@ -777,13 +782,13 @@
                 <div class="timer-next-button">
             
                         <!-- count down timer -->
-                    <div ng-show="countDown" id="countdown" class="background-of-countdown">
+                    <div ng-show="countDown" id="bhanixCountDown" class="background-of-countdown">
                         <p class="countdown-timer-text">Time left off</p>
                         <h1 ng-style="{'color':foregroundColor,'font-weight':fontWeight,'font-size':fontSize,'top':top}" id="bhanix-countdown-timer"></h1>
                     </div>
             
                         <!-- next button -->
-                    <div id="next-button" ng-hide="currentQ==15" ng-click="questionIncrement();currentQ=currentQ+1">
+                    <div id="bhanix-next-button" ng-hide="currentQ==15" ng-click="questionIncrement();currentQ=currentQ+1">
                         <a href="#" class="btn btn-info btn-lg next">
                             Next&nbsp;<div class="glyphicon glyphicon-circle-arrow-right"></div>
                         </a>
@@ -884,13 +889,13 @@
                 <div class="timer-next-button">
             
                         <!-- count down timer -->
-                    <div ng-show="countDown" id="countdown" class="background-of-countdown">
+                    <div ng-show="countDown" id="competitiveAnalysisCountDown" class="background-of-countdown">
                         <p class="countdown-timer-text">Time left off</p>
                         <h1 ng-style="{'color':foregroundColor,'font-weight':fontWeight,'font-size':fontSize,'top':top}" id="competitive-analysis-countdown-timer"></h1>
                     </div>
             
                         <!-- next button -->
-                    <div id="next-button" ng-hide="currentQ==20" ng-click="questionIncrement();currentQ=currentQ+1">
+                    <div id="competitive-analysis-next-button" ng-hide="currentQ==20" ng-click="questionIncrement();currentQ=currentQ+1">
                         <a href="#" class="btn btn-info btn-lg next">
                             Next&nbsp;<div class="glyphicon glyphicon-circle-arrow-right"></div>
                         </a>

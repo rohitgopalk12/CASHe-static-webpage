@@ -136,10 +136,10 @@ table
     display : none;
 } */
 
-/* #displayFintechQuizScore
+#displayFintechQuizScore
 {
-    display : none;
-} */
+    display : block;
+}
 #fintechScoreText
 {
     color : black;
@@ -373,7 +373,7 @@ original code
 {
     background-color : orange;
 }
-.links.selected,.quizzes.selected
+.links.selected
 {
     background-color : orange;
 }
