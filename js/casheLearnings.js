@@ -88,39 +88,8 @@ var current_div_clicked=false;
 var className = 0;
 var questionVisited = 0;
 
-var fintechQuizApp = angular.module('casheLearningsApp',['ngAnimate']);
-
-// function hoverApplied(id,color)
-// {
-//     if(default_video_clicked == true)
-//     {
-//         document.getElementById('vid1').style.backgroundColor = 'orange';
-//     }
-//     else
-//     {
-//         document.getElementById(id).style.backgroundColor = color;
-//         if(current_div_clicked == true)
-//         {
-//             document.getElementById(current_div).style.backgroundColor = 'orange';
-//         } 
-//     }
-// }
-
-// function hoverLost(id,color)
-// {
-//     if(default_video_clicked == true)
-//     {
-//         document.getElementById('vid1').style.backgroundColor = 'orange';
-//     }
-//     else
-//     {
-//         document.getElementById(id).style.backgroundColor = color;
-//         if(current_div_clicked == true)
-//         {
-//             document.getElementById(current_div).style.backgroundColor = 'orange';
-//         }
-//     }
-// } 
+var fintechQuizApp = angular.module('casheLearningsApp',[]);
+ 
 
 //var prev_index=0;
 // document.getElementById('displayBlankPage').style.display = "none";
@@ -303,8 +272,6 @@ var ctrl = function($scope)
     $scope.videoTopic='';
     
     $scope.linksTitle = 'LINKS';
-    //$scope.videoTopic = $scope.videoRecordings[0].name;
-    console.log("$scope.videotopic : "+$scope.videoTopic);
 
     $scope.linksWebsites = 
     [
@@ -348,7 +315,6 @@ var ctrl = function($scope)
     $scope.changeBackgroundTopic = function(index,event)
     {
         className = event.target.className;
-        console.log("class name : "+className);
         $scope.selectedDocumentation = -1;
         $scope.videoRecordingTitle = -1;
         $scope.selectedVideoRecording = -1;
@@ -368,7 +334,6 @@ var ctrl = function($scope)
         $scope.selectedCasheQuestion = -1;
         $scope.selectedFintechQuestion = -1;
 
-        console.log("index : "+index);
         switch(className)
         {
             case 'vid ng-binding':
@@ -447,14 +412,10 @@ var ctrl = function($scope)
                 break;
             
             case 'quizzTitle ng-binding':
-                    console.log("great guns");
-                    console.log("quiz title : "+index);
                 $scope.selectedQuizTitle = $scope.quizTitle;
-                console.log("selected quiz title : "+$scope.selectedQuizTitle);
                 break;
                 
             case 'quiz-topics ng-binding':
-                    console.log("quiz topoics");
                 $scope.selectedQuizTitle = $scope.quizTitle;
                 $scope.selectedQuizTopics = index;
                 break;
@@ -489,8 +450,6 @@ var ctrl = function($scope)
         // $scope.selectedBhanixQuestion = index;
         // $scope.selectedCompetitiveAnalysisQuestion = index;
         // $scope.selectedQuizTopics = index;
-
-        console.log("hello");
         //$scope.selectedSubAccordion = index
     }
     
@@ -504,38 +463,6 @@ var ctrl = function($scope)
         }
         $('.videos').slideDown(500);
     }
-    
-    // $scope.videoRecordings = 
-    // [
-    //     {name : 'Digital Transformation (Tech Panel)', backgroundColor : 'rgb(255,153,51)'},
-    //     {name : 'About CASHe', backgroundColor : 'rgb(255,153,51)'},
-    //     {name : 'Pandaemic Fuels Tech Inclusion in the Financial Sector', backgroundColor : 'rgb(255,153,51)'},
-    //     {name : 'V Raman Kumar talks about growth ahead', backgroundColor : 'rgb(255,153,51)'},
-    //     {name : 'Building a Digital-first Customer Acquisition', backgroundColor : 'rgb(255,153,51)'},
-    //     {name : 'Is Buy Now Pay Later A Good Idea For Consumers?', backgroundColor : 'rgb(255,153,51)'}
-    // ]
-
-    
-    // $scope.changeBackgroundColor = function(sub_accordion,hoverOn) 
-    // {
-    //     if($scope.showVideos == false)
-    //     {
-    //         $scope.showVideos = true;
-    //     }
-    //     else
-    //     {
-    //         $scope.showVideos = false;
-    //     }
-    //     console.log("hey dude");
-    //     if(hoverOn == true)
-    //     {
-    //         $scope.bgColor = {color: sub_accordion.backgroundColor};
-    //     }
-    //     else
-    //     {
-    //         $scope.bgColor = {color: 'rgb(64,64,64)'};
-    //     }
-    // };
 
     var intervalCleared = false;
     $scope.startQ=1;
@@ -593,22 +520,26 @@ var ctrl = function($scope)
     var current_index = 0;
     var pagesTobeDisplayed = 0;
     $scope.quiz_running = false;
+    $scope.displayVideosDocsPage = true;
+    var current_file = 'vid1';
     $scope.displayInThePage = function(index,event)
     {
         // $scope.bgColor = $scope.video_clicked[current_index] == true ? $scope.bgColor={'background-color':'orange'} : $scope.bgColor={'background-color':'rgb(64,64,64)'} 
         // $scope.bgColor = $scope.video_clicked[prev_index] == false ? $scope.bgColor={'background-color':'rgb(64,64,64)'} : $scope.bgColor={'background-color':'orange'} 
-        console.log("he went there");
         id = event.target.id;
         default_video_clicked = false;
         if($scope.quiz_running == true)
         {
             if(confirm("Would you like to end the quiz?")==true)
             {
+                clearInterval(timer); 
+                document.getElementById($scope.quiz+"-countdown-timer").innerHTML = '';
+                
+                $scope.submitQuiz($scope.running_quiz,true);
                 $scope.quiz_running = false;
+                $scope.displayQuizPages=false;
                 $scope.quizTipsAreDisplayed = false;
                 current_div = id;
-                console.log("running Quiz : "+$scope.running_quiz);
-
                 //document.getElementById($scope.running_quiz).style.backgroundColor = 'rgb(64,64,64)';
                 //$scope.pageToBeDisplayed(id);  
                 pagesTobeDisplayed = true;
@@ -616,7 +547,6 @@ var ctrl = function($scope)
             else
             {
                 pagesTobeDisplayed = false;
-                console.log("bolo man");
                 switch(id)
                 {
                     case 'vidRec':
@@ -669,77 +599,129 @@ var ctrl = function($scope)
         }
         else
         {
-            console.log("hello guru");
             //$scope.pageToBeDisplayed(id);  
             pagesTobeDisplayed = true;     
         }
         if(pagesTobeDisplayed == true)
         {
+            $scope.hideAllQuizRelatedPages();
             switch(id)
             {
                 case 'vidRec':
+                    $scope.displayQuizPages=false;
+                    $scope.displayWebsiteLinksPage=false;
                     //document.getElementById('display').data = casheFiles.get("vid1");
                     toggleAccordion = '.videos';
+                    $scope.displayNavigateTipPage=false;
+                    $scope.selectedVideo = 0;
+                    $scope.videoRecordingTitle = $scope.videoRecording;
+                    document.getElementById('display').data = casheFiles.get('vid1');
                     $scope.slideAccordions(toggleAccordion);
-                    $scope.displayNavigateTipPage = true;
+                    $scope.displayVideosDocsPage = true;
+                    //$scope.displayNavigateTipPage = true;
                     $scope.wordDocPdfDocSlideUp = true;
                     break;
 
                 case 'document':
-                    //document.getElementById('display').data = casheFiles.get("vid1");
+                    $scope.displayQuizPages=false;
+                    $scope.displayWebsiteLinksPage=false;
+                    $scope.selectedDocumentation = $scope.documentation;
+                    //$scope.selectedDoc=0;
+                    //$scope.selectedWordDoc = 0;
+                    //$('.word-docs').slideDown(500);
+                    //document.getElementById('display').data = casheFiles.get('word-doc-1');
                     //$scope.selectedDoc = -1;
+                    //$scope.displayVideosDocsPage = false;
                     toggleAccordion = '.documents';
                     $scope.slideAccordions(toggleAccordion);
-                    $scope.displayNavigateTipPage = true;
-                    $scope.wordDocPdfDocSlideUp = true;
+                    $scope.displayVideosDocsPage = true;
+                    //$scope.displayNavigateTipPage = true;
+                    $scope.wordDocPdfDocSlideUp = false;
                     break;
 
                 case 'word':
+                    $scope.displayQuizPages=false;
+                    $scope.displayWebsiteLinksPage=false;
                     toggleAccordion = '';
+                    $scope.displayVideosDocsPage = true;
+                    $scope.displayNavigateTipPage=false;
                     $scope.slideAccordions(toggleAccordion);
-                    $scope.selectedWordDoc = -1;
-                    //document.getElementById('display').data = casheFiles.get("vid1");
+                    $scope.selectedDocumentation = $scope.documentation;
+                    $scope.selectedDoc=0;
+                    $scope.selectedWordDoc = 0;
+                    document.getElementById('display').data = casheFiles.get("word-doc-1");
                     //document.getElementById('display').data = casheFiles.get(current_file);
                     $scope.wordDocPdfDocSlideUp = false;
-                    $scope.displayNavigateTipPage = true;
+                    //$scope.displayNavigateTipPage = true;
                     $('.word-docs').slideToggle(500);
                     $('.pdf-docs').slideUp(500);
                     break;
 
                 case 'pdf':
+                    $scope.displayQuizPages=false;
+                    $scope.displayWebsiteLinksPage=false;
+                    $scope.selectedDocumentation = $scope.documentation;
+                    $scope.selectedDoc=1;
                     toggleAccordion = '';
+                    $scope.displayNavigateTipPage=false;
                     $scope.slideAccordions(toggleAccordion);
-                    $scope.selectedPdfDoc = -1;
-                    //document.getElementById('display').data = casheFiles.get('vid1');
+                    $scope.selectedPdfDoc = 0;
+                    $scope.displayVideosDocsPage = true;
+                    document.getElementById('display').data = casheFiles.get('pdf-doc-1');
                     $scope.wordDocPdfDocSlideUp = false;
                     $('.word-docs').slideUp(500);
-                    $scope.displayNavigateTipPage = true;
+                    //$scope.displayNavigateTipPage = true;
                     $('.pdf-docs').slideToggle(500);
                     break;
 
                 case 'ppt-doc':
-                    //document.getElementById('display').data = casheFiles.get('vid1');
+                    $scope.displayQuizPages=false;
+                    $scope.displayWebsiteLinksPage=false;
+                    $scope.displayNavigateTipPage=false;
+                    $scope.selectedPptTitle = $scope.pptTitle;
+                    $scope.selectedPptDoc = 0;
+                    document.getElementById('display').data = casheFiles.get('ppt-doc-1');
                     toggleAccordion = '.ppt-docs';
+                    $scope.displayVideosDocsPage = true;
                     $scope.slideAccordions(toggleAccordion);
-                    $scope.displayNavigateTipPage = true;
+                    //$scope.displayNavigateTipPage = true;
                     $scope.wordDocPdfDocSlideUp = true;
                     break;
 
                 case 'websites':
+                    $scope.displayQuizPages=false;
+                    $scope.displayNavigateTipPage=false;
+                    $scope.selectedLinksTitle = $scope.linksTitle;
+                    $scope.selectedLinks = 0;
                     //document.getElementById('display').data = casheFiles.get('vid1');
                     toggleAccordion = '.links'
+                    $scope.websitelink = "https://www.cashe.co.in";
+                    $scope.displayWebsiteLinksPage=true;
                     $scope.slideAccordions(toggleAccordion);
-                    $scope.displayNavigateTipPage = true;
+                    //$scope.displayNavigateTipPage = true;
+                    //$scope.displayVideosDocsPage = true;
+                    //$scope.displayVideosDocsPage = true;
                     $scope.wordDocPdfDocSlideUp = true;
+                    $scope.displayVideosDocsPage = false;
+                    prev_visited_accordion = id;
                     break;
                 
                 case 'quiz':
-                    console.log("100% yes");
-                    
+                    $scope.displayWebsiteLinksPage=false;
+                    $scope.displayNavigateTipPage=false;
+                    $scope.selectedQuizTitle = $scope.quizTitle;
+                    $scope.selectedQuizTopics = 0;
+                    //$scope.displayQuizTips($event);
+                    $scope.displayQuizPages=true;
+                    $scope.displayFintechQuizPage=true;
+                    $scope.displayFintechQuizTips=true;
+                    //$scope.displayNavigateTipPage = true;
                     //document.getElementById('display').data = casheFiles.get('vid1');
                     toggleAccordion = '.quiz-topics';
+                    $scope.displayVideosDocsPage = false;
                     $scope.slideAccordions(toggleAccordion);
-                    $scope.displayNavigateTipPage = true;
+                    //$scope.displayNavigateTipPage = true;
+                    //$scope.displayVideosDocsPage = false;
                     $scope.wordDocPdfDocSlideUp = true;
                     break;
 
@@ -747,8 +729,8 @@ var ctrl = function($scope)
                     //$scope.displayQuizPages = false;
                     $scope.displayVideosDocsPage = true;
                      //$scope.displayNavigateTipPage = false;
-                    console.log("id : "+id);
                     document.getElementById('display').data = casheFiles.get(id);
+                    current_file = id;
                     //$scope.displayWebsiteLinksPage = false; 
                     
             }
@@ -759,8 +741,8 @@ var ctrl = function($scope)
                     $scope.wordDocPdfDocSlideUp = false;
             }
             $scope.slideUpQuizQuestions();
-            $scope.displayQuizPages=false;
-            $scope.displayWebsiteLinksPage = false;
+            //$scope.displayQuizPages=false;
+            //$scope.displayWebsiteLinksPage = false;
         }
     }
 
@@ -1075,7 +1057,6 @@ var ctrl = function($scope)
                         //document.getElementById('displayDIV').style.display = "none";
                         //document.getElementById('displayWebsiteLinks').style.display = "block";
             var id = event.target.id;
-            console.log("id : "+id);
             if(id=='cashe')
             {
                 $scope.websitelink = "https://www.cashe.co.in";
@@ -1103,7 +1084,6 @@ var ctrl = function($scope)
         // $scope.selectedCompetitiveAnalysisQuestion = -1;
 
         current_div = event.target.id;
-        console.log("current div is : "+current_div);
         $scope.displayWebsiteLinksPage = false;
         current_div_clicked = true;
         // if(prev_accordion_visited==true)
@@ -1283,7 +1263,6 @@ var ctrl = function($scope)
             switch(id)
             {
                 case 'fintechQuiz':
-                    console.log("bolo man");
                     $scope.displayFintechQuizTips = true;
                     $scope.displayFintechQuizPage = true;
                     // $scope.fintechQuizPage = false;
@@ -1297,7 +1276,6 @@ var ctrl = function($scope)
                     break;
 
                 case 'casheQuiz':
-                    console.log("caseh quiz");
                     $scope.displayCasheQuizTips = true;
                     $scope.displayCasheQuizPage = true;
                     // document.getElementById('cashe-quiz-tips').style.display = 'block';
@@ -1392,7 +1370,6 @@ var ctrl = function($scope)
         switch(id)
         {
             case 'fintechQuiz':
-                console.log("hello rohit");
                 $scope.displayFintechQuizPage=true;
                 $scope.fintechQuizPage = true;
                 $scope.quiz = 'fintech';
@@ -1494,7 +1471,6 @@ var ctrl = function($scope)
             $scope.countDownTimer--;
             $scope.$apply();
         }, 1000);
-        console.log("venky mama");
         $scope.prevButton = true;
         $scope.nextButton=true;
         $scope.countDown = true;
@@ -1514,7 +1490,6 @@ var ctrl = function($scope)
             switch(id)
             {
                 case 'fintechQuiz':
-                    console.log("amala devi 4444");
                     // $scope.fintechQuizPage = false;
                     $scope.displayFintechQuizPage = true;
                     $scope.displayFintechQuizScorePage = true;
@@ -1527,7 +1502,6 @@ var ctrl = function($scope)
                     break;
     
                 case 'casheQuiz':
-                    console.log("planti");
                     $scope.displayCasheQuizPage = true;
                     $scope.displayCasheQuizScore = true;
 
@@ -1539,7 +1513,6 @@ var ctrl = function($scope)
                     break;
     
                 case 'bhanixQuiz':
-                    console.log("silver");
                     $scope.displayBhanixQuizPage = true;
                     $scope.displayBhanixQuizScore = true;
 
@@ -1585,7 +1558,6 @@ var ctrl = function($scope)
             {
                 document.getElementById($scope.quiz_score+'-quiz-feedback').innerHTML = "Feedback : "+scoreFeedback[3];
             } 
-            console.log("gold");
     }
     /* submit Quiz */
     var score=0;
@@ -1601,7 +1573,6 @@ var ctrl = function($scope)
         score=0;
         if(auto_submit == true)
         {
-            console.log("auto submit true");
             $scope.slideUpQuizQuestions();
             $scope.scoreIsDisplayed = true;
         }
@@ -1609,7 +1580,6 @@ var ctrl = function($scope)
         {
             if(confirm("Are you sure you want to submit?")==true)
             {
-                console.log("venkatesh ");
                 $scope.slideUpQuizQuestions();
                 $scope.quiz_running = false;
                 //$scope.displayFintechScore();
@@ -1642,7 +1612,6 @@ var ctrl = function($scope)
             switch(id)
             {
                 case 'fintechQuiz':
-                    console.log("amala devi");
                     //$scope.fintechQuizPage = false;
                     $scope.displayFintechQuizPage = true;
                     $scope.displayFintechQuizScorePage = true;
@@ -1688,7 +1657,6 @@ var ctrl = function($scope)
             }
             for(var i=startQ-1 ; i<startQ+4 ; i++)
             {
-                console.log("uma devi");
                 if($scope.selections[i] == $scope.questions[i].rightOption)
                 {
                     score++;
@@ -1698,7 +1666,6 @@ var ctrl = function($scope)
 
             if(score<=1)
             {
-                console.log("zero");
                 document.getElementById($scope.quiz_score+'-quiz-feedback').innerHTML= "Feedback : "+scoreFeedback[0];
             }
             else if(score>1 && score<=2)
@@ -1757,7 +1724,6 @@ var ctrl = function($scope)
         {
             id=parseInt(id);
         }
-        console.log("id is : "+id);
         $scope.currentQ = id;
     }
 
@@ -1800,7 +1766,6 @@ var ctrl = function($scope)
             case 'competitiveAnalysisQuiz':
                 $scope.selectedCompetitiveAnalysisQuestion = $scope.question;
         }
-        console.log("question : "+$scope.question);
     }
 
     
