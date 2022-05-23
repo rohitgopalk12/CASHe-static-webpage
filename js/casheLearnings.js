@@ -1669,7 +1669,7 @@ var ctrl = function($scope)
     
                 case 'competitiveAnalysisQuiz':
                     $scope.displayCompetitiveAnalysisQuizPage = true;
-                    $scope.displayCompetitiveAnalysisQuizScore = true;
+                    $scope.displayCompetitiveAnalysisQuizScorePage = true;
                     // document.getElementById('competitive-analysis-quiz-page').style.display = 'none';
                     // document.getElementById('displayCompetitiveAnalysisQuizScore').style.display = 'block';
                     // document.getElementById('competitive-analysis-quiz-tips').style.display = 'none';
