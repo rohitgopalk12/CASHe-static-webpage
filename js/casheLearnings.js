@@ -736,7 +736,7 @@ var ctrl = function($scope)
                     //$scope.displayFintechQuizPage=true;
                     //$scope.displayFintechQuizTips=true;
                     //$scope.displayNavigateTipPage = true;
-                    document.getElementById('display').data = casheFiles.get('vid1');
+                    //document.getElementById('display').data = casheFiles.get('vid1');
                     toggleAccordion = '.quiz-topics';
                     //$scope.displayVideosDocsPage = false;
                     $scope.slideAccordions(toggleAccordion);
