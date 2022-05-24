@@ -127,19 +127,6 @@ table
     display : block;
 }
 
-/* .tips
-{
-    position : relative;
-    top : 10px;
-    color : black;
-    font-weight : bold;
-    display : none;
-} */
-
-/* #displayFintechQuizScore
-{
-    display : none;
-} */
 #fintechScoreText
 {
     color : black;
@@ -149,16 +136,6 @@ table
 {
     display : none;
 }
-
-/* 
-original code
-.start-quiz
-{
-    position : relative;
-    top : 80px;
-    left : 300px;
-} */
-
 /* start button CSS */
 #fintech-start, #cashe-start, #bhanix-start, #competitive-analysis-start
 {
@@ -176,26 +153,6 @@ original code
 {
     background-color : rgb(72, 213, 77)
 }
-
-/* prev button CSS all 4 quizzes */
-/* #fintech-prev,
-#cashe-prev,
-#bhanix-prev,
-#competitive-analysis-prev
-{
-    border-radius : 20%;
-    color : white;
-    font-weight : bold;
-    background-color : green;
-    border-color : green;
-    position : absolute;
-    left : 30px;    
-    bottom : 30px;
-} */
-/* #fintech-prev:hover, #cashe-prev:hover, #bhanix-prev:hover, #competitive-analysis-prev:hover
-{
-    background-color : rgb(72, 213, 77)
-} */
 
 #fintech-countdown-timer, #cashe-countdown-timer, #bhanix-countdown-timer, #competitive-analysis-countdown-timer
 {
@@ -266,19 +223,7 @@ original code
   .container input:checked ~ .checkmark:after {
     display: block;
   }
-  
-  /* Style the indicator (dot/circle) 
-  .container .checkmark:after {
-       top: 9px;
-      left: 9px;
-      width: 8px;
-      height: 8px;
-      border-radius: 50%;
-      background: white;
-  }
-  .container input:checked ~ .checkmark {
-    background-color: green;
-  }*/
+
 
 .quiz-question
 {
@@ -288,17 +233,7 @@ original code
         font-size : 25px;
         top : 150px;   
 }
-  
-/* #options
-{
-    position : relative;
-    cursor : pointer;
-    color :black;
-    top : 120px;
-    font-weight : bold;
-    font-size : 15px;
-    padding : 10px;
-} */
+
 
 .countdown-timer-text
 {
@@ -308,10 +243,7 @@ original code
     color : red;
     font-weight : bold;
 }
-/* #Cashe-quiz-tips
-{
-    display : none;
-} */
+
 #displayCasheQuizPage
 {
     position : absolute;
@@ -322,13 +254,7 @@ original code
     top : 18.5%;
     left : 28.5%;
     left : 400px; 
-    /* display : none; */
 }
-
-/* #displayFintechQuizScore
-{
-    display : none;
-} */
 
 #fintech-quiz-page
 {

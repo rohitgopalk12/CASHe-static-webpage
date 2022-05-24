@@ -90,52 +90,6 @@ var questionVisited = 0;
 
 var fintechQuizApp = angular.module('casheLearningsApp',[]);
  
-
-//var prev_index=0;
-// document.getElementById('displayBlankPage').style.display = "none";
-// fintechQuizApp.controller('videoRecordingsController',function($scope,$rootScope)
-// {
-    
-//     //$scope.bgColor = $scope.videoRecordings[0].backgroundColor;
-
-    
-
-//     $scope.hoverOnColor = 'rgb(255,153,51)';
-//     $scope.hoverOffColor = 'rgb(64,64,64)';
-//     $scope.hoverApplied = function(event,color)
-//     {
-//         id = event.target.id;
-//         if(default_video_clicked == true)
-//         {
-//             $scope.bgColor = videoRecordings[0].backgroundColor;
-//             document.getElementById('vid1').style.backgroundColor = 'orange';
-//         }
-//         else
-//         {
-//             document.getElementById(id).style.backgroundColor = color;
-//             if(current_div_clicked == true)
-//             {
-//                 $scope.hoverOnColor = 'orange';
-//                 $scope.hoverOffColor = 'orange';
-//                 document.getElementById(current_div).style.backgroundColor = 'orange';
-//             }
-//         }
-
-//         $scope.bgColor={'background-color':'rgb(255,153,51)'};
-//     }
-
-//     $scope.hoverLost = function(event,color)
-//     {
-//         $scope.bgColor={'background-color':'rgb(255,153,51)'};
-//     }
-
-//     $scope.selectedTopic = '';
-//     var prev_video_name = '';
-//     $scope.prev_video_topic = '';
-
-// });
-
-
 var ctrl = function($scope)
 {   
     var current_file = 0;
@@ -166,7 +120,6 @@ var ctrl = function($scope)
     $scope.foregroundColor = '';
     $scope.pptTitle = 'PPT PRESENTATION';
     
-    //document.getElementById('vid1').style.backgroundColor = 'orange';
     $scope.videoRecording = "VIDEO RECORDINGS";
     $scope.pptDocuments = 
     [
@@ -281,37 +234,6 @@ var ctrl = function($scope)
     var videoRecording = 0;
     $scope.documentation = 'DOCUMENTATION';
 
-    // $scope.firstQuestionSelectedByDefault = function(index,event)
-    // {
-    //     console.log("hello 567");
-    //     $scope.selectedFintechQuestion = 0;
-
-        // className = event.target.className;
-        // $scope.selectedFintechQuestion = -1;
-        // $scope.selectedCasheQuestion = -1;
-        // $scope.selectedBhanixQuestion = -1;
-        // $scope.selectedCompetitiveAnalysisQuestion = -1;
-
-        // switch(className)
-        // {
-        //     case 'quiz-topics ng-binding':
-        //         $scope.selectedFintechQuestion = 0;
-        //         break;
-
-        //     // case 'casheQuestions':
-        //     //     $scope.selectedCasheQuestion = 0;
-        //     //     break;
-
-        //     // case 'bhanixQuestions':
-        //     //     $scope.selectedBhanixQuestion = 0;
-        //     //     break;
-
-        //     // case 'competitiveAnalysisQuestions':
-        //     //     $scope.selectedCompetitiveAnalysisQuestion = 0;
-        //     //     break;
-        // }
-
-    // }
     $scope.changeBackgroundTopic = function(index,event)
     {
         className = event.target.className;
@@ -419,38 +341,7 @@ var ctrl = function($scope)
                 $scope.selectedQuizTitle = $scope.quizTitle;
                 $scope.selectedQuizTopics = index;
                 break;
-
-            
-
-            // case 'fintechQuestions ng-binding':
-            //     $scope.selectedFintechQuestion = index;
-            //     break;
-
-            // case 'casheQuestions ng-binding':
-            //     $scope.selectedCasheQuestion = index;
-            //     break;
-
-            // case 'bhanixQuestions ng-binding':
-            //     $scope.selectedBhanixQuestion = index;
-            //     break;
-            
-            // case 'competitiveAnalysisQuestions ng-binding':
-            //     $scope.selectedCompetitiveAnalysisQuestion = index;
-            //     break;
         } 
-       
-
-        // $scope.selectedVideoRecording = index;
-        // $scope.selectedVideo=index;
-        // $scope.selectedDoc = index;
-        // $scope.selectedWordDoc = index;
-        // $scope.selectedPdfDoc = index;
-        // $scope.selectedFintechQuestion = index;
-        // $scope.selectedCasheQuestion = index;
-        // $scope.selectedBhanixQuestion = index;
-        // $scope.selectedCompetitiveAnalysisQuestion = index;
-        // $scope.selectedQuizTopics = index;
-        //$scope.selectedSubAccordion = index
     }
     
     $scope.videosAutoSlideDown = function(index)
@@ -458,7 +349,6 @@ var ctrl = function($scope)
         if(default_video_clicked == true)
         {
             $scope.videoRecordingTitle = $scope.videoRecording;
-            //$scope.selectedVideoRecording = $scope.videoRecording;
             $scope.selectedVideo = 0;
             default_video_clicked = false;
         }
@@ -517,8 +407,6 @@ var ctrl = function($scope)
 
     var prev_selected_accordion=0;
     $scope.video_clicked = [false,false,false,false,false,false];
-    //prev_index = 1;
-    //var prev_index = 0;
     var current_index = 0;
     var pagesTobeDisplayed = 0;
     $scope.quiz_running = false;
@@ -529,8 +417,6 @@ var ctrl = function($scope)
     
     $scope.displayInThePage = function(index,event)
     {
-        // $scope.bgColor = $scope.video_clicked[current_index] == true ? $scope.bgColor={'background-color':'orange'} : $scope.bgColor={'background-color':'rgb(64,64,64)'} 
-        // $scope.bgColor = $scope.video_clicked[prev_index] == false ? $scope.bgColor={'background-color':'rgb(64,64,64)'} : $scope.bgColor={'background-color':'orange'} 
         id = event.target.id;
         default_video_clicked = false;
         if($scope.quiz_running == true)
@@ -542,11 +428,10 @@ var ctrl = function($scope)
                 
                 $scope.submitQuiz($scope.running_quiz,true);
                 $scope.quiz_running = false;
-                //$scope.displayQuizPages=false;
+        
                 $scope.quizTipsAreDisplayed = false;
                 current_div = id;
-                //document.getElementById($scope.running_quiz).style.backgroundColor = 'rgb(64,64,64)';
-                //$scope.pageToBeDisplayed(id);  
+
                 pagesTobeDisplayed = true;
             }
             else
@@ -598,13 +483,10 @@ var ctrl = function($scope)
 
                 $scope.quizTipsAreDisplayed = false;
                 current_div = $scope.running_quiz;
-                //document.getElementById($scope.running_quiz).style.backgroundColor = 'orange';
-                //document.getElementById(id).style.backgroundColor = 'rgb(64,64,64)';
             }
         }
         else
         {
-            //$scope.pageToBeDisplayed(id);  
             pagesTobeDisplayed = true;     
         }
         if(pagesTobeDisplayed == true)
@@ -615,36 +497,27 @@ var ctrl = function($scope)
                 case 'vidRec':
                     $scope.displayQuizPages=false;
                     $scope.displayWebsiteLinksPage=false;
-                    //document.getElementById('display').data = casheFiles.get("vid1");
+                    
                     toggleAccordion = '.videos';
-                    //$scope.displayNavigateTipPage=false;
+              
                     $scope.selectedVideo = 0;
                     $scope.videoRecordingTitle = $scope.videoRecording;
                     $scope.displayVideosDocsPage = true;
 
                     document.getElementById('display').data = casheFiles.get('vid1');
                     $scope.slideAccordions(toggleAccordion);
-                    //$scope.displayNavigateTipPage = false;
+                  
                     $scope.wordDocPdfDocSlideUp = true;
-                    //document.getElementById('display').data = casheFiles.get(id);
+                   
                     console.log("hello boy");
                     break;
 
                 case 'document':
-                    //$scope.displayWebsiteLinksPage=false;
+                    
                     $scope.selectedDocumentation = $scope.documentation;
-                    //$scope.selectedDoc=0;
-                    //$scope.selectedWordDoc = 0;
-                    //$('.word-docs').slideDown(500);
-                    //document.getElementById('display').data = casheFiles.get("word-doc-1");
-                    //$scope.selectedDoc = -1;
-                    //$scope.displayVideosDocsPage = true;
                     toggleAccordion = '.documents';
                     $scope.slideAccordions(toggleAccordion);
-                    //$scope.displayVideosDocsPage = true;
-                    //$scope.displayNavigateTipPage = true;
                     $scope.wordDocPdfDocSlideUp = false;
-                    //document.getElementById('display').data = casheFiles.get(id);
                     id='word';
                     break;
 
@@ -654,18 +527,14 @@ var ctrl = function($scope)
                     toggleAccordion = '';
                     $scope.displayVideosDocsPage = true;
                     document.getElementById('display').data = casheFiles.get("word-doc-1");
-                    //$scope.displayNavigateTipPage=false;
                     $scope.slideAccordions(toggleAccordion);
                     $scope.selectedDocumentation = $scope.documentation;
                     $scope.selectedDoc=0;
                     $scope.selectedWordDoc = 0;
                     
-                    //document.getElementById('display').data = casheFiles.get(current_file);
                     $scope.wordDocPdfDocSlideUp = false;
-                    //$scope.displayNavigateTipPage = true;
                     $('.word-docs').slideToggle(500);
                     $('.pdf-docs').slideUp(500);
-                    //document.getElementById('display').data = casheFiles.get(id);
                     break;
 
                 case 'pdf':
@@ -681,9 +550,9 @@ var ctrl = function($scope)
                     document.getElementById('display').data = casheFiles.get('pdf-doc-1');
                     $scope.wordDocPdfDocSlideUp = false;
                     $('.word-docs').slideUp(500);
-                    //$scope.displayNavigateTipPage = true;
+                   
                     $('.pdf-docs').slideToggle(500);
-                    //document.getElementById('display').data = casheFiles.get(id);
+                   
                     break;
 
                 case 'ppt-doc':
@@ -696,9 +565,9 @@ var ctrl = function($scope)
                     toggleAccordion = '.ppt-docs';
                     $scope.displayVideosDocsPage = true;
                     $scope.slideAccordions(toggleAccordion);
-                    //$scope.displayNavigateTipPage = true;
+                   
                     $scope.wordDocPdfDocSlideUp = true;
-                    //document.getElementById('display').data = casheFiles.get(id);
+                  
                     break;
 
                 case 'websites':
@@ -706,46 +575,33 @@ var ctrl = function($scope)
                     $scope.displayNavigateTipPage=false;
                     $scope.selectedLinksTitle = $scope.linksTitle;
                     $scope.selectedLinks = 0;
-                    //first_files[0];
+                    
                     document.getElementById('display').data = casheFiles.get('word-doc-1');
                     toggleAccordion = '.links'
                     $scope.websitelink = "https://www.cashe.co.in";
                     $scope.displayWebsiteLinksPage=true;
                     $scope.slideAccordions(toggleAccordion);
-                    //document.getElementById('display').data = casheFiles.get(already_selected_file);
-                    //$scope.displayNavigateTipPage = true;
-                    //$scope.displayVideosDocsPage = true;
-                    //$scope.displayVideosDocsPage = true;
+                    
                     $scope.wordDocPdfDocSlideUp = true;
                     $scope.displayVideosDocsPage = false;
-                    //prev_visited_accordion = id;
+                  
                     document.getElementById('display').data = casheFiles.get(id);
                     break;
                 
                 case 'quiz':
                     $scope.hideAllQuizRelatedPages();
-                    //$scope.hideAllQuizRelatedPages();
+                    
                     prev_selected_accordion = id;
                    
-                    //$scope.displayWebsiteLinksPage=false;
-                    //$scope.displayNavigateTipPage=false;
+                    
                     $scope.selectedQuizTitle = $scope.quizTitle;
-                    //$scope.selectedQuizTopics = 0;
-                    
-                    
-                    //$scope.displayQuizTips($event);
-                    // $scope.displayQuizPages=true;
-                    // $scope.displayFintechQuizPage=true;
-                    // $scope.displayFintechQuizTips=true;
-                    //$scope.displayNavigateTipPage = true;
-                    //document.getElementById('display').data = casheFiles.get('vid1');
+                   
                     toggleAccordion = '.quiz-topics';
-                    //$scope.displayVideosDocsPage = true;
+                   
                     $scope.slideAccordions(toggleAccordion);
-                    //$scope.displayNavigateTipPage = true;
-                    //$scope.displayVideosDocsPage = false;
+                   
                     $scope.wordDocPdfDocSlideUp = true;
-                    //document.getElementById('display').data = casheFiles.get(id);
+                  
                     break;
 
                 default:
@@ -765,99 +621,9 @@ var ctrl = function($scope)
                     $scope.wordDocPdfDocSlideUp = false;
             }
             $scope.slideUpQuizQuestions();
-            //$scope.displayQuizPages=false;
-            //$scope.displayWebsiteLinksPage = false;
+        
         }
     }
-
-    // $scope.pageToBeDisplayed = function(id)      
-    // {
-        // if(id=='vidRec' || id=='document' || id=='word' || id=='pdf' || id=='ppt-doc' || id=='websites' || id=='quiz')
-        // {
-        //     console.log("hello uma devi garu");
-            // switch(id)
-            // {
-            //     case 'vidRec':
-            //         //document.getElementById('display').data = casheFiles.get("vid1");
-            //         toggleAccordion = '.videos';
-            //         $scope.wordDocPdfDocSlideUp = true;
-            //         break;
-
-            //     case 'document':
-            //         //document.getElementById('display').data = casheFiles.get("vid1");
-            //         //$scope.selectedDoc = -1;
-            //         toggleAccordion = '.documents';
-            //         $scope.wordDocPdfDocSlideUp = true;
-            //         break;
-
-            //     case 'word':
-            //         toggleAccordion = '';
-            //         $scope.selectedWordDoc = -1;
-            //         //document.getElementById('display').data = casheFiles.get("vid1");
-            //         document.getElementById('display').data = casheFiles.get(current_file);
-            //         $scope.wordDocPdfDocSlideUp = false;
-            //         $('.word-docs').slideToggle(500);
-            //         $('.pdf-docs').slideUp(500);
-            //         break;
-
-            //     case 'pdf':
-            //         toggleAccordion = '';
-            //         $scope.selectedPdfDoc = -1;
-            //         //document.getElementById('display').data = casheFiles.get('vid1');
-            //         $scope.wordDocPdfDocSlideUp = false;
-            //         $('.word-docs').slideUp(500);
-            //         $('.pdf-docs').slideToggle(500);
-            //         break;
-
-            //     case 'ppt-doc':
-            //         //document.getElementById('display').data = casheFiles.get('vid1');
-            //         toggleAccordion = '.ppt-docs';
-            //         $scope.wordDocPdfDocSlideUp = true;
-            //         break;
-
-            //     case 'websites':
-            //         //document.getElementById('display').data = casheFiles.get('vid1');
-            //         toggleAccordion = '.links'
-            //         $scope.wordDocPdfDocSlideUp = true;
-            //         break;
-                
-            //     case 'quiz':
-            //         console.log("100% yes");
-                    
-            //         //document.getElementById('display').data = casheFiles.get('vid1');
-            //         toggleAccordion = '.quiz-topics';
-            //         $scope.wordDocPdfDocSlideUp = true;
-            //         break;
-            // }
-            // if($scope.wordDocPdfDocSlideUp == true)
-            // {
-            //             $('.word-docs').slideUp(500);
-            //             $('.pdf-docs').slideUp(500);
-            //             $scope.wordDocPdfDocSlideUp = false;
-            // }
-            // console.log("---ram gopal rao----")
-            // $scope.slideAccordions(toggleAccordion);
-            // $scope.slideUpQuizQuestions();
-            // $scope.displayQuizPages=false;
-            // $scope.displayVideosDocsPage = false;
-            // $scope.displayNavigateTipPage = true;
-            // $scope.displayWebsiteLinksPage = false;
-            // console.log("gole gole");
-            // id='vid1';
-            //document.getElementById('display').data = casheFiles.get(current_file);
-        // }
-        // else
-    //     // {
-    //     //     console.log("great gatsby");
-    //         console.log("hey man");
-    //         $scope.displayQuizPages = false;
-    //         $scope.displayVideosDocsPage = true;
-    //         $scope.displayNavigateTipPage = false;
-    //         console.log("id : "+id);
-    //         document.getElementById('display').data = casheFiles.get(id);
-    //         $scope.displayWebsiteLinksPage = false;  
-    // //     }
-    // }
 // ---------X----------X----------X---------X-----------X-----------X---------
 
     $scope.displayWebsiteLinksPage = false;
@@ -1076,10 +842,7 @@ var ctrl = function($scope)
             $scope.displayNavigateTipPage = false;
             $scope.displayVideosDocsPage = false;
             $scope.displayWebsiteLinksPage = true;
-                        //document.getElementById('display-quiz-pages').style.display = "none";
-                        //document.getElementById('displayBlankPage').style.display="none";
-                        //document.getElementById('displayDIV').style.display = "none";
-                        //document.getElementById('displayWebsiteLinks').style.display = "block";
+        
             var id = event.target.id;
             if(id=='cashe')
             {
@@ -1095,27 +858,10 @@ var ctrl = function($scope)
     
     $scope.changeBackground = function(index,event)
     {   
-        // $scope.videoRecordingTitle = index;
         default_video_clicked = false;
-        // $scope.selectedVideo = -1;
-        // $scope.selectedDoc = -1;
-        // $scope.selectedWordDoc = -1;
-        // $scope.selectedPdfDoc = -1;
-        // $scope.selectedPptDoc = -1;
-        // $scope.selectedFintechQuestion = -1;
-        // $scope.selectedCasheQuestion = -1;
-        // $scope.selectedBhanixQuestion = -1;
-        // $scope.selectedCompetitiveAnalysisQuestion = -1;
-
         current_div = event.target.id;
         $scope.displayWebsiteLinksPage = false;
         current_div_clicked = true;
-        // if(prev_accordion_visited==true)
-        // {
-        //     console.log("prev div : "+prev_div);
-        //     document.getElementById(prev_div).style.backgroundColor = 'rgb(64,64,64)';
-        // }
-        // document.getElementById(current_div).style.backgroundColor = 'orange';
         prev_div = current_div;
         prev_accordion_visited=true;
     }
@@ -1188,7 +934,6 @@ var ctrl = function($scope)
                         $scope.selectedQuizTopics = 3;
                         break;
                 }
-                //document.getElementById($scope.running_quiz).style.backgroundColor = 'rgb(64,64,64)';
                 $scope.quizTipsAreDisplayed = true;
                 $scope.quiz_running = false;
             }
@@ -1218,8 +963,6 @@ var ctrl = function($scope)
                 }
                 $scope.quizTipsAreDisplayed = false;
                 current_div = $scope.running_quiz;
-               // document.getElementById($scope.running_quiz).style.backgroundColor = 'orange';
-                //document.getElementById(id).style.backgroundColor = 'rgb(64,64,64)';
             }
         }
         else
@@ -1228,43 +971,9 @@ var ctrl = function($scope)
         }
         if($scope.quizTipsAreDisplayed == true)
         {
-
-            //    <!-- original code #1064 -->
-
-            //document.getElementById('display-quiz-pages').style.display = 'block'; 
-            // $scope.displayFintechQuizPage = false;
-            // $scope.displayCasheQuizPage = false;
-            // $scope.displayBhanixQuizPage = false;
-            // $scope.displayCompetitiveAnalysisQuizPage = false;
-            
-            // $scope.displayFintechQuizTips = false;
-            // $scope.displayCasheQuizTips = false;
-            // $scope.displayBhanixQuizTips = false;
-            // $scope.displayCompetitiveAnalysisQuizTips = false;
-
-            // $scope.fintechQuizPage = false;
-            // $scope.casheQuizPage = false;
-            // $scope.bhanixQuizPage = false;
-            // $scope.competitiveAnalysisQuizPage = false;
-
-            // $scope.displayFintechQuizScore = false;
-            // $scope.displayCasheQuizScore = false;
-            // $scope.displayBhanixQuizScore = false;
-            // $scope.displayCompetitiveAnalysisQuizScore = false;
-
             $scope.hideAllQuizRelatedPages();
             $scope.displayQuizPages = true;
-            //document.getElementById('fintech-quiz-tips').style.display = 'none';
-            //document.getElementById('cashe-quiz-tips').style.display = 'none';
-            //document.getElementById('bhanix-quiz-tips').style.display = 'none';
-            //document.getElementById('competitive-analysis-quiz-tips').style.display = 'none';
-
             $scope.displayFintechQuizScorePage = false;
-
-            // document.getElementById('displayFintechQuizScore').style.display = 'none';
-            // document.getElementById('displayCasheQuizScore').style.display = 'none';
-            // document.getElementById('displayBhanixQuizScore').style.display = 'none';
-            // document.getElementById('displayCompetitiveAnalysisQuizScore').style.display = 'none';
 
             $scope.currentProgress = 
             {
@@ -1276,11 +985,6 @@ var ctrl = function($scope)
             $scope.displayWebsiteLinksPage = false;
             $scope.displayNavigateTipPage = false;
 
-            //document.getElementById('display-fintech-quiz-page').style.display = 'none';
-            // document.getElementById('display-cashe-quiz-page').style.display = 'none';
-            // document.getElementById('display-bhanix-quiz-page').style.display = 'none';
-            // document.getElementById('display-competitive-analysis-quiz-page').style.display = 'none';
-
             $scope.slideUpQuizQuestions();
 
             quiz_topic_enabled = true;
@@ -1290,43 +994,24 @@ var ctrl = function($scope)
                 case 'fintechQuiz':
                     $scope.displayFintechQuizTips = true;
                     $scope.displayFintechQuizPage = true;
-                    // $scope.fintechQuizPage = false;
-                    // $scope.displayFintechQuizScore = false;
-
-                    //document.getElementById('fintech-quiz-tips').style.display = 'block';
-                    //document.getElementById('display-fintech-quiz-page').style.display = 'block';
-                    //document.getElementById('fintech-quiz-page').style.display = 'none';
-                    //document.getElementById('displayFintechQuizScore').style.display = 'none';
                     $scope.quiz = 'fintech';
                     break;
 
                 case 'casheQuiz':
                     $scope.displayCasheQuizTips = true;
                     $scope.displayCasheQuizPage = true;
-                    // document.getElementById('cashe-quiz-tips').style.display = 'block';
-                    // document.getElementById('display-cashe-quiz-page').style.display = 'block';
-                    // document.getElementById('cashe-quiz-page').style.display = 'none';
-                    // document.getElementById('displayCasheQuizScore').style.display = 'none';
                     $scope.quiz = 'cashe';
                     break;
                     
                 case 'bhanixQuiz':
                     $scope.displayBhanixQuizTips = true;
                     $scope.displayBhanixQuizPage = true;
-                    // document.getElementById('bhanix-quiz-tips').style.display = 'block';
-                    // document.getElementById('display-bhanix-quiz-page').style.display = 'block';
-                    // document.getElementById('bhanix-quiz-page').style.display = 'none';
-                    // document.getElementById('displayBhanixQuizScore').style.display = 'none';
                     $scope.quiz = 'bhanix';
                     break;
                         
                 case 'competitiveAnalysisQuiz':
                     $scope.displayCompetitiveAnalysisQuizTips = true;
                     $scope.displayCompetitiveAnalysisQuizPage = true;
-                    // document.getElementById('competitive-analysis-quiz-tips').style.display = 'block';
-                    // document.getElementById('display-competitive-analysis-quiz-page').style.display = 'block';
-                    // document.getElementById('competitive-analysis-quiz-page').style.display = 'none';
-                    // document.getElementById('displayCompetitiveAnalysisQuizScore').style.display = 'none';
                     $scope.quiz = 'competitive-analysis';
                     break;
             }
@@ -1354,11 +1039,6 @@ var ctrl = function($scope)
 
         $scope.displayWebsiteLinksPage = false;
         
-        // document.getElementById('fintech-quiz-page').style.display = 'none';
-        // document.getElementById('cashe-quiz-page').style.display = 'none';
-        // document.getElementById('bhanix-quiz-page').style.display = 'none';
-        // document.getElementById('competitive-analysis-quiz-page').style.display = 'none';
-
         $scope.slideUpQuizQuestions();
             
         $('.links').slideUp(500);
@@ -1398,8 +1078,6 @@ var ctrl = function($scope)
                 $scope.displayFintechQuizPage=true;
                 $scope.fintechQuizPage = true;
                 $scope.quiz = 'fintech';
-                //document.getElementById('fintech-quiz-tips').style.display = 'none';
-                //document.getElementById('fintech-quiz-page').style.display = 'block';
                 $scope.topicQuestions = '.fintechQuestions';
                 $scope.currentQ = 1;
                 break;
@@ -1408,8 +1086,6 @@ var ctrl = function($scope)
                 $scope.displayCasheQuizPage=true;
                 $scope.casheQuizPage = true;
                 $scope.quiz = 'cashe';
-                // document.getElementById('cashe-quiz-tips').style.display = 'none';
-                // document.getElementById('cashe-quiz-page').style.display = 'block';
                 $scope.topicQuestions = '.casheQuestions';
                 $scope.currentQ = 6;
                 break;
@@ -1418,8 +1094,6 @@ var ctrl = function($scope)
                 $scope.displayBhanixQuizPage=true;
                 $scope.bhanixQuizPage = true;
                 $scope.quiz = 'bhanix';
-                // document.getElementById('bhanix-quiz-tips').style.display = 'none';
-                // document.getElementById('bhanix-quiz-page').style.display = 'block';
                 $scope.topicQuestions = '.bhanixQuestions';
                 $scope.currentQ = 11;
                 break;                    
@@ -1428,8 +1102,6 @@ var ctrl = function($scope)
                 $scope.displayCompetitiveAnalysisQuizPage = true;
                 $scope.competitiveAnalysisQuizPage = true;
                 $scope.quiz = 'competitive-analysis';
-                // document.getElementById('competitive-analysis-quiz-tips').style.display = 'none';
-                // document.getElementById('competitive-analysis-quiz-page').style.display = 'block';
                 $scope.topicQuestions = '.competitiveAnalysisQuestions';
                 $scope.currentQ = 16;
                 break;
@@ -1473,25 +1145,19 @@ var ctrl = function($scope)
                 if(sec<10)
                 {
                     $scope.foregroundColor = 'red';
-                        //document.getElementById($scope.quiz+"-countdown-timer").style.color = "red";
                 }
                 else
                 {
                     $scope.foregroundColor = 'black';
-                        //document.getElementById($scope.quiz+"-countdown-timer").style.color = "black";
                 }
             }
             else
             {
                 $scope.foregroundColor = 'black';
-                    //document.getElementById($scope.quiz+"-countdown-timer").style.color = "black";
             }
             $scope.fontWeight='bold';
             $scope.fontSize='20px';
             $scope.top='10px';
-                // document.getElementById($scope.quiz+"-countdown-timer").style.fontWeight = "bold";
-                // document.getElementById($scope.quiz+"-countdown-timer").style.fontSize = "20px";
-                // document.getElementById($scope.quiz+"-countdown-timer").style.top = "10px";
             document.getElementById($scope.quiz+"-countdown-timer").innerHTML = min + ":" + sec;
             $scope.countDownTimer--;
             $scope.$apply();
@@ -1515,13 +1181,8 @@ var ctrl = function($scope)
             switch(id)
             {
                 case 'fintechQuiz':
-                    // $scope.fintechQuizPage = false;
                     $scope.displayFintechQuizPage = true;
                     $scope.displayFintechQuizScorePage = true;
-                    // document.getElementById('display-fintech-quiz-page').style.display = 'block';
-                    // document.getElementById('fintech-quiz-page').style.display = 'none';
-                    //document.getElementById('displayFintechQuizScore').style.display = 'block';
-                    // document.getElementById('fintech-quiz-tips').style.display = 'none';
                     startQ=1;
                     $scope.quiz_score = 'fintech'
                     break;
@@ -1529,10 +1190,6 @@ var ctrl = function($scope)
                 case 'casheQuiz':
                     $scope.displayCasheQuizPage = true;
                     $scope.displayCasheQuizScore = true;
-
-                    // document.getElementById('cashe-quiz-page').style.display = 'none';
-                    // document.getElementById('displayCasheQuizScore').style.display = 'block';
-                    // document.getElementById('cashe-quiz-tips').style.display = 'none';
                     startQ=6;
                     $scope.quiz_score = 'cashe'
                     break;
@@ -1540,10 +1197,6 @@ var ctrl = function($scope)
                 case 'bhanixQuiz':
                     $scope.displayBhanixQuizPage = true;
                     $scope.displayBhanixQuizScore = true;
-
-                    // document.getElementById('bhanix-quiz-page').style.display = 'none';
-                    // document.getElementById('displayBhanixQuizScore').style.display = 'block';
-                    // document.getElementById('bhanix-quiz-tips').style.display = 'none';
                     startQ=11;
                     $scope.quiz_score = 'bhanix'
                     break;
@@ -1551,9 +1204,6 @@ var ctrl = function($scope)
                 case 'competitiveAnalysisQuiz':
                     $scope.displayCompetitiveAnalysisQuizPage = true;
                     $scope.displayCompetitiveAnalysisQuizScore = true;
-                    // document.getElementById('competitive-analysis-quiz-page').style.display = 'none';
-                    // document.getElementById('displayCompetitiveAnalysisQuizScore').style.display = 'block';
-                    // document.getElementById('competitive-analysis-quiz-tips').style.display = 'none';
                     startQ=16;
                     $scope.quiz_score = 'competitive-analysis'
                     break;
@@ -1587,11 +1237,6 @@ var ctrl = function($scope)
     /* submit Quiz */
     var score=0;
     var startQ=0;
-    // $scope.quizAutoSubmitted = function(id)
-    // {
-    //     $scope.fintechQuizPage = false;
-    //     $scope.displayFintechQuizPage = true;
-    // }
 
     $scope.submitQuiz = function(id,auto_submit)
     {
@@ -1607,7 +1252,6 @@ var ctrl = function($scope)
             {
                 $scope.slideUpQuizQuestions();
                 $scope.quiz_running = false;
-                //$scope.displayFintechScore();
                 $scope.scoreIsDisplayed = true;
             }
             else
@@ -1615,20 +1259,9 @@ var ctrl = function($scope)
                 $scope.scoreIsDisplayed = false;
             }
         }
-        // else if(auto_submit==true)
-        // {
-        //     console.log("auto submit true");
-        //     $scope.slideUpQuizQuestions();
-        //     $scope.scoreIsDisplayed = true;
-        // }
         if($scope.scoreIsDisplayed == true)
         {
             $scope.hideAllQuizRelatedPages();
-            // $scope.displayFintechQuizPage = true;
-            // $scope.displayFintechQuizScorePage = true;
-            // $scope.displayFintechQuizPage = true;
-            // $scope.displayFintechQuizScorePage = true;
-            //clearInterval(timer);
             $scope.quiz_running = false;
             $scope.currentProgress =
             {
@@ -1637,13 +1270,8 @@ var ctrl = function($scope)
             switch(id)
             {
                 case 'fintechQuiz':
-                    //$scope.fintechQuizPage = false;
                     $scope.displayFintechQuizPage = true;
                     $scope.displayFintechQuizScorePage = true;
-                    // document.getElementById('display-fintech-quiz-page').style.display = 'block';
-                    // document.getElementById('fintech-quiz-page').style.display = 'none';
-                    // document.getElementById('displayFintechQuizScore').style.display = 'block';
-                    // document.getElementById('fintech-quiz-tips').style.display = 'none';
                     startQ=1;
                     $scope.quiz_score = 'fintech'
                     break;
@@ -1651,10 +1279,6 @@ var ctrl = function($scope)
                 case 'casheQuiz':
                     $scope.displayCasheQuizPage = true;
                     $scope.displayCasheQuizScorePage = true;
-
-                    // document.getElementById('cashe-quiz-page').style.display = 'none';
-                    // document.getElementById('displayCasheQuizScore').style.display = 'block';
-                    // document.getElementById('cashe-quiz-tips').style.display = 'none';
                     startQ=6;
                     $scope.quiz_score = 'cashe'
                     break;
@@ -1662,10 +1286,6 @@ var ctrl = function($scope)
                 case 'bhanixQuiz':
                     $scope.displayBhanixQuizPage = true;
                     $scope.displayBhanixQuizScorePage = true;
-
-                    // document.getElementById('bhanix-quiz-page').style.display = 'none';
-                    // document.getElementById('displayBhanixQuizScore').style.display = 'block';
-                    // document.getElementById('bhanix-quiz-tips').style.display = 'none';
                     startQ=11;
                     $scope.quiz_score = 'bhanix'
                     break;
@@ -1673,9 +1293,6 @@ var ctrl = function($scope)
                 case 'competitiveAnalysisQuiz':
                     $scope.displayCompetitiveAnalysisQuizPage = true;
                     $scope.displayCompetitiveAnalysisQuizScorePage = true;
-                    // document.getElementById('competitive-analysis-quiz-page').style.display = 'none';
-                    // document.getElementById('displayCompetitiveAnalysisQuizScore').style.display = 'block';
-                    // document.getElementById('competitive-analysis-quiz-tips').style.display = 'none';
                     startQ=16;
                     $scope.quiz_score = 'competitive-analysis'
                     break;
@@ -1713,10 +1330,8 @@ var ctrl = function($scope)
         // jump to Question
     $scope.jumpToQuestion = function(event)
     {   
-        $scope.displayWebsiteLinksPage = false;
-                //document.getElementById('displayWebsiteLinks').style.display = "none";   
+        $scope.displayWebsiteLinksPage = false;   
         quiz_topic_enabled = true;
-        // $scope.changeBackground(event);
         id=event.target.id;
         var ch=0;
         var new_id = '';
@@ -1792,7 +1407,5 @@ var ctrl = function($scope)
                 $scope.selectedCompetitiveAnalysisQuestion = $scope.question;
         }
     }
-
-    
 }
 fintechQuizApp.controller('quizController',ctrl);
