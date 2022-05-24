@@ -517,7 +517,7 @@ var ctrl = function($scope)
                     $scope.selectedDocumentation = $scope.documentation;
                     toggleAccordion = '.documents';
                     $scope.slideAccordions(toggleAccordion);
-                    $scope.wordDocPdfDocSlideUp = false;
+                    $scope.wordDocPdfDocSlideUp = true;
                     id='word';
                     break;
 
