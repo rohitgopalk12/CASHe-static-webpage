@@ -542,7 +542,7 @@ var ctrl = function($scope)
                 
                 $scope.submitQuiz($scope.running_quiz,true);
                 $scope.quiz_running = false;
-                $scope.displayQuizPages=false;
+                //$scope.displayQuizPages=false;
                 $scope.quizTipsAreDisplayed = false;
                 current_div = id;
                 //document.getElementById($scope.running_quiz).style.backgroundColor = 'rgb(64,64,64)';
@@ -723,22 +723,24 @@ var ctrl = function($scope)
                     break;
                 
                 case 'quiz':
+                    $scope.hideAllQuizRelatedPages();
                     //$scope.hideAllQuizRelatedPages();
                     prev_selected_accordion = id;
+                   
                     //$scope.displayWebsiteLinksPage=false;
                     //$scope.displayNavigateTipPage=false;
                     $scope.selectedQuizTitle = $scope.quizTitle;
-                    $scope.selectedQuizTopics = 0;
+                    //$scope.selectedQuizTopics = 0;
                     
                     
                     //$scope.displayQuizTips($event);
-                    //$scope.displayQuizPages=true;
-                    //$scope.displayFintechQuizPage=true;
-                    //$scope.displayFintechQuizTips=true;
+                    // $scope.displayQuizPages=true;
+                    // $scope.displayFintechQuizPage=true;
+                    // $scope.displayFintechQuizTips=true;
                     //$scope.displayNavigateTipPage = true;
                     //document.getElementById('display').data = casheFiles.get('vid1');
                     toggleAccordion = '.quiz-topics';
-                    //$scope.displayVideosDocsPage = false;
+                    //$scope.displayVideosDocsPage = true;
                     $scope.slideAccordions(toggleAccordion);
                     //$scope.displayNavigateTipPage = true;
                     //$scope.displayVideosDocsPage = false;
@@ -1159,6 +1161,7 @@ var ctrl = function($scope)
 
     $scope.displayQuizTips = function(event)
     {
+        document.getElementById('display').data = casheFiles.get('vid1');
         id = event.target.id;
             // original code
         if($scope.quiz_running == true)
