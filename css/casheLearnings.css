@@ -19,31 +19,84 @@
     padding-right : 15px;
 }
 
-div.CASHe-topics-list
+@media only screen
 {
-    position : absolute;
-    overflow : visible;
-    top : 12.4%;
-    height : 87.6%;
-    overflow-x: hidden;
-    overflow-y: scroll;
-    scrollbar-color : orange white;
-    width : 25%;
-    left : 0px;
-    background-color : white;
-    border-top : 1px solid black;
+    div.CASHe-topics-list
+    {
+        position : absolute;
+        overflow : auto;
+        top : 12.4%;
+        height : 87.6%;
+        overflow-x: hidden;
+        overflow-y: scroll;
+        scrollbar-color : orange white;
+        width : 25%;
+        left : 0;
+        background-color : white;
+        border-top : 1px solid black;
+    }
 }
+
 div.word-doc, div.documents{
     overflow-y:auto;
 }
-#displayDIV
+#displayDIV, #display-quiz-pages
 {
+    border : 4px solid black;
     position : absolute;
     height : 80%;
-    min-width: 71.5%;
-    max-width : 80%;
+    width : 60%;
+    height : 70%;
+    /* min-width: 71.5%;
+    max-width : 80%; */
     top : 18.5%;
     left : 28.5%;  
+}
+#cashe-logo
+{
+    padding-top : 2%;
+    height : 30%;
+    width : 30%;
+}
+#raman-kumar
+{
+    position : relative;
+    float : right;
+    top : 10px;
+    right : 10px;
+    height : 27%;
+    width : 27%;
+}
+#chairman
+{
+    position : relative;
+    left : 160px;
+    top : 80px;
+    font-weight : bold;
+    float : right;
+    color : grey;
+}
+
+.about
+{
+    padding-top : 2%;
+    color : black;
+    font-weight : bold;
+    font-size : 14px;
+    text-align : left;
+}
+
+#more-info
+{
+    text-align : left;
+    padding-top : 2%;
+    padding-left : 25px;
+}
+#website-link
+{
+    text-align : center;
+    padding-top : 2%;
+    padding-left : 25px;
 }
 
 #displayWebsiteLinks
@@ -54,10 +107,10 @@ div.word-doc, div.documents{
     left : 28.5%;
     height : 70%;
     width : 60%;
-    padding-top:10%;
+    background-color : #ffe5b4;
 }
 
-#display-quiz-pages
+/* #display-quiz-pages
 {
     position : absolute;
     border : 4px solid black;
@@ -65,7 +118,8 @@ div.word-doc, div.documents{
     width : 60%;
     top : 18.5%;
     left : 28.5%;
-}
+    background-color : #ffe5b4;
+} */
 
 td
 {
@@ -193,7 +247,7 @@ body
     position : sticky;
     top : 0%;
     padding : 3px;
-    border : 4px solid black;
+    /* border : 4px solid black; */
 }
 #welcome-heading
 {
@@ -243,6 +297,10 @@ a{
 #link:hover
 {
     color : blue;
+    text-decoration : underline;
+}
+#link
+{
     text-decoration : underline;
 }
 #display-fintech-quiz-page #fintech-quiz-page

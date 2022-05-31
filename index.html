@@ -67,15 +67,19 @@
                 </div>
 
                 <div ng-repeat="wordDoc in doc.word_documents">
-                    <div ng-class="{selected : selectedWordDoc == $index}" id="{{wordDoc.wordID}}" class="word-docs" ng-click="changeBackgroundTopic($index,$event);displayInThePage($index,$event)">
-                        {{wordDoc.word_doc}}
-                    </div>
+                    <a style="text-decoration : none" ng-href="{{wordDoc.document}}" download>
+                        <div ng-class="{selected : selectedWordDoc == $index}" id="{{wordDoc.wordID}}" class="word-docs" ng-click="changeBackgroundTopic($index,$event);displayInThePage($index,$event)">
+                            {{wordDoc.word_doc}}
+                        </div>
+                    </a>
                 </div>
 
                 <div ng-repeat="pdfDoc in doc.pdf_documents">
-                    <div ng-click="changeBackgroundTopic($index,$event);displayInThePage($index,$event)" ng-class="{selected : selectedPdfDoc == $index}" id="{{pdfDoc.pdfID}}" class="pdf-docs">
-                        {{pdfDoc.pdf_doc}}
-                    </div>
+                    <a style="text-decoration : none" ng-href="{{pdfDoc.document}}" download>
+                        <div ng-click="changeBackgroundTopic($index,$event);displayInThePage($index,$event)" target="_blank" ng-class="{selected : selectedPdfDoc == $index}" id="{{pdfDoc.pdfID}}" class="pdf-docs">
+                            {{pdfDoc.pdf_doc}}
+                        </div>
+                    </a>
                 </div>
             </div>
         
@@ -159,9 +163,73 @@
      <!-- display website links -->
      <!-- ------------------------ -->
 
+     <div ng-show="wordDocDisplayScreen==true" id="word-doc-display-screen">
+        <table>
+            <tr ng-repeat="doc in documentsOfCashe">
+                <td>
+                    <img src="images/word-doc-tile-png.jpg"></img><br />
+                    {{doc.name}}
+                </td>
+            </tr>
+        </table>
+    </div>
+
+    <div id="pdf-doc-display-screen">
+
+    </div>
+
     <div ng-show="displayWebsiteLinksPage == true" id="displayWebsiteLinks" align="center">
-        <h2 style="color:black">Please click on the below link to navigate to the official site</h2>
-        <h3 style="color:black"><a ng-href="{{websitelink}}" target="_blank" id="link">{{websitelink}}</a></h3>
+        <div ng-show="showCasheContents==true" id="cashe-contents">
+            <img id='cashe-logo' align="center" src="images/cashe-logo.png"></img>
+            <div>
+                <img id="raman-kumar" src="images/Raman_1.png"></img>
+               
+                <ul id="cashe-short-notes">
+                    <li class="about">
+                        CASHe is a loan giving mobile app for salaried professionals.
+                    </li>
+                    <li class="about">
+                        Disburses short-term personal loan to people who don’t have credit history.
+                    </li>
+                    <li class="about">
+                        Loans range from Rs.1,000 to Rs.4,00,000 with the credit period ranging<br /> 
+                        from 3 months to 1 ½ year. 
+                    </li>
+                    <li class="about">
+                        Loan lending would happen in quick time.
+                    </li>
+                </ul>
+                <p id="chairman">Mr.V.Raman Kumar<br />Chairman</p>
+            </div>
+        </div>
+
+        <div ng-show="showBhanixContents==true" id="bhanix-contents">
+            <img align="center" src="images/bhanix-finance-logo.png"></img>
+
+            <div>
+                <ul id="bhanix-short-notes">
+                    <li class="about">
+                        Bhanix is a non-banking financial corporation registered with Reserve Bank of India.
+                    </li>
+                    <li class="about">
+                        Incorporated on March 15th, 1996.
+                    </li>
+                    <li class="about">
+                        One of the leading short-term unsecured personal loans giving institution that uses a technology called CASHe.
+                    </li>
+                    <li class="about">
+                        Customer need not disclose any surety to the institution for getting loan sanctioned.
+                    </li>
+                    <li class="about">
+                        CASHe is India’s fastest loan giving app for salaried young professionals.
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+
+        <h5 id="more-info" style="color:black"><b>For more information, please click on the below link</b></h5>
+        <h5 id="website-link" style="color:black"><b><a ng-href="{{websitelink}}" target="_blank" id="link">{{websitelink}}</a></b></h5>
     </div>
 
     <!-- ======================================================================= -->
@@ -175,7 +243,7 @@
         <!-- =========================================================-->
 
     <div ng-show="displayVideosDocsPage == true" id="displayDIV">
-        <object id="display" height="95%" width="95%" data="https://www.youtube.com/embed/Pl7XP8o7v6g"></object>
+        <object id="display" height="100%" width="100%" data="https://www.youtube.com/embed/Pl7XP8o7v6g"></object>
     </div>
 
     <p id="developers_credit">
