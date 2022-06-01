@@ -1,6 +1,6 @@
 var default_video_clicked = true;
 const casheFiles = new Map();
-var accordions_list = ['.videos','.documents','.ppt-docs','.links','.quiz-topics']
+var accordions_list = ['.videos','.documents','.links','.quiz-topics']
 
 //=====================================================================================
                                 /* youtube video links */
@@ -83,7 +83,10 @@ var fintechQuizApp = angular.module('casheLearningsApp',[]);
  
 var ctrl = function($scope)
 {   
+    $scope.ite = 0;
     $scope.wordDocDisplayScreen = false;
+    $scope.pdfDocDisplayScreen = false;
+    $scope.pptDocDisplayScreen = false;
     $scope.showCasheContents=false;
     $scope.showBhanixContents=false;
     //var current_file = 0;
@@ -117,7 +120,9 @@ var ctrl = function($scope)
     $scope.videoRecording = "VIDEO RECORDINGS";
     $scope.pptDocuments = 
     [
-        'BHANIX & CASHe','BUY NOW PAY LATER','FINTECH - FINANCIAL SECTOR'
+        { name : 'BHANIX & CASHe',document : 'assets/bhanix_and_cashe.pdf'},
+        { name : 'BUY NOW PAY LATER',document : 'assets//buy_now_pay_later.pdf'},
+        { name : 'FINTECH - FINANCIAL SECTOR',document : 'assets/fintech_financial_sector.pdf'}
     ];
 
     $scope.quizTopicsList = 
@@ -483,6 +488,13 @@ var ctrl = function($scope)
         }
         if(pagesTobeDisplayed == true)
         {
+            $scope.wordDocDisplayScreen = false;
+            $scope.pdfDocDisplayScreen = false;
+            $scope.pptDocDisplayScreen = false;
+            // $scope.displayQuizPages=false;
+            // $scope.displayVideosDocsPage=false;
+            // $scope.displayWebsiteLinksPage=false;
+
             switch(id)
             {
                 case 'vidRec':
@@ -498,28 +510,31 @@ var ctrl = function($scope)
                     break;
 
                 case 'document':
-                    
+                    console.log("bolo");
+                    $scope.wordDocDisplayScreen=true;
                     $scope.selectedDocumentation = $scope.documentation;
                     $scope.selectedDoc=0;
-                    $scope.displayVideosDocsPage=true;
+                    $scope.displayVideosDocsPage=false;
                     $scope.displayQuizPages=false;
                     $scope.displayWebsiteLinksPage=false;
-                    $scope.selectedWordDoc = 0;
+                   // $scope.selectedWordDoc = 0;
                     document.getElementById('display').data = casheFiles.get("word-doc-1");
                     toggleAccordion = '.documents';
                     $scope.slideAccordions(toggleAccordion);
                     $scope.wordDocPdfDocSlideUp = false;
-                    $('.word-docs').slideToggle(500);
-                    $('.pdf-docs').slideUp(500);
-                    id='word';
+                    // $('.word-docs').slideToggle(500);
+                    // $('.pdf-docs').slideUp(500);
+                    //id='word';
                     break;
 
                 case 'word':
+                    console.log("hello");
+                    $scope.wordDocDisplayScreen = true;
                     $scope.displayQuizPages=false;
                     $scope.displayWebsiteLinksPage=false;
                     toggleAccordion = '';
-                    $scope.displayVideosDocsPage = true;
-                    document.getElementById('display').data = casheFiles.get("word-doc-1");
+                    $scope.displayVideosDocsPage = false;
+                    //document.getElementById('display').data = casheFiles.get("word-doc-1");
                     $scope.slideAccordions(toggleAccordion);
                     $scope.selectedDocumentation = $scope.documentation;
                     $scope.selectedDoc=0;
@@ -530,15 +545,16 @@ var ctrl = function($scope)
                     break;
 
                 case 'pdf':
+                    $scope.pdfDocDisplayScreen = true;
                     $scope.displayQuizPages=false;
                     $scope.displayWebsiteLinksPage=false;
                     $scope.selectedDocumentation = $scope.documentation;
                     $scope.selectedDoc=1;
                     toggleAccordion = '';
-                    $scope.displayNavigateTipPage=false;
+                    //$scope.displayNavigateTipPage=false;
                     $scope.slideAccordions(toggleAccordion);
                     $scope.selectedPdfDoc = 0;
-                    $scope.displayVideosDocsPage = true;
+                    $scope.displayVideosDocsPage = false;
                     document.getElementById('display').data = casheFiles.get('pdf-doc-1');
                     $scope.wordDocPdfDocSlideUp = false;
                     $('.word-docs').slideUp(500);
@@ -546,14 +562,15 @@ var ctrl = function($scope)
                     break;
 
                 case 'ppt-doc':
+                    $scope.pptDocDisplayScreen = true;
                     $scope.displayQuizPages=false;
                     $scope.displayWebsiteLinksPage=false;
                     $scope.displayNavigateTipPage=false;
                     $scope.selectedPptTitle = $scope.pptTitle;
-                    $scope.selectedPptDoc = 0;
-                    document.getElementById('display').data = casheFiles.get('ppt-doc-1');
+                    //$scope.selectedPptDoc = 0;
+                    //document.getElementById('display').data = casheFiles.get('ppt-doc-1');
                     toggleAccordion = '.ppt-docs';
-                    $scope.displayVideosDocsPage = true;
+                    $scope.displayVideosDocsPage = false;
                     $scope.slideAccordions(toggleAccordion);
                     $scope.wordDocPdfDocSlideUp = true;
                     break;
@@ -571,7 +588,7 @@ var ctrl = function($scope)
                     $scope.displayWebsiteLinksPage=true;
                     $scope.slideAccordions(toggleAccordion);
                     
-                    $scope.wordDocPdfDocSlideUp = true;
+                    //$scope.wordDocPdfDocSlideUp = true;
                     $scope.displayVideosDocsPage = false;
                   
                     document.getElementById('display').data = casheFiles.get(id);
@@ -584,11 +601,10 @@ var ctrl = function($scope)
                     $scope.slideAccordions(toggleAccordion);
                     //$scope.selectedQuizTopics=0;
                     $scope.wordDocPdfDocSlideUp = true;
-                  
                     break;
 
                 default:
-                    console.log("default");
+                    //console.log("default");
                     $scope.displayQuizPages = false;
                     $scope.displayVideosDocsPage = true;
                     $scope.displayNavigateTipPage = false;
@@ -604,7 +620,6 @@ var ctrl = function($scope)
                     $scope.wordDocPdfDocSlideUp = false;
             }
             $scope.slideUpQuizQuestions();
-        
         }
     }
 // ---------X----------X----------X---------X-----------X-----------X---------

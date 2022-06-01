@@ -66,7 +66,7 @@
                     {{doc.name}}
                 </div>
 
-                <div ng-repeat="wordDoc in doc.word_documents">
+                <!-- <div ng-repeat="wordDoc in doc.word_documents">
                     <a style="text-decoration : none" ng-href="{{wordDoc.document}}" download>
                         <div ng-class="{selected : selectedWordDoc == $index}" id="{{wordDoc.wordID}}" class="word-docs" ng-click="changeBackgroundTopic($index,$event);displayInThePage($index,$event)">
                             {{wordDoc.word_doc}}
@@ -80,7 +80,7 @@
                             {{pdfDoc.pdf_doc}}
                         </div>
                     </a>
-                </div>
+                </div> -->
             </div>
         
             <!-- --------X-------------X------------X-----------------X----------------X -->
@@ -160,23 +160,110 @@
 
      <!-- ======================================================================= -->
 
-     <!-- display website links -->
-     <!-- ------------------------ -->
+        <div ng-show="wordDocDisplayScreen==true" class="doc-display-screen" id="word-doc-display-screen">
+            <h1 align="center">Word Documents</h1>
+            <table>
+                <tr ng-repeat="doc in documentsOfCashe">
+                    <td valign=top ng-if="$index <= 4" ng-repeat="wordDoc in doc.word_documents">
+                        <a style="text-decoration : none" target="_blank" ng-href="{{wordDoc.document}}">
+                        <!--</a><a style="text-decoration : none" ng-href="{{wordDoc.document}}" download>-->
+                        <img class="doc-tile" id="word-doc-tile" src="images/word-doc-tile-img.png"></img><br />
+                        <b>{{doc.word_documents[$index].word_doc}}</b>
+                        </a>
+                    </td>
+                </tr>
 
-     <div ng-show="wordDocDisplayScreen==true" id="word-doc-display-screen">
+                <tr ng-repeat="doc in documentsOfCashe">
+                    <td valign=top ng-if="$index >= 5 && $index <= 9" ng-repeat="wordDoc in doc.word_documents">
+                        <a style="text-decoration : none" target="_blank" ng-href="{{wordDoc.document}}">
+                        <!--</a><a style="text-decoration : none" ng-href="{{wordDoc.document}}" download>-->
+                            <img class="doc-tile" id="word-doc-tile" src="images/word-doc-tile-img.png"></img><br />
+                            <b>{{doc.word_documents[$index].word_doc}}</b>
+                        </a>
+                    </td>
+                </tr>
+
+                <tr ng-repeat="doc in documentsOfCashe">
+                    <td valign=top ng-if="$index >= 10 && $index <= 14" ng-repeat="wordDoc in doc.word_documents">
+                        <a style="text-decoration : none" target="_blank" ng-href="{{wordDoc.document}}">
+                            <!--</a><a style="text-decoration : none" ng-href="{{wordDoc.document}}" download>-->
+                            <img class="doc-tile" id="word-doc-tile" src="images/word-doc-tile-img.png"></img><br />
+                            <b>{{doc.word_documents[$index].word_doc}}</b>
+                        </a>
+                    </td>
+                </tr>
+
+                <tr ng-repeat="doc in documentsOfCashe">
+                    <td valign=top ng-if="$index >= 15 && $index <= 19" ng-repeat="wordDoc in doc.word_documents">
+                        <a style="text-decoration : none" target="_blank" ng-href="{{wordDoc.document}}">
+                            <!--</a><a style="text-decoration : none" ng-href="{{wordDoc.document}}" download>-->
+                            <img class="doc-tile" src="images/word-doc-tile-img.png"></img><br />
+                            <b>{{doc.word_documents[$index].word_doc}}</b>
+                        </a>
+                    </td>
+                </tr>
+
+                <tr ng-repeat="doc in documentsOfCashe">
+                    <td valign=top ng-if="$index >= 20 && $index <= 24" ng-repeat="wordDoc in doc.word_documents">
+                        <a style="text-decoration : none" target="_blank" ng-href="{{wordDoc.document}}">
+                            <!--</a><a style="text-decoration : none" ng-href="{{wordDoc.document}}" download>-->
+                            <img class="doc-tile" src="images/word-doc-tile-img.png"></img><br />
+                            <b>{{doc.word_documents[$index].word_doc}}</b>
+                        </a>
+                    </td>
+                </tr>
+
+                <tr ng-repeat="doc in documentsOfCashe">
+                    <td valign=top  ng-if="$index >= 25 && $index <= 26" ng-repeat="wordDoc in doc.word_documents">
+                        <a style="text-decoration : none" target="_blank" ng-href="{{wordDoc.document}}">
+                            <!--</a><a style="text-decoration : none" ng-href="{{wordDoc.document}}" download>-->
+                                <img class="doc-tile" src="images/word-doc-tile-img.png"></img><br />
+                            <b>{{doc.word_documents[$index].word_doc}}</b>
+                        </a>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    
+    <!-- ======================================================================= -->
+
+        <div ng-show="pdfDocDisplayScreen==true" class="doc-display-screen" id="pdf-doc-display-screen">
+            <h1 align="center">PDF Documents</h1>
+            <table>
+                <tr ng-repeat="doc in documentsOfCashe">
+                    <td valign=top ng-if="$index <= 4" ng-repeat="pdfDoc in doc.pdf_documents">
+                        <a style="text-decoration : none" target="_blank" ng-href="{{pdfDoc.document}}">
+                        <!--</a><a style="text-decoration : none" ng-href="{{pdfDoc.document}}" download>-->
+                        <img class="doc-tile" src="images/pdf-tile.png"></img><br />
+                        <b>{{doc.pdf_documents[$index].pdf_doc}}</b>
+                        </a>
+                    </td>
+                </tr>
+            </table>
+        </div>
+
+    <!-- ======================================================================= -->
+
+    <div ng-show="pptDocDisplayScreen==true" class="doc-display-screen" id="ppt-doc-display-screen">
+        <h1 align="center">PPT Documents</h1>
         <table>
-            <tr ng-repeat="doc in documentsOfCashe">
-                <td>
-                    <img src="images/word-doc-tile-png.jpg"></img><br />
-                    {{doc.name}}
+            <tr>
+                <td valign=top ng-repeat="pptDoc in pptDocuments">
+                    <a style="text-decoration : none" target="_blank" ng-href="{{pptDoc.document}}">
+                    <!--</a><a style="text-decoration : none" ng-href="{{pptDoc.document}}" download>-->
+                        <img class="doc-tile" src="images/ppt-tile-img.png"></img><br />
+                        <b>{{pptDoc.name}}</b>
+                    </a>
                 </td>
             </tr>
         </table>
     </div>
 
-    <div id="pdf-doc-display-screen">
+    <!-- ============================================================================== -->
 
-    </div>
+     <!-- display website links -->
+     <!-- ------------------------ -->
+
 
     <div ng-show="displayWebsiteLinksPage == true" id="displayWebsiteLinks" align="center">
         <div ng-show="showCasheContents==true" id="cashe-contents">
