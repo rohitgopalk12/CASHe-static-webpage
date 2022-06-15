@@ -18,9 +18,9 @@ body
     font-size : 20px;
 }
 table
-{
+{ 
     border-spacing : 10px ;
-    border-collapse : separate;
+    border-collapse : collapse;
 }
 
 .current-Question

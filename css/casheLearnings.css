@@ -1,471 +1,503 @@
-#welcome-heading
-{
-    position : absolute;
-    margin-top : 0px !important;
-    text-align : center;
-    background-color: orange;
-    padding-top : 1.5%;
-    height : 12.5%;
-    width : 100%;
-}
-#developers_credit
-{
-    position : fixed;
-    bottom : 7px;
-    right : 10px;
-    top : 95.5%;
-    font-weight: bold;
-    text-align : right;
-    padding-right : 15px;
-}
-
-th,td{
-    padding-top : 10px;
-}
-
-.doc-tile
-{
-    height : 30%;
-    width : 30%;
-}
-.png-doc-tile
-{
-    height : 10%;
-    width : 10%
-}
 @media only screen
 {
-    div.CASHe-topics-list
+    #welcome-heading
     {
         position : absolute;
-        overflow : auto;
-        top : 12.4%;
-        height : 87.6%;
-        overflow-x: hidden;
-        scrollbar-color : orange white;
-        width : 25%;
-        left : 0;
-        background-color : white;
+        margin-top : 0px !important;
+        text-align : center;
+        background-color: orange;
+        padding-top : 1.5%;
+        height : 12.5%;
+        width : 100%;
+    }
+    /* table, tr, td
+    {
+        border : 2px solid silver;
+        border-collapse : collapse;
+    } */
+    .row-one
+    {
+        border : 2px solid silver;
+        border-bottom-style : hidden;
+    }
+    #developers_credit
+    {
+        position : fixed;
+        bottom : 7px;
+        right : 10px;
+        color : black;
+        top : 95.5%;
+        font-weight: bold;
+        text-align : right;
+        padding-right : 15px;
+    }
+
+    th,td{
+        padding-top : 10px;
+    }
+    td
+    {
+        width : 100%;
+        height : 100%;
+        display : block;
+    }
+    .doc-tile
+    {
+        height : 100px;
+        width : 100px;
+        object-fit : cover;
+    }
+    .png-doc-tile
+    {
+        height : 10%;
+        width : 10%
+    }
+
+        div.CASHe-topics-list
+        {
+            position : absolute;
+            overflow : auto;
+            top : 12.4%;
+            height : 87.6%;
+            overflow-x: hidden;
+            scrollbar-color : orange white;
+            width : 25%;
+            left : 0;
+            background-color : white;
+            border-top : 1px solid black;
+        }
+
+
+    div.word-doc, div.documents{
+        overflow-y:auto;
+    }
+    #displayDIV, #display-quiz-pages, .doc-display-screen, #displayWebsiteLinks
+    {
+        
+        border : 4px solid black;
+        position : absolute;
+        height : 80%;
+        width : 72%;
+        height : 80%;
+        /* min-width: 71.5%;
+        max-width : 80%; */
+        top : 14.5%;
+        left : 26.5%;  
+    }
+    .doc-display-screen
+    {
+        overflow-y : auto;
+        /* border : 4px solid black;
+        position : absolute;
+        height : 80%;
+        width : 60%;
+        height : 70%;
+        /* min-width: 71.5%;
+        max-width : 80%;
+        top : 18.5%;
+        left : 28.5%;  */
+    }
+    #cashe-logo
+    {
+        padding-top : 2%;
+        height : 30%;
+        width : 30%;
+    }
+    #raman-kumar
+    {
+        position : relative;
+        float : right;
+        right : 6%;
+        height : 27%;
+        width : 27%;
+    }
+    #chairman
+    {
+        position : absolute;
+        /* left : 160px; */
+        right : 13%;
+        /* top : 80px; */
+        top : 87%;
+        font-weight : bold;
+        float : right;
+        color : grey;
+    }
+
+    .about
+    {
+        padding-top : 2%;
+        color : black;
+        font-weight : bold;
+        font-size : 14px;
+        text-align : left;
+    }
+
+    #more-info
+    {
+        text-align : left;
+        padding-top : 2%;
+        padding-left : 25px;
+    }
+    #website-link
+    {
+        text-align : center;
+        padding-top : 2%;
+        padding-left : 25px;
+    }
+
+    #displayWebsiteLinks
+    {
+        /* position : absolute;
+        border : 4px solid black;
+        top : 18.5%;
+        left : 28.5%;
+        height : 70%;
+        width : 60%; */
+        background-color : #ffe5b4;
+    }
+
+    /* #display-quiz-pages
+    {
+        position : absolute;
+        border : 4px solid black;
+        height : 70%;
+        width : 60%;
+        top : 18.5%;
+        left : 28.5%;
+        background-color : #ffe5b4;
+    } */
+
+    td
+    {
+        padding : 10px;
+        text-align : center;
+    }
+
+    a:visited , a:link
+    {
+        text-decoration : none;
+        color : black;
+
+    }
+
+    button
+    {
+        background-color: transparent;
+        border: none;
+        color: black;
+        padding: 15px 32px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        margin: 4px 2px;
+        cursor: pointer;
+    }
+
+    #vid2, #vid3, #vid4, #vid5, #vid6, #vid1
+    {
+        cursor : pointer;
+        display : none;
+        height : 80px;
+    }
+    p{
+        font-family : tahoma;
+    }
+    body
+    {
+        overflow-y : auto;
+        font-family : tahoma;
+    }
+    .space 
+    {
+        
+        padding-left : 50px;
+    }
+    h1
+    {
+        font-family : tahoma;
+        color : black;
+    }
+    .vid:hover, .videos:hover, .word-doc:hover, .documents:hover, .word-docs:hover, .pdf-doc:hover, .pdf-docs:hover, .ppt-docs:hover, .links:hover, .links-websites:hover, .ppt:hover, .documentation:hover, .fintechQuestions:hover, .casheQuestions:hover, .bhanixQuestions:hover, .competitiveAnalysisQuestions:hover, #quiz:hover, .quiz:hover, .quiz-topics:hover
+    { 
+        background-color : rgb(255,153,51);
+    }
+
+    .vid, .documentation, .ppt, .links-websites, #quiz, .word-doc, .pdf-doc, .documents
+    {
+        cursor : pointer;
+        font-weight : bold;
+        border : 1px solid black;
+        font-size : 15x;
+        background-color : rgb(64,64,64);
+        color : white;
+        padding-left : 20px;
+        padding-top : 6.5%;
+        height : 60px;
+        max-height : 60px; 
+    }
+
+    .videos, .word-doc, .word-docs, .ppt-docs, .pdf-doc, .pdf-docs, .links, .quiz-topics, .documents
+    {
+        border : 1px solid black;
+        cursor : pointer;
+        display  : none;
+        color : white;
+        height : 60px;
+        max-height : 60px;   
+    }
+    .word-doc, .pdf-doc, .ppt-docs, .links, .quiz-topics, .videos, .documents
+    {
+        padding-left : 40px;
+    }
+    .word-docs, .pdf-docs, .fintechQuestions, .casheQuestions, .bhanixQuestions, .competitiveAnalysisQuestions
+    {
+        padding-left : 60px;
+        padding-right : 15px;
+        color : white;
+    }
+
+    .fintechQuestions, .casheQuestions, .bhanixQuestions, .competitiveAnalysisQuestions
+    {
+        border : 1px solid black;
+    }
+
+    .videos 
+    {
+        font-weight : bold;
+    }
+    #fintechQuiz, #casheQuiz, #bhanixQuiz, #competitiveAnalysisQuiz
+    {
+        font-weight : bold;
+    }
+    .vid, .documentation, .ppt, .links-websites
+    {
         border-top : 1px solid black;
     }
-}
-
-div.word-doc, div.documents{
-    overflow-y:auto;
-}
-#displayDIV, #display-quiz-pages
-{
-    
-    border : 4px solid black;
-    position : absolute;
-    height : 80%;
-    width : 60%;
-    height : 70%;
-    /* min-width: 71.5%;
-    max-width : 80%; */
-    top : 18.5%;
-    left : 28.5%;  
-}
-.doc-display-screen
-{
-    overflow-y : auto;
-    border : 4px solid black;
-    position : absolute;
-    height : 80%;
-    width : 60%;
-    height : 70%;
-    /* min-width: 71.5%;
-    max-width : 80%; */
-    top : 18.5%;
-    left : 28.5%; 
-}
-#cashe-logo
-{
-    padding-top : 2%;
-    height : 30%;
-    width : 30%;
-}
-#raman-kumar
-{
-    position : relative;
-    float : right;
-    top : 10px;
-    right : 10px;
-    height : 27%;
-    width : 27%;
-}
-#chairman
-{
-    position : relative;
-    left : 160px;
-    top : 80px;
-    font-weight : bold;
-    float : right;
-    color : grey;
-}
-
-.about
-{
-    padding-top : 2%;
-    color : black;
-    font-weight : bold;
-    font-size : 14px;
-    text-align : left;
-}
-
-#more-info
-{
-    text-align : left;
-    padding-top : 2%;
-    padding-left : 25px;
-}
-#website-link
-{
-    text-align : center;
-    padding-top : 2%;
-    padding-left : 25px;
-}
-
-#displayWebsiteLinks
-{
-    position : absolute;
-    border : 4px solid black;
-    top : 18.5%;
-    left : 28.5%;
-    height : 70%;
-    width : 60%;
-    background-color : #ffe5b4;
-}
-
-/* #display-quiz-pages
-{
-    position : absolute;
-    border : 4px solid black;
-    height : 70%;
-    width : 60%;
-    top : 18.5%;
-    left : 28.5%;
-    background-color : #ffe5b4;
-} */
-
-td
-{
-    padding : 10px;
-    text-align : center;
-}
-
-a:visited , a:link
-{
-    text-decoration : none;
-    color : black;
-
-}
-
-button
-{
-    background-color: transparent;
-    border: none;
-    color: black;
-    padding: 15px 32px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    margin: 4px 2px;
-    cursor: pointer;
-}
-
-#vid2, #vid3, #vid4, #vid5, #vid6, #vid1
-{
-    cursor : pointer;
-    display : none;
-    height : 80px;
-}
-
-body
-{
-    overflow-y : auto;
-    font-family : tahoma;
-}
-.vid:hover, .videos:hover, .word-doc:hover, .documents:hover, .word-docs:hover, .pdf-doc:hover, .pdf-docs:hover, .ppt-docs:hover, .links:hover, .links-websites:hover, .ppt:hover, .documentation:hover, .fintechQuestions:hover, .casheQuestions:hover, .bhanixQuestions:hover, .competitiveAnalysisQuestions:hover, #quiz:hover, .quiz:hover, .quiz-topics:hover
-{ 
-    background-color : rgb(255,153,51);
-}
-
-.vid, .documentation, .ppt, .links-websites, #quiz, .word-doc, .pdf-doc, .documents
-{
-    cursor : pointer;
-    font-weight : bold;
-    border : 1px solid black;
-    font-size : 15x;
-    background-color : rgb(64,64,64);
-    color : white;
-    padding-left : 20px;
-    padding-top : 6.5%;
-    height : 60px;
-    max-height : 60px; 
-}
-
-.videos, .word-doc, .word-docs, .ppt-docs, .pdf-doc, .pdf-docs, .links, .quiz-topics, .documents
-{
-    border : 1px solid black;
-    cursor : pointer;
-    display  : none;
-    color : white;
-    height : 60px;
-    max-height : 60px;   
-}
-.word-doc, .pdf-doc, .ppt-docs, .links, .quiz-topics, .videos, .documents
-{
-    padding-left : 40px;
-}
-.word-docs, .pdf-docs, .fintechQuestions, .casheQuestions, .bhanixQuestions, .competitiveAnalysisQuestions
-{
-    padding-left : 60px;
-    padding-right : 15px;
-    color : white;
-}
-
-.fintechQuestions, .casheQuestions, .bhanixQuestions, .competitiveAnalysisQuestions
-{
-    border : 1px solid black;
-}
-
-.videos 
-{
-    font-weight : bold;
-}
-#fintechQuiz, #casheQuiz, #bhanixQuiz, #competitiveAnalysisQuiz
-{
-    font-weight : bold;
-}
-.vid, .documentation, .ppt, .links-websites
-{
-    border-top : 1px solid black;
-}
 
 
-.videos 
-{
-    font-weight : normal;
-} 
+    .videos 
+    {
+        font-weight : normal;
+    } 
 
-.align
-{
-    text-align : right;
-    color : white;
-    font-weight : bold;
-}
-.navigateText
-{
-    position : absolute;
-    top : 20%;
-    left : 35%;
-    border : 4px solid black;
-    padding-top : 13%;
-    padding-left : 5%;
-    padding-right : 5%;
-    height : 70%;
-    max-width : 80%;
-    color : black;
+    .align
+    {
+        text-align : right;
+        color : white;
+        font-weight : bold;
+    }
+    .navigateText
+    {
+        position : absolute;
+        top : 20%;
+        left : 35%;
+        border : 4px solid black;
+        padding-top : 13%;
+        padding-left : 5%;
+        padding-right : 5%;
+        height : 70%;
+        max-width : 80%;
+        color : black;
 
-}
-#display
-{
-    position : sticky;
-    top : 0%;
-    padding : 3px;
-    /* border : 4px solid black; */
-}
-#welcome-heading
-{
-    color : black;
-    background-color : orange;
-    right : 2px;
-}
+    }
+    #display
+    {
+        position : sticky;
+        top : 0%;
+        padding : 3px;
+        /* border : 4px solid black; */
+    }
+    #welcome-heading
+    {
+        color : black;
+        background-color : orange;
+        right : 2px;
+    }
 
-.word-doc, .pdf-doc, .ppt-docs, .links, .videos, .quiz-topics, .word-docs, .pdf-docs, .documents
-{
-    background-color : rgb(64,64,64);
-}
-.word-doc, .pdf-doc, .documents
-{
-    text-transform : uppercase;
-    font-weight : bold;
-}
-.fintechQuestions, .casheQuestions, .bhanixQuestions, .competitiveAnalysisQuestions
-{
-    border-bottom : 1px solid black;
-    cursor : pointer;
-    color : white;
-    display : none;
-    height : 60px;
-    background-color : rgb(64,64,64);
-}
-a{
-    text-decoration : none;
-    color : white;
-}
-
-.progress
-{
-    border : 2px solid black;
-}
-
-
-/* original code */
-#display-fintech-quiz-page #fintech-quiz-tips,#display-cashe-quiz-page #cashe-quiz-tips,#display-bhanix-quiz-page #bhanix-quiz-tips, #display-competitive-analysis-quiz-page #competitive-analysis-quiz-tips
-{
-    /* display : block; */
-    position : absolute;
-    top : 20%;
-    left : 30%;
-}
-
-#link:hover
-{
-    color : blue;
-    text-decoration : underline;
-}
-#link
-{
-    text-decoration : underline;
-}
-#display-fintech-quiz-page #fintech-quiz-page
-{
-    display : block;
-} 
-#display-fintech-quiz-page #displayFintechQuizScore, #display-cashe-quiz-page #displayCasheQuizScore, #display-bhanix-quiz-page #displayBhanixQuizScore, #display-competitive-analysis-quiz-page #displayCompetitiveAnalysisQuizScore
-{
-    position : absolute;
-    top : 27%;
-    left : 7%;
-    color : black;
-    font-size : 35px;
-    font-weight : bold;
-}
-/* ---------------------------------------------------------------*/
-
-/*   vid1 to vid6  aligned */
-/* ===========================*/
-#vid1, #vid2, #vid4, #vid5
-{
-    /*padding-top : 10%;*/
-    padding-top : 6.5%;
-}
-#vid3, #vid6
-{
-    padding-top : 3.2%;
-}
-/* --------------------------------------*/
-
-/* word docs aligned */
-/*======================*/
-#word-doc-4,#word-doc-5,#word-doc-11,#word-doc-13,#word-doc-14
-{
-    padding-top : 6.5%;
-}
-#word-doc-1,#word-doc-2,#word-doc-3,#word-doc-6,#word-doc-7,#word-doc-8,#word-doc-9,#word-doc-10,#word-doc-12,#word-doc-17,#word-doc-18,#word-doc-19,#word-doc-20,#word-doc-21,#word-doc-22,#word-doc-23,#word-doc-24,#word-doc-25,#word-doc-26
-{
-    padding-top : 3.2%;
-}
-
-/* --------------------------------------*/
-/* PDF and PPT documents, links */
-/*================================*/
-.pdf-docs, .ppt-docs, .links
-{
-    padding-top : 6.5%;
-}
-/* --------------------------------------*/
-
-/* quiz topics */
-/*===============*/
-.quiz-topics
-{
-    padding-top : 6.5%;
-}
-/* --------------------------------------*/
-
-/* fintech questions */
-/*====================*/
-#fintech_1
-{
-    padding-top : 6.5%;
-}
-#fintech_2, #fintech_3, #fintech_4
-{
-    padding-top : 3.2%;
-}
-/* -------------------------------------*/
-
-/* cashe questions */
-/*====================*/
-#cashe_6, #cashe_8, #cashe_9, #cashe_10
-{
-    padding-top : 6.5%;
-}
-#cashe_7
-{
-    padding-top : 3.2%;
-}
-
-/* ----------------------------------------------*/
-
-/* bhanix questions */
-/*====================*/
-.bhanixQuestions
-{
-    padding-top : 6.5%;
-}
-/* ----------------------------------------------*/
-
-/* competitive Analysis questions */
-/*===============================*/
-#competitive_16, #competitive_19
-{
-    padding-top : 3.2%;
-}
-#competitive_18, #competitive_20
-{
-    padding-top : 6.5%;
-}
-/* ----------------------------------------------*/
-
-::-webkit-scrollbar {
-    width: 15px;
-  }
-  
-  /* Track */
-  ::-webkit-scrollbar-track {
-    box-shadow: inset 0 0 5px grey; 
-    border-radius: 10px;
-  }
-   
-  /* Handle */
-  ::-webkit-scrollbar-thumb {
-    background: orange; 
-    border-radius: 10px;
-  }
-
-.unselected
-{
-    background-color : 'rgb(64,64,64)';
-}
-.hoverOn
-{
-    background-color : 'rgb(255,153,51)';
-}
-   #quizLink
-   {
+    .word-doc, .pdf-doc, .ppt-docs, .links, .videos, .quiz-topics, .word-docs, .pdf-docs, .documents
+    {
+        background-color : rgb(64,64,64);
+    }
+    .word-doc, .pdf-doc, .documents
+    {
+        text-transform : uppercase;
+        font-weight : bold;
+    }
+    .fintechQuestions, .casheQuestions, .bhanixQuestions, .competitiveAnalysisQuestions
+    {
+        border-bottom : 1px solid black;
+        cursor : pointer;
+        color : white;
+        display : none;
+        height : 60px;
+        background-color : rgb(64,64,64);
+    }
+    a{
         text-decoration : none;
-   }
+        color : white;
+    }
 
-   .selected
-   {
-    background-color : orange !important;
-   }
-   .unselected
-   {
-    background-color : orange;
-   }
+    .progress
+    {
+        border : 2px solid black;
+    }
+
+
+    /* original code */
+    #display-fintech-quiz-page #fintech-quiz-tips,#display-cashe-quiz-page #cashe-quiz-tips,#display-bhanix-quiz-page #bhanix-quiz-tips, #display-competitive-analysis-quiz-page #competitive-analysis-quiz-tips
+    {
+        /* display : block; */
+        position : absolute;
+        top : 20%;
+        left : 33%;
+    }
+
+    #link:hover
+    {
+        color : blue;
+        text-decoration : underline;
+    }
+    #link
+    {
+        text-decoration : underline;
+    }
+    #display-fintech-quiz-page #fintech-quiz-page
+    {
+        display : block;
+    } 
+    #display-fintech-quiz-page #displayFintechQuizScore, #display-cashe-quiz-page #displayCasheQuizScore, #display-bhanix-quiz-page #displayBhanixQuizScore, #display-competitive-analysis-quiz-page #displayCompetitiveAnalysisQuizScore
+    {
+        position : absolute;
+        top : 27%;
+        left : 7%;
+        color : black;
+        font-size : 35px;
+        font-weight : bold;
+    }
+    /* ---------------------------------------------------------------*/
+
+    /*   vid1 to vid6  aligned */
+    /* ===========================*/
+    #vid1, #vid2, #vid4, #vid5
+    {
+        /*padding-top : 10%;*/
+        padding-top : 6.5%;
+    }
+    #vid3, #vid6
+    {
+        padding-top : 3.2%;
+    }
+    /* --------------------------------------*/
+
+    /* word docs aligned */
+    /*======================*/
+    #word-doc-4,#word-doc-5,#word-doc-11,#word-doc-13,#word-doc-14
+    {
+        padding-top : 6.5%;
+    }
+    #word-doc-1,#word-doc-2,#word-doc-3,#word-doc-6,#word-doc-7,#word-doc-8,#word-doc-9,#word-doc-10,#word-doc-12,#word-doc-17,#word-doc-18,#word-doc-19,#word-doc-20,#word-doc-21,#word-doc-22,#word-doc-23,#word-doc-24,#word-doc-25,#word-doc-26
+    {
+        padding-top : 3.2%;
+    }
+
+    /* --------------------------------------*/
+    /* PDF and PPT documents, links */
+    /*================================*/
+    .pdf-docs, .ppt-docs, .links
+    {
+        padding-top : 6.5%;
+    }
+    /* --------------------------------------*/
+
+    /* quiz topics */
+    /*===============*/
+    .quiz-topics
+    {
+        padding-top : 6.5%;
+    }
+    /* --------------------------------------*/
+
+    /* fintech questions */
+    /*====================*/
+    #fintech_1
+    {
+        padding-top : 6.5%;
+    }
+    #fintech_2, #fintech_3, #fintech_4
+    {
+        padding-top : 3.2%;
+    }
+    /* -------------------------------------*/
+
+    /* cashe questions */
+    /*====================*/
+    #cashe_6, #cashe_8, #cashe_9, #cashe_10
+    {
+        padding-top : 6.5%;
+    }
+    #cashe_7
+    {
+        padding-top : 3.2%;
+    }
+
+    /* ----------------------------------------------*/
+
+    /* bhanix questions */
+    /*====================*/
+    .bhanixQuestions
+    {
+        padding-top : 6.5%;
+    }
+    /* ----------------------------------------------*/
+
+    /* competitive Analysis questions */
+    /*===============================*/
+    #competitive_16, #competitive_19
+    {
+        padding-top : 3.2%;
+    }
+    #competitive_18, #competitive_20
+    {
+        padding-top : 6.5%;
+    }
+    /* ----------------------------------------------*/
+
+    ::-webkit-scrollbar {
+        width: 15px;
+    }
+    
+    /* Track */
+    ::-webkit-scrollbar-track {
+        box-shadow: inset 0 0 5px grey; 
+        border-radius: 10px;
+    }
+    
+    /* Handle */
+    ::-webkit-scrollbar-thumb {
+        background: orange; 
+        border-radius: 10px;
+    }
+
+    .unselected
+    {
+        background-color : 'rgb(64,64,64)';
+    }
+    .hoverOn
+    {
+        background-color : 'rgb(255,153,51)';
+    }
+    #quizLink
+    {
+            text-decoration : none;
+    }
+
+    .selected
+    {
+        background-color : orange !important;
+    }
+    .unselected
+    {
+        background-color : orange;
+    }
+}
