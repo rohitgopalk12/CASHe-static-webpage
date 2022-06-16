@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <!-- <meta http-equiv="X-UA-Compatible" content="IE=edge"> -->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>CASHe learnings</title>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css">
+        <!-- <link rel="stylesheet" href="https://s3.ap-south-1.amazonaws.com/learnings.cashe.co.in/css/casheLearnings.css"> -->
+        <script src="https://s3.ap-south-1.amazonaws.com/learnings.cashe.co.in/js/angular.min.js"></script>
+        <script src="https://s3.ap-south-1.amazonaws.com/learnings.cashe.co.in/js/jquery-3.6.0.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular-route.js"></script>
+        <link rel="shortcut icon" href="#">
+    </head>
+
+    <body ng-app="casheLearningsApp" ng-controller="quizController">
+        <h1 id='welcome-heading'>
+            Business
+        </h1>
+
+        <div class="business-topics-list">
+
+            <!-- ==========================================================================-->
+                                        <!-- Business Intelligence -->
+                                        <!-- ----------------- -->
+
+            <div>
+                <div id="business-intelligence" ng-class="{selected : businessIntelligenceTitle == businessIntelligence}" ng-click="changeBackgroundTopic(videoRecording,$event);displayInThePage($index,$event)" class="bi">
+                    {{businessIntelligence}}
+                </div> 
+        
+                <div ng-repeat="business in businessIntelligence">
+                    <div ng-class="{selected : selectedBusinessIntelligenceTopic == $index}" class="business-intelligence-topics" ng-attr-id="{{business.businessId}}"  ng-click="changeBackgroundTopic($index,$event);displayInThePage($index,$event)">
+                        {{business.businessName}}
+                    </div>
+                </div>
+            </div>
+
+            <!-- ==========================================================================-->
+
+            <!-- Collections  -->
+            <!-- ===================-->
+
+            <div id="collection" ng-class="{selected : selectedCollectionsTitle == collections}" ng-click="changeBackgroundTopic(documentation,$event);displayInThePage($index,$event)" class="collections">
+                {{collections}}
+            </div>
+
+           
+             <!-- Customer Support  -->
+            <!-- ===================-->
+
+            <div id='customer-support' ng-class="{selected : selectedCustomerSupportTitle == customer_support}" ng-click="changeBackgroundTopic(pptTitle,$event);displayInThePage($index,$event)" class="customer_support">
+                {{customer_support}}
+            </div>
+
+            <!-- --------X-------------X------------X-----------------X----------------X -->
+
+            <!-- Fintech Ecosystem -->
+            <!-- ==================-->
+
+            <div id='fintechEcoSystem' ng-class="{selected : selectedFintechEcoSystemTitle == fintechEcoSystem}" ng-click="changeBackgroundTopic(linksTitle,$event);displayInThePage($index,$event)" class="fintech-eco-system">
+                {{fintechEcoSystem}}
+            </div>
+
+            <!----------X-------------X------------X-----------------X----------------X  -->
+
+            <!-- Growth -->
+            <!-- ==================-->
+
+            <div id='growthId' ng-class="{selected : selectedGrowthTitle == growth}" ng-click="changeBackgroundTopic(linksTitle,$event);displayInThePage($index,$event)" class="growth">
+                {{growth}}
+            </div>
+
+            <!----------X-------------X------------X-----------------X----------------X  -->
+            
+            <!-- Operations -->
+            <!-- ==================-->
+
+            <div ng-class="{selected : selectedOperationsTitle == operations}" class="operations" id="operation" ng-click="changeBackgroundTopic(quizTitle,$event);displayInThePage($index,$event)">
+                {{operations}}
+            </div>
+
+            <!----------X-------------X------------X-----------------X----------------X  -->
+
+            <!-- Product -->
+            <!-- ==================-->
+
+            <div ng-class="{selected : selectedProductTitle == product}" class="product" id="product" ng-click="changeBackgroundTopic(quizTitle,$event);displayInThePage($index,$event)">
+                {{product}}
+            </div>
+            
+            <!----------X-------------X------------X-----------------X----------------X  -->
+            
+        </div>
+
+        <link rel="stylesheet" href="https://s3.ap-south-1.amazonaws.com/learnings.cashe.co.in/css/quiz.css">
+        <link rel="stylesheet" href="https://s3.ap-south-1.amazonaws.com/learnings.cashe.co.in/css/styles.less">
+        <!-- <script src="https://s3.ap-south-1.amazonaws.com/learnings.cashe.co.in/js/casheLearnings.js"></script> -->
+        <script src="js/casheLearnings.js"></script>
+        <link rel="stylesheet" href="css/casheLearnings.css">
+    </body>
+</html>

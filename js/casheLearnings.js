@@ -7,7 +7,10 @@ var accordions_list = ['.videos','.documents','.links','.quiz-topics']
                                 /* ============================== */
 casheFiles.set('vid1','https://www.youtube.com/embed/Pl7XP8o7v6g?start=0');
 casheFiles.set('vid2','https://www.youtube.com/embed/JvNvINEgW1s');
-casheFiles.set('vid3','https://www.youtube.com/embed/ww_83m_bB_U');
+// casheFiles.set('vid3','https://www.youtube.com/embed/ww_83m_bB_U');
+// https://www.youtube.com/watch?v=ww_83m_bB_U?autoplay=1
+casheFiles.set('vid3','https://www.youtube.com/embed/ww_83m_bB_U?autoplay=1');
+// casheFiles.set('vid3','https://www.youtube.com/watch?v=ww_83m_bB_U');
 casheFiles.set('vid4','https://www.youtube.com/embed/C1E5tHaZaks');
 casheFiles.set('vid5','https://www.youtube.com/embed/7jS9JMxg5R4');
 casheFiles.set('vid6','https://www.youtube.com/embed/z_zj2OmTRJk');
@@ -83,6 +86,36 @@ var fintechQuizApp = angular.module('casheLearningsApp',[]);
  
 var ctrl = function($scope)
 {   
+    /*---------------------------------------------*/
+    /* business.html */
+    /* --------------- */
+
+    $scope.businessIntelligence = "Business Intelligence";
+    $scope.collections = "Collections";
+    $scope.customer_support = "Customer Support";
+    $scope.fintechEcoSystem = "Fintech Ecosystem"
+    $scope.growth = "Growth";
+    $scope.operations = "Operations";
+    $scope.product = "Product";
+    
+    $scope.businessPage = 
+    [
+        {businessId : 'bi', businessName : 'Business Intelligence', businessImage : 'images/bi.png', businessDescription : 'This section belongs to Business Intelligence'},
+        {businessId : 'collections', businessName : 'Collections', businessImage : 'images/collections.png', businessDescription : 'This section belongs Collections'},
+        {businessId : 'customer_support', businessName : 'Customer Support', businessImage : 'images/customer_support.png', businessDescription : 'This section belongs to Customer Support'},
+        {businessId : 'fintech_ecosystem', businessName : 'Fintech Ecosystem', businessImage : 'images/fintech_ecosystem.png', businessDescription : 'This section belongs to Fintech Ecosystem'},
+        {businessId : 'growth', businessName : 'Growth', businessImage : 'images/growth.png', businessDescription : 'This section belongs to Growth'},
+        {businessId : 'operations', businessName : 'Operations', businessImage : 'images/operations.png', businessDescription : 'This section belongs to Operations'},
+        {businessId : 'product', businessName : 'Product', businessImage : 'images/product.png', businessDescription : 'This section belongs to Product'}
+    ];
+
+    /*---------------------------------------------*/
+
+
+
+    /* ------------------------------------------------*/
+    /* index.html */
+    /* ------------- */
     var already_started_quiz_ended=false;
     $scope.ite = 0;
     $scope.wordDocDisplayScreen = false;
@@ -169,6 +202,9 @@ var ctrl = function($scope)
             ]
         }
     ]
+
+
+
     $scope.documentsOfCashe = 
     [
             {
