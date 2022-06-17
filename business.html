@@ -20,79 +20,24 @@
         </h1>
 
         <div class="business-topics-list">
-
-            <!-- ==========================================================================-->
-                                        <!-- Business Intelligence -->
-                                        <!-- ----------------- -->
-
-            <div>
-                <div id="business-intelligence" ng-class="{selected : businessIntelligenceTitle == businessIntelligence}" ng-click="changeBackgroundTopic(videoRecording,$event);displayInThePage($index,$event)" class="bi">
-                    {{businessIntelligence}}
-                </div> 
-        
-                <div ng-repeat="business in businessIntelligence">
-                    <div ng-class="{selected : selectedBusinessIntelligenceTopic == $index}" class="business-intelligence-topics" ng-attr-id="{{business.businessId}}"  ng-click="changeBackgroundTopic($index,$event);displayInThePage($index,$event)">
-                        {{business.businessName}}
-                    </div>
+            <div ng-repeat="business in businessPage">
+                <div ng-class="{selected : selectedBusinessTopic === $index}" class="business-topics" ng-attr-id="{{businessPage[$index].businessId}}"  ng-click="changeBackgroundTopic($index,$event);displayInThePage($index,$event)">
+                    {{businessPage[$index].businessName}}
                 </div>
-            </div>
 
-            <!-- ==========================================================================-->
-
-            <!-- Collections  -->
-            <!-- ===================-->
-
-            <div id="collection" ng-class="{selected : selectedCollectionsTitle == collections}" ng-click="changeBackgroundTopic(documentation,$event);displayInThePage($index,$event)" class="collections">
-                {{collections}}
-            </div>
-
-           
-             <!-- Customer Support  -->
-            <!-- ===================-->
-
-            <div id='customer-support' ng-class="{selected : selectedCustomerSupportTitle == customer_support}" ng-click="changeBackgroundTopic(pptTitle,$event);displayInThePage($index,$event)" class="customer_support">
-                {{customer_support}}
-            </div>
-
-            <!-- --------X-------------X------------X-----------------X----------------X -->
-
-            <!-- Fintech Ecosystem -->
-            <!-- ==================-->
-
-            <div id='fintechEcoSystem' ng-class="{selected : selectedFintechEcoSystemTitle == fintechEcoSystem}" ng-click="changeBackgroundTopic(linksTitle,$event);displayInThePage($index,$event)" class="fintech-eco-system">
-                {{fintechEcoSystem}}
-            </div>
-
-            <!----------X-------------X------------X-----------------X----------------X  -->
-
-            <!-- Growth -->
-            <!-- ==================-->
-
-            <div id='growthId' ng-class="{selected : selectedGrowthTitle == growth}" ng-click="changeBackgroundTopic(linksTitle,$event);displayInThePage($index,$event)" class="growth">
-                {{growth}}
-            </div>
-
-            <!----------X-------------X------------X-----------------X----------------X  -->
-            
-            <!-- Operations -->
-            <!-- ==================-->
-
-            <div ng-class="{selected : selectedOperationsTitle == operations}" class="operations" id="operation" ng-click="changeBackgroundTopic(quizTitle,$event);displayInThePage($index,$event)">
-                {{operations}}
-            </div>
-
-            <!----------X-------------X------------X-----------------X----------------X  -->
-
-            <!-- Product -->
-            <!-- ==================-->
-
-            <div ng-class="{selected : selectedProductTitle == product}" class="product" id="product" ng-click="changeBackgroundTopic(quizTitle,$event);displayInThePage($index,$event)">
-                {{product}}
-            </div>
-            
-            <!----------X-------------X------------X-----------------X----------------X  -->
-            
+                <div class="sub-topics" ng-repeat="subTopics in business.sub_topics">
+                    <div ng-class="{selected : selectedBusinessSubTopic === $index}" class="{{business.sub_topics[$index].topicClass}}" ng-attr-id="{{business.sub_topics[$index].topicID}}"  ng-click="changeBackgroundTopic($index,$event);displayInThePage($index,$event)">
+                        {{business.sub_topics[$index].topicName}}
+                    </div>
+                </div>  
+            </div>            
         </div>
+
+        <!----------X-------------X------------X-----------------X----------------X  -->
+
+        <div class="display-screen"></div>
+
+        <!----------X-------------X------------X-----------------X----------------X  -->
 
         <link rel="stylesheet" href="https://s3.ap-south-1.amazonaws.com/learnings.cashe.co.in/css/quiz.css">
         <link rel="stylesheet" href="https://s3.ap-south-1.amazonaws.com/learnings.cashe.co.in/css/styles.less">

@@ -1,47 +1,41 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular-route.js"></script>
 
-    <head>
-        <meta charset="UTF-8">
-        <!-- <meta http-equiv="X-UA-Compatible" content="IE=edge"> -->
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>CASHe learnings</title>
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css">
-        <!-- <link rel="stylesheet" href="https://s3.ap-south-1.amazonaws.com/learnings.cashe.co.in/css/casheLearnings.css"> -->
-        <script src="https://s3.ap-south-1.amazonaws.com/learnings.cashe.co.in/js/angular.min.js"></script>
-        <script src="https://s3.ap-south-1.amazonaws.com/learnings.cashe.co.in/js/jquery-3.6.0.min.js"></script>
-        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular-route.js"></script>
-        <link rel="shortcut icon" href="#">
-    </head>
+<body ng-app="myApp">
 
-    <body ng-app="casheLearningsApp" ng-controller="quizController">
-        <h1 align="center">
-            Business
-        </h1>
+<a href="#!homepage">City 1</a>
+<a href="#!index">City 2</a>
 
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/ww_83m_bB_U?autoplay=1" frameborder="0" gesture="media" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+<p>Click on the links.</p>
 
-        <table style="border : 1px solid silver;border-collapse : collapse">
-            <tr style="border : 1px solid silver;border-collapse : collapse" ng-repeat="doc in documentsOfCashe">
-                <td valign=top style="border : 1px solid silver;border-collapse : collapse" class="row-one" rowspan="2" ng-if="$index <= 4" ng-repeat="wordDoc in doc.word_documents">
-                    <a style="text-decoration : none" target="_blank" ng-href="{{doc.word_documents[$index].document}}">
-                        <img ng-alt="{{doc.word_documents[$index].alt_text}}" class="doc-tile" ng-src="{{doc.word_documents[$index].icon}}"><br />
-                        <p style="font-size : 12px">hi</p>
-                    </a>
-                    <!-- <b style="font-size : 12px">Overview : {{doc.word_documents[$index].overview}}</b> -->
-                </td>
-            </tr>
-        </table>
-        <!-- <embed src="https://www.youtube.com/embed/JvNvINEgW1s"
-    width="640" height="480"> -->
-            
-        </embed>
-        
+<p>Note that each "view" has its own controller which each gives the "msg" variable a value.</p>
 
-            <link rel="stylesheet" href="https://s3.ap-south-1.amazonaws.com/learnings.cashe.co.in/css/quiz.css">
-            <link rel="stylesheet" href="https://s3.ap-south-1.amazonaws.com/learnings.cashe.co.in/css/styles.less">
-            <!-- <script src="https://s3.ap-south-1.amazonaws.com/learnings.cashe.co.in/js/casheLearnings.js"></script> -->
-            <script src="js/casheLearnings.js"></script>
-            <link rel="stylesheet" href="css/casheLearnings.css">
-    </body>
+<div ng-view></div>
+
+<script>
+var app = angular.module("myApp", ["ngRoute"]);
+app.config(function($routeProvider) {
+    $routeProvider
+    
+    .when("/homepage", {
+        templateUrl : "homepage.html",
+        controller : "londonCtrl"
+    })
+    .when("/index", {
+        templateUrl : "index.html",
+        controller : "parisCtrl"
+    });
+});
+app.controller("londonCtrl", function ($scope) {
+    $scope.msg = "I love London";
+});
+app.controller("parisCtrl", function ($scope) {
+    $scope.msg = "I love Paris";
+});
+
+</script>
+
+</body>
 </html>

@@ -82,7 +82,39 @@ var current_div_clicked=false;
 var className = 0;
 var questionVisited = 0;
 
-var fintechQuizApp = angular.module('casheLearningsApp',[]);
+var fintechQuizApp = angular.module('casheLearningsApp',['ngRoute']);
+fintechQuizApp.config(function($routeProvider)
+{
+    $routeProvider
+    .when("/business-intelligence", 
+    {
+      templateUrl : "businessintelligence.html"
+    })
+    .when("/collections", 
+    {
+      templateUrl : "collections.html"
+    })
+    .when("/customer-support", 
+    {
+      templateUrl : "customersupport.html"
+    })
+    .when("/financial-ecosystem", 
+    {
+      templateUrl : "financialecosystem.html"
+    })
+    .when("/growth", 
+    {
+      templateUrl : "operations.html"
+    })
+    .when("/product", 
+    {
+      templateUrl : "product.html"
+    })
+    .when("/general", 
+    {
+      templateUrl : "general.html"
+    })
+});
  
 var ctrl = function($scope)
 {   
@@ -97,16 +129,50 @@ var ctrl = function($scope)
     $scope.growth = "Growth";
     $scope.operations = "Operations";
     $scope.product = "Product";
-    
+
     $scope.businessPage = 
     [
-        {businessId : 'bi', businessName : 'Business Intelligence', businessImage : 'images/bi.png', businessDescription : 'This section belongs to Business Intelligence'},
-        {businessId : 'collections', businessName : 'Collections', businessImage : 'images/collections.png', businessDescription : 'This section belongs Collections'},
-        {businessId : 'customer_support', businessName : 'Customer Support', businessImage : 'images/customer_support.png', businessDescription : 'This section belongs to Customer Support'},
-        {businessId : 'fintech_ecosystem', businessName : 'Fintech Ecosystem', businessImage : 'images/fintech_ecosystem.png', businessDescription : 'This section belongs to Fintech Ecosystem'},
-        {businessId : 'growth', businessName : 'Growth', businessImage : 'images/growth.png', businessDescription : 'This section belongs to Growth'},
-        {businessId : 'operations', businessName : 'Operations', businessImage : 'images/operations.png', businessDescription : 'This section belongs to Operations'},
-        {businessId : 'product', businessName : 'Product', businessImage : 'images/product.png', businessDescription : 'This section belongs to Product'}
+        {businessId : 'bi', businessName : 'Business Intelligence', businessImage : 'images/bi.png', businessDescription : 'This section belongs to Business Intelligence', sub_topics : 
+            [
+                {topicClass : 'bi-class', topicID : 'bi-video_recordings', topicName : 'Video Recordings'}
+            ]
+        },
+        {businessId : 'collections', businessName : 'Collections', businessImage : 'images/collections.png', businessDescription : 'This section belongs Collections', sub_topics : 
+            [
+                {topicClass : 'collections-class', topicID : 'collections-video_recordings', topicName : 'Video Recordings'}
+            ]
+        },
+        {businessId : 'customer_support', businessName : 'Customer Support', businessImage : 'images/customer_support.png', businessDescription : 'This section belongs to Customer Support', sub_topics : 
+            [
+                {topicClass : 'customer_support-class', topicID : 'customer-support-video_recordings', topicName : 'Video Recordings'}
+            ]
+        },
+        {businessId : 'fintech_ecosystem', businessName : 'Fintech Ecosystem', businessImage : 'images/fintech_ecosystem.png', businessDescription : 'This section belongs to Fintech Ecosystem', sub_topics : 
+            [
+                {topicClass : 'fintech_ecosystem-class', topicID : 'fintech_ecosystem-video_recordings', topicName : 'Video Recordings'}
+            ]
+        },
+        {businessId : 'growth', businessName : 'Growth', businessImage : 'images/growth.png', businessDescription : 'This section belongs to Growth', sub_topics : 
+            [
+                {topicClass : 'growth-class', topicID : 'growth-video_recordings', topicName : 'Video Recordings'}
+            ]
+        },
+        {businessId : 'operations', businessName : 'Operations', businessImage : 'images/operations.png', businessDescription : 'This section belongs to Operations', sub_topics : 
+            [
+                {topicClass : 'operations-class', topicID : 'operations-video_recordings', topicName : 'Video Recordings'}
+            ]
+        },
+        {businessId : 'product', businessName : 'Product', businessImage : 'images/product.png', businessDescription : 'This section belongs to Product', sub_topics : 
+            [
+                {topicClass : 'product-class', topicID : 'product-video_recordings', topicName : 'Video Recordings'}
+            ]
+        },
+        {businessId : 'general', businessName : 'General', businessImage : 'images/product.png', businessDescription : 'This section belongs to General', sub_topics : 
+            [
+                {topicClass : 'general-class', topicID : 'general-articles', topicName : 'Articles'}
+            ]
+        }
+
     ];
 
     /*---------------------------------------------*/
@@ -291,6 +357,9 @@ var ctrl = function($scope)
         $scope.selectedBhanixQuestion = -1;
         $scope.selectedCasheQuestion = -1;
         $scope.selectedFintechQuestion = -1;
+        
+        $scope.selectedBusinessSubTopic = -1;
+        $scope.selectedBusinessTopic = -1;
 
         switch(className)
         {
@@ -374,6 +443,50 @@ var ctrl = function($scope)
             case 'quiz-topics ng-binding':
                 $scope.selectedQuizTitle = $scope.quizTitle;
                 $scope.selectedQuizTopics = index;
+                break;
+            
+            case 'business-topics ng-binding':
+                $scope.selectedBusinessTopic = index;
+                break;
+
+            case 'bi-class ng-binding':
+                $scope.selectedBusinessTopic = 0;
+                $scope.selectedBusinessSubTopic = 0;
+                break;
+
+            case 'collections-class ng-binding':
+                $scope.selectedBusinessTopic = 1;
+                $scope.selectedBusinessSubTopic = 0;
+                break;
+
+            case 'customer-support ng-binding':
+                $scope.selectedBusinessTopic = 2;
+                $scope.selectedBusinessSubTopic = 0;
+                break;
+
+            case 'fintech-ecosystem ng-binding':
+                $scope.selectedBusinessTopic = 3;
+                $scope.selectedBusinessSubTopic = 0;
+                break;
+        
+            case 'growth ng-binding':
+                $scope.selectedBusinessTopic = 4;
+                $scope.selectedBusinessSubTopic = 0;
+                break;
+
+            case 'operations ng-binding':
+                $scope.selectedBusinessTopic = 5;
+                $scope.selectedBusinessSubTopic = 0;
+                break;
+
+            case 'product ng-binding':
+                $scope.selectedBusinessTopic = 6;
+                $scope.selectedBusinessSubTopic = 0;
+                break;
+    
+            case 'general ng-binding':
+                $scope.selectedBusinessTopic = 7;
+                $scope.selectedBusinessSubTopic = 0;
                 break;
         } 
     }
@@ -540,7 +653,7 @@ var ctrl = function($scope)
             // $scope.displayQuizPages=false;
             // $scope.displayVideosDocsPage=false;
             // $scope.displayWebsiteLinksPage=false;
-
+        
             switch(id)
             {
                 case 'vidRec':
@@ -557,6 +670,14 @@ var ctrl = function($scope)
                     $scope.slideAccordions(toggleAccordion);
                     $scope.wordDocPdfDocSlideUp = true;
                     $scope.quiz_running=false;
+                    break;
+
+                case 'bi':
+                    document.getElementByClassName('sub-topics')[0].style.display = "block";
+                    document.getElementById('bi-video_recordings').style.display = "block";
+                    // $('.'+$scope.businessPage[0].sub_topics[0].topicClass).slideToggle(500);
+                    $('.sub-topics').slideToggle(500);
+                    alert($scope.businessPage[0].sub_topics[0].topicClass);
                     break;
 
                 case 'document':
