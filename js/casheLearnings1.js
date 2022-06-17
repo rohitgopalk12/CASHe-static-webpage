@@ -5,12 +5,9 @@ var accordions_list = ['.videos','.documents','.links','.quiz-topics']
 //=====================================================================================
                                 /* youtube video links */
                                 /* ============================== */
-casheFiles.set('vid1','https://www.youtube.com/embed/Pl7XP8o7v6g?start=0');
+casheFiles.set('vid1','https://www.youtube.com/embed/Pl7XP8o7v6g');
 casheFiles.set('vid2','https://www.youtube.com/embed/JvNvINEgW1s');
-// casheFiles.set('vid3','https://www.youtube.com/embed/ww_83m_bB_U');
-// https://www.youtube.com/watch?v=ww_83m_bB_U?autoplay=1
-casheFiles.set('vid3','https://www.youtube.com/embed/ww_83m_bB_U?autoplay=1');
-// casheFiles.set('vid3','https://www.youtube.com/watch?v=ww_83m_bB_U');
+casheFiles.set('vid3','https://www.youtube.com/embed/ww_83m_bB_U');
 casheFiles.set('vid4','https://www.youtube.com/embed/C1E5tHaZaks');
 casheFiles.set('vid5','https://www.youtube.com/embed/7jS9JMxg5R4');
 casheFiles.set('vid6','https://www.youtube.com/embed/z_zj2OmTRJk');
@@ -82,128 +79,10 @@ var current_div_clicked=false;
 var className = 0;
 var questionVisited = 0;
 
-var fintechQuizApp = angular.module('casheLearningsApp',['ngRoute']);
-fintechQuizApp.config(function($routeProvider)
-{
-    $routeProvider
-    .when("/business-intelligence", 
-    {
-      templateUrl : "businessintelligence.html"
-    })
-    .when("/collections", 
-    {
-      templateUrl : "collections.html"
-    })
-    .when("/customer-support", 
-    {
-      templateUrl : "customersupport.html"
-    })
-    .when("/financial-ecosystem", 
-    {
-      templateUrl : "financialecosystem.html"
-    })
-    .when("/growth", 
-    {
-      templateUrl : "operations.html"
-    })
-    .when("/product", 
-    {
-      templateUrl : "product.html"
-    })
-    .when("/general", 
-    {
-      templateUrl : "general.html"
-    })
-});
+var fintechQuizApp = angular.module('casheLearningsApp',[]);
  
 var ctrl = function($scope)
 {   
-    /*---------------------------------------------*/
-    /* business.html */
-    /* --------------- */
-
-    var chosenBusinessSubAccordion = ''
-    $scope.businessIntelligence = "Business Intelligence";
-    $scope.collections = "Collections";
-    $scope.customer_support = "Customer Support";
-    $scope.fintechEcoSystem = "Fintech Ecosystem"
-    $scope.growth = "Growth";
-    $scope.operations = "Operations";
-    $scope.product = "Product";
-
-    $scope.businessTopicsList = ['bi-video_recordings','collections-video_recordings','customer-support-video_recordings','fintech_ecosystem-video_recordings','growth-video_recordings','operations-video_recordings','product-video_recordings','general-articles'];
-
-    $scope.slideBusinessAccordions = function(chosenBusinessSubAccordion)
-    {
-        console.log("entered");
-        for(let listItem=0;listItem<$scope.businessTopicsList.length;listItem++)
-        {
-            
-            if($scope.businessTopicsList[listItem]==chosenBusinessSubAccordion)
-            {
-                console.log("good");
-                $('#'+chosenBusinessSubAccordion).slideToggle(500);
-            }
-            else
-            {
-                console.log("bad");
-                $('#'+$scope.businessTopicsList[listItem]).slideUp(500);
-            }
-        }
-    }
-    
-    $scope.businessPage = 
-    [
-        {businessId : 'bi', businessClass : 'businessClass', businessName : 'Business Intelligence', businessImage : 'images/bi.png', businessDescription : 'This section belongs to Business Intelligence', sub_topics : 
-            [
-                {topicClass : 'video-recordings', topicID : 'bi-video_recordings', topicName : 'Video Recordings'}
-            ]
-        },
-        {businessId : 'collections', businessClass : 'businessClass', businessName : 'Collections', businessImage : 'images/collections.png', businessDescription : 'This section belongs Collections', sub_topics : 
-            [
-                {topicClass : 'video-recordings', topicID : 'collections-video_recordings', topicName : 'Video Recordings'}
-            ]
-        },
-        {businessId : 'customer_support', businessClass : 'businessClass', businessName : 'Customer Support', businessImage : 'images/customer_support.png', businessDescription : 'This section belongs to Customer Support', sub_topics : 
-            [
-                {topicClass : 'video-recordings', topicID : 'customer-support-video_recordings', topicName : 'Video Recordings'}
-            ]
-        },
-        {businessId : 'fintech_ecosystem', businessClass : 'businessClass', businessName : 'Fintech Ecosystem', businessImage : 'images/fintech_ecosystem.png', businessDescription : 'This section belongs to Fintech Ecosystem', sub_topics : 
-            [
-                {topicClass : 'video-recordings', topicID : 'fintech_ecosystem-video_recordings', topicName : 'Video Recordings'}
-            ]
-        },
-        {businessId : 'growth', businessClass : 'businessClass', businessName : 'Growth', businessImage : 'images/growth.png', businessDescription : 'This section belongs to Growth', sub_topics : 
-            [
-                {topicClass : 'video-recordings', topicID : 'growth-video_recordings', topicName : 'Video Recordings'}
-            ]
-        },
-        {businessId : 'operations', businessClass : 'businessClass', businessName : 'Operations', businessImage : 'images/operations.png', businessDescription : 'This section belongs to Operations', sub_topics : 
-            [
-                {topicClass : 'video-recordings', topicID : 'operations-video_recordings', topicName : 'Video Recordings'}
-            ]
-        },
-        {businessId : 'product', businessClass : 'businessClass', businessName : 'Product', businessImage : 'images/product.png', businessDescription : 'This section belongs to Product', sub_topics : 
-            [
-                {topicClass : 'video-recordings', topicID : 'product-video_recordings', topicName : 'Video Recordings'}
-            ]
-        },
-        {businessId : 'general', businessClass : 'businessClass', businessName : 'General', businessImage : 'images/product.png', businessDescription : 'This section belongs to General', sub_topics : 
-            [
-                {topicClass : 'articles', topicID : 'general-articles', topicName : 'Articles'}
-            ]
-        }
-
-    ];
-
-    /*---------------------------------------------*/
-
-
-
-    /* ------------------------------------------------*/
-    /* index.html */
-    /* ------------- */
     var already_started_quiz_ended=false;
     $scope.ite = 0;
     $scope.wordDocDisplayScreen = false;
@@ -290,9 +169,6 @@ var ctrl = function($scope)
             ]
         }
     ]
-
-
-
     $scope.documentsOfCashe = 
     [
             {
@@ -379,9 +255,6 @@ var ctrl = function($scope)
         $scope.selectedBhanixQuestion = -1;
         $scope.selectedCasheQuestion = -1;
         $scope.selectedFintechQuestion = -1;
-        
-        $scope.selectedBusinessSubTopic = -1;
-        $scope.selectedBusinessTopic = -1;
 
         switch(className)
         {
@@ -466,51 +339,6 @@ var ctrl = function($scope)
                 $scope.selectedQuizTitle = $scope.quizTitle;
                 $scope.selectedQuizTopics = index;
                 break;
-            
-            case 'business-topics ng-binding':
-                $scope.selectedBusinessTopic = index;
-                break;
-
-            case 'bi-class ng-binding':
-                $scope.selectedBusinessTopic = 0;
-                $scope.selectedBusinessSubTopic = index;
-                break;
-
-            case 'collections-class ng-binding':
-                $scope.selectedBusinessTopic = 1;
-                $scope.selectedBusinessSubTopic = index;
-                break;
-
-            case 'customer-support ng-binding':
-                $scope.selectedBusinessTopic = 2;
-                $scope.selectedBusinessSubTopic = index;
-                break;
-
-            case 'fintech-ecosystem ng-binding':
-                $scope.selectedBusinessTopic = 3;
-                $scope.selectedBusinessSubTopic = 0;
-                break;
-        
-            case 'growth ng-binding':
-                $scope.selectedBusinessTopic = 4;
-                $scope.selectedBusinessSubTopic = 0;
-                break;
-
-            case 'operations ng-binding':
-                $scope.selectedBusinessTopic = 5;
-                $scope.selectedBusinessSubTopic = 0;
-                break;
-
-            case 'product ng-binding':
-                $scope.selectedBusinessTopic = 6;
-                $scope.selectedBusinessSubTopic = 0;
-                break;
-    
-            case 'general ng-binding':
-                $scope.selectedBusinessTopic = 7;
-                $scope.selectedBusinessSubTopic = 0;
-                break;
-            
         } 
     }
     
@@ -676,7 +504,7 @@ var ctrl = function($scope)
             // $scope.displayQuizPages=false;
             // $scope.displayVideosDocsPage=false;
             // $scope.displayWebsiteLinksPage=false;
-        
+
             switch(id)
             {
                 case 'vidRec':
@@ -693,49 +521,6 @@ var ctrl = function($scope)
                     $scope.slideAccordions(toggleAccordion);
                     $scope.wordDocPdfDocSlideUp = true;
                     $scope.quiz_running=false;
-                    break;
-
-                case 'bi':
-                    chosenBusinessSubAccordion='bi-video_recordings';
-                    $scope.slideBusinessAccordions(chosenBusinessSubAccordion);
-                    // $('#'+$scope.businessPage[0].sub_topics[0].topicID).slideToggle(500);
-                    break;
-
-                case 'collections':
-                    chosenBusinessSubAccordion='collections-video_recordings';
-                    $scope.slideBusinessAccordions(chosenBusinessSubAccordion);
-                    // $('#'+$scope.businessPage[1].sub_topics[0].topicID).slideToggle(500);
-                    break;
-
-                case 'customer_support':
-                    chosenBusinessSubAccordion='customer-support-video_recordings';
-                    $scope.slideBusinessAccordions(chosenBusinessSubAccordion);
-                    // $('#'+$scope.businessPage[2].sub_topics[0].topicID).slideToggle(500);
-                    break;
-
-                case 'fintech_ecosystem':
-                    chosenBusinessSubAccordion='fintech_ecosystem-video_recordings';
-                    $scope.slideBusinessAccordions(chosenBusinessSubAccordion);
-                    break;
-
-                case 'growth':
-                    chosenBusinessSubAccordion='growth-video_recordings';
-                    $scope.slideBusinessAccordions(chosenBusinessSubAccordion);                   
-                    break;
-
-                case 'operations':
-                    chosenBusinessSubAccordion='operations-video_recordings';
-                    $scope.slideBusinessAccordions(chosenBusinessSubAccordion);    
-                    break;
-    
-                case 'product':
-                    chosenBusinessSubAccordion='product-video_recordings';
-                    $scope.slideBusinessAccordions(chosenBusinessSubAccordion);
-                    break;
-
-                case 'general':
-                    chosenBusinessSubAccordion='general-articles';
-                    $scope.slideBusinessAccordions(chosenBusinessSubAccordion);
                     break;
 
                 case 'document':

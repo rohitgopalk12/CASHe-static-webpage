@@ -10,10 +10,8 @@
         <link rel="stylesheet" href="https://s3.ap-south-1.amazonaws.com/learnings.cashe.co.in/css/casheLearnings.css">
         <script src="https://s3.ap-south-1.amazonaws.com/learnings.cashe.co.in/js/angular.min.js"></script>
         <script src="https://s3.ap-south-1.amazonaws.com/learnings.cashe.co.in/js/jquery-3.6.0.min.js"></script>
-        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular-route.js"></script>
-        <!-- <link rel="shortcut icon" href="images/favicon.ico"> -->
-        <link rel="shortcut icon" type="image/x-icon" href="/images/favicon.ico">
 
+        <link rel="shortcut icon" href="#">
     </head>
 
     <body ng-app="casheLearningsApp" ng-controller="quizController">
@@ -110,11 +108,9 @@
             </div>
 
             <div ng-repeat="links in linksWebsites">
-                <a ng-href="#/{{links.websiteName}}">
-                    <div ng-class="{selected : selectedLinks === $index}" ng-click="changeBackgroundTopic($index,$event);displayLinks($event)" id="{{links.ID}}" class="links">
-                        {{links.name}}
-                    </div>
-                </a>
+                <div ng-class="{selected : selectedLinks === $index}" ng-click="changeBackgroundTopic($index,$event);displayLinks($event)" id="{{links.ID}}" class="links">
+                    {{links.name}}
+                </div>
             </div>
 
             <!----------X-------------X------------X-----------------X----------------X  -->
@@ -164,15 +160,14 @@
         </div>
 
      <!-- ======================================================================= -->
- 
-     
+
         <div ng-show="wordDocDisplayScreen==true" class="doc-display-screen" id="word-doc-display-screen">
             <h1 align="center">Word Documents</h1>
                 <table style="border : 1px solid silver;border-collapse : collapse">
                     <tr style="border : 1px solid silver;border-collapse : collapse" ng-repeat="doc in documentsOfCashe">
-                        <td valign=top style="border : 1px solid silver;border-collapse : collapse" class="row-one" rowspan="2" ng-if="$index <= 4" ng-repeat="wordDoc in doc.word_documents">
+                        <td valign=top style="border : 1px solid silver;border-collapse : collapse" class="row-one" rowspan="2" valign=top ng-if="$index <= 4" ng-repeat="wordDoc in doc.word_documents">
                             <a style="text-decoration : none" target="_blank" ng-href="{{doc.word_documents[$index].document}}">
-                                <img ng-alt="{{doc.word_documents[$index].alt_text}}" class="doc-tile" ng-src="{{doc.word_documents[$index].icon}}"><br />
+                                <img ng-alt="{{doc.word_documents[$index].alt_text}}" class="doc-tile" ng-src="{{doc.word_documents[$index].icon}}"></img><br />
                                 <p style="font-size : 12px">{{doc.word_documents[$index].word_doc}}</p>
                             </a>
                             <!-- <b style="font-size : 12px">Overview : {{doc.word_documents[$index].overview}}</b> -->
@@ -190,10 +185,10 @@
 
 
                     <tr style="border : 1px solid silver;border-collapse : collapse" ng-repeat="doc in documentsOfCashe">
-                        <td valign=top style="border : 1px solid silver;border-collapse : collapse" class="row-one" rowspan="2" ng-if="$index >= 5 && $index <= 9" ng-repeat="wordDoc in doc.word_documents">
+                        <td valign=top style="border : 1px solid silver;border-collapse : collapse" class="row-one" rowspan="2" valign=top ng-if="$index >= 5 && $index <= 9" ng-repeat="wordDoc in doc.word_documents">
                             <a style="text-decoration : none" target="_blank" ng-href="{{wordDoc.document}}">
                             <!--</a><a style="text-decoration : none" ng-href="{{wordDoc.document}}" download>-->
-                                <img ng-alt="{{doc.word_documents[$index].alt_text}}" class="doc-tile" ng-src="{{doc.word_documents[$index].icon}}"><br />
+                                <img ng-alt="{{doc.word_documents[$index].alt_text}}" class="doc-tile" ng-src="{{doc.word_documents[$index].icon}}"></img><br />
                                 <p style="font-size : 12px">{{doc.word_documents[$index].word_doc}}</p>
                             </a>
                         </td>
@@ -208,10 +203,10 @@
                     </tr> -->
 
                     <tr style="border : 1px solid silver;border-collapse : collapse" ng-repeat="doc in documentsOfCashe">
-                        <td style="border : 1px solid silver;border-collapse : collapse" valign=top ng-if="$index >= 10 && $index <= 14" ng-repeat="wordDoc in doc.word_documents">
+                        <td valign=top style="border : 1px solid silver;border-collapse : collapse" valign=top ng-if="$index >= 10 && $index <= 14" ng-repeat="wordDoc in doc.word_documents">
                             <a style="text-decoration : none" target="_blank" ng-href="{{wordDoc.document}}">
                                 <!--</a><a style="text-decoration : none" ng-href="{{wordDoc.document}}" download>-->
-                                    <img ng-alt="{{doc.word_documents[$index].alt_text}}" class="doc-tile" ng-src="{{doc.word_documents[$index].icon}}"><br />
+                                    <img ng-alt="{{doc.word_documents[$index].alt_text}}" class="doc-tile" ng-src="{{doc.word_documents[$index].icon}}"></img><br />
                                 <p style="font-size : 12px">{{doc.word_documents[$index].word_doc}}</p>
                             </a>
                         </td>
@@ -219,10 +214,10 @@
 
     
                     <tr style="border : 1px solid silver;border-collapse : collapse" ng-repeat="doc in documentsOfCashe">
-                        <td style="border : 1px solid silver;border-collapse : collapse" valign=top ng-if="$index >= 15 && $index <= 19" ng-repeat="wordDoc in doc.word_documents">
+                        <td valign=top style="border : 1px solid silver;border-collapse : collapse" valign=top ng-if="$index >= 15 && $index <= 19" ng-repeat="wordDoc in doc.word_documents">
                             <a style="text-decoration : none" target="_blank" ng-href="{{wordDoc.document}}">
                                 <!--</a><a style="text-decoration : none" ng-href="{{wordDoc.document}}" download>-->
-                                    <img ng-alt="{{doc.word_documents[$index].alt_text}}" class="doc-tile" ng-src="{{doc.word_documents[$index].icon}}"><br />
+                                    <img ng-alt="{{doc.word_documents[$index].alt_text}}" class="doc-tile" ng-src="{{doc.word_documents[$index].icon}}"></img><br />
                                 <p style="font-size : 12px">{{doc.word_documents[$index].word_doc}}</p>
                             </a>
                         </td>
@@ -232,7 +227,7 @@
                         <td valign=top style="border : 1px solid silver;border-collapse : collapse" valign=top ng-if="$index >= 20 && $index <= 24" ng-repeat="wordDoc in doc.word_documents">
                             <a style="text-decoration : none" target="_blank" ng-href="{{wordDoc.document}}">
                                 <!--</a><a style="text-decoration : none" ng-href="{{wordDoc.document}}" download>-->
-                                    <img ng-alt="{{doc.word_documents[$index].alt_text}}" class="doc-tile" ng-src="{{doc.word_documents[$index].icon}}"><br />
+                                    <img ng-alt="{{doc.word_documents[$index].alt_text}}" class="doc-tile" ng-src="{{doc.word_documents[$index].icon}}"></img><br />
                                 <p style="font-size : 12px">{{doc.word_documents[$index].word_doc}}</p>
                             </a>
                         </td>
@@ -242,7 +237,7 @@
                         <td valign=top style="border : 1px solid silver;border-collapse : collapse" valign=top  ng-if="$index >= 25 && $index <= 26" ng-repeat="wordDoc in doc.word_documents">
                             <a style="text-decoration : none" target="_blank" ng-href="{{wordDoc.document}}">
                                 <!--</a><a style="text-decoration : none" ng-href="{{wordDoc.document}}" download>-->
-                                    <img ng-alt="{{doc.word_documents[$index].alt_text}}" class="doc-tile" ng-src="{{doc.word_documents[$index].icon}}"><br />
+                                    <img ng-alt="{{doc.word_documents[$index].alt_text}}" class="doc-tile" ng-src="{{doc.word_documents[$index].icon}}"></img><br />
                                     <p style="font-size : 12px">{{doc.word_documents[$index].word_doc}}</p>
                             </a>
                         </td>
@@ -260,7 +255,7 @@
                     <td valign=top style="border : 1px solid silver;border-collapse : collapse" valign=top ng-if="$index <= 4" ng-repeat="pdfDoc in doc.pdf_documents">
                         <a style="text-decoration : none" target="_blank" ng-href="{{pdfDoc.document}}">
                         <!--</a><a style="text-decoration : none" ng-href="{{pdfDoc.document}}" download>-->
-                            <img ng-alt="{{doc.pdf_documents[$index].alt_text}}" class="doc-tile" ng-src="{{doc.pdf_documents[$index].icon}}"><br />
+                            <img ng-alt="{{doc.pdf_documents[$index].alt_text}}" class="doc-tile" ng-src="{{doc.pdf_documents[$index].icon}}"></img><br />
                             <p>{{doc.pdf_documents[$index].pdf_doc}}</p>
                         </a>
                     </td>
@@ -277,7 +272,7 @@
                 <td valign=top style="border : 1px solid silver;border-collapse : collapse" valign=top ng-repeat="pptDoc in pptDocuments">
                     <a style="text-decoration : none" target="_blank" ng-href="{{pptDoc.document}}">
                     <!--</a><a style="text-decoration : none" ng-href="{{pptDoc.document}}" download>-->
-                        <img ng-alt="{{doc.pdf_documents[$index].alt_text}}" class="doc-tile" ng-src="{{pptDoc.icon}}"><br />
+                        <img ng-alt="{{doc.pdf_documents[$index].alt_text}}" class="doc-tile" ng-src="{{pptDoc.icon}}"></img><br />
                         <p>{{pptDoc.name}}</p>
                     </a>
                 </td>
@@ -290,10 +285,9 @@
      <!-- display website links -->
      <!-- ------------------------ -->
 
-    <!-- <div ng-view></div> -->
+
     <div ng-show="displayWebsiteLinksPage == true" id="displayWebsiteLinks" align="center">
-        <div ng-view></div>
-        <!-- <div ng-show="showCasheContents==true" id="cashe-contents">
+        <div ng-show="showCasheContents==true" id="cashe-contents">
             <img id='cashe-logo' alt="cashe-logo" align="center" src="https://s3.ap-south-1.amazonaws.com/learnings.cashe.co.in/images/cashe-logo.png"></img>
             <div>
                 <img id="raman-kumar" alt="raman-cashe" src="https://s3.ap-south-1.amazonaws.com/learnings.cashe.co.in/images/raman_1.png"></img>
@@ -306,8 +300,8 @@
                         Disburses short-term personal loan to people who don’t have credit history.
                     </li>
                     <li class="about">
-                        Loans range from Rs.1,000 to Rs.4,00,000 with the credit period ranging<br />  -->
-                        <!-- from 3 months to 1 ½ year. 
+                        Loans range from Rs.1,000 to Rs.4,00,000 with the credit period ranging<br /> 
+                        from 3 months to 1 ½ year. 
                     </li>
                     <li class="about">
                         Loan lending would happen in quick time.
@@ -338,12 +332,12 @@
                         CASHe is India’s fastest loan giving app for salaried young professionals.
                     </li>
                 </ul>
-            </div> -->
+            </div>
 
-        <!-- </div> -->
+        </div>
 
-        <!-- <h5 id="more-info" style="color:black"><b>For more information, please click on the below link</b></h5>
-        <h5 id="website-link" style="color:black"><b><a ng-href="{{websitelink}}" target="_blank" id="link">{{websitelink}}</a></b></h5> -->
+        <h5 id="more-info" style="color:black"><b>For more information, please click on the below link</b></h5>
+        <h5 id="website-link" style="color:black"><b><a ng-href="{{websitelink}}" target="_blank" id="link">{{websitelink}}</a></b></h5>
     </div>
 
     <!-- ======================================================================= -->
@@ -357,8 +351,6 @@
         <!-- =========================================================-->
 
     <div ng-show="displayVideosDocsPage == true" id="displayDIV">
-        <!-- <iframe width="100%" height="100%" src="https://www.youtube.com/embed/Pl7XP8o7v6g?start=0">
-        </iframe> -->
         <object id="display" height="100%" width="100%" data="https://www.youtube.com/embed/Pl7XP8o7v6g"></object>
     </div>
 
@@ -425,7 +417,7 @@
                         
                     <table align="center" ng-init="currentQ=1">
                         <tr>
-                            <td style="visibility:hidden" ng-model="selections[currentQ-1]" ng-click="selectAnswer($index)" 
+                            <td style="visibility:none" ng-model="selections[currentQ-1]" ng-click="selectAnswer($index)" 
                                 ng-repeat="op in questions[currentQ-1].options" class="option">
                                 <input ng-checked="selections[currentQ-1] === $index" type="radio"
                                 name="fintech_option_quiz" ng-value="op">
@@ -468,7 +460,8 @@
                     </div>
 
                     <input id="fintech-submit-button" ng-show="currentQ==5" ng-click="submitQuiz('fintechQuiz',false)"
-                    class="btn btn-primary" type="submit" value="Submit" />
+                    class="btn btn-primary" type="submit" value="Submit">
+                    </input>
                 </div>
             </div>
                 <!-- -------X---------X--------X -------X---------X--------X----------- -->
@@ -580,8 +573,8 @@
                     </div>
 
                     <input id="cashe-submit-button" ng-show="currentQ==10" ng-click="submitQuiz('casheQuiz',false)"
-                        class="btn btn-primary" type="submit" value="Submit" />
-                    
+                        class="btn btn-primary" type="submit" value="Submit">
+                    </input>
                 </div>
             </div>
 
@@ -689,7 +682,8 @@
                     </div>
             
                     <input id="bhanix-submit-button" ng-show="currentQ==15" ng-click="submitQuiz('bhanixQuiz',false)"
-                        class="btn btn-primary" type="submit" value="Submit" />
+                        class="btn btn-primary" type="submit" value="Submit">
+                    </input>
                 </div>
             </div>
             
@@ -795,7 +789,8 @@
                     </div>
             
                     <input id="competitive-analysis-submit-button" ng-show="currentQ==20" ng-click="submitQuiz('competitiveAnalysisQuiz',false)"
-                        class="btn btn-primary" type="submit" value="Submit" />
+                        class="btn btn-primary" type="submit" value="Submit">
+                    </input>
                 </div>
             </div>
     
@@ -813,7 +808,6 @@
 
     <link rel="stylesheet" href="https://s3.ap-south-1.amazonaws.com/learnings.cashe.co.in/css/quiz.css">
     <link rel="stylesheet" href="https://s3.ap-south-1.amazonaws.com/learnings.cashe.co.in/css/styles.less">
-    <!-- <script src="https://s3.ap-south-1.amazonaws.com/learnings.cashe.co.in/js/casheLearnings.js"></script> -->
-    <script src="js/casheLearnings.js"></script>
+    <script src="https://s3.ap-south-1.amazonaws.com/learnings.cashe.co.in/js/casheLearnings.js"></script>
     </body>
 </html>
