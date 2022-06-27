@@ -1,0 +1,1562 @@
+[
+    {
+        "question_id": 90,
+        "question_content": "Who is the founder of CASHe?",
+        "description": null,
+        "question_type": "ONE_WORD",
+        "answer": {
+            "answer_id": 90,
+            "description": null,
+            "answer_type": "ONE_WORD",
+            "correct_option": 1,
+            "options": [
+                {
+                    "option_id": 180,
+                    "option_content": "  V. Raman Kumar",
+                    "description": null
+                },
+                {
+                    "option_id": 179,
+                    "option_content": "  Yashoraj Tyagi",
+                    "description": null
+                }
+            ]
+        }
+    },
+    {
+        "question_id": 91,
+        "question_content": "What Is CASHe’s mission?",
+        "description": null,
+        "question_type": "DESCRIPTIVE",
+        "answer": {
+            "answer_id": 91,
+            "description": null,
+            "answer_type": "DESCRIPTIVE",
+            "correct_option": 2,
+            "options": [
+                {
+                    "option_id": 182,
+                    "option_content": "  To deliver transparent short-term loans to young Indian unsalaried millennials.",
+                    "description": null
+                },
+                {
+                    "option_id": 181,
+                    "option_content": "To deliver transparent short-term loans to young Indian salaried millennials.",
+                    "description": null
+                }
+            ]
+        }
+    },
+    {
+        "question_id": 92,
+        "question_content": "what is the fundamental belief of CASHe?",
+        "description": null,
+        "question_type": "DESCRIPTIVE",
+        "answer": {
+            "answer_id": 92,
+            "description": null,
+            "answer_type": "DESCRIPTIVE",
+            "correct_option": 1,
+            "options": [
+                {
+                    "option_id": 184,
+                    "option_content": "Technology should be built to address immediate credit requirements.",
+                    "description": null
+                },
+                {
+                    "option_id": 183,
+                    "option_content": "Technology should be built not to address immediate credit requirements.",
+                    "description": null
+                }
+            ]
+        }
+    },
+    {
+        "question_id": 93,
+        "question_content": "CASHe was founded in _______",
+        "description": null,
+        "question_type": "ONE_WORD",
+        "answer": {
+            "answer_id": 93,
+            "description": null,
+            "answer_type": "ONE_WORD",
+            "correct_option": 2,
+            "options": [
+                {
+                    "option_id": 186,
+                    "option_content": "2018",
+                    "description": null
+                },
+                {
+                    "option_id": 185,
+                    "option_content": "2016",
+                    "description": null
+                }
+            ]
+        }
+    },
+    {
+        "question_id": 94,
+        "question_content": "Is CASHe a mobile app.",
+        "description": null,
+        "question_type": "TRUTHY",
+        "answer": {
+            "answer_id": 94,
+            "description": null,
+            "answer_type": "TRUTHY",
+            "correct_option": 1,
+            "options": [
+                {
+                    "option_id": 187,
+                    "option_content": "TRUE",
+                    "description": null
+                },
+                {
+                    "option_id": 188,
+                    "option_content": "FALSE",
+                    "description": null
+                }
+            ]
+        }
+    },
+    {
+        "question_id": 95,
+        "question_content": "What is the loan range in CASHe? ",
+        "description": null,
+        "question_type": "DESCRIPTIVE",
+        "answer": {
+            "answer_id": 95,
+            "description": null,
+            "answer_type": "DESCRIPTIVE",
+            "correct_option": 1,
+            "options": [
+                {
+                    "option_id": 190,
+                    "option_content": "  Loans range from Rs 1,000 to Rs 4,00,000",
+                    "description": null
+                },
+                {
+                    "option_id": 189,
+                    "option_content": " Loans range from Rs 1,000 to Rs 6,00,000",
+                    "description": null
+                }
+            ]
+        }
+    },
+    {
+        "question_id": 96,
+        "question_content": "Who is the Lending partner of CASHe?",
+        "description": null,
+        "question_type": "DESCRIPTIVE",
+        "answer": {
+            "answer_id": 96,
+            "description": null,
+            "answer_type": "DESCRIPTIVE",
+            "correct_option": 1,
+            "options": [
+                {
+                    "option_id": 191,
+                    "option_content": " Bhanix Finance& Investment ltd",
+                    "description": null
+                },
+                {
+                    "option_id": 192,
+                    "option_content": " Northern Arc capital limited.",
+                    "description": null
+                }
+            ]
+        }
+    },
+    {
+        "question_id": 97,
+        "question_content": "Credit period of CASHe?",
+        "description": null,
+        "question_type": "DESCRIPTIVE",
+        "answer": {
+            "answer_id": 97,
+            "description": null,
+            "answer_type": "DESCRIPTIVE",
+            "correct_option": 1,
+            "options": [
+                {
+                    "option_id": 194,
+                    "option_content": " The credit period is ranging from 3 months to 1.5 year.",
+                    "description": null
+                },
+                {
+                    "option_id": 193,
+                    "option_content": "The credit period is ranging from 2 months to 2.5 year.",
+                    "description": null
+                }
+            ]
+        }
+    },
+    {
+        "question_id": 98,
+        "question_content": "Does Growth Source Financial Technologies a lending partner of CASHe?",
+        "description": null,
+        "question_type": "TRUTHY",
+        "answer": {
+            "answer_id": 98,
+            "description": null,
+            "answer_type": "TRUTHY",
+            "correct_option": 1,
+            "options": [
+                {
+                    "option_id": 195,
+                    "option_content": "TRUE",
+                    "description": null
+                },
+                {
+                    "option_id": 196,
+                    "option_content": "FALSE",
+                    "description": null
+                }
+            ]
+        }
+    },
+    {
+        "question_id": 99,
+        "question_content": "CASHe an AI-based credit scoring mechanism&advanced data science technologies.",
+        "description": null,
+        "question_type": "TRUTHY",
+        "answer": {
+            "answer_id": 99,
+            "description": null,
+            "answer_type": "TRUTHY",
+            "correct_option": 2,
+            "options": [
+                {
+                    "option_id": 198,
+                    "option_content": "FALSE",
+                    "description": null
+                },
+                {
+                    "option_id": 197,
+                    "option_content": "TRUE",
+                    "description": null
+                }
+            ]
+        }
+    },
+    {
+        "question_id": 100,
+        "question_content": "Anyone across India with a smartphone can apply for a loan.",
+        "description": null,
+        "question_type": "TRUTHY",
+        "answer": {
+            "answer_id": 100,
+            "description": null,
+            "answer_type": "TRUTHY",
+            "correct_option": 1,
+            "options": [
+                {
+                    "option_id": 200,
+                    "option_content": "TRUE",
+                    "description": null
+                },
+                {
+                    "option_id": 199,
+                    "option_content": "FALSE",
+                    "description": null
+                }
+            ]
+        }
+    },
+    {
+        "question_id": 101,
+        "question_content": "Who is the CTO of CASHe? ",
+        "description": null,
+        "question_type": "ONE_WORD",
+        "answer": {
+            "answer_id": 101,
+            "description": null,
+            "answer_type": "ONE_WORD",
+            "correct_option": 1,
+            "options": [
+                {
+                    "option_id": 202,
+                    "option_content": "Yashoraj Tyagi",
+                    "description": null
+                },
+                {
+                    "option_id": 201,
+                    "option_content": "Dhruv Jain",
+                    "description": null
+                }
+            ]
+        }
+    },
+    {
+        "question_id": 102,
+        "question_content": "Does CASHe gives personal loans?",
+        "description": null,
+        "question_type": "TRUTHY",
+        "answer": {
+            "answer_id": 102,
+            "description": null,
+            "answer_type": "TRUTHY",
+            "correct_option": 2,
+            "options": [
+                {
+                    "option_id": 204,
+                    "option_content": "FALSE",
+                    "description": null
+                },
+                {
+                    "option_id": 203,
+                    "option_content": "TRUE",
+                    "description": null
+                }
+            ]
+        }
+    },
+    {
+        "question_id": 103,
+        "question_content": "What is the loan tenure of CASHe90?",
+        "description": null,
+        "question_type": "ONE_WORD",
+        "answer": {
+            "answer_id": 103,
+            "description": null,
+            "answer_type": "ONE_WORD",
+            "correct_option": 2,
+            "options": [
+                {
+                    "option_id": 206,
+                    "option_content": "6 months",
+                    "description": null
+                },
+                {
+                    "option_id": 205,
+                    "option_content": "3 months",
+                    "description": null
+                }
+            ]
+        }
+    },
+    {
+        "question_id": 104,
+        "question_content": "Who is the vice-chairman& managing director? ",
+        "description": null,
+        "question_type": "ONE_WORD",
+        "answer": {
+            "answer_id": 104,
+            "description": null,
+            "answer_type": "ONE_WORD",
+            "correct_option": 1,
+            "options": [
+                {
+                    "option_id": 208,
+                    "option_content": "Joginder Rana",
+                    "description": null
+                },
+                {
+                    "option_id": 207,
+                    "option_content": "V.Raman Kumar",
+                    "description": null
+                }
+            ]
+        }
+    },
+    {
+        "question_id": 105,
+        "question_content": "What is the tenure of CASHe’s personal loans?",
+        "description": null,
+        "question_type": "DESCRIPTIVE",
+        "answer": {
+            "answer_id": 105,
+            "description": null,
+            "answer_type": "DESCRIPTIVE",
+            "correct_option": 2,
+            "options": [
+                {
+                    "option_id": 209,
+                    "option_content": "90 days to 100 days",
+                    "description": null
+                },
+                {
+                    "option_id": 210,
+                    "option_content": "90 days to 540 days",
+                    "description": null
+                }
+            ]
+        }
+    },
+    {
+        "question_id": 106,
+        "question_content": "Who is the CEO of CASHe?",
+        "description": null,
+        "question_type": "ONE_WORD",
+        "answer": {
+            "answer_id": 106,
+            "description": null,
+            "answer_type": "ONE_WORD",
+            "correct_option": 2,
+            "options": [
+                {
+                    "option_id": 212,
+                    "option_content": "Joginder Rana",
+                    "description": null
+                },
+                {
+                    "option_id": 211,
+                    "option_content": "Dhruv Jain",
+                    "description": null
+                }
+            ]
+        }
+    },
+    {
+        "question_id": 107,
+        "question_content": "CASHe provides loans to the person with no previous credit history.",
+        "description": null,
+        "question_type": "TRUTHY",
+        "answer": {
+            "answer_id": 107,
+            "description": null,
+            "answer_type": "TRUTHY",
+            "correct_option": 1,
+            "options": [
+                {
+                    "option_id": 213,
+                    "option_content": "TRUE",
+                    "description": null
+                },
+                {
+                    "option_id": 214,
+                    "option_content": "FALSE",
+                    "description": null
+                }
+            ]
+        }
+    },
+    {
+        "question_id": 108,
+        "question_content": "CASHe provides confidentiality for the user data.",
+        "description": null,
+        "question_type": "TRUTHY",
+        "answer": {
+            "answer_id": 108,
+            "description": null,
+            "answer_type": "TRUTHY",
+            "correct_option": 1,
+            "options": [
+                {
+                    "option_id": 215,
+                    "option_content": "TRUE",
+                    "description": null
+                },
+                {
+                    "option_id": 216,
+                    "option_content": "FALSE",
+                    "description": null
+                }
+            ]
+        }
+    },
+    {
+        "question_id": 109,
+        "question_content": "SLQ is a ____________",
+        "description": null,
+        "question_type": "DESCRIPTIVE",
+        "answer": {
+            "answer_id": 109,
+            "description": null,
+            "answer_type": "DESCRIPTIVE",
+            "correct_option": 1,
+            "options": [
+                {
+                    "option_id": 217,
+                    "option_content": "Social Loan Quotient",
+                    "description": null
+                },
+                {
+                    "option_id": 218,
+                    "option_content": "Social Loan Question",
+                    "description": null
+                }
+            ]
+        }
+    },
+    {
+        "question_id": 110,
+        "question_content": "What is the loan tenure of CASHe540?",
+        "description": null,
+        "question_type": "ONE_WORD",
+        "answer": {
+            "answer_id": 110,
+            "description": null,
+            "answer_type": "ONE_WORD",
+            "correct_option": 1,
+            "options": [
+                {
+                    "option_id": 220,
+                    "option_content": "18 months",
+                    "description": null
+                },
+                {
+                    "option_id": 219,
+                    "option_content": "6 months",
+                    "description": null
+                }
+            ]
+        }
+    },
+    {
+        "question_id": 111,
+        "question_content": " What is salary eligibility of CASHe180?",
+        "description": null,
+        "question_type": "ONE_WORD",
+        "answer": {
+            "answer_id": 111,
+            "description": null,
+            "answer_type": "ONE_WORD",
+            "correct_option": 2,
+            "options": [
+                {
+                    "option_id": 221,
+                    "option_content": "12,000",
+                    "description": null
+                },
+                {
+                    "option_id": 222,
+                    "option_content": "22,000",
+                    "description": null
+                }
+            ]
+        }
+    },
+    {
+        "question_id": 112,
+        "question_content": "What is the loan tenure of CASHe270?",
+        "description": null,
+        "question_type": "ONE_WORD",
+        "answer": {
+            "answer_id": 112,
+            "description": null,
+            "answer_type": "ONE_WORD",
+            "correct_option": 2,
+            "options": [
+                {
+                    "option_id": 223,
+                    "option_content": "3 months",
+                    "description": null
+                },
+                {
+                    "option_id": 224,
+                    "option_content": "9 months",
+                    "description": null
+                }
+            ]
+        }
+    },
+    {
+        "question_id": 113,
+        "question_content": "SLQ generates credit score.",
+        "description": null,
+        "question_type": "TRUTHY",
+        "answer": {
+            "answer_id": 113,
+            "description": null,
+            "answer_type": "TRUTHY",
+            "correct_option": 1,
+            "options": [
+                {
+                    "option_id": 225,
+                    "option_content": "TRUE",
+                    "description": null
+                },
+                {
+                    "option_id": 226,
+                    "option_content": "FALSE",
+                    "description": null
+                }
+            ]
+        }
+    },
+    {
+        "question_id": 114,
+        "question_content": "What is salary eligibility of CASHe270?",
+        "description": null,
+        "question_type": "ONE_WORD",
+        "answer": {
+            "answer_id": 114,
+            "description": null,
+            "answer_type": "ONE_WORD",
+            "correct_option": 2,
+            "options": [
+                {
+                    "option_id": 228,
+                    "option_content": "12,000",
+                    "description": null
+                },
+                {
+                    "option_id": 227,
+                    "option_content": "25,000",
+                    "description": null
+                }
+            ]
+        }
+    },
+    {
+        "question_id": 115,
+        "question_content": "What is the loan tenure of CASHe360?",
+        "description": null,
+        "question_type": "ONE_WORD",
+        "answer": {
+            "answer_id": 115,
+            "description": null,
+            "answer_type": "ONE_WORD",
+            "correct_option": 2,
+            "options": [
+                {
+                    "option_id": 229,
+                    "option_content": "3 months",
+                    "description": null
+                },
+                {
+                    "option_id": 230,
+                    "option_content": "12 months",
+                    "description": null
+                }
+            ]
+        }
+    },
+    {
+        "question_id": 116,
+        "question_content": "What is the loan tenure of CASHe180?",
+        "description": null,
+        "question_type": "ONE_WORD",
+        "answer": {
+            "answer_id": 116,
+            "description": null,
+            "answer_type": "ONE_WORD",
+            "correct_option": 1,
+            "options": [
+                {
+                    "option_id": 231,
+                    "option_content": "6 months",
+                    "description": null
+                },
+                {
+                    "option_id": 232,
+                    "option_content": "9 months",
+                    "description": null
+                }
+            ]
+        }
+    },
+    {
+        "question_id": 117,
+        "question_content": "What is the salary eligibility of CASHe90?",
+        "description": null,
+        "question_type": "ONE_WORD",
+        "answer": {
+            "answer_id": 117,
+            "description": null,
+            "answer_type": "ONE_WORD",
+            "correct_option": 2,
+            "options": [
+                {
+                    "option_id": 233,
+                    "option_content": "12,000",
+                    "description": null
+                },
+                {
+                    "option_id": 234,
+                    "option_content": "25,000",
+                    "description": null
+                }
+            ]
+        }
+    },
+    {
+        "question_id": 118,
+        "question_content": "What is the salary eligibility of CASHe360?",
+        "description": null,
+        "question_type": "ONE_WORD",
+        "answer": {
+            "answer_id": 118,
+            "description": null,
+            "answer_type": "ONE_WORD",
+            "correct_option": 2,
+            "options": [
+                {
+                    "option_id": 236,
+                    "option_content": "35,000",
+                    "description": null
+                },
+                {
+                    "option_id": 235,
+                    "option_content": "40,000",
+                    "description": null
+                }
+            ]
+        }
+    },
+    {
+        "question_id": 119,
+        "question_content": "What is the salary eligibility of CASHe540?",
+        "description": null,
+        "question_type": "ONE_WORD",
+        "answer": {
+            "answer_id": 119,
+            "description": null,
+            "answer_type": "ONE_WORD",
+            "correct_option": 2,
+            "options": [
+                {
+                    "option_id": 237,
+                    "option_content": "25,000",
+                    "description": null
+                },
+                {
+                    "option_id": 238,
+                    "option_content": "50,000",
+                    "description": null
+                }
+            ]
+        }
+    },
+    {
+        "question_id": 120,
+        "question_content": "PAN card is needed for photo id proof",
+        "description": null,
+        "question_type": "TRUTHY",
+        "answer": {
+            "answer_id": 120,
+            "description": null,
+            "answer_type": "TRUTHY",
+            "correct_option": 1,
+            "options": [
+                {
+                    "option_id": 240,
+                    "option_content": "TRUE",
+                    "description": null
+                },
+                {
+                    "option_id": 239,
+                    "option_content": "FALSE",
+                    "description": null
+                }
+            ]
+        }
+    },
+    {
+        "question_id": 121,
+        "question_content": "Latest bank account statement showing salarycreited into is needed to get a loan.",
+        "description": null,
+        "question_type": "TRUTHY",
+        "answer": {
+            "answer_id": 121,
+            "description": null,
+            "answer_type": "TRUTHY",
+            "correct_option": 2,
+            "options": [
+                {
+                    "option_id": 242,
+                    "option_content": "FALSE",
+                    "description": null
+                },
+                {
+                    "option_id": 241,
+                    "option_content": "TRUE",
+                    "description": null
+                }
+            ]
+        }
+    },
+    {
+        "question_id": 122,
+        "question_content": "Does a selfie require for photo proof?",
+        "description": null,
+        "question_type": "TRUTHY",
+        "answer": {
+            "answer_id": 122,
+            "description": null,
+            "answer_type": "TRUTHY",
+            "correct_option": 1,
+            "options": [
+                {
+                    "option_id": 243,
+                    "option_content": "TRUE",
+                    "description": null
+                },
+                {
+                    "option_id": 244,
+                    "option_content": "FALSE",
+                    "description": null
+                }
+            ]
+        }
+    },
+    {
+        "question_id": 123,
+        "question_content": "Voter ID card is one of the permanent address proofs.",
+        "description": null,
+        "question_type": "TRUTHY",
+        "answer": {
+            "answer_id": 123,
+            "description": null,
+            "answer_type": "TRUTHY",
+            "correct_option": 1,
+            "options": [
+                {
+                    "option_id": 245,
+                    "option_content": "TRUE",
+                    "description": null
+                },
+                {
+                    "option_id": 246,
+                    "option_content": "FALSE",
+                    "description": null
+                }
+            ]
+        }
+    },
+    {
+        "question_id": 124,
+        "question_content": "If the current address is different from the permanent address,then you need to submit ",
+        "description": null,
+        "question_type": "ONE_WORD",
+        "answer": {
+            "answer_id": 124,
+            "description": null,
+            "answer_type": "ONE_WORD",
+            "correct_option": 1,
+            "options": [
+                {
+                    "option_id": 248,
+                    "option_content": "Utility bill",
+                    "description": null
+                },
+                {
+                    "option_id": 247,
+                    "option_content": "Aadhar card",
+                    "description": null
+                }
+            ]
+        }
+    },
+    {
+        "question_id": 125,
+        "question_content": "You can pay the EMIs via NEFT/IMPS/UPI.",
+        "description": null,
+        "question_type": "TRUTHY",
+        "answer": {
+            "answer_id": 125,
+            "description": null,
+            "answer_type": "TRUTHY",
+            "correct_option": 2,
+            "options": [
+                {
+                    "option_id": 250,
+                    "option_content": "FALSE",
+                    "description": null
+                },
+                {
+                    "option_id": 249,
+                    "option_content": "TRUE",
+                    "description": null
+                }
+            ]
+        }
+    },
+    {
+        "question_id": 126,
+        "question_content": "A _________is a unique number generated against your loan application based on the information provided.",
+        "description": null,
+        "question_type": "ONE_WORD",
+        "answer": {
+            "answer_id": 126,
+            "description": null,
+            "answer_type": "ONE_WORD",
+            "correct_option": 1,
+            "options": [
+                {
+                    "option_id": 251,
+                    "option_content": "Credit score",
+                    "description": null
+                },
+                {
+                    "option_id": 252,
+                    "option_content": "EMI",
+                    "description": null
+                }
+            ]
+        }
+    },
+    {
+        "question_id": 127,
+        "question_content": "SLQ credit score ranges from 0-995.",
+        "description": null,
+        "question_type": "TRUTHY",
+        "answer": {
+            "answer_id": 127,
+            "description": null,
+            "answer_type": "TRUTHY",
+            "correct_option": 1,
+            "options": [
+                {
+                    "option_id": 253,
+                    "option_content": "TRUE",
+                    "description": null
+                },
+                {
+                    "option_id": 254,
+                    "option_content": "FALSE",
+                    "description": null
+                }
+            ]
+        }
+    },
+    {
+        "question_id": 128,
+        "question_content": "The interest rate of the Loan amount for Tenure of 90 days is______",
+        "description": null,
+        "question_type": "ONE_WORD",
+        "answer": {
+            "answer_id": 128,
+            "description": null,
+            "answer_type": "ONE_WORD",
+            "correct_option": 2,
+            "options": [
+                {
+                    "option_id": 256,
+                    "option_content": "2.75% P.M",
+                    "description": null
+                },
+                {
+                    "option_id": 255,
+                    "option_content": "2.50% P.M",
+                    "description": null
+                }
+            ]
+        }
+    },
+    {
+        "question_id": 129,
+        "question_content": "The interest rate of the Loan amount for tenure of 180 days is ____",
+        "description": null,
+        "question_type": "ONE_WORD",
+        "answer": {
+            "answer_id": 129,
+            "description": null,
+            "answer_type": "ONE_WORD",
+            "correct_option": 1,
+            "options": [
+                {
+                    "option_id": 258,
+                    "option_content": "2.40% P.M",
+                    "description": null
+                },
+                {
+                    "option_id": 257,
+                    "option_content": "2.75% P.M",
+                    "description": null
+                }
+            ]
+        }
+    },
+    {
+        "question_id": 130,
+        "question_content": "_______is a powerful predictor of an individual’s character or willingness to pay.",
+        "description": null,
+        "question_type": "ONE_WORD",
+        "answer": {
+            "answer_id": 130,
+            "description": null,
+            "answer_type": "ONE_WORD",
+            "correct_option": 1,
+            "options": [
+                {
+                    "option_id": 259,
+                    "option_content": "SLQ",
+                    "description": null
+                },
+                {
+                    "option_id": 260,
+                    "option_content": "BNPL",
+                    "description": null
+                }
+            ]
+        }
+    },
+    {
+        "question_id": 131,
+        "question_content": "BNPL means Buy Now Pay Later ",
+        "description": null,
+        "question_type": "TRUTHY",
+        "answer": {
+            "answer_id": 131,
+            "description": null,
+            "answer_type": "TRUTHY",
+            "correct_option": 1,
+            "options": [
+                {
+                    "option_id": 262,
+                    "option_content": "TRUE",
+                    "description": null
+                },
+                {
+                    "option_id": 261,
+                    "option_content": "FALSE",
+                    "description": null
+                }
+            ]
+        }
+    },
+    {
+        "question_id": 132,
+        "question_content": "The interest rate of the Loan amount for tenure of 270 days",
+        "description": null,
+        "question_type": "ONE_WORD",
+        "answer": {
+            "answer_id": 132,
+            "description": null,
+            "answer_type": "ONE_WORD",
+            "correct_option": 2,
+            "options": [
+                {
+                    "option_id": 264,
+                    "option_content": "2.50% P.M",
+                    "description": null
+                },
+                {
+                    "option_id": 263,
+                    "option_content": "2.25% P.M",
+                    "description": null
+                }
+            ]
+        }
+    },
+    {
+        "question_id": 133,
+        "question_content": "Aeries Financial Technology Private Limited is the privacy policy of CASHe?",
+        "description": null,
+        "question_type": "TRUTHY",
+        "answer": {
+            "answer_id": 133,
+            "description": null,
+            "answer_type": "TRUTHY",
+            "correct_option": 2,
+            "options": [
+                {
+                    "option_id": 266,
+                    "option_content": "FALSE",
+                    "description": null
+                },
+                {
+                    "option_id": 265,
+                    "option_content": "TRUE",
+                    "description": null
+                }
+            ]
+        }
+    },
+    {
+        "question_id": 134,
+        "question_content": "What are the EMI plans of BNPL in CASHe?",
+        "description": null,
+        "question_type": "DESCRIPTIVE",
+        "answer": {
+            "answer_id": 134,
+            "description": null,
+            "answer_type": "DESCRIPTIVE",
+            "correct_option": 2,
+            "options": [
+                {
+                    "option_id": 268,
+                    "option_content": "    30-day BNPL plan",
+                    "description": null
+                },
+                {
+                    "option_id": 267,
+                    "option_content": "90-day repayment or 180-day repayment BNPL plan",
+                    "description": null
+                }
+            ]
+        }
+    },
+    {
+        "question_id": 135,
+        "question_content": "You can also avail the Buy Now Pay Later through the credit line.",
+        "description": null,
+        "question_type": "TRUTHY",
+        "answer": {
+            "answer_id": 135,
+            "description": null,
+            "answer_type": "TRUTHY",
+            "correct_option": 2,
+            "options": [
+                {
+                    "option_id": 270,
+                    "option_content": "FALSE",
+                    "description": null
+                },
+                {
+                    "option_id": 269,
+                    "option_content": "TRUE",
+                    "description": null
+                }
+            ]
+        }
+    },
+    {
+        "question_id": 136,
+        "question_content": "_______ is available for various Merchants such as FlipKart, Big Bazaar, Amazon, Myntra, Apollo Pharmacy, Uber and Big Basket.",
+        "description": null,
+        "question_type": "ONE_WORD",
+        "answer": {
+            "answer_id": 136,
+            "description": null,
+            "answer_type": "ONE_WORD",
+            "correct_option": 1,
+            "options": [
+                {
+                    "option_id": 271,
+                    "option_content": "BNPL",
+                    "description": null
+                },
+                {
+                    "option_id": 272,
+                    "option_content": "Personal loans",
+                    "description": null
+                }
+            ]
+        }
+    },
+    {
+        "question_id": 137,
+        "question_content": "What is the minimum amount applicable for buy Now Pay Later?",
+        "description": null,
+        "question_type": "ONE_WORD",
+        "answer": {
+            "answer_id": 137,
+            "description": null,
+            "answer_type": "ONE_WORD",
+            "correct_option": 2,
+            "options": [
+                {
+                    "option_id": 274,
+                    "option_content": "10,000",
+                    "description": null
+                },
+                {
+                    "option_id": 273,
+                    "option_content": "3,000",
+                    "description": null
+                }
+            ]
+        }
+    },
+    {
+        "question_id": 138,
+        "question_content": "What is the maximum amount applicable for Buy Now Pay Later?",
+        "description": null,
+        "question_type": "ONE_WORD",
+        "answer": {
+            "answer_id": 138,
+            "description": null,
+            "answer_type": "ONE_WORD",
+            "correct_option": 1,
+            "options": [
+                {
+                    "option_id": 276,
+                    "option_content": "60,000",
+                    "description": null
+                },
+                {
+                    "option_id": 275,
+                    "option_content": "40,000",
+                    "description": null
+                }
+            ]
+        }
+    },
+    {
+        "question_id": 139,
+        "question_content": "The interest rate of the Loan amount for tenure of CASHe 1 year (360 days). ",
+        "description": null,
+        "question_type": "ONE_WORD",
+        "answer": {
+            "answer_id": 139,
+            "description": null,
+            "answer_type": "ONE_WORD",
+            "correct_option": 2,
+            "options": [
+                {
+                    "option_id": 278,
+                    "option_content": "2.50% P.M",
+                    "description": null
+                },
+                {
+                    "option_id": 277,
+                    "option_content": "2.25% P.M",
+                    "description": null
+                }
+            ]
+        }
+    },
+    {
+        "question_id": 140,
+        "question_content": "CASHe’s loan recovery process adheres to RBI’s fair practice code.",
+        "description": null,
+        "question_type": "TRUTHY",
+        "answer": {
+            "answer_id": 140,
+            "description": null,
+            "answer_type": "TRUTHY",
+            "correct_option": 2,
+            "options": [
+                {
+                    "option_id": 280,
+                    "option_content": "FALSE",
+                    "description": null
+                },
+                {
+                    "option_id": 279,
+                    "option_content": "TRUE",
+                    "description": null
+                }
+            ]
+        }
+    },
+    {
+        "question_id": 141,
+        "question_content": "Does Moratorium policy is one of the policies of CASHe?",
+        "description": null,
+        "question_type": "TRUTHY",
+        "answer": {
+            "answer_id": 141,
+            "description": null,
+            "answer_type": "TRUTHY",
+            "correct_option": 1,
+            "options": [
+                {
+                    "option_id": 282,
+                    "option_content": "TRUE",
+                    "description": null
+                },
+                {
+                    "option_id": 281,
+                    "option_content": "FALSE",
+                    "description": null
+                }
+            ]
+        }
+    },
+    {
+        "question_id": 142,
+        "question_content": "2.75% flat per month of the Loan amount for Tenure of 62 days.",
+        "description": null,
+        "question_type": "ONE_WORD",
+        "answer": {
+            "answer_id": 142,
+            "description": null,
+            "answer_type": "ONE_WORD",
+            "correct_option": 1,
+            "options": [
+                {
+                    "option_id": 284,
+                    "option_content": "2.75%P.M",
+                    "description": null
+                },
+                {
+                    "option_id": 283,
+                    "option_content": "2.50% P.M",
+                    "description": null
+                }
+            ]
+        }
+    },
+    {
+        "question_id": 143,
+        "question_content": "The interest rate of the Loan amount for tenure of CASHe 1.5 years (540 days).",
+        "description": null,
+        "question_type": "ONE_WORD",
+        "answer": {
+            "answer_id": 143,
+            "description": null,
+            "answer_type": "ONE_WORD",
+            "correct_option": 1,
+            "options": [
+                {
+                    "option_id": 285,
+                    "option_content": "2.25% P.M",
+                    "description": null
+                },
+                {
+                    "option_id": 286,
+                    "option_content": "2.50% P.M",
+                    "description": null
+                }
+            ]
+        }
+    },
+    {
+        "question_id": 144,
+        "question_content": "CASHe Silver is entry level reward.",
+        "description": null,
+        "question_type": "TRUTHY",
+        "answer": {
+            "answer_id": 144,
+            "description": null,
+            "answer_type": "TRUTHY",
+            "correct_option": 1,
+            "options": [
+                {
+                    "option_id": 287,
+                    "option_content": "TRUE",
+                    "description": null
+                },
+                {
+                    "option_id": 288,
+                    "option_content": "FALSE",
+                    "description": null
+                }
+            ]
+        }
+    },
+    {
+        "question_id": 145,
+        "question_content": "CASHe Gold, with prompt repayment value of Rs. _____\t",
+        "description": null,
+        "question_type": "ONE_WORD",
+        "answer": {
+            "answer_id": 145,
+            "description": null,
+            "answer_type": "ONE_WORD",
+            "correct_option": 1,
+            "options": [
+                {
+                    "option_id": 290,
+                    "option_content": "  3,00,000",
+                    "description": null
+                },
+                {
+                    "option_id": 289,
+                    "option_content": "4,00,000",
+                    "description": null
+                }
+            ]
+        }
+    },
+    {
+        "question_id": 146,
+        "question_content": "_________, with prompt repayment value of Rs. 6,00,000",
+        "description": null,
+        "question_type": "ONE_WORD",
+        "answer": {
+            "answer_id": 146,
+            "description": null,
+            "answer_type": "ONE_WORD",
+            "correct_option": 1,
+            "options": [
+                {
+                    "option_id": 291,
+                    "option_content": "CASHe Platinum",
+                    "description": null
+                },
+                {
+                    "option_id": 292,
+                    "option_content": "CASHe silver",
+                    "description": null
+                }
+            ]
+        }
+    },
+    {
+        "question_id": 147,
+        "question_content": "CASHe Diamond, with prompt repayment value of Rs. _____",
+        "description": null,
+        "question_type": "ONE_WORD",
+        "answer": {
+            "answer_id": 147,
+            "description": null,
+            "answer_type": "ONE_WORD",
+            "correct_option": 1,
+            "options": [
+                {
+                    "option_id": 293,
+                    "option_content": "10,00,000",
+                    "description": null
+                },
+                {
+                    "option_id": 294,
+                    "option_content": "5,00,000",
+                    "description": null
+                }
+            ]
+        }
+    },
+    {
+        "question_id": 148,
+        "question_content": "KYC Policy of CASHe is ",
+        "description": null,
+        "question_type": "DESCRIPTIVE",
+        "answer": {
+            "answer_id": 148,
+            "description": null,
+            "answer_type": "DESCRIPTIVE",
+            "correct_option": 1,
+            "options": [
+                {
+                    "option_id": 295,
+                    "option_content": " To prevent money laundering or terrorist financing activities.",
+                    "description": null
+                },
+                {
+                    "option_id": 296,
+                    "option_content": "Not to prevent money laundering or terrorist financing activities.",
+                    "description": null
+                }
+            ]
+        }
+    },
+    {
+        "question_id": 149,
+        "question_content": " Does CASHe provides moratorium policy to its borrowers?",
+        "description": null,
+        "question_type": "TRUTHY",
+        "answer": {
+            "answer_id": 149,
+            "description": null,
+            "answer_type": "TRUTHY",
+            "correct_option": 2,
+            "options": [
+                {
+                    "option_id": 298,
+                    "option_content": "FALSE",
+                    "description": null
+                },
+                {
+                    "option_id": 297,
+                    "option_content": "TRUE",
+                    "description": null
+                }
+            ]
+        }
+    },
+    {
+        "question_id": 150,
+        "question_content": "The EMI waved off during moratorium period.",
+        "description": null,
+        "question_type": "TRUTHY",
+        "answer": {
+            "answer_id": 150,
+            "description": null,
+            "answer_type": "TRUTHY",
+            "correct_option": 1,
+            "options": [
+                {
+                    "option_id": 300,
+                    "option_content": "FALSE",
+                    "description": null
+                },
+                {
+                    "option_id": 299,
+                    "option_content": "TRUE",
+                    "description": null
+                }
+            ]
+        }
+    },
+    {
+        "question_id": 151,
+        "question_content": "Does the moratorium affect the credit rating?",
+        "description": null,
+        "question_type": "TRUTHY",
+        "answer": {
+            "answer_id": 151,
+            "description": null,
+            "answer_type": "TRUTHY",
+            "correct_option": 1,
+            "options": [
+                {
+                    "option_id": 302,
+                    "option_content": "FALSE",
+                    "description": null
+                },
+                {
+                    "option_id": 301,
+                    "option_content": "TRUE",
+                    "description": null
+                }
+            ]
+        }
+    },
+    {
+        "question_id": 152,
+        "question_content": "The moratorium scheme covers both Principal and Interest payment.",
+        "description": null,
+        "question_type": "TRUTHY",
+        "answer": {
+            "answer_id": 152,
+            "description": null,
+            "answer_type": "TRUTHY",
+            "correct_option": 2,
+            "options": [
+                {
+                    "option_id": 304,
+                    "option_content": "FALSE",
+                    "description": null
+                },
+                {
+                    "option_id": 303,
+                    "option_content": "TRUE",
+                    "description": null
+                }
+            ]
+        }
+    },
+    {
+        "question_id": 153,
+        "question_content": "Ombudsman scheme is applicable for all NBFC’s",
+        "description": null,
+        "question_type": "TRUTHY",
+        "answer": {
+            "answer_id": 153,
+            "description": null,
+            "answer_type": "TRUTHY",
+            "correct_option": 1,
+            "options": [
+                {
+                    "option_id": 305,
+                    "option_content": "TRUE",
+                    "description": null
+                },
+                {
+                    "option_id": 306,
+                    "option_content": "FALSE",
+                    "description": null
+                }
+            ]
+        }
+    },
+    {
+        "question_id": 154,
+        "question_content": "The Company’s dealings with its customers will rest on the principles of fairness, transparency and honesty is the objective of_______",
+        "description": null,
+        "question_type": "ONE_WORD",
+        "answer": {
+            "answer_id": 154,
+            "description": null,
+            "answer_type": "ONE_WORD",
+            "correct_option": 1,
+            "options": [
+                {
+                    "option_id": 308,
+                    "option_content": "   Fair practices code",
+                    "description": null
+                },
+                {
+                    "option_id": 307,
+                    "option_content": "Moratorium policy",
+                    "description": null
+                }
+            ]
+        }
+    }
+]

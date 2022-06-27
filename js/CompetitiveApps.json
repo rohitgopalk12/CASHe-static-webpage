@@ -1,0 +1,1203 @@
+[
+    {
+        "question_id": 1,
+        "question_content": "How much is MoneyView's Maximum Loan Ticket Size",
+        "description": null,
+        "question_type": "ONE_WORD",
+        "answer": {
+            "answer_id": 1,
+            "description": null,
+            "answer_type": "ONE_WORD",
+            "correct_option": 2,
+            "options": [
+                {
+                    "option_id": 1,
+                    "option_content": "Rs. 4,00,000",
+                    "description": null
+                },
+                {
+                    "option_id": 2,
+                    "option_content": "Rs. 5,00,000",
+                    "description": null
+                }
+            ]
+        }
+    },
+    {
+        "question_id": 2,
+        "question_content": "Which of the following demographic are eligible to apply for a loan at MoneyView",
+        "description": null,
+        "question_type": "DESCRIPTIVE",
+        "answer": {
+            "answer_id": 2,
+            "description": null,
+            "answer_type": "DESCRIPTIVE",
+            "correct_option": 2,
+            "options": [
+                {
+                    "option_id": 4,
+                    "option_content": "Salaried Individuals only between the Age of 21 to 57",
+                    "description": null
+                },
+                {
+                    "option_id": 3,
+                    "option_content": "Salaried or Self-Employed Individuals between the Age of 21 to 57",
+                    "description": null
+                }
+            ]
+        }
+    },
+    {
+        "question_id": 3,
+        "question_content": "MoneyView is available in Gpay",
+        "description": null,
+        "question_type": "TRUTHY",
+        "answer": {
+            "answer_id": 3,
+            "description": null,
+            "answer_type": "TRUTHY",
+            "correct_option": 2,
+            "options": [
+                {
+                    "option_id": 6,
+                    "option_content": "FALSE",
+                    "description": null
+                },
+                {
+                    "option_id": 5,
+                    "option_content": "TRUE",
+                    "description": null
+                }
+            ]
+        }
+    },
+    {
+        "question_id": 4,
+        "question_content": "MoneyView Advantage Card offers an interest free period of up to",
+        "description": null,
+        "question_type": "ONE_WORD",
+        "answer": {
+            "answer_id": 4,
+            "description": null,
+            "answer_type": "ONE_WORD",
+            "correct_option": 2,
+            "options": [
+                {
+                    "option_id": 7,
+                    "option_content": "55 days",
+                    "description": null
+                },
+                {
+                    "option_id": 8,
+                    "option_content": "40 days",
+                    "description": null
+                }
+            ]
+        }
+    },
+    {
+        "question_id": 5,
+        "question_content": "PostPe card has a credit limit of upto ",
+        "description": null,
+        "question_type": "ONE_WORD",
+        "answer": {
+            "answer_id": 5,
+            "description": null,
+            "answer_type": "ONE_WORD",
+            "correct_option": 2,
+            "options": [
+                {
+                    "option_id": 9,
+                    "option_content": "Rs. 4 Lakhs",
+                    "description": null
+                },
+                {
+                    "option_id": 10,
+                    "option_content": "Rs. 10 Lakhs",
+                    "description": null
+                }
+            ]
+        }
+    },
+    {
+        "question_id": 6,
+        "question_content": "What are the mode of payments supported by PostPe Card?",
+        "description": null,
+        "question_type": "DESCRIPTIVE",
+        "answer": {
+            "answer_id": 6,
+            "description": null,
+            "answer_type": "DESCRIPTIVE",
+            "correct_option": 1,
+            "options": [
+                {
+                    "option_id": 11,
+                    "option_content": "QR, Card Machine (offline), Online (net banking)",
+                    "description": null
+                },
+                {
+                    "option_id": 12,
+                    "option_content": "Card Machine (offline) and Online (net banking) ",
+                    "description": null
+                }
+            ]
+        }
+    },
+    {
+        "question_id": 7,
+        "question_content": "All loans offered by 12% club have a fixed tenure of ",
+        "description": null,
+        "question_type": "ONE_WORD",
+        "answer": {
+            "answer_id": 7,
+            "description": null,
+            "answer_type": "ONE_WORD",
+            "correct_option": 2,
+            "options": [
+                {
+                    "option_id": 14,
+                    "option_content": "2 months",
+                    "description": null
+                },
+                {
+                    "option_id": 13,
+                    "option_content": "3 months ",
+                    "description": null
+                }
+            ]
+        }
+    },
+    {
+        "question_id": 8,
+        "question_content": "12% club has above average processing charge compared to industry average",
+        "description": null,
+        "question_type": "TRUTHY",
+        "answer": {
+            "answer_id": 8,
+            "description": null,
+            "answer_type": "TRUTHY",
+            "correct_option": 2,
+            "options": [
+                {
+                    "option_id": 15,
+                    "option_content": "TRUE",
+                    "description": null
+                },
+                {
+                    "option_id": 16,
+                    "option_content": "FALSE",
+                    "description": null
+                }
+            ]
+        }
+    },
+    {
+        "question_id": 9,
+        "question_content": "What are the platforms supported by KreditBee?",
+        "description": null,
+        "question_type": "DESCRIPTIVE",
+        "answer": {
+            "answer_id": 9,
+            "description": null,
+            "answer_type": "DESCRIPTIVE",
+            "correct_option": 2,
+            "options": [
+                {
+                    "option_id": 18,
+                    "option_content": "Android Native and iOS",
+                    "description": null
+                },
+                {
+                    "option_id": 17,
+                    "option_content": "Android Native, Gpay, iOS, Web",
+                    "description": null
+                }
+            ]
+        }
+    },
+    {
+        "question_id": 10,
+        "question_content": "KreditBee offers online purchase loans",
+        "description": null,
+        "question_type": "TRUTHY",
+        "answer": {
+            "answer_id": 10,
+            "description": null,
+            "answer_type": "TRUTHY",
+            "correct_option": 1,
+            "options": [
+                {
+                    "option_id": 19,
+                    "option_content": "TRUE",
+                    "description": null
+                },
+                {
+                    "option_id": 20,
+                    "option_content": "FALSE",
+                    "description": null
+                }
+            ]
+        }
+    },
+    {
+        "question_id": 11,
+        "question_content": "What are the features offered by KreditBee Card",
+        "description": null,
+        "question_type": "DESCRIPTIVE",
+        "answer": {
+            "answer_id": 11,
+            "description": null,
+            "answer_type": "DESCRIPTIVE",
+            "correct_option": 1,
+            "options": [
+                {
+                    "option_id": 21,
+                    "option_content": "Withdraw cash to your bank account, Shop Online",
+                    "description": null
+                },
+                {
+                    "option_id": 22,
+                    "option_content": "Shop Online, QR Payments",
+                    "description": null
+                }
+            ]
+        }
+    },
+    {
+        "question_id": 12,
+        "question_content": "KreditBee Cards charge zero Activation fee and Maintenance fee",
+        "description": null,
+        "question_type": "TRUTHY",
+        "answer": {
+            "answer_id": 12,
+            "description": null,
+            "answer_type": "TRUTHY",
+            "correct_option": 2,
+            "options": [
+                {
+                    "option_id": 23,
+                    "option_content": "True ",
+                    "description": null
+                },
+                {
+                    "option_id": 24,
+                    "option_content": "FALSE",
+                    "description": null
+                }
+            ]
+        }
+    },
+    {
+        "question_id": 13,
+        "question_content": "Cred Offers a Credit Score Check for a megre charge of Rs.10 per month",
+        "description": null,
+        "question_type": "TRUTHY",
+        "answer": {
+            "answer_id": 13,
+            "description": null,
+            "answer_type": "TRUTHY",
+            "correct_option": 2,
+            "options": [
+                {
+                    "option_id": 25,
+                    "option_content": "TRUE",
+                    "description": null
+                },
+                {
+                    "option_id": 26,
+                    "option_content": "FALSE",
+                    "description": null
+                }
+            ]
+        }
+    },
+    {
+        "question_id": 14,
+        "question_content": "Which of the following products does SmartCoin offer which is similar to CASHe's Buddy Loan product",
+        "description": null,
+        "question_type": "ONE_WORD",
+        "answer": {
+            "answer_id": 14,
+            "description": null,
+            "answer_type": "ONE_WORD",
+            "correct_option": 2,
+            "options": [
+                {
+                    "option_id": 27,
+                    "option_content": "Augmont",
+                    "description": null
+                },
+                {
+                    "option_id": 28,
+                    "option_content": "My Khata",
+                    "description": null
+                }
+            ]
+        }
+    },
+    {
+        "question_id": 15,
+        "question_content": "Which of the following demographic is eligible to apply for a loan at SmartCoin",
+        "description": null,
+        "question_type": "ONE_WORD",
+        "answer": {
+            "answer_id": 15,
+            "description": null,
+            "answer_type": "ONE_WORD",
+            "correct_option": 1,
+            "options": [
+                {
+                    "option_id": 30,
+                    "option_content": "Anyone",
+                    "description": null
+                },
+                {
+                    "option_id": 29,
+                    "option_content": "Salaried Individuals",
+                    "description": null
+                }
+            ]
+        }
+    },
+    {
+        "question_id": 16,
+        "question_content": "Does SmartCoin charge higher processing charges for high risk customer?",
+        "description": null,
+        "question_type": "TRUTHY",
+        "answer": {
+            "answer_id": 16,
+            "description": null,
+            "answer_type": "TRUTHY",
+            "correct_option": 1,
+            "options": [
+                {
+                    "option_id": 31,
+                    "option_content": "TRUE",
+                    "description": null
+                },
+                {
+                    "option_id": 32,
+                    "option_content": "FALSE",
+                    "description": null
+                }
+            ]
+        }
+    },
+    {
+        "question_id": 17,
+        "question_content": "Which of the following statements are true with regards to MoneyTap",
+        "description": null,
+        "question_type": "DESCRIPTIVE",
+        "answer": {
+            "answer_id": 17,
+            "description": null,
+            "answer_type": "DESCRIPTIVE",
+            "correct_option": 2,
+            "options": [
+                {
+                    "option_id": 34,
+                    "option_content": "MoneyTap's interest ranges are higher than industry average",
+                    "description": null
+                },
+                {
+                    "option_id": 33,
+                    "option_content": "MoneyTap's minimum monthly income criteria to be eligible for loans is higher than industry average",
+                    "description": null
+                }
+            ]
+        }
+    },
+    {
+        "question_id": 18,
+        "question_content": "MoneyTap credit card does not allow cash withdrawal",
+        "description": null,
+        "question_type": "TRUTHY",
+        "answer": {
+            "answer_id": 18,
+            "description": null,
+            "answer_type": "TRUTHY",
+            "correct_option": 1,
+            "options": [
+                {
+                    "option_id": 36,
+                    "option_content": "FALSE",
+                    "description": null
+                },
+                {
+                    "option_id": 35,
+                    "option_content": "True ",
+                    "description": null
+                }
+            ]
+        }
+    },
+    {
+        "question_id": 19,
+        "question_content": "MoneyTap offers upto ___ days interest free period for the credit card",
+        "description": null,
+        "question_type": "ONE_WORD",
+        "answer": {
+            "answer_id": 19,
+            "description": null,
+            "answer_type": "ONE_WORD",
+            "correct_option": 2,
+            "options": [
+                {
+                    "option_id": 38,
+                    "option_content": "30",
+                    "description": null
+                },
+                {
+                    "option_id": 37,
+                    "option_content": "50",
+                    "description": null
+                }
+            ]
+        }
+    },
+    {
+        "question_id": 20,
+        "question_content": "MoneyTap does not allow UPI transactions directly from your credit line",
+        "description": null,
+        "question_type": "TRUTHY",
+        "answer": {
+            "answer_id": 20,
+            "description": null,
+            "answer_type": "TRUTHY",
+            "correct_option": 1,
+            "options": [
+                {
+                    "option_id": 40,
+                    "option_content": "FALSE",
+                    "description": null
+                },
+                {
+                    "option_id": 39,
+                    "option_content": "True ",
+                    "description": null
+                }
+            ]
+        }
+    },
+    {
+        "question_id": 21,
+        "question_content": "What is the name of EarlySalary's credit card",
+        "description": null,
+        "question_type": "ONE_WORD",
+        "answer": {
+            "answer_id": 21,
+            "description": null,
+            "answer_type": "ONE_WORD",
+            "correct_option": 2,
+            "options": [
+                {
+                    "option_id": 41,
+                    "option_content": "EarlyCard",
+                    "description": null
+                },
+                {
+                    "option_id": 42,
+                    "option_content": "SalaryCard",
+                    "description": null
+                }
+            ]
+        }
+    },
+    {
+        "question_id": 22,
+        "question_content": "EarlySalary offers Amazon and Flipkart EMIs with 1% interest for 3 and 6 months",
+        "description": null,
+        "question_type": "TRUTHY",
+        "answer": {
+            "answer_id": 22,
+            "description": null,
+            "answer_type": "TRUTHY",
+            "correct_option": 1,
+            "options": [
+                {
+                    "option_id": 44,
+                    "option_content": "FALSE",
+                    "description": null
+                },
+                {
+                    "option_id": 43,
+                    "option_content": "TRUE",
+                    "description": null
+                }
+            ]
+        }
+    },
+    {
+        "question_id": 23,
+        "question_content": "What are the platforms supported by EarlySalary",
+        "description": null,
+        "question_type": "DESCRIPTIVE",
+        "answer": {
+            "answer_id": 23,
+            "description": null,
+            "answer_type": "DESCRIPTIVE",
+            "correct_option": 1,
+            "options": [
+                {
+                    "option_id": 46,
+                    "option_content": "Android, Gpay, iOS and Web",
+                    "description": null
+                },
+                {
+                    "option_id": 45,
+                    "option_content": "Android, Gpay and iOS",
+                    "description": null
+                }
+            ]
+        }
+    },
+    {
+        "question_id": 24,
+        "question_content": "EarlySalary's credit card offers upto ____ days of interest free period",
+        "description": null,
+        "question_type": "ONE_WORD",
+        "answer": {
+            "answer_id": 24,
+            "description": null,
+            "answer_type": "ONE_WORD",
+            "correct_option": 1,
+            "options": [
+                {
+                    "option_id": 47,
+                    "option_content": "51",
+                    "description": null
+                },
+                {
+                    "option_id": 48,
+                    "option_content": "55",
+                    "description": null
+                }
+            ]
+        }
+    },
+    {
+        "question_id": 25,
+        "question_content": "Customers can use LazyPay's UPI Id to make online payments and pay later",
+        "description": null,
+        "question_type": "TRUTHY",
+        "answer": {
+            "answer_id": 25,
+            "description": null,
+            "answer_type": "TRUTHY",
+            "correct_option": 1,
+            "options": [
+                {
+                    "option_id": 49,
+                    "option_content": "TRUE",
+                    "description": null
+                },
+                {
+                    "option_id": 50,
+                    "option_content": "FALSE",
+                    "description": null
+                }
+            ]
+        }
+    },
+    {
+        "question_id": 26,
+        "question_content": "Which of the following statements are false with regards to LazyPay",
+        "description": null,
+        "question_type": "DESCRIPTIVE",
+        "answer": {
+            "answer_id": 26,
+            "description": null,
+            "answer_type": "DESCRIPTIVE",
+            "correct_option": 1,
+            "options": [
+                {
+                    "option_id": 52,
+                    "option_content": "LazyPay offers interest free period of upto 30 days",
+                    "description": null
+                },
+                {
+                    "option_id": 51,
+                    "option_content": "LazyPay is a super App with integrated one tap payments to various merchants",
+                    "description": null
+                }
+            ]
+        }
+    },
+    {
+        "question_id": 27,
+        "question_content": "LazyPay supports upto Rs._______ direct cash transfer to bank A/C",
+        "description": null,
+        "question_type": "ONE_WORD",
+        "answer": {
+            "answer_id": 27,
+            "description": null,
+            "answer_type": "ONE_WORD",
+            "correct_option": 1,
+            "options": [
+                {
+                    "option_id": 53,
+                    "option_content": "5 lakhs",
+                    "description": null
+                },
+                {
+                    "option_id": 54,
+                    "option_content": "1 lakh",
+                    "description": null
+                }
+            ]
+        }
+    },
+    {
+        "question_id": 28,
+        "question_content": "Which of the following are products offered by LazyPay",
+        "description": null,
+        "question_type": "DESCRIPTIVE",
+        "answer": {
+            "answer_id": 28,
+            "description": null,
+            "answer_type": "DESCRIPTIVE",
+            "correct_option": 2,
+            "options": [
+                {
+                    "option_id": 56,
+                    "option_content": "LazyCredit, LazyQR",
+                    "description": null
+                },
+                {
+                    "option_id": 55,
+                    "option_content": "LazyCard, LazyPlus",
+                    "description": null
+                }
+            ]
+        }
+    },
+    {
+        "question_id": 29,
+        "question_content": "What is the name of the lending app provided by lendenclub?",
+        "description": null,
+        "question_type": "ONE_WORD",
+        "answer": {
+            "answer_id": 29,
+            "description": null,
+            "answer_type": "ONE_WORD",
+            "correct_option": 1,
+            "options": [
+                {
+                    "option_id": 57,
+                    "option_content": "InstaMoney",
+                    "description": null
+                },
+                {
+                    "option_id": 58,
+                    "option_content": "QuickMoney",
+                    "description": null
+                }
+            ]
+        }
+    },
+    {
+        "question_id": 30,
+        "question_content": "Which of the following are products offered by InstaMoney?",
+        "description": null,
+        "question_type": "DESCRIPTIVE",
+        "answer": {
+            "answer_id": 30,
+            "description": null,
+            "answer_type": "DESCRIPTIVE",
+            "correct_option": 1,
+            "options": [
+                {
+                    "option_id": 60,
+                    "option_content": "Personal Loans, Credit Line",
+                    "description": null
+                },
+                {
+                    "option_id": 59,
+                    "option_content": "InstaCard, Personal Loans",
+                    "description": null
+                }
+            ]
+        }
+    },
+    {
+        "question_id": 31,
+        "question_content": "InstaMoney provides a commitment  of maximum 24hrs for loan disbursal",
+        "description": null,
+        "question_type": "TRUTHY",
+        "answer": {
+            "answer_id": 31,
+            "description": null,
+            "answer_type": "TRUTHY",
+            "correct_option": 2,
+            "options": [
+                {
+                    "option_id": 61,
+                    "option_content": "True ",
+                    "description": null
+                },
+                {
+                    "option_id": 62,
+                    "option_content": "FALSE",
+                    "description": null
+                }
+            ]
+        }
+    },
+    {
+        "question_id": 32,
+        "question_content": "Which of the following credit scores are provided by OneScore?",
+        "description": null,
+        "question_type": "DESCRIPTIVE",
+        "answer": {
+            "answer_id": 32,
+            "description": null,
+            "answer_type": "DESCRIPTIVE",
+            "correct_option": 1,
+            "options": [
+                {
+                    "option_id": 63,
+                    "option_content": "Experian and CIBIL",
+                    "description": null
+                },
+                {
+                    "option_id": 64,
+                    "option_content": "CIBIL and Equifax",
+                    "description": null
+                }
+            ]
+        }
+    },
+    {
+        "question_id": 33,
+        "question_content": "Which of the following is a feature of OneScore?",
+        "description": null,
+        "question_type": "DESCRIPTIVE",
+        "answer": {
+            "answer_id": 33,
+            "description": null,
+            "answer_type": "DESCRIPTIVE",
+            "correct_option": 1,
+            "options": [
+                {
+                    "option_id": 66,
+                    "option_content": "Option to check customer's credit history",
+                    "description": null
+                },
+                {
+                    "option_id": 65,
+                    "option_content": "Credit Score check at Rs.10/month",
+                    "description": null
+                }
+            ]
+        }
+    },
+    {
+        "question_id": 34,
+        "question_content": "OneScore offers a credit card called OneCard ",
+        "description": null,
+        "question_type": "TRUTHY",
+        "answer": {
+            "answer_id": 34,
+            "description": null,
+            "answer_type": "TRUTHY",
+            "correct_option": 2,
+            "options": [
+                {
+                    "option_id": 68,
+                    "option_content": "FALSE",
+                    "description": null
+                },
+                {
+                    "option_id": 67,
+                    "option_content": "TRUE",
+                    "description": null
+                }
+            ]
+        }
+    },
+    {
+        "question_id": 35,
+        "question_content": "Which of the following is a unique feature of phocket?",
+        "description": null,
+        "question_type": "DESCRIPTIVE",
+        "answer": {
+            "answer_id": 35,
+            "description": null,
+            "answer_type": "DESCRIPTIVE",
+            "correct_option": 2,
+            "options": [
+                {
+                    "option_id": 69,
+                    "option_content": "Loan Application Inteface via Whatsapp",
+                    "description": null
+                },
+                {
+                    "option_id": 70,
+                    "option_content": "Loan Application Interface via in-App Chat",
+                    "description": null
+                }
+            ]
+        }
+    },
+    {
+        "question_id": 36,
+        "question_content": "Which of the following statement is true with regards to phocket?",
+        "description": null,
+        "question_type": "DESCRIPTIVE",
+        "answer": {
+            "answer_id": 36,
+            "description": null,
+            "answer_type": "DESCRIPTIVE",
+            "correct_option": 2,
+            "options": [
+                {
+                    "option_id": 71,
+                    "option_content": "Phocket offers a credit line product ",
+                    "description": null
+                },
+                {
+                    "option_id": 72,
+                    "option_content": "Phocket offers a BNPL product",
+                    "description": null
+                }
+            ]
+        }
+    },
+    {
+        "question_id": 37,
+        "question_content": "Navi's Maximum Loan Ticket Size is ?",
+        "description": null,
+        "question_type": "ONE_WORD",
+        "answer": {
+            "answer_id": 37,
+            "description": null,
+            "answer_type": "ONE_WORD",
+            "correct_option": 1,
+            "options": [
+                {
+                    "option_id": 74,
+                    "option_content": "Rs. 20,00,000",
+                    "description": null
+                },
+                {
+                    "option_id": 73,
+                    "option_content": "Rs. 10,00,000",
+                    "description": null
+                }
+            ]
+        }
+    },
+    {
+        "question_id": 38,
+        "question_content": "What Insurance Products does NAVI sell currently?",
+        "description": null,
+        "question_type": "ONE_WORD",
+        "answer": {
+            "answer_id": 38,
+            "description": null,
+            "answer_type": "ONE_WORD",
+            "correct_option": 1,
+            "options": [
+                {
+                    "option_id": 75,
+                    "option_content": "Health Insurance",
+                    "description": null
+                },
+                {
+                    "option_id": 76,
+                    "option_content": "Life Insurance",
+                    "description": null
+                }
+            ]
+        }
+    },
+    {
+        "question_id": 39,
+        "question_content": "NAVI Offers Home Loans upto Rs. 10 Crore",
+        "description": null,
+        "question_type": "TRUTHY",
+        "answer": {
+            "answer_id": 39,
+            "description": null,
+            "answer_type": "TRUTHY",
+            "correct_option": 1,
+            "options": [
+                {
+                    "option_id": 77,
+                    "option_content": "True ",
+                    "description": null
+                },
+                {
+                    "option_id": 78,
+                    "option_content": "FALSE",
+                    "description": null
+                }
+            ]
+        }
+    },
+    {
+        "question_id": 40,
+        "question_content": "What is the minimum CIBIL Score to be eligible for a NAVI personal loan",
+        "description": null,
+        "question_type": "ONE_WORD",
+        "answer": {
+            "answer_id": 40,
+            "description": null,
+            "answer_type": "ONE_WORD",
+            "correct_option": 1,
+            "options": [
+                {
+                    "option_id": 80,
+                    "option_content": "750",
+                    "description": null
+                },
+                {
+                    "option_id": 79,
+                    "option_content": "650",
+                    "description": null
+                }
+            ]
+        }
+    },
+    {
+        "question_id": 41,
+        "question_content": "What are unique features offered by true balance?",
+        "description": null,
+        "question_type": "DESCRIPTIVE",
+        "answer": {
+            "answer_id": 41,
+            "description": null,
+            "answer_type": "DESCRIPTIVE",
+            "correct_option": 1,
+            "options": [
+                {
+                    "option_id": 82,
+                    "option_content": "Free Credit Score, Bill Payment, Mobile Recharge",
+                    "description": null
+                },
+                {
+                    "option_id": 81,
+                    "option_content": "Credit Line, Free Credit Score",
+                    "description": null
+                }
+            ]
+        }
+    },
+    {
+        "question_id": 42,
+        "question_content": "true balance interest ranges are one of the highest in the industry",
+        "description": null,
+        "question_type": "TRUTHY",
+        "answer": {
+            "answer_id": 42,
+            "description": null,
+            "answer_type": "TRUTHY",
+            "correct_option": 2,
+            "options": [
+                {
+                    "option_id": 84,
+                    "option_content": "FALSE",
+                    "description": null
+                },
+                {
+                    "option_id": 83,
+                    "option_content": "True ",
+                    "description": null
+                }
+            ]
+        }
+    },
+    {
+        "question_id": 43,
+        "question_content": "What are the platforms supported by true balance?",
+        "description": null,
+        "question_type": "DESCRIPTIVE",
+        "answer": {
+            "answer_id": 43,
+            "description": null,
+            "answer_type": "DESCRIPTIVE",
+            "correct_option": 1,
+            "options": [
+                {
+                    "option_id": 86,
+                    "option_content": "Android",
+                    "description": null
+                },
+                {
+                    "option_id": 85,
+                    "option_content": "Android, Gpay",
+                    "description": null
+                }
+            ]
+        }
+    },
+    {
+        "question_id": 44,
+        "question_content": "Which of the following statements are true with regards to PaySense",
+        "description": null,
+        "question_type": "DESCRIPTIVE",
+        "answer": {
+            "answer_id": 44,
+            "description": null,
+            "answer_type": "DESCRIPTIVE",
+            "correct_option": 1,
+            "options": [
+                {
+                    "option_id": 88,
+                    "option_content": "PaySense's parent company is PayU, PaySense and LazyPay are going to integrate into a financial super app",
+                    "description": null
+                },
+                {
+                    "option_id": 87,
+                    "option_content": "PaySense's parent company is PayTM, PaySense and PayTM are planning to integrate into a financial super app",
+                    "description": null
+                }
+            ]
+        }
+    },
+    {
+        "question_id": 45,
+        "question_content": "What is the maximum tenure offered by PaySense for loans?",
+        "description": null,
+        "question_type": "ONE_WORD",
+        "answer": {
+            "answer_id": 45,
+            "description": null,
+            "answer_type": "ONE_WORD",
+            "correct_option": 2,
+            "options": [
+                {
+                    "option_id": 89,
+                    "option_content": "24 months ",
+                    "description": null
+                },
+                {
+                    "option_id": 90,
+                    "option_content": "60 months",
+                    "description": null
+                }
+            ]
+        }
+    },
+    {
+        "question_id": 46,
+        "question_content": "Which of the following set of Apps are available on all 4 platforms? (Android, Gpay, iOS and Web)",
+        "description": null,
+        "question_type": "DESCRIPTIVE",
+        "answer": {
+            "answer_id": 46,
+            "description": null,
+            "answer_type": "DESCRIPTIVE",
+            "correct_option": 2,
+            "options": [
+                {
+                    "option_id": 92,
+                    "option_content": "KreditBee, EarlySalary, CASHe, MoneyView, Navi",
+                    "description": null
+                },
+                {
+                    "option_id": 91,
+                    "option_content": "Kreditbee, MoneyTap, EarlySalary, Phocket, CASHe",
+                    "description": null
+                }
+            ]
+        }
+    },
+    {
+        "question_id": 47,
+        "question_content": "Which of the following set of Apps have playstore downloads of more than 100 Lakhs?",
+        "description": null,
+        "question_type": "DESCRIPTIVE",
+        "answer": {
+            "answer_id": 47,
+            "description": null,
+            "answer_type": "DESCRIPTIVE",
+            "correct_option": 2,
+            "options": [
+                {
+                    "option_id": 93,
+                    "option_content": "MoneyView, Navi, EarlySalary, CASHe, SmartCoin ",
+                    "description": null
+                },
+                {
+                    "option_id": 94,
+                    "option_content": "MoneyView, KreditBee, MoneyTap, Navi, true balance",
+                    "description": null
+                }
+            ]
+        }
+    },
+    {
+        "question_id": 48,
+        "question_content": "Which digital lending App has the highest user rating currently in playstore?",
+        "description": null,
+        "question_type": "ONE_WORD",
+        "answer": {
+            "answer_id": 48,
+            "description": null,
+            "answer_type": "ONE_WORD",
+            "correct_option": 1,
+            "options": [
+                {
+                    "option_id": 95,
+                    "option_content": "MoneyView",
+                    "description": null
+                },
+                {
+                    "option_id": 96,
+                    "option_content": "SmartCoin",
+                    "description": null
+                }
+            ]
+        }
+    },
+    {
+        "question_id": 49,
+        "question_content": "Which two Apps have the lowest two starting interest rates across the digital lending indsutry?",
+        "description": null,
+        "question_type": "DESCRIPTIVE",
+        "answer": {
+            "answer_id": 49,
+            "description": null,
+            "answer_type": "DESCRIPTIVE",
+            "correct_option": 2,
+            "options": [
+                {
+                    "option_id": 98,
+                    "option_content": "NAVI, MoneyTap",
+                    "description": null
+                },
+                {
+                    "option_id": 97,
+                    "option_content": "LenDenClub, NAVI",
+                    "description": null
+                }
+            ]
+        }
+    },
+    {
+        "question_id": 50,
+        "question_content": "Which Digital lending App offers the lowest processing charge across the digital lending industry",
+        "description": null,
+        "question_type": "ONE_WORD",
+        "answer": {
+            "answer_id": 50,
+            "description": null,
+            "answer_type": "ONE_WORD",
+            "correct_option": 2,
+            "options": [
+                {
+                    "option_id": 100,
+                    "option_content": "InstaMoney",
+                    "description": null
+                },
+                {
+                    "option_id": 99,
+                    "option_content": "12% Club",
+                    "description": null
+                }
+            ]
+        }
+    }
+]
+    

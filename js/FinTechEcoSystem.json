@@ -1,0 +1,939 @@
+[
+    {
+        "question_id": 51,
+        "question_content": "When to choose Buy Now Pay later?",
+        "description": null,
+        "question_type": "DESCRIPTIVE",
+        "answer": {
+            "answer_id": 51,
+            "description": null,
+            "answer_type": "DESCRIPTIVE",
+            "correct_option": 1,
+            "options": [
+                {
+                    "option_id": 101,
+                    "option_content": "no credit history",
+                    "description": null
+                },
+                {
+                    "option_id": 102,
+                    "option_content": "having good credit history",
+                    "description": null
+                }
+            ]
+        }
+    },
+    {
+        "question_id": 52,
+        "question_content": "does Buy Now Pay Later charge interest?",
+        "description": null,
+        "question_type": "ONE_WORD",
+        "answer": {
+            "answer_id": 52,
+            "description": null,
+            "answer_type": "ONE_WORD",
+            "correct_option": 1,
+            "options": [
+                {
+                    "option_id": 104,
+                    "option_content": "no ",
+                    "description": null
+                },
+                {
+                    "option_id": 103,
+                    "option_content": "yes",
+                    "description": null
+                }
+            ]
+        }
+    },
+    {
+        "question_id": 53,
+        "question_content": "Is early salary a mobile app or desktop app?",
+        "description": null,
+        "question_type": "ONE_WORD",
+        "answer": {
+            "answer_id": 53,
+            "description": null,
+            "answer_type": "ONE_WORD",
+            "correct_option": 1,
+            "options": [
+                {
+                    "option_id": 105,
+                    "option_content": "mobile app",
+                    "description": null
+                },
+                {
+                    "option_id": 106,
+                    "option_content": "desktop app",
+                    "description": null
+                }
+            ]
+        }
+    },
+    {
+        "question_id": 54,
+        "question_content": "What is the loan range of Early Salary",
+        "description": null,
+        "question_type": "DESCRIPTIVE",
+        "answer": {
+            "answer_id": 54,
+            "description": null,
+            "answer_type": "DESCRIPTIVE",
+            "correct_option": 1,
+            "options": [
+                {
+                    "option_id": 108,
+                    "option_content": "Rs.5000 to Rs.2 lakhs",
+                    "description": null
+                },
+                {
+                    "option_id": 107,
+                    "option_content": "Rs.1000 to Rs.70,000",
+                    "description": null
+                }
+            ]
+        }
+    },
+    {
+        "question_id": 55,
+        "question_content": "Traditional lending saves customer's time compared to digital lending?",
+        "description": null,
+        "question_type": "TRUTHY",
+        "answer": {
+            "answer_id": 55,
+            "description": null,
+            "answer_type": "TRUTHY",
+            "correct_option": 2,
+            "options": [
+                {
+                    "option_id": 109,
+                    "option_content": "TRUE",
+                    "description": null
+                },
+                {
+                    "option_id": 110,
+                    "option_content": "FALSE",
+                    "description": null
+                }
+            ]
+        }
+    },
+    {
+        "question_id": 56,
+        "question_content": "cometition, collaboration and convergence makes healthy relationship between bank and NBFC",
+        "description": null,
+        "question_type": "TRUTHY",
+        "answer": {
+            "answer_id": 56,
+            "description": null,
+            "answer_type": "TRUTHY",
+            "correct_option": 2,
+            "options": [
+                {
+                    "option_id": 112,
+                    "option_content": "FALSE",
+                    "description": null
+                },
+                {
+                    "option_id": 111,
+                    "option_content": "TRUE",
+                    "description": null
+                }
+            ]
+        }
+    },
+    {
+        "question_id": 57,
+        "question_content": "TVs and smartphones are the products that are purchased by Customers using BNPL scheme",
+        "description": null,
+        "question_type": "TRUTHY",
+        "answer": {
+            "answer_id": 57,
+            "description": null,
+            "answer_type": "TRUTHY",
+            "correct_option": 2,
+            "options": [
+                {
+                    "option_id": 114,
+                    "option_content": "FALSE",
+                    "description": null
+                },
+                {
+                    "option_id": 113,
+                    "option_content": "TRUE",
+                    "description": null
+                }
+            ]
+        }
+    },
+    {
+        "question_id": 58,
+        "question_content": "What is the age group of borrowers who are using BNPL scheme",
+        "description": null,
+        "question_type": "ONE_WORD",
+        "answer": {
+            "answer_id": 58,
+            "description": null,
+            "answer_type": "ONE_WORD",
+            "correct_option": 2,
+            "options": [
+                {
+                    "option_id": 116,
+                    "option_content": "40-45 years",
+                    "description": null
+                },
+                {
+                    "option_id": 115,
+                    "option_content": "22-36 years",
+                    "description": null
+                }
+            ]
+        }
+    },
+    {
+        "question_id": 59,
+        "question_content": "There is an increase in interest from retailers who want to enable BNPL at their store",
+        "description": null,
+        "question_type": "TRUTHY",
+        "answer": {
+            "answer_id": 59,
+            "description": null,
+            "answer_type": "TRUTHY",
+            "correct_option": 2,
+            "options": [
+                {
+                    "option_id": 118,
+                    "option_content": "FALSE",
+                    "description": null
+                },
+                {
+                    "option_id": 117,
+                    "option_content": "TRUE",
+                    "description": null
+                }
+            ]
+        }
+    },
+    {
+        "question_id": 60,
+        "question_content": "In which year Fintech has become popular in India",
+        "description": null,
+        "question_type": "ONE_WORD",
+        "answer": {
+            "answer_id": 60,
+            "description": null,
+            "answer_type": "ONE_WORD",
+            "correct_option": 1,
+            "options": [
+                {
+                    "option_id": 120,
+                    "option_content": "2015",
+                    "description": null
+                },
+                {
+                    "option_id": 119,
+                    "option_content": "2011",
+                    "description": null
+                }
+            ]
+        }
+    },
+    {
+        "question_id": 61,
+        "question_content": "Financial decisions made by which age group people these days?",
+        "description": null,
+        "question_type": "ONE_WORD",
+        "answer": {
+            "answer_id": 61,
+            "description": null,
+            "answer_type": "ONE_WORD",
+            "correct_option": 1,
+            "options": [
+                {
+                    "option_id": 121,
+                    "option_content": "20 year olds",
+                    "description": null
+                },
+                {
+                    "option_id": 122,
+                    "option_content": "45 year olds",
+                    "description": null
+                }
+            ]
+        }
+    },
+    {
+        "question_id": 62,
+        "question_content": "The pandemic is the one that's changing banks",
+        "description": null,
+        "question_type": "TRUTHY",
+        "answer": {
+            "answer_id": 62,
+            "description": null,
+            "answer_type": "TRUTHY",
+            "correct_option": 2,
+            "options": [
+                {
+                    "option_id": 123,
+                    "option_content": "TRUE",
+                    "description": null
+                },
+                {
+                    "option_id": 124,
+                    "option_content": "FALSE",
+                    "description": null
+                }
+            ]
+        }
+    },
+    {
+        "question_id": 63,
+        "question_content": "Financial services and banking is a high trust game",
+        "description": null,
+        "question_type": "TRUTHY",
+        "answer": {
+            "answer_id": 63,
+            "description": null,
+            "answer_type": "TRUTHY",
+            "correct_option": 2,
+            "options": [
+                {
+                    "option_id": 126,
+                    "option_content": "FALSE",
+                    "description": null
+                },
+                {
+                    "option_id": 125,
+                    "option_content": "TRUE",
+                    "description": null
+                }
+            ]
+        }
+    },
+    {
+        "question_id": 64,
+        "question_content": "Fintech plays as a medium between the customer and the bank",
+        "description": null,
+        "question_type": "TRUTHY",
+        "answer": {
+            "answer_id": 64,
+            "description": null,
+            "answer_type": "TRUTHY",
+            "correct_option": 2,
+            "options": [
+                {
+                    "option_id": 128,
+                    "option_content": "FALSE",
+                    "description": null
+                },
+                {
+                    "option_id": 127,
+                    "option_content": "TRUE",
+                    "description": null
+                }
+            ]
+        }
+    },
+    {
+        "question_id": 65,
+        "question_content": "These days data has become a big repository",
+        "description": null,
+        "question_type": "TRUTHY",
+        "answer": {
+            "answer_id": 65,
+            "description": null,
+            "answer_type": "TRUTHY",
+            "correct_option": 2,
+            "options": [
+                {
+                    "option_id": 130,
+                    "option_content": "FALSE",
+                    "description": null
+                },
+                {
+                    "option_id": 129,
+                    "option_content": "TRUE",
+                    "description": null
+                }
+            ]
+        }
+    },
+    {
+        "question_id": 66,
+        "question_content": "Customer's experience plays a minor role in improving the product",
+        "description": null,
+        "question_type": "TRUTHY",
+        "answer": {
+            "answer_id": 66,
+            "description": null,
+            "answer_type": "TRUTHY",
+            "correct_option": 1,
+            "options": [
+                {
+                    "option_id": 132,
+                    "option_content": "FALSE",
+                    "description": null
+                },
+                {
+                    "option_id": 131,
+                    "option_content": "TRUE",
+                    "description": null
+                }
+            ]
+        }
+    },
+    {
+        "question_id": 67,
+        "question_content": "Intent of the borrower to repay plays a major role while disbursing loan",
+        "description": null,
+        "question_type": "TRUTHY",
+        "answer": {
+            "answer_id": 67,
+            "description": null,
+            "answer_type": "TRUTHY",
+            "correct_option": 2,
+            "options": [
+                {
+                    "option_id": 134,
+                    "option_content": "FALSE",
+                    "description": null
+                },
+                {
+                    "option_id": 133,
+                    "option_content": "TRUE",
+                    "description": null
+                }
+            ]
+        }
+    },
+    {
+        "question_id": 68,
+        "question_content": "Amazon’s month long great Indian festival 2021 has ended on which date?",
+        "description": null,
+        "question_type": "ONE_WORD",
+        "answer": {
+            "answer_id": 68,
+            "description": null,
+            "answer_type": "ONE_WORD",
+            "correct_option": 1,
+            "options": [
+                {
+                    "option_id": 135,
+                    "option_content": "December 15th",
+                    "description": null
+                },
+                {
+                    "option_id": 136,
+                    "option_content": "November 2nd",
+                    "description": null
+                }
+            ]
+        }
+    },
+    {
+        "question_id": 69,
+        "question_content": "Amazon saw how much improvement in usage of BNPL from tier 2 and tier 3 cities?",
+        "description": null,
+        "question_type": "ONE_WORD",
+        "answer": {
+            "answer_id": 69,
+            "description": null,
+            "answer_type": "ONE_WORD",
+            "correct_option": 1,
+            "options": [
+                {
+                    "option_id": 138,
+                    "option_content": "10 times",
+                    "description": null
+                },
+                {
+                    "option_id": 137,
+                    "option_content": "5 times",
+                    "description": null
+                }
+            ]
+        }
+    },
+    {
+        "question_id": 70,
+        "question_content": "On which day of every month, FlipKart charges penalty of late payment?",
+        "description": null,
+        "question_type": "ONE_WORD",
+        "answer": {
+            "answer_id": 70,
+            "description": null,
+            "answer_type": "ONE_WORD",
+            "correct_option": 2,
+            "options": [
+                {
+                    "option_id": 139,
+                    "option_content": "3rd",
+                    "description": null
+                },
+                {
+                    "option_id": 140,
+                    "option_content": "5th ",
+                    "description": null
+                }
+            ]
+        }
+    },
+    {
+        "question_id": 71,
+        "question_content": "Redseer estimates India’s BNPL market will rocket how many billions by 2026 from $3-3.5 billion now?",
+        "description": null,
+        "question_type": "ONE_WORD",
+        "answer": {
+            "answer_id": 71,
+            "description": null,
+            "answer_type": "ONE_WORD",
+            "correct_option": 1,
+            "options": [
+                {
+                    "option_id": 141,
+                    "option_content": "$45-$50 billions",
+                    "description": null
+                },
+                {
+                    "option_id": 142,
+                    "option_content": "$20-$30 billions",
+                    "description": null
+                }
+            ]
+        }
+    },
+    {
+        "question_id": 72,
+        "question_content": "The number of BNPL users are estimated to rise from 10-15 millions to how much?",
+        "description": null,
+        "question_type": "ONE_WORD",
+        "answer": {
+            "answer_id": 72,
+            "description": null,
+            "answer_type": "ONE_WORD",
+            "correct_option": 2,
+            "options": [
+                {
+                    "option_id": 143,
+                    "option_content": "45-70 million",
+                    "description": null
+                },
+                {
+                    "option_id": 144,
+                    "option_content": "80-100 million",
+                    "description": null
+                }
+            ]
+        }
+    },
+    {
+        "question_id": 73,
+        "question_content": "How much percentage of Clix Capital's business comes from digital lending?",
+        "description": null,
+        "question_type": "ONE_WORD",
+        "answer": {
+            "answer_id": 73,
+            "description": null,
+            "answer_type": "ONE_WORD",
+            "correct_option": 2,
+            "options": [
+                {
+                    "option_id": 145,
+                    "option_content": "95%",
+                    "description": null
+                },
+                {
+                    "option_id": 146,
+                    "option_content": "85%",
+                    "description": null
+                }
+            ]
+        }
+    },
+    {
+        "question_id": 74,
+        "question_content": "Digital lending happens using what technology in India?",
+        "description": null,
+        "question_type": "ONE_WORD",
+        "answer": {
+            "answer_id": 74,
+            "description": null,
+            "answer_type": "ONE_WORD",
+            "correct_option": 1,
+            "options": [
+                {
+                    "option_id": 147,
+                    "option_content": "smartphones",
+                    "description": null
+                },
+                {
+                    "option_id": 148,
+                    "option_content": "computers ",
+                    "description": null
+                }
+            ]
+        }
+    },
+    {
+        "question_id": 75,
+        "question_content": "UPI stands for?",
+        "description": null,
+        "question_type": "ONE_WORD",
+        "answer": {
+            "answer_id": 75,
+            "description": null,
+            "answer_type": "ONE_WORD",
+            "correct_option": 2,
+            "options": [
+                {
+                    "option_id": 149,
+                    "option_content": "Unified Polling Interface",
+                    "description": null
+                },
+                {
+                    "option_id": 150,
+                    "option_content": "Unified Payment Interface",
+                    "description": null
+                }
+            ]
+        }
+    },
+    {
+        "question_id": 76,
+        "question_content": "Neobanks operate through web apps",
+        "description": null,
+        "question_type": "TRUTHY",
+        "answer": {
+            "answer_id": 76,
+            "description": null,
+            "answer_type": "TRUTHY",
+            "correct_option": 2,
+            "options": [
+                {
+                    "option_id": 151,
+                    "option_content": "TRUE",
+                    "description": null
+                },
+                {
+                    "option_id": 152,
+                    "option_content": "FALSE",
+                    "description": null
+                }
+            ]
+        }
+    },
+    {
+        "question_id": 77,
+        "question_content": "More than 90% of collection happens using technology.",
+        "description": null,
+        "question_type": "TRUTHY",
+        "answer": {
+            "answer_id": 77,
+            "description": null,
+            "answer_type": "TRUTHY",
+            "correct_option": 2,
+            "options": [
+                {
+                    "option_id": 154,
+                    "option_content": "FALSE",
+                    "description": null
+                },
+                {
+                    "option_id": 153,
+                    "option_content": "TRUE",
+                    "description": null
+                }
+            ]
+        }
+    },
+    {
+        "question_id": 78,
+        "question_content": "In India, from 2019-2021, how much percent of time spent by an individual on mobile?",
+        "description": null,
+        "question_type": "ONE_WORD",
+        "answer": {
+            "answer_id": 78,
+            "description": null,
+            "answer_type": "ONE_WORD",
+            "correct_option": 1,
+            "options": [
+                {
+                    "option_id": 156,
+                    "option_content": "41%",
+                    "description": null
+                },
+                {
+                    "option_id": 155,
+                    "option_content": "55%",
+                    "description": null
+                }
+            ]
+        }
+    },
+    {
+        "question_id": 79,
+        "question_content": "How much percent increase of data consumption is taking place in India?",
+        "description": null,
+        "question_type": "ONE_WORD",
+        "answer": {
+            "answer_id": 79,
+            "description": null,
+            "answer_type": "ONE_WORD",
+            "correct_option": 2,
+            "options": [
+                {
+                    "option_id": 158,
+                    "option_content": "45%",
+                    "description": null
+                },
+                {
+                    "option_id": 157,
+                    "option_content": "30%",
+                    "description": null
+                }
+            ]
+        }
+    },
+    {
+        "question_id": 80,
+        "question_content": "Who is responsible to bring the business to upper level every day?",
+        "description": null,
+        "question_type": "ONE_WORD",
+        "answer": {
+            "answer_id": 80,
+            "description": null,
+            "answer_type": "ONE_WORD",
+            "correct_option": 1,
+            "options": [
+                {
+                    "option_id": 159,
+                    "option_content": " customer",
+                    "description": null
+                },
+                {
+                    "option_id": 160,
+                    "option_content": "the team",
+                    "description": null
+                }
+            ]
+        }
+    },
+    {
+        "question_id": 81,
+        "question_content": "What is the worry that bothers a business or entire eco system?",
+        "description": null,
+        "question_type": "DESCRIPTIVE",
+        "answer": {
+            "answer_id": 81,
+            "description": null,
+            "answer_type": "DESCRIPTIVE",
+            "correct_option": 1,
+            "options": [
+                {
+                    "option_id": 161,
+                    "option_content": "preventing fraud",
+                    "description": null
+                },
+                {
+                    "option_id": 162,
+                    "option_content": "managing the team",
+                    "description": null
+                }
+            ]
+        }
+    },
+    {
+        "question_id": 82,
+        "question_content": "Attracting the customer plays a major role to grow the business",
+        "description": null,
+        "question_type": "TRUTHY",
+        "answer": {
+            "answer_id": 82,
+            "description": null,
+            "answer_type": "TRUTHY",
+            "correct_option": 1,
+            "options": [
+                {
+                    "option_id": 164,
+                    "option_content": "FALSE",
+                    "description": null
+                },
+                {
+                    "option_id": 163,
+                    "option_content": "TRUE",
+                    "description": null
+                }
+            ]
+        }
+    },
+    {
+        "question_id": 83,
+        "question_content": "How much percent is Buy Now Pay Later in Germany?",
+        "description": null,
+        "question_type": "ONE_WORD",
+        "answer": {
+            "answer_id": 83,
+            "description": null,
+            "answer_type": "ONE_WORD",
+            "correct_option": 2,
+            "options": [
+                {
+                    "option_id": 165,
+                    "option_content": "34%",
+                    "description": null
+                },
+                {
+                    "option_id": 166,
+                    "option_content": "19%",
+                    "description": null
+                }
+            ]
+        }
+    },
+    {
+        "question_id": 84,
+        "question_content": "Buy Now Pay Later charges less fees for late payments",
+        "description": null,
+        "question_type": "TRUTHY",
+        "answer": {
+            "answer_id": 84,
+            "description": null,
+            "answer_type": "TRUTHY",
+            "correct_option": 2,
+            "options": [
+                {
+                    "option_id": 167,
+                    "option_content": "TRUE",
+                    "description": null
+                },
+                {
+                    "option_id": 168,
+                    "option_content": "FALSE",
+                    "description": null
+                }
+            ]
+        }
+    },
+    {
+        "question_id": 85,
+        "question_content": "How much percentage users regretted to purchase an expensive product before BNPL?",
+        "description": null,
+        "question_type": "ONE_WORD",
+        "answer": {
+            "answer_id": 85,
+            "description": null,
+            "answer_type": "ONE_WORD",
+            "correct_option": 2,
+            "options": [
+                {
+                    "option_id": 170,
+                    "option_content": "64%",
+                    "description": null
+                },
+                {
+                    "option_id": 169,
+                    "option_content": "57%",
+                    "description": null
+                }
+            ]
+        }
+    },
+    {
+        "question_id": 86,
+        "question_content": "BNPL services are not safe compared to using a credit card",
+        "description": null,
+        "question_type": "TRUTHY",
+        "answer": {
+            "answer_id": 86,
+            "description": null,
+            "answer_type": "TRUTHY",
+            "correct_option": 1,
+            "options": [
+                {
+                    "option_id": 172,
+                    "option_content": "FALSE",
+                    "description": null
+                },
+                {
+                    "option_id": 171,
+                    "option_content": "TRUE",
+                    "description": null
+                }
+            ]
+        }
+    },
+    {
+        "question_id": 87,
+        "question_content": "Always use debit card if we have money",
+        "description": null,
+        "question_type": "TRUTHY",
+        "answer": {
+            "answer_id": 87,
+            "description": null,
+            "answer_type": "TRUTHY",
+            "correct_option": 1,
+            "options": [
+                {
+                    "option_id": 173,
+                    "option_content": "TRUE",
+                    "description": null
+                },
+                {
+                    "option_id": 174,
+                    "option_content": "FALSE",
+                    "description": null
+                }
+            ]
+        }
+    },
+    {
+        "question_id": 88,
+        "question_content": "Collection was a challenge during Pandemic",
+        "description": null,
+        "question_type": "TRUTHY",
+        "answer": {
+            "answer_id": 88,
+            "description": null,
+            "answer_type": "TRUTHY",
+            "correct_option": 1,
+            "options": [
+                {
+                    "option_id": 175,
+                    "option_content": "TRUE",
+                    "description": null
+                },
+                {
+                    "option_id": 176,
+                    "option_content": "FALSE",
+                    "description": null
+                }
+            ]
+        }
+    },
+    {
+        "question_id": 89,
+        "question_content": "India Stack is the backbone of India's digital revolution",
+        "description": null,
+        "question_type": "TRUTHY",
+        "answer": {
+            "answer_id": 89,
+            "description": null,
+            "answer_type": "TRUTHY",
+            "correct_option": 1,
+            "options": [
+                {
+                    "option_id": 177,
+                    "option_content": "TRUE",
+                    "description": null
+                },
+                {
+                    "option_id": 178,
+                    "option_content": "FALSE",
+                    "description": null
+                }
+            ]
+        }
+    }
+]
+    

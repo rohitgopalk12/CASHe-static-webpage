@@ -1,0 +1,1658 @@
+[
+    {
+        "question_id": 155,
+        "question_content": "Bhanix was established on?",
+        "description": null,
+        "question_type": "DESCRIPTIVE",
+        "answer": {
+            "answer_id": 155,
+            "description": null,
+            "answer_type": "DESCRIPTIVE",
+            "correct_option": 1,
+            "options": [
+                {
+                    "option_id": 309,
+                    "option_content": "March 15, 1996   ",
+                    "description": null
+                },
+                {
+                    "option_id": 310,
+                    "option_content": "March 15,1999",
+                    "description": null
+                }
+            ]
+        }
+    },
+    {
+        "question_id": 156,
+        "question_content": "What is full form of NBFC ",
+        "description": null,
+        "question_type": "DESCRIPTIVE",
+        "answer": {
+            "answer_id": 156,
+            "description": null,
+            "answer_type": "DESCRIPTIVE",
+            "correct_option": 1,
+            "options": [
+                {
+                    "option_id": 312,
+                    "option_content": "non-banking financial company",
+                    "description": null
+                },
+                {
+                    "option_id": 311,
+                    "option_content": " Non-banking functional company    ",
+                    "description": null
+                }
+            ]
+        }
+    },
+    {
+        "question_id": 157,
+        "question_content": "NBFC's allow deposits from customers",
+        "description": null,
+        "question_type": "TRUTHY",
+        "answer": {
+            "answer_id": 157,
+            "description": null,
+            "answer_type": "TRUTHY",
+            "correct_option": 2,
+            "options": [
+                {
+                    "option_id": 313,
+                    "option_content": "True  ",
+                    "description": null
+                },
+                {
+                    "option_id": 314,
+                    "option_content": "False ",
+                    "description": null
+                }
+            ]
+        }
+    },
+    {
+        "question_id": 158,
+        "question_content": "Bhanix provides loan through:",
+        "description": null,
+        "question_type": "DESCRIPTIVE",
+        "answer": {
+            "answer_id": 158,
+            "description": null,
+            "answer_type": "DESCRIPTIVE",
+            "correct_option": 1,
+            "options": [
+                {
+                    "option_id": 316,
+                    "option_content": "Application CASHe ",
+                    "description": null
+                },
+                {
+                    "option_id": 315,
+                    "option_content": "website CASHe   ",
+                    "description": null
+                }
+            ]
+        }
+    },
+    {
+        "question_id": 159,
+        "question_content": "Fair practice code is meant for:",
+        "description": null,
+        "question_type": "DESCRIPTIVE",
+        "answer": {
+            "answer_id": 159,
+            "description": null,
+            "answer_type": "DESCRIPTIVE",
+            "correct_option": 1,
+            "options": [
+                {
+                    "option_id": 318,
+                    "option_content": "for maintaining transparency and honesty",
+                    "description": null
+                },
+                {
+                    "option_id": 317,
+                    "option_content": "easy loan disbursement     ",
+                    "description": null
+                }
+            ]
+        }
+    },
+    {
+        "question_id": 160,
+        "question_content": "SLQ full form:",
+        "description": null,
+        "question_type": "DESCRIPTIVE",
+        "answer": {
+            "answer_id": 160,
+            "description": null,
+            "answer_type": "DESCRIPTIVE",
+            "correct_option": 2,
+            "options": [
+                {
+                    "option_id": 319,
+                    "option_content": "Social Loan Quotient      ",
+                    "description": null
+                },
+                {
+                    "option_id": 320,
+                    "option_content": "Standing Liberty Quarter",
+                    "description": null
+                }
+            ]
+        }
+    },
+    {
+        "question_id": 161,
+        "question_content": "SLQ is used for:",
+        "description": null,
+        "question_type": "DESCRIPTIVE",
+        "answer": {
+            "answer_id": 161,
+            "description": null,
+            "answer_type": "DESCRIPTIVE",
+            "correct_option": 2,
+            "options": [
+                {
+                    "option_id": 321,
+                    "option_content": "paying EMI       ",
+                    "description": null
+                },
+                {
+                    "option_id": 322,
+                    "option_content": "calculating credit worthiness",
+                    "description": null
+                }
+            ]
+        }
+    },
+    {
+        "question_id": 162,
+        "question_content": "CASHe was launched in the:",
+        "description": null,
+        "question_type": "ONE_WORD",
+        "answer": {
+            "answer_id": 162,
+            "description": null,
+            "answer_type": "ONE_WORD",
+            "correct_option": 1,
+            "options": [
+                {
+                    "option_id": 323,
+                    "option_content": "Apr-16",
+                    "description": null
+                },
+                {
+                    "option_id": 324,
+                    "option_content": "Apr-18",
+                    "description": null
+                }
+            ]
+        }
+    },
+    {
+        "question_id": 163,
+        "question_content": "CASHe provides loan tenures ranging from:",
+        "description": null,
+        "question_type": "DESCRIPTIVE",
+        "answer": {
+            "answer_id": 163,
+            "description": null,
+            "answer_type": "DESCRIPTIVE",
+            "correct_option": 2,
+            "options": [
+                {
+                    "option_id": 325,
+                    "option_content": "1 month to 3 years      ",
+                    "description": null
+                },
+                {
+                    "option_id": 326,
+                    "option_content": "3 months to 1.5 years",
+                    "description": null
+                }
+            ]
+        }
+    },
+    {
+        "question_id": 164,
+        "question_content": "CASHe provides both retail and shopping loans:",
+        "description": null,
+        "question_type": "TRUTHY",
+        "answer": {
+            "answer_id": 164,
+            "description": null,
+            "answer_type": "TRUTHY",
+            "correct_option": 2,
+            "options": [
+                {
+                    "option_id": 328,
+                    "option_content": "False ",
+                    "description": null
+                },
+                {
+                    "option_id": 327,
+                    "option_content": "True  ",
+                    "description": null
+                }
+            ]
+        }
+    },
+    {
+        "question_id": 165,
+        "question_content": "Shopping loans are also known as:",
+        "description": null,
+        "question_type": "ONE_WORD",
+        "answer": {
+            "answer_id": 165,
+            "description": null,
+            "answer_type": "ONE_WORD",
+            "correct_option": 1,
+            "options": [
+                {
+                    "option_id": 330,
+                    "option_content": "BNPL loans",
+                    "description": null
+                },
+                {
+                    "option_id": 329,
+                    "option_content": "retail loans      ",
+                    "description": null
+                }
+            ]
+        }
+    },
+    {
+        "question_id": 166,
+        "question_content": "Full form of BNPL:",
+        "description": null,
+        "question_type": "DESCRIPTIVE",
+        "answer": {
+            "answer_id": 166,
+            "description": null,
+            "answer_type": "DESCRIPTIVE",
+            "correct_option": 1,
+            "options": [
+                {
+                    "option_id": 332,
+                    "option_content": "Buy now pay later",
+                    "description": null
+                },
+                {
+                    "option_id": 331,
+                    "option_content": "Buy now pay less    ",
+                    "description": null
+                }
+            ]
+        }
+    },
+    {
+        "question_id": 167,
+        "question_content": "Does BNPL loan products charge interest:",
+        "description": null,
+        "question_type": "TRUTHY",
+        "answer": {
+            "answer_id": 167,
+            "description": null,
+            "answer_type": "TRUTHY",
+            "correct_option": 2,
+            "options": [
+                {
+                    "option_id": 334,
+                    "option_content": "No",
+                    "description": null
+                },
+                {
+                    "option_id": 333,
+                    "option_content": "Yes ",
+                    "description": null
+                }
+            ]
+        }
+    },
+    {
+        "question_id": 168,
+        "question_content": "BNPL loan product charge interest for 90 days tenure:",
+        "description": null,
+        "question_type": "TRUTHY",
+        "answer": {
+            "answer_id": 168,
+            "description": null,
+            "answer_type": "TRUTHY",
+            "correct_option": 1,
+            "options": [
+                {
+                    "option_id": 336,
+                    "option_content": "False ",
+                    "description": null
+                },
+                {
+                    "option_id": 335,
+                    "option_content": "True  ",
+                    "description": null
+                }
+            ]
+        }
+    },
+    {
+        "question_id": 169,
+        "question_content": "BNPL loan products charge interest for 180 days:",
+        "description": null,
+        "question_type": "TRUTHY",
+        "answer": {
+            "answer_id": 169,
+            "description": null,
+            "answer_type": "TRUTHY",
+            "correct_option": 2,
+            "options": [
+                {
+                    "option_id": 338,
+                    "option_content": "False ",
+                    "description": null
+                },
+                {
+                    "option_id": 337,
+                    "option_content": "True  ",
+                    "description": null
+                }
+            ]
+        }
+    },
+    {
+        "question_id": 170,
+        "question_content": "CASHe has 5 loan products under the retail loans:",
+        "description": null,
+        "question_type": "TRUTHY",
+        "answer": {
+            "answer_id": 170,
+            "description": null,
+            "answer_type": "TRUTHY",
+            "correct_option": 2,
+            "options": [
+                {
+                    "option_id": 340,
+                    "option_content": "False ",
+                    "description": null
+                },
+                {
+                    "option_id": 339,
+                    "option_content": "True  ",
+                    "description": null
+                }
+            ]
+        }
+    },
+    {
+        "question_id": 171,
+        "question_content": "CASHe 90 is BNPL loan product:",
+        "description": null,
+        "question_type": "TRUTHY",
+        "answer": {
+            "answer_id": 171,
+            "description": null,
+            "answer_type": "TRUTHY",
+            "correct_option": 2,
+            "options": [
+                {
+                    "option_id": 341,
+                    "option_content": "True  ",
+                    "description": null
+                },
+                {
+                    "option_id": 342,
+                    "option_content": "False ",
+                    "description": null
+                }
+            ]
+        }
+    },
+    {
+        "question_id": 172,
+        "question_content": " Any one can get loan from CASHe irrespective of eligibility:",
+        "description": null,
+        "question_type": "TRUTHY",
+        "answer": {
+            "answer_id": 172,
+            "description": null,
+            "answer_type": "TRUTHY",
+            "correct_option": 1,
+            "options": [
+                {
+                    "option_id": 344,
+                    "option_content": "False ",
+                    "description": null
+                },
+                {
+                    "option_id": 343,
+                    "option_content": "True  ",
+                    "description": null
+                }
+            ]
+        }
+    },
+    {
+        "question_id": 173,
+        "question_content": "CASHe provides loan for students:",
+        "description": null,
+        "question_type": "TRUTHY",
+        "answer": {
+            "answer_id": 173,
+            "description": null,
+            "answer_type": "TRUTHY",
+            "correct_option": 2,
+            "options": [
+                {
+                    "option_id": 345,
+                    "option_content": "True  ",
+                    "description": null
+                },
+                {
+                    "option_id": 346,
+                    "option_content": "False ",
+                    "description": null
+                }
+            ]
+        }
+    },
+    {
+        "question_id": 174,
+        "question_content": "The minimum salary eligibility criteria for loan on CASHe was:",
+        "description": null,
+        "question_type": "ONE_WORD",
+        "answer": {
+            "answer_id": 174,
+            "description": null,
+            "answer_type": "ONE_WORD",
+            "correct_option": 1,
+            "options": [
+                {
+                    "option_id": 347,
+                    "option_content": " ?12,000   per month",
+                    "description": null
+                },
+                {
+                    "option_id": 348,
+                    "option_content": "?25000 per month",
+                    "description": null
+                }
+            ]
+        }
+    },
+    {
+        "question_id": 175,
+        "question_content": "Is PAN card required to apply loan on CASHe?",
+        "description": null,
+        "question_type": "TRUTHY",
+        "answer": {
+            "answer_id": 175,
+            "description": null,
+            "answer_type": "TRUTHY",
+            "correct_option": 1,
+            "options": [
+                {
+                    "option_id": 349,
+                    "option_content": "True    ",
+                    "description": null
+                },
+                {
+                    "option_id": 350,
+                    "option_content": "False ",
+                    "description": null
+                }
+            ]
+        }
+    },
+    {
+        "question_id": 176,
+        "question_content": "The user should go through the T&C before applying the loan on the app CASHe",
+        "description": null,
+        "question_type": "TRUTHY",
+        "answer": {
+            "answer_id": 176,
+            "description": null,
+            "answer_type": "TRUTHY",
+            "correct_option": 1,
+            "options": [
+                {
+                    "option_id": 351,
+                    "option_content": "True    ",
+                    "description": null
+                },
+                {
+                    "option_id": 352,
+                    "option_content": "False ",
+                    "description": null
+                }
+            ]
+        }
+    },
+    {
+        "question_id": 177,
+        "question_content": "To whom the customer needs to submit the required documents:",
+        "description": null,
+        "question_type": "DESCRIPTIVE",
+        "answer": {
+            "answer_id": 177,
+            "description": null,
+            "answer_type": "DESCRIPTIVE",
+            "correct_option": 1,
+            "options": [
+                {
+                    "option_id": 354,
+                    "option_content": "submit them manually to the officer of app",
+                    "description": null
+                },
+                {
+                    "option_id": 353,
+                    "option_content": "submit in the app itself     ",
+                    "description": null
+                }
+            ]
+        }
+    },
+    {
+        "question_id": 178,
+        "question_content": "The required documents include the bank details:",
+        "description": null,
+        "question_type": "TRUTHY",
+        "answer": {
+            "answer_id": 178,
+            "description": null,
+            "answer_type": "TRUTHY",
+            "correct_option": 2,
+            "options": [
+                {
+                    "option_id": 356,
+                    "option_content": "False ",
+                    "description": null
+                },
+                {
+                    "option_id": 355,
+                    "option_content": "True    ",
+                    "description": null
+                }
+            ]
+        }
+    },
+    {
+        "question_id": 179,
+        "question_content": "Grievance Redressal mechanism is used to:",
+        "description": null,
+        "question_type": "DESCRIPTIVE",
+        "answer": {
+            "answer_id": 179,
+            "description": null,
+            "answer_type": "DESCRIPTIVE",
+            "correct_option": 1,
+            "options": [
+                {
+                    "option_id": 358,
+                    "option_content": "complaint if the customer was not satisfied",
+                    "description": null
+                },
+                {
+                    "option_id": 357,
+                    "option_content": "verify the documents     ",
+                    "description": null
+                }
+            ]
+        }
+    },
+    {
+        "question_id": 180,
+        "question_content": "How can we address our complaint in Grievance Redressal Mechanism:",
+        "description": null,
+        "question_type": "DESCRIPTIVE",
+        "answer": {
+            "answer_id": 180,
+            "description": null,
+            "answer_type": "DESCRIPTIVE",
+            "correct_option": 2,
+            "options": [
+                {
+                    "option_id": 359,
+                    "option_content": "By reaching the office CASHe      ",
+                    "description": null
+                },
+                {
+                    "option_id": 360,
+                    "option_content": "by writing a mail to support team",
+                    "description": null
+                }
+            ]
+        }
+    },
+    {
+        "question_id": 181,
+        "question_content": "Moratorium Policy was launched on:",
+        "description": null,
+        "question_type": "ONE_WORD",
+        "answer": {
+            "answer_id": 181,
+            "description": null,
+            "answer_type": "ONE_WORD",
+            "correct_option": 1,
+            "options": [
+                {
+                    "option_id": 362,
+                    "option_content": "27th March 2020",
+                    "description": null
+                },
+                {
+                    "option_id": 361,
+                    "option_content": "01-Mar-20",
+                    "description": null
+                }
+            ]
+        }
+    },
+    {
+        "question_id": 182,
+        "question_content": "Moratorium Policy is launched:",
+        "description": null,
+        "question_type": "DESCRIPTIVE",
+        "answer": {
+            "answer_id": 182,
+            "description": null,
+            "answer_type": "DESCRIPTIVE",
+            "correct_option": 2,
+            "options": [
+                {
+                    "option_id": 363,
+                    "option_content": "To Demonetisation     ",
+                    "description": null
+                },
+                {
+                    "option_id": 364,
+                    "option_content": "To reduce financial burden in COVID-19 pandemic",
+                    "description": null
+                }
+            ]
+        }
+    },
+    {
+        "question_id": 183,
+        "question_content": "For NBFC’s it is mandatory to provide moratorium policy:",
+        "description": null,
+        "question_type": "TRUTHY",
+        "answer": {
+            "answer_id": 183,
+            "description": null,
+            "answer_type": "TRUTHY",
+            "correct_option": 1,
+            "options": [
+                {
+                    "option_id": 366,
+                    "option_content": "False ",
+                    "description": null
+                },
+                {
+                    "option_id": 365,
+                    "option_content": "True ",
+                    "description": null
+                }
+            ]
+        }
+    },
+    {
+        "question_id": 184,
+        "question_content": "Does BHANIX provides moratorium policy:",
+        "description": null,
+        "question_type": "ONE_WORD",
+        "answer": {
+            "answer_id": 184,
+            "description": null,
+            "answer_type": "ONE_WORD",
+            "correct_option": 1,
+            "options": [
+                {
+                    "option_id": 367,
+                    "option_content": "Yes ",
+                    "description": null
+                },
+                {
+                    "option_id": 368,
+                    "option_content": "No",
+                    "description": null
+                }
+            ]
+        }
+    },
+    {
+        "question_id": 185,
+        "question_content": "Loans like Personal loans, vehicle loans etc are considered under Moratorium policy:",
+        "description": null,
+        "question_type": "TRUTHY",
+        "answer": {
+            "answer_id": 185,
+            "description": null,
+            "answer_type": "TRUTHY",
+            "correct_option": 2,
+            "options": [
+                {
+                    "option_id": 370,
+                    "option_content": "False ",
+                    "description": null
+                },
+                {
+                    "option_id": 369,
+                    "option_content": "True ",
+                    "description": null
+                }
+            ]
+        }
+    },
+    {
+        "question_id": 186,
+        "question_content": "Moratorium Policy will be applied and approved only to the instalments that fall between:",
+        "description": null,
+        "question_type": "DESCRIPTIVE",
+        "answer": {
+            "answer_id": 186,
+            "description": null,
+            "answer_type": "DESCRIPTIVE",
+            "correct_option": 1,
+            "options": [
+                {
+                    "option_id": 371,
+                    "option_content": "March 1,2020 to August 31, 2020     ",
+                    "description": null
+                },
+                {
+                    "option_id": 372,
+                    "option_content": "February 29 ,2020 to August 31, 2020",
+                    "description": null
+                }
+            ]
+        }
+    },
+    {
+        "question_id": 187,
+        "question_content": "Does eligibility was provided by default to all the customers under Moratorium?",
+        "description": null,
+        "question_type": "TRUTHY",
+        "answer": {
+            "answer_id": 187,
+            "description": null,
+            "answer_type": "TRUTHY",
+            "correct_option": 2,
+            "options": [
+                {
+                    "option_id": 373,
+                    "option_content": "True   ",
+                    "description": null
+                },
+                {
+                    "option_id": 374,
+                    "option_content": "False ",
+                    "description": null
+                }
+            ]
+        }
+    },
+    {
+        "question_id": 188,
+        "question_content": "What are the documents needed to be provided by the customer under Moratorium?",
+        "description": null,
+        "question_type": "DESCRIPTIVE",
+        "answer": {
+            "answer_id": 188,
+            "description": null,
+            "answer_type": "DESCRIPTIVE",
+            "correct_option": 1,
+            "options": [
+                {
+                    "option_id": 376,
+                    "option_content": "salary slips with reduction in pay and higher authorities ",
+                    "description": null
+                },
+                {
+                    "option_id": 375,
+                    "option_content": "PAN and Aadhaar card     ",
+                    "description": null
+                }
+            ]
+        }
+    },
+    {
+        "question_id": 189,
+        "question_content": "It is mandatory to pay EMI during Moratorium period:",
+        "description": null,
+        "question_type": "TRUTHY",
+        "answer": {
+            "answer_id": 189,
+            "description": null,
+            "answer_type": "TRUTHY",
+            "correct_option": 2,
+            "options": [
+                {
+                    "option_id": 377,
+                    "option_content": "True ",
+                    "description": null
+                },
+                {
+                    "option_id": 378,
+                    "option_content": "False ",
+                    "description": null
+                }
+            ]
+        }
+    },
+    {
+        "question_id": 190,
+        "question_content": "The usage of both the APP and website is subjected to:",
+        "description": null,
+        "question_type": "DESCRIPTIVE",
+        "answer": {
+            "answer_id": 190,
+            "description": null,
+            "answer_type": "DESCRIPTIVE",
+            "correct_option": 1,
+            "options": [
+                {
+                    "option_id": 379,
+                    "option_content": "Acceptance of Privacy policy     ",
+                    "description": null
+                },
+                {
+                    "option_id": 380,
+                    "option_content": "Acceptance of Moratorium",
+                    "description": null
+                }
+            ]
+        }
+    },
+    {
+        "question_id": 191,
+        "question_content": "The usage of 3rd party apps on the website are subjected to:",
+        "description": null,
+        "question_type": "DESCRIPTIVE",
+        "answer": {
+            "answer_id": 191,
+            "description": null,
+            "answer_type": "DESCRIPTIVE",
+            "correct_option": 1,
+            "options": [
+                {
+                    "option_id": 381,
+                    "option_content": "T&C of 3rd party website       ",
+                    "description": null
+                },
+                {
+                    "option_id": 382,
+                    "option_content": "T&C of website itself",
+                    "description": null
+                }
+            ]
+        }
+    },
+    {
+        "question_id": 192,
+        "question_content": "The social media widgets such as like button and video button collects:",
+        "description": null,
+        "question_type": "DESCRIPTIVE",
+        "answer": {
+            "answer_id": 192,
+            "description": null,
+            "answer_type": "DESCRIPTIVE",
+            "correct_option": 1,
+            "options": [
+                {
+                    "option_id": 383,
+                    "option_content": "IP address    ",
+                    "description": null
+                },
+                {
+                    "option_id": 384,
+                    "option_content": "capture the images of user",
+                    "description": null
+                }
+            ]
+        }
+    },
+    {
+        "question_id": 193,
+        "question_content": "Usage of the social media widgets are subjected to website privacy policy:",
+        "description": null,
+        "question_type": "TRUTHY",
+        "answer": {
+            "answer_id": 193,
+            "description": null,
+            "answer_type": "TRUTHY",
+            "correct_option": 1,
+            "options": [
+                {
+                    "option_id": 385,
+                    "option_content": "True ",
+                    "description": null
+                },
+                {
+                    "option_id": 386,
+                    "option_content": "False ",
+                    "description": null
+                }
+            ]
+        }
+    },
+    {
+        "question_id": 194,
+        "question_content": "Vigil Mechanism is used to complaint about:",
+        "description": null,
+        "question_type": "DESCRIPTIVE",
+        "answer": {
+            "answer_id": 194,
+            "description": null,
+            "answer_type": "DESCRIPTIVE",
+            "correct_option": 2,
+            "options": [
+                {
+                    "option_id": 388,
+                    "option_content": "Irregular EMI payment",
+                    "description": null
+                },
+                {
+                    "option_id": 387,
+                    "option_content": "unauthorised activity or misuse     ",
+                    "description": null
+                }
+            ]
+        }
+    },
+    {
+        "question_id": 195,
+        "question_content": "Who are covered under Vigil Mechanism:",
+        "description": null,
+        "question_type": "DESCRIPTIVE",
+        "answer": {
+            "answer_id": 195,
+            "description": null,
+            "answer_type": "DESCRIPTIVE",
+            "correct_option": 2,
+            "options": [
+                {
+                    "option_id": 389,
+                    "option_content": "Borrowers  ",
+                    "description": null
+                },
+                {
+                    "option_id": 390,
+                    "option_content": "employees even outsourcing, contract, stakeholders of Bhanix      ",
+                    "description": null
+                }
+            ]
+        }
+    },
+    {
+        "question_id": 196,
+        "question_content": "Whistle blower is a person:",
+        "description": null,
+        "question_type": "DESCRIPTIVE",
+        "answer": {
+            "answer_id": 196,
+            "description": null,
+            "answer_type": "DESCRIPTIVE",
+            "correct_option": 1,
+            "options": [
+                {
+                    "option_id": 391,
+                    "option_content": "who files complaint     ",
+                    "description": null
+                },
+                {
+                    "option_id": 392,
+                    "option_content": "who takes loan",
+                    "description": null
+                }
+            ]
+        }
+    },
+    {
+        "question_id": 197,
+        "question_content": "Vigil officer is a person who addresses the complaint:",
+        "description": null,
+        "question_type": "TRUTHY",
+        "answer": {
+            "answer_id": 197,
+            "description": null,
+            "answer_type": "TRUTHY",
+            "correct_option": 1,
+            "options": [
+                {
+                    "option_id": 393,
+                    "option_content": "True   ",
+                    "description": null
+                },
+                {
+                    "option_id": 394,
+                    "option_content": "False ",
+                    "description": null
+                }
+            ]
+        }
+    },
+    {
+        "question_id": 198,
+        "question_content": "Do the company provide any security measures to hide the identity of Whistle blower:",
+        "description": null,
+        "question_type": "ONE_WORD",
+        "answer": {
+            "answer_id": 198,
+            "description": null,
+            "answer_type": "ONE_WORD",
+            "correct_option": 1,
+            "options": [
+                {
+                    "option_id": 395,
+                    "option_content": "Yes ",
+                    "description": null
+                },
+                {
+                    "option_id": 396,
+                    "option_content": "No",
+                    "description": null
+                }
+            ]
+        }
+    },
+    {
+        "question_id": 199,
+        "question_content": "Ombudsman Scheme was covers:",
+        "description": null,
+        "question_type": "DESCRIPTIVE",
+        "answer": {
+            "answer_id": 199,
+            "description": null,
+            "answer_type": "DESCRIPTIVE",
+            "correct_option": 1,
+            "options": [
+                {
+                    "option_id": 398,
+                    "option_content": "Complaints filled by the customer   ",
+                    "description": null
+                },
+                {
+                    "option_id": 397,
+                    "option_content": "eligibility criteria of borrowers",
+                    "description": null
+                }
+            ]
+        }
+    },
+    {
+        "question_id": 200,
+        "question_content": "How Ombudsman takes decision on the Issue raised?",
+        "description": null,
+        "question_type": "DESCRIPTIVE",
+        "answer": {
+            "answer_id": 200,
+            "description": null,
+            "answer_type": "DESCRIPTIVE",
+            "correct_option": 1,
+            "options": [
+                {
+                    "option_id": 399,
+                    "option_content": "Hear proceedings from customer & company      ",
+                    "description": null
+                },
+                {
+                    "option_id": 400,
+                    "option_content": "Hear proceedings from company",
+                    "description": null
+                }
+            ]
+        }
+    },
+    {
+        "question_id": 201,
+        "question_content": "What a complainant can do further if he was not satisfied with the Ombudsman decision?",
+        "description": null,
+        "question_type": "DESCRIPTIVE",
+        "answer": {
+            "answer_id": 201,
+            "description": null,
+            "answer_type": "DESCRIPTIVE",
+            "correct_option": 1,
+            "options": [
+                {
+                    "option_id": 402,
+                    "option_content": "Can reach the higher judiciary ",
+                    "description": null
+                },
+                {
+                    "option_id": 401,
+                    "option_content": "Need to withdraw the complaint      ",
+                    "description": null
+                }
+            ]
+        }
+    },
+    {
+        "question_id": 202,
+        "question_content": "The approval of loan was made on:",
+        "description": null,
+        "question_type": "DESCRIPTIVE",
+        "answer": {
+            "answer_id": 202,
+            "description": null,
+            "answer_type": "DESCRIPTIVE",
+            "correct_option": 1,
+            "options": [
+                {
+                    "option_id": 404,
+                    "option_content": "valid submission of details",
+                    "description": null
+                },
+                {
+                    "option_id": 403,
+                    "option_content": "submission of details    ",
+                    "description": null
+                }
+            ]
+        }
+    },
+    {
+        "question_id": 203,
+        "question_content": "Borrower is a person who:",
+        "description": null,
+        "question_type": "DESCRIPTIVE",
+        "answer": {
+            "answer_id": 203,
+            "description": null,
+            "answer_type": "DESCRIPTIVE",
+            "correct_option": 2,
+            "options": [
+                {
+                    "option_id": 406,
+                    "option_content": " provides the loan",
+                    "description": null
+                },
+                {
+                    "option_id": 405,
+                    "option_content": "takes the loan      ",
+                    "description": null
+                }
+            ]
+        }
+    },
+    {
+        "question_id": 204,
+        "question_content": " What is the reward program given to customers who satisfies certain standards, by CASHe.",
+        "description": null,
+        "question_type": "ONE_WORD",
+        "answer": {
+            "answer_id": 204,
+            "description": null,
+            "answer_type": "ONE_WORD",
+            "correct_option": 1,
+            "options": [
+                {
+                    "option_id": 407,
+                    "option_content": "CASHe cool          ",
+                    "description": null
+                },
+                {
+                    "option_id": 408,
+                    "option_content": "CASHe Crown",
+                    "description": null
+                }
+            ]
+        }
+    },
+    {
+        "question_id": 205,
+        "question_content": "EMI waived off during Moratorium?",
+        "description": null,
+        "question_type": "TRUTHY",
+        "answer": {
+            "answer_id": 205,
+            "description": null,
+            "answer_type": "TRUTHY",
+            "correct_option": 2,
+            "options": [
+                {
+                    "option_id": 409,
+                    "option_content": "True ",
+                    "description": null
+                },
+                {
+                    "option_id": 410,
+                    "option_content": "False ",
+                    "description": null
+                }
+            ]
+        }
+    },
+    {
+        "question_id": 206,
+        "question_content": "The lender has the right to recall the loan, when user fails in following T&C:",
+        "description": null,
+        "question_type": "TRUTHY",
+        "answer": {
+            "answer_id": 206,
+            "description": null,
+            "answer_type": "TRUTHY",
+            "correct_option": 1,
+            "options": [
+                {
+                    "option_id": 411,
+                    "option_content": "True ",
+                    "description": null
+                },
+                {
+                    "option_id": 412,
+                    "option_content": "False ",
+                    "description": null
+                }
+            ]
+        }
+    },
+    {
+        "question_id": 207,
+        "question_content": "CASHe Silver, CASHe Gold, CASHe platinum, CASHe diamond are:",
+        "description": null,
+        "question_type": "DESCRIPTIVE",
+        "answer": {
+            "answer_id": 207,
+            "description": null,
+            "answer_type": "DESCRIPTIVE",
+            "correct_option": 2,
+            "options": [
+                {
+                    "option_id": 413,
+                    "option_content": "Loan Products of CASHE   ",
+                    "description": null
+                },
+                {
+                    "option_id": 414,
+                    "option_content": "CASHe Crown Rewards",
+                    "description": null
+                }
+            ]
+        }
+    },
+    {
+        "question_id": 208,
+        "question_content": "The benefit that was included in CASHe Crown Rewards was:",
+        "description": null,
+        "question_type": "DESCRIPTIVE",
+        "answer": {
+            "answer_id": 208,
+            "description": null,
+            "answer_type": "DESCRIPTIVE",
+            "correct_option": 1,
+            "options": [
+                {
+                    "option_id": 416,
+                    "option_content": "Reduce the interest rates to some extend",
+                    "description": null
+                },
+                {
+                    "option_id": 415,
+                    "option_content": "The due amount was waived off     ",
+                    "description": null
+                }
+            ]
+        }
+    },
+    {
+        "question_id": 209,
+        "question_content": "Borrower can prepay the loan before arrival of due date",
+        "description": null,
+        "question_type": "TRUTHY",
+        "answer": {
+            "answer_id": 209,
+            "description": null,
+            "answer_type": "TRUTHY",
+            "correct_option": 2,
+            "options": [
+                {
+                    "option_id": 418,
+                    "option_content": "False ",
+                    "description": null
+                },
+                {
+                    "option_id": 417,
+                    "option_content": "True ",
+                    "description": null
+                }
+            ]
+        }
+    },
+    {
+        "question_id": 210,
+        "question_content": "For process of loan application the borrower:",
+        "description": null,
+        "question_type": "DESCRIPTIVE",
+        "answer": {
+            "answer_id": 210,
+            "description": null,
+            "answer_type": "DESCRIPTIVE",
+            "correct_option": 2,
+            "options": [
+                {
+                    "option_id": 419,
+                    "option_content": "need not to pay GST on processing fees      ",
+                    "description": null
+                },
+                {
+                    "option_id": 420,
+                    "option_content": "Need to pay GST on Processing",
+                    "description": null
+                }
+            ]
+        }
+    },
+    {
+        "question_id": 211,
+        "question_content": "Every customer will be providing with_____, while registering with the company",
+        "description": null,
+        "question_type": "ONE_WORD",
+        "answer": {
+            "answer_id": 211,
+            "description": null,
+            "answer_type": "ONE_WORD",
+            "correct_option": 2,
+            "options": [
+                {
+                    "option_id": 421,
+                    "option_content": "SLQ score      ",
+                    "description": null
+                },
+                {
+                    "option_id": 422,
+                    "option_content": "Unique ID",
+                    "description": null
+                }
+            ]
+        }
+    },
+    {
+        "question_id": 212,
+        "question_content": "Training is not provided to the employees of organisation on introducing new technologies?",
+        "description": null,
+        "question_type": "TRUTHY",
+        "answer": {
+            "answer_id": 212,
+            "description": null,
+            "answer_type": "TRUTHY",
+            "correct_option": 1,
+            "options": [
+                {
+                    "option_id": 424,
+                    "option_content": "False ",
+                    "description": null
+                },
+                {
+                    "option_id": 423,
+                    "option_content": "True ",
+                    "description": null
+                }
+            ]
+        }
+    },
+    {
+        "question_id": 213,
+        "question_content": "Full form of CSR, in CSR policy is:",
+        "description": null,
+        "question_type": "DESCRIPTIVE",
+        "answer": {
+            "answer_id": 213,
+            "description": null,
+            "answer_type": "DESCRIPTIVE",
+            "correct_option": 1,
+            "options": [
+                {
+                    "option_id": 426,
+                    "option_content": "Corporate Social Responsibility",
+                    "description": null
+                },
+                {
+                    "option_id": 425,
+                    "option_content": "corporate security resources      ",
+                    "description": null
+                }
+            ]
+        }
+    },
+    {
+        "question_id": 214,
+        "question_content": "What are the activities performed under CSR policy?",
+        "description": null,
+        "question_type": "DESCRIPTIVE",
+        "answer": {
+            "answer_id": 214,
+            "description": null,
+            "answer_type": "DESCRIPTIVE",
+            "correct_option": 2,
+            "options": [
+                {
+                    "option_id": 427,
+                    "option_content": "Building new office spaces      ",
+                    "description": null
+                },
+                {
+                    "option_id": 428,
+                    "option_content": "investing for social cause like educating poor ",
+                    "description": null
+                }
+            ]
+        }
+    },
+    {
+        "question_id": 215,
+        "question_content": "What was the group which monitor the activities under CSR policy?",
+        "description": null,
+        "question_type": "DESCRIPTIVE",
+        "answer": {
+            "answer_id": 215,
+            "description": null,
+            "answer_type": "DESCRIPTIVE",
+            "correct_option": 2,
+            "options": [
+                {
+                    "option_id": 429,
+                    "option_content": "Board members        ",
+                    "description": null
+                },
+                {
+                    "option_id": 430,
+                    "option_content": "CSR committee",
+                    "description": null
+                }
+            ]
+        }
+    },
+    {
+        "question_id": 216,
+        "question_content": "Budget for CSR policy was based on?",
+        "description": null,
+        "question_type": "DESCRIPTIVE",
+        "answer": {
+            "answer_id": 216,
+            "description": null,
+            "answer_type": "DESCRIPTIVE",
+            "correct_option": 1,
+            "options": [
+                {
+                    "option_id": 431,
+                    "option_content": "Annual income of company       ",
+                    "description": null
+                },
+                {
+                    "option_id": 432,
+                    "option_content": "fixed amount by the CSR committee",
+                    "description": null
+                }
+            ]
+        }
+    },
+    {
+        "question_id": 217,
+        "question_content": "Which River was included in the CSR activity recently by the central government?",
+        "description": null,
+        "question_type": "ONE_WORD",
+        "answer": {
+            "answer_id": 217,
+            "description": null,
+            "answer_type": "ONE_WORD",
+            "correct_option": 1,
+            "options": [
+                {
+                    "option_id": 434,
+                    "option_content": "River Ganga",
+                    "description": null
+                },
+                {
+                    "option_id": 433,
+                    "option_content": "River Godavari      ",
+                    "description": null
+                }
+            ]
+        }
+    },
+    {
+        "question_id": 218,
+        "question_content": "Independent directors are appointed in organisations?",
+        "description": null,
+        "question_type": "TRUTHY",
+        "answer": {
+            "answer_id": 218,
+            "description": null,
+            "answer_type": "TRUTHY",
+            "correct_option": 1,
+            "options": [
+                {
+                    "option_id": 435,
+                    "option_content": "True ",
+                    "description": null
+                },
+                {
+                    "option_id": 436,
+                    "option_content": "False ",
+                    "description": null
+                }
+            ]
+        }
+    },
+    {
+        "question_id": 219,
+        "question_content": "The independent director will attend the board meeting, like other members.",
+        "description": null,
+        "question_type": "TRUTHY",
+        "answer": {
+            "answer_id": 219,
+            "description": null,
+            "answer_type": "TRUTHY",
+            "correct_option": 2,
+            "options": [
+                {
+                    "option_id": 438,
+                    "option_content": "False ",
+                    "description": null
+                },
+                {
+                    "option_id": 437,
+                    "option_content": "True ",
+                    "description": null
+                }
+            ]
+        }
+    },
+    {
+        "question_id": 220,
+        "question_content": "What is the term of appointment of the independent director?",
+        "description": null,
+        "question_type": "ONE_WORD",
+        "answer": {
+            "answer_id": 220,
+            "description": null,
+            "answer_type": "ONE_WORD",
+            "correct_option": 1,
+            "options": [
+                {
+                    "option_id": 440,
+                    "option_content": "5 years",
+                    "description": null
+                },
+                {
+                    "option_id": 439,
+                    "option_content": "3 years    ",
+                    "description": null
+                }
+            ]
+        }
+    },
+    {
+        "question_id": 221,
+        "question_content": "The independent director was not provided with insurance by organisation.",
+        "description": null,
+        "question_type": "TRUTHY",
+        "answer": {
+            "answer_id": 221,
+            "description": null,
+            "answer_type": "TRUTHY",
+            "correct_option": 1,
+            "options": [
+                {
+                    "option_id": 442,
+                    "option_content": "False ",
+                    "description": null
+                },
+                {
+                    "option_id": 441,
+                    "option_content": "True ",
+                    "description": null
+                }
+            ]
+        }
+    },
+    {
+        "question_id": 222,
+        "question_content": "On what basis the appraisal was provided to the independent director?",
+        "description": null,
+        "question_type": "DESCRIPTIVE",
+        "answer": {
+            "answer_id": 222,
+            "description": null,
+            "answer_type": "DESCRIPTIVE",
+            "correct_option": 2,
+            "options": [
+                {
+                    "option_id": 444,
+                    "option_content": " No. of meeting he attended",
+                    "description": null
+                },
+                {
+                    "option_id": 443,
+                    "option_content": "Entire performance                  ",
+                    "description": null
+                }
+            ]
+        }
+    },
+    {
+        "question_id": 223,
+        "question_content": "Termination of independent director was done when:",
+        "description": null,
+        "question_type": "DESCRIPTIVE",
+        "answer": {
+            "answer_id": 223,
+            "description": null,
+            "answer_type": "DESCRIPTIVE",
+            "correct_option": 1,
+            "options": [
+                {
+                    "option_id": 445,
+                    "option_content": "He feels to resign and when he was included in violation",
+                    "description": null
+                },
+                {
+                    "option_id": 446,
+                    "option_content": "only when he feels to resign before his term.",
+                    "description": null
+                }
+            ]
+        }
+    }
+]

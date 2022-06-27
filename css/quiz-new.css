@@ -1,0 +1,318 @@
+body {
+  margin: 0;
+  font-family: system-ui,-apple-system,system-ui,"Helvetica Neue",Helvetica,Arial,sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+#quiz-wrapper {
+    
+}
+
+#quiz-wrapper .header {
+  border: 1px solid #f48020;
+  height: 12vh;
+  text-align: center;
+  background-color: #f48020;
+  color: white;
+  font-family: system-ui,-apple-system,system-ui,"Helvetica Neue",Helvetica,Arial,sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+#quiz-wrapper .page-content {
+  display: flex;
+  height: 87.5vh;
+}
+
+.page-content .topics-accordion {
+  height: 87.4vh;
+  width: 22vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  overflow-y: auto;
+}
+
+.topics-accordion .topic-wrapper {
+  height: 8vh;
+  border: 1px solid black;
+  font-size: 3vh;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  cursor: pointer;
+  user-select: none;
+}
+
+.topics-accordion .question-list-wrapper {
+  height: 8vh;
+  border: 1px solid black;
+  font-size: 2vh;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  cursor: pointer;
+  user-select: none;
+}
+
+.answered {
+  width: 20px;
+  margin-right: 10px;
+}
+
+.selected-topic {
+  background-color: #fa6400;
+  color: white;
+}
+
+.topics-accordion .topic-wrapper:hover {
+  background-color: #fb8332;
+  color: white;
+}
+
+.topics-accordion .question-list-wrapper:hover {
+  background-color: #fb8332;
+  color: white;
+}
+
+.topic-wrapper .topic {
+  margin-left: 1vw;
+}
+
+.question-list-wrapper .question-list {
+  margin: 1.5vh 1vh;
+  height: 3vh;
+  white-space: nowrap;
+  width: 100%;                   /* IE6 needs any width */
+  overflow: hidden;              /* "overflow" value must be different from  visible"*/ 
+  -o-text-overflow: ellipsis;    /* Opera < 11*/
+  text-overflow:    ellipsis;
+}
+
+.page-content .quiz-content {
+  height: 82vh;
+  width: 78vw;
+  margin: 15px;
+  border: 5px solid black;
+}
+
+.quiz-content .quiz-body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 78vh;
+}
+
+.quiz-body .quiz-timer {
+  height: 10vh;
+  display: flex;
+  justify-content: space-between;
+}
+
+.quiz-timer .timer-content {
+  margin: 1px 1px;
+  background-color: #f48020;
+  border-radius: 3px;
+  color: white;
+  width: 140px;
+  height: 6vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.quiz-body .question {
+  height: 15vh;
+  margin: 2vh 10vw;
+  font-size: 24px;
+  font-weight: 600;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.quiz-body .answer {
+  height: 12vh;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  text-align: center;
+}
+
+.answer .option {
+  max-width: 30vw;
+  margin: 5px 15px;
+}
+
+.quiz-body .nav-buttons {
+  height: 20vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.nav-buttons .next-button {
+  margin: 0 40px;
+}
+
+.nav-buttons .previous-button {
+  margin: 0 40px;
+}
+
+.quiz-timer .submit-button {
+  margin: 0 40px;
+}
+
+.quiz-timer .timer-content {
+  margin: 0 40px;
+}
+
+.quiz-start-page .content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 78vh;
+}
+
+.content .start-quiz {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.button-5 {
+  align-items: center;
+  background-clip: padding-box;
+  background-color: #fa6400;
+  border: 1px solid transparent;
+  border-radius: .25rem;
+  box-shadow: rgba(0, 0, 0, 0.02) 0 1px 3px 0;
+  box-sizing: border-box;
+  color: #fff;
+  cursor: pointer;
+  display: inline-flex;
+  font-family: system-ui,-apple-system,system-ui,"Helvetica Neue",Helvetica,Arial,sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  justify-content: center;
+  line-height: 1.25;
+  margin: 0;
+  min-height: 3rem;
+  padding: calc(.875rem - 1px) calc(1.5rem - 1px);
+  position: relative;
+  text-decoration: none;
+  transition: all 250ms;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  vertical-align: baseline;
+  width: 140px;
+}
+
+.button-5:hover {
+  background-color: #fb8332;
+  box-shadow: rgba(0, 0, 0, 0.1) 0 4px 12px;
+}
+
+.button-5:hover {
+  transform: translateY(-1px);
+}
+
+.button-5:active {
+  background-color: #c85000;
+  box-shadow: rgba(0, 0, 0, .06) 0 2px 4px;
+  transform: translateY(0);
+}
+
+.modal {
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content {
+  position: relative;
+  background-color: #fefefe;
+  margin: auto;
+  padding: 0;
+  border: 1px solid #888;
+  width: 80%;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+  -webkit-animation-name: animatetop;
+  -webkit-animation-duration: 0.4s;
+  animation-name: animatetop;
+  animation-duration: 0.4s
+}
+
+/* Add Animation */
+@-webkit-keyframes animatetop {
+  from {top:-300px; opacity:0} 
+  to {top:0; opacity:1}
+}
+
+@keyframes animatetop {
+  from {top:-300px; opacity:0}
+  to {top:0; opacity:1}
+}
+
+/* The Close Button */
+.close {
+  color: white;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.modal-header {
+  padding: 2px 16px;
+  background-color: #fa6400;
+  color: white;
+}
+
+.modal-body {padding: 2px 16px;}
+
+.modal-footer {
+  padding: 2px 16px;
+  background-color: #fa6400;
+  color: white;
+}
+
+.quiz-body .progressbar-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 10vh;
+}
+
+.progressbar-container .progressbar {
+  border: 2px solid black;
+  border-radius: 15px;
+  /* (height of inner div) / 2 + padding */
+  padding: 1px;
+  width: 40vw;
+}
+
+.progressbar-container .progressbar>div {
+  background-color: orange;
+  /* Adjust with JavaScript */
+  width: 0%;
+  height: 8px;
+  border-radius: 10px;
+}

@@ -1,69 +1,6 @@
 var default_video_clicked = true;
 const casheFiles = new Map();
-var accordions_list = ['.videos','.documents','.links','.quiz-topics']
-
-//=====================================================================================
-                                /* youtube video links */
-                                /* ============================== */
-casheFiles.set('vid1','https://www.youtube.com/embed/Pl7XP8o7v6g');
-casheFiles.set('vid2','https://www.youtube.com/embed/JvNvINEgW1s');
-casheFiles.set('vid3','https://www.youtube.com/embed/ww_83m_bB_U');
-casheFiles.set('vid4','https://www.youtube.com/embed/C1E5tHaZaks');
-casheFiles.set('vid5','https://www.youtube.com/embed/7jS9JMxg5R4');
-casheFiles.set('vid6','https://www.youtube.com/embed/z_zj2OmTRJk');
-
-//=====================================================================================
-
-                                /* word documents links */
-                                //=========================
-
-casheFiles.set('word-doc-1','assets/3_reasons_bnpl_is_a_hit_among_young_shoppers_this_festive_season.pdf');
-casheFiles.set('word-doc-2','assets/5_apps_to_consider_for_micro_loans_this_festive_season.pdf');
-casheFiles.set('word-doc-3','assets/5_tech-based_platforms_driving_credit_literacy.pdf');
-casheFiles.set('word-doc-4','assets/banking_2_dot_0.pdf');
-casheFiles.set('word-doc-5','assets/bhanix_finance.pdf');
-
-casheFiles.set('word-doc-6','assets/bnpl_lights_up_india’s_ecommerce_sales_this_diwali.pdf');
-casheFiles.set('word-doc-7','assets/buy_now_pay_later_set_to_surge_over_ten_fold_in_india.pdf');
-casheFiles.set('word-doc-8','assets/buy_now,pay_later_set_to_surge_over_ten-fold_in_india-reuters.pdf');
-casheFiles.set('word-doc-9','assets/buy_now,_pay_later_loans_help_fuel_india’s_festive_recovery.pdf');
-casheFiles.set('word-doc-10','assets/cashe_appoints_veteran_banker_jogindar_rana_to_top_role.pdf');
-
-casheFiles.set('word-doc-11','assets/cashe_product_pipeline.pdf');
-casheFiles.set('word-doc-12','assets/cashe_raises_rs_140_cr_v_raman_kumar_talks_about_growth_ahead.pdf');
-casheFiles.set('word-doc-13','assets/cashe_roadmap.pdf');
-casheFiles.set('word-doc-14','assets/cashe.pdf');
-casheFiles.set('word-doc-15','assets/cxo_exclusive-building_a_digital-first_customer_acquisition_and_collection_process.pdf');
-
-casheFiles.set('word-doc-16','assets/exploring_ai-driven_financial_inclusion_with_yashoraj_tyagi,_ct_of_cashe.pdf');
-casheFiles.set('word-doc-17','assets/fintech_platform_raises_$19_million_from_its_singaporean_parent_tslc.pdf');
-casheFiles.set('word-doc-18','assets/how_to_safeguard_yourself_from_financial_frauds.pdf');
-casheFiles.set('word-doc-19','assets/is_buy_now,_pay_later_a_good_idea_for_consumers.pdf');
-casheFiles.set('word-doc-20','assets/pandemic_fuels_tech_inclusion_in_the_financial_sector.pdf');
-
-casheFiles.set('word-doc-21','assets/personal_lending_startup_cashe_secures_inr_140_crores_equity_funding.pdf');
-casheFiles.set('word-doc-22','assets/personal_loans_for_young_salaried_millennials_across_india.pdf');
-casheFiles.set('word-doc-23','assets/sept_records_35_percent_rise_in_bnpl_loan_applications.pdf');
-casheFiles.set('word-doc-24','assets/the_evolution_of_the_digital_lending_sector_in_india.pdf');
-casheFiles.set('word-doc-25','assets/top_apps_that_help_you_take_an_instant_personal_loan.pdf');
-casheFiles.set('word-doc-26','assets/with_10x_growth_for_bnpl_products_during_sales.pdf');
-
-//====================================================================================
-                                        /* pdf docs */
-                                        //============
-
-casheFiles.set('pdf-doc-1','assets/bhanix_and_cashe.pdf');
-casheFiles.set('pdf-doc-2','assets/buy_now_pay_later.pdf');
-casheFiles.set('pdf-doc-3','assets/fintech_financial_sector.pdf');
-
-//====================================================================================
-
-                                        /* ppt files */
-                                        //================
-
-casheFiles.set('ppt-doc-1','assets/bhanix_and_cashe.pdf');
-casheFiles.set('ppt-doc-2','assets//buy_now_pay_later.pdf');
-casheFiles.set('ppt-doc-3','assets/fintech_financial_sector.pdf');
+var accordions_list = ['.quiz-topics'];
 
 //====================================================================================
 
@@ -116,15 +53,6 @@ var ctrl = function($scope)
     $scope.top='10px';
 
     $scope.foregroundColor = '';
-    $scope.pptTitle = 'PPT PRESENTATION';
-    
-    $scope.videoRecording = "VIDEO RECORDINGS";
-    $scope.pptDocuments = 
-    [
-        { name : 'BHANIX & CASHe', icon:'https://s3.ap-south-1.amazonaws.com/learnings.cashe.co.in/images/bhanix_and_cashe_icon.png', document : 'https://s3.ap-south-1.amazonaws.com/learnings.cashe.co.in/assets/bhanix_and_cashe.pdf'},
-        { name : 'BUY NOW PAY LATER', icon:'https://s3.ap-south-1.amazonaws.com/learnings.cashe.co.in/images/buy_now_pay_later_icon.png', document : 'https://s3.ap-south-1.amazonaws.com/learnings.cashe.co.in/assets/buy_now_pay_later.pdf'},
-        { name : 'FINTECH - FINANCIAL SECTOR', icon:'https://s3.ap-south-1.amazonaws.com/learnings.cashe.co.in/images/fintech_financial_sector_icon.png', document : 'https://s3.ap-south-1.amazonaws.com/learnings.cashe.co.in/assets/fintech_financial_sector.pdf'}
-    ];
 
     $scope.quizTopicsList = 
     [
@@ -169,86 +97,13 @@ var ctrl = function($scope)
             ]
         }
     ]
-    $scope.documentsOfCashe = 
-    [
-            {
-                id:'word',name : 'Word Documents', class_name : "word-doc", word_documents : 
-                [
-                {wordID : 'word-doc-1', alt_text : "BNPL is a hit for 3 reasons", icon : 'https://s3.ap-south-1.amazonaws.com/learnings.cashe.co.in/images/3_reasons_bnpl_hit_icon.png', document : "https://s3.ap-south-1.amazonaws.com/learnings.cashe.co.in/assets/3_reasons_bnpl_is_a_hit_among_young_shoppers_this_festive_season.pdf", word_doc : '3 reasons BNPL is a hit among young shoppers this festive season', overview : 'BNPL gives customers instant credit lines access to pay for the products they want to buy on the online retail stores'},
-                {wordID : 'word-doc-2', alt_text : "5 apps to consider for micro loans", icon : 'https://s3.ap-south-1.amazonaws.com/learnings.cashe.co.in/images/5_apps_to_consider_for_micro_loans_icon.png', document : "https://s3.ap-south-1.amazonaws.com/learnings.cashe.co.in/assets/5_apps_to_consider_for_micro_loans_this_festive_season.pdf", word_doc : '5 apps to consider for micro loans this festive season',overview : 'Popular small sized loan apps that reach customer needs are Smart Coin, KreditBee, MoneyTap, CASHe & PaySense'},
-                {wordID : 'word-doc-3', alt_text : "5 tech based platforms for credit literacy", icon : 'https://s3.ap-south-1.amazonaws.com/learnings.cashe.co.in/images/5_tech_based_platforms_driving_credit_line_icon.png', document : "https://s3.ap-south-1.amazonaws.com/learnings.cashe.co.in/assets/5_tech-based_platforms_driving_credit_literacy.pdf", word_doc : '5 Tech-Based Platforms Driving Credit Literacy', overview : 'the 5 Tech based plans that are ready to improve customer finance health are OneScore, CASHe, LenDen Club, Bank Bazaar and Paisa Bazaar'},
-                {wordID : 'word-doc-4', alt_text : "Banking 2.0", icon : 'https://s3.ap-south-1.amazonaws.com/learnings.cashe.co.in/images/banking_2_dot_0_icon.png', document : "https://s3.ap-south-1.amazonaws.com/learnings.cashe.co.in/assets/banking_2_dot_0.pdf", word_doc : 'Banking 2.0', overview : 'Young minds and Technology are the pillars of the Banking sector in this generation'},
-                {wordID : 'word-doc-5', alt_text : "Bhanix Finance", icon : 'https://s3.ap-south-1.amazonaws.com/learnings.cashe.co.in/images/bhanix-finance-logo.png', document : "https://s3.ap-south-1.amazonaws.com/learnings.cashe.co.in/assets/bhanix_finance.pdf", word_doc : 'Bhanix Finance', overview : 'Bhanix is a non-banking financial corporation incorporated on March 15th, 1996 registered with Reserve Bank of India. It uses CASHe a loan giving app for young salaried professionals'},
-                {wordID : 'word-doc-6', alt_text : "BNPL lights up India's e-commerce", icon : 'https://s3.ap-south-1.amazonaws.com/learnings.cashe.co.in/images/BNPL_lights_up_India_ecommerce_sales_icon.png', document : "https://s3.ap-south-1.amazonaws.com/learnings.cashe.co.in/assets/bnpl_lights_up_india%E2%80%99s_ecommerce_sales_this_diwali.pdf", word_doc : 'BNPL lights up India’s ecommerce sales this Diwali', overview : 'BNPL became a helping hand for customers to shop with during the festive season who can pay back over a period of 12 months'},
-                {wordID : 'word-doc-7', alt_text : "Buy now pay later set to surge over ten fold in India", icon : 'https://s3.ap-south-1.amazonaws.com/learnings.cashe.co.in/images/buy_now_pay_later_ten_fold_india_icon.png', document : "https://s3.ap-south-1.amazonaws.com/learnings.cashe.co.in/assets/buy_now_pay_later_set_to_surge_over_ten_fold_in_india.pdf", word_doc : 'Buy now pay later set to surge over ten fold in India'},
-                {wordID : 'word-doc-8', alt_text : "Buy now, pay later set to surge over ten-fold in India - reuters", icon : 'https://s3.ap-south-1.amazonaws.com/learnings.cashe.co.in/images/buy_now_pay_later_reuters_icon.png', document : "https://s3.ap-south-1.amazonaws.com/learnings.cashe.co.in/assets/buy_now%2Cpay_later_set_to_surge_over_ten-fold_in_india-reuters.pdf", word_doc : 'Buy now, pay later set to surge over ten-fold in India - reuters'},
-                {wordID : 'word-doc-9', alt_text : "Buy-Now, Pay-Later Loans Help Fuel India’s Festive Recovery", icon : 'https://s3.ap-south-1.amazonaws.com/learnings.cashe.co.in/images/buy_now_pay_later_festive_recovery_icon.png', document : "https://s3.ap-south-1.amazonaws.com/learnings.cashe.co.in/assets/buy_now%2C_pay_later_loans_help_fuel_india%E2%80%99s_festive_recovery.pdf", word_doc : 'Buy-Now, Pay-Later Loans Help Fuel India’s Festive Recovery'},
-                {wordID : 'word-doc-10', alt_text : "Jogindar Rana appointed on top role", icon : 'https://s3.ap-south-1.amazonaws.com/learnings.cashe.co.in/images/joindhar_rana_appointed.png', document : "https://s3.ap-south-1.amazonaws.com/learnings.cashe.co.in/assets/cashe_appoints_veteran_banker_jogindar_rana_to_top_role.pdf", word_doc : 'CASHe appoints veteran banker Jogindar Rana to Top Role'},
-                {wordID : 'word-doc-11', alt_text : "CASHe product pipeline", icon : 'https://s3.ap-south-1.amazonaws.com/learnings.cashe.co.in/images/cashe_product_pipeline.png', document : "https://s3.ap-south-1.amazonaws.com/learnings.cashe.co.in/assets/cashe_product_pipeline.pdf", word_doc : 'CASHe product pipeline'},
-                {wordID : 'word-doc-12', alt_text : "CASHe Raises Rs 140 Crores", icon : 'https://s3.ap-south-1.amazonaws.com/learnings.cashe.co.in/images/cashe_raises_140_cr_cnbc.png', document : "https://s3.ap-south-1.amazonaws.com/learnings.cashe.co.in/assets/cashe_raises_rs_140_cr_v_raman_kumar_talks_about_growth_ahead.pdf", word_doc : 'CASHe Raises Rs 140 Cr V Raman Kumar Talks About Growth Ahead'},
-                {wordID : 'word-doc-13', alt_text : "CASHe roadmap", icon : 'https://s3.ap-south-1.amazonaws.com/learnings.cashe.co.in/images/cashe_roadmap.png', document : "https://s3.ap-south-1.amazonaws.com/learnings.cashe.co.in/assets/cashe_roadmap.pdf", word_doc : 'CASHe roadmap'},
-                {wordID : 'word-doc-14', alt_text : "CASHe", icon : 'https://s3.ap-south-1.amazonaws.com/learnings.cashe.co.in/images/cashe.png', document : "https://s3.ap-south-1.amazonaws.com/learnings.cashe.co.in/assets/cashe.pdf", word_doc : 'CASHe'},
-                {wordID : 'word-doc-15', alt_text : "Building up Digital-first Customer Acquisition", icon : 'https://s3.ap-south-1.amazonaws.com/learnings.cashe.co.in/images/cxo_exclusive_icon.png', document : "https://s3.ap-south-1.amazonaws.com/learnings.cashe.co.in/assets/cxo_exclusive-building_a_digital-first_customer_acquisition_and_collection_process.pdf", word_doc : 'CXO Exclusive - Building a Digital-first Customer Acquisition and Collection Process'},
-                {wordID : 'word-doc-16', alt_text : "AI-Driven Financial Inclusion' with Yashoraj Tyagi", icon : 'https://s3.ap-south-1.amazonaws.com/learnings.cashe.co.in/images/ai_driven_financial_inclusion.png', document : "https://s3.ap-south-1.amazonaws.com/learnings.cashe.co.in/assets/exploring_ai-driven_financial_inclusion_with_yashoraj_tyagi%2C_ct_of_cashe.pdf", word_doc : "Ecd D:xploring 'AI-Driven Financial Inclusion' with Yashoraj Tyagi, CTO of CASHe"},
-                {wordID : 'word-doc-17', alt_text : "Fintech Platform raises $19 million", icon : 'https://s3.ap-south-1.amazonaws.com/learnings.cashe.co.in/images/fintech_platform_raises_19_million_dollars.png', document : "https://s3.ap-south-1.amazonaws.com/learnings.cashe.co.in/assets/fintech_platform_raises_%2419_million_from_its_singaporean_parent_tslc.pdf", word_doc : 'Fintech Platform raises $19 million from its Singaporean parent TSLC'},
-                {wordID : 'word-doc-18', alt_text : "Safeguarding yourself from financial frauds", icon : 'https://s3.ap-south-1.amazonaws.com/learnings.cashe.co.in/images/safe_guarding_from_financial_frauds.png', document : "https://s3.ap-south-1.amazonaws.com/learnings.cashe.co.in/assets/how_to_safeguard_yourself_from_financial_frauds.pdf", word_doc : 'How to safeguard yourself from financial frauds'},
-                {wordID : 'word-doc-19', alt_text : "BNPL good idea or not", icon : 'https://s3.ap-south-1.amazonaws.com/learnings.cashe.co.in/images/buy_now_pay_later_good_idea.png', document : "https://s3.ap-south-1.amazonaws.com/learnings.cashe.co.in/assets/is_buy_now%2C_pay_later_a_good_idea_for_consumers.pdf", word_doc : 'Is Buy Now, Pay Later A Good Idea For Consumers'},
-                {wordID : 'word-doc-20', alt_text : "", icon : 'https://s3.ap-south-1.amazonaws.com/learnings.cashe.co.in/images/pandemic_fuels_tech_inclusion.png', document : "https://s3.ap-south-1.amazonaws.com/learnings.cashe.co.in/assets/pandemic_fuels_tech_inclusion_in_the_financial_sector.pdf", word_doc : 'Pandemic Fuels Tech Inclusion in the Financial Sector'},
-                {wordID : 'word-doc-21', alt_text : "", icon : 'https://s3.ap-south-1.amazonaws.com/learnings.cashe.co.in/images/personal_lending_startup.png', document : "https://s3.ap-south-1.amazonaws.com/learnings.cashe.co.in/assets/personal_lending_startup_cashe_secures_inr_140_crores_equity_funding.pdf", word_doc : 'Personal Lending Startup CASHe secures INR 140 Crores Equity funding'},
-                {wordID : 'word-doc-22', alt_text : "", icon : 'https://s3.ap-south-1.amazonaws.com/learnings.cashe.co.in/images/personal_loans_young_salaried_millennials.png', document : "https://s3.ap-south-1.amazonaws.com/learnings.cashe.co.in/assets/personal_loans_for_young_salaried_millennials_across_india.pdf", word_doc : 'Personal Loans for young salaried millennials across India'},
-                {wordID : 'word-doc-23', alt_text : "", icon : 'https://s3.ap-south-1.amazonaws.com/learnings.cashe.co.in/images/september_records_35_percent.png', document : "https://s3.ap-south-1.amazonaws.com/learnings.cashe.co.in/assets/sept_records_35_percent_rise_in_bnpl_loan_applications.pdf", word_doc : 'Sept records 35 percent rise in BNPL loan applications'},
-                {wordID : 'word-doc-24', alt_text : "", icon : 'https://s3.ap-south-1.amazonaws.com/learnings.cashe.co.in/images/the_evolution_of_digital_lending_sector.png', document : "https://s3.ap-south-1.amazonaws.com/learnings.cashe.co.in/assets/the_evolution_of_the_digital_lending_sector_in_india.pdf", word_doc : 'The evolution of the digital lending sector in India'},
-                {wordID : 'word-doc-25', alt_text : "", icon : 'https://s3.ap-south-1.amazonaws.com/learnings.cashe.co.in/images/top_apps_instant_personal_loan.png', document : "https://s3.ap-south-1.amazonaws.com/learnings.cashe.co.in/assets/top_apps_that_help_you_take_an_instant_personal_loan.pdf", word_doc : 'Top apps that help you take an instant personal loan'},
-                {wordID : 'word-doc-26', alt_text : "", icon : 'https://s3.ap-south-1.amazonaws.com/learnings.cashe.co.in/images/with_10x_growth_bnpl_products.png', document : "https://s3.ap-south-1.amazonaws.com/learnings.cashe.co.in/assets/with_10x_growth_for_bnpl_products_during_sales.pdf", word_doc : 'With 10x growth for BNPL products during sales'}
-                ]
-            },
-            {
-                id:'pdf',name : 'PDF Documents', class_name : "pdf-doc", pdf_documents : 
-                [
-                    {pdfID : 'pdf-doc-1', icon:'https://s3.ap-south-1.amazonaws.com/learnings.cashe.co.in/images/bhanix_and_cashe_icon.png', document : 'https://s3.ap-south-1.amazonaws.com/learnings.cashe.co.in/assets/bhanix_and_cashe.pdf', pdf_doc : "BHANIX & CASHe"},
-                    {pdfID : 'pdf-doc-2', icon:'https://s3.ap-south-1.amazonaws.com/learnings.cashe.co.in/images/buy_now_pay_later_icon.png', document : 'https://s3.ap-south-1.amazonaws.com/learnings.cashe.co.in/assets/buy_now_pay_later.pdf', pdf_doc : "Buy Now Pay Later"},
-                    {pdfID : 'pdf-doc-3', icon:'https://s3.ap-south-1.amazonaws.com/learnings.cashe.co.in/images/fintech_financial_sector_icon.png', document : 'https://s3.ap-south-1.amazonaws.com/learnings.cashe.co.in/assets/fintech_financial_sector.pdf', pdf_doc : "Fintech - Financial Sector"}
-                ]
-            }
-    ];
 
-    $scope.videoRecordings = 
-    [
-        {id:'vid1', name : 'Digital Transformation (Tech Panel)', backgroundColor : 'orange', hoverOn : 'rgb(255,153,51)'},
-        {id:'vid2', name : 'About CASHe', backgroundColor : 'orange', hoverOn : 'rgb(255,153,51)'},
-        {id:'vid3', name : 'Pandaemic Fuels Tech Inclusion in the Financial Sector', backgroundColor : 'orange', hoverOn : 'rgb(255,153,51)'},
-        {id:'vid4', name : 'V Raman Kumar talks about growth ahead', backgroundColor : 'orange', hoverOn : 'rgb(255,153,51)'},
-        {id:'vid5', name : 'Building a Digital-first Customer Acquisition', backgroundColor : 'orange', hoverOn : 'rgb(255,153,51)'},
-        {id:'vid6', name : 'Is Buy Now Pay Later A Good Idea For Consumers?', backgroundColor : 'orange', hoverOn : 'rgb(255,153,51)'}
-    ]
-    default_video_clicked = true;
-    $scope.videoTopic='';
-    
-    $scope.linksTitle = 'LINKS';
-
-    $scope.linksWebsites = 
-    [
-        {ID : 'cashe', name : 'CASHe'},
-        {ID : 'bhanix', name : 'Bhanix Finance'}
-    ];
-    var videoRecording = 0;
-    $scope.documentation = 'DOCUMENTATION';
 
     $scope.changeBackgroundTopic = function(index,event)
     {
         className = event.target.className;
-        $scope.selectedDocumentation = -1;
-        $scope.videoRecordingTitle = -1;
-        $scope.selectedVideoRecording = -1;
-        $scope.selectedVideo= -1;
-        $scope.selectedDoc = -1;
-        $scope.selectedWordDoc = -1;
-        $scope.selectedPdfDoc = -1;
 
         $scope.selectedQuizTopics = -1;
-        $scope.selectedPptTitle = -1;
-        $scope.selectedLinksTitle = -1;
-        $scope.selectedLinks = -1;
         $scope.selectedQuizTitle = -1;
 
         $scope.selectedCompetitiveAnalysisQuestion = -1;
@@ -258,46 +113,6 @@ var ctrl = function($scope)
 
         switch(className)
         {
-            case 'vid ng-binding':
-                videoRecording = index;
-                $scope.videoRecordingTitle = index;
-                break;
-
-            case 'videos ng-binding':
-                $scope.videoRecordingTitle = $scope.videoRecording;
-                $scope.selectedVideo = index;
-                break;
-
-            case 'documentation ng-binding':
-                $scope.selectedDocumentation = $scope.documentation;
-                break;
-
-            case 'documents ng-binding':
-                $scope.selectedDocumentation = $scope.documentation;
-                $scope.selectedDoc = index;
-                break;
-
-            case 'word-docs ng-binding':
-                $scope.selectedDocumentation = $scope.documentation;
-                $scope.selectedDoc = 0;
-                $scope.selectedWordDoc = index;
-                break;
-
-            case 'pdf-docs ng-binding':
-                $scope.selectedDocumentation = $scope.documentation;
-                $scope.selectedDoc = 1;
-                $scope.selectedPdfDoc = index;
-                break;
-
-            case 'ppt ng-binding':
-                $scope.selectedPptTitle = index;
-                break;
-
-            case 'ppt-docs ng-binding':
-                $scope.selectedPptTitle = $scope.pptTitle;
-                $scope.selectedPptDoc = index;
-                break;
-
             case 'fintechQuestions ng-binding':
                 questionVisited = index;
                 $scope.selectedQuizTopics = 0;
@@ -322,15 +137,6 @@ var ctrl = function($scope)
                 $scope.selectedCompetitiveAnalysisQuestion = index;
                 break;           
             
-            case 'links-websites ng-binding':
-                $scope.selectedLinksTitle = $scope.linksTitle;
-                break;
-
-            case 'links ng-binding':
-                $scope.selectedLinksTitle = $scope.linksTitle;
-                $scope.selectedLinks = index;
-                break;
-            
             case 'quizzTitle ng-binding':
                 $scope.selectedQuizTitle = $scope.quizTitle;
                 break;
@@ -340,17 +146,6 @@ var ctrl = function($scope)
                 $scope.selectedQuizTopics = index;
                 break;
         } 
-    }
-    
-    $scope.videosAutoSlideDown = function(index)
-    {
-        // if(default_video_clicked == true)
-        // {
-            $scope.videoRecordingTitle = $scope.videoRecording;
-            $scope.selectedVideo = 0;
-            //default_video_clicked = false;
-        //}
-        $('.videos').slideDown(500);
     }
 
     $scope.startQ=1;
@@ -390,8 +185,7 @@ var ctrl = function($scope)
     $scope.displayNavigateTipPage = false;
     
 // ---------X----------X----------X---------X-----------X-----------X---------
-  
-    $scope.wordDocPdfDocSlideUp = true;
+
     $scope.quiz_running  = false;
 
     $scope.slideUpQuizQuestions = function()
@@ -444,22 +238,6 @@ var ctrl = function($scope)
                 pagesTobeDisplayed = false;
                 switch(id)
                 {
-                    case 'vidRec':
-                        $scope.videoRecordingTitle = -1;
-                        break;
-
-                    case 'document':
-                        $scope.selectedDocumentation = -1;
-                        break;
-
-                    case 'ppt-doc':
-                        $scope.selectedPptTitle = -1;
-                        break;
-
-                    case 'websites':
-                        $scope.selectedLinksTitle = -1;
-                        break;
-
                     case 'quiz':
                         $scope.selectedQuizTitle = -1;
 
@@ -506,138 +284,15 @@ var ctrl = function($scope)
             // $scope.displayWebsiteLinksPage=false;
 
             switch(id)
-            {
-                case 'vidRec':
-                    $scope.wordDocDisplayScreen = false;
-                    $scope.pdfDocDisplayScreen = false;
-                    $scope.pptDocDisplayScreen = false;
-                    $scope.displayQuizPages=false;
-                    $scope.displayWebsiteLinksPage=false;
-                    toggleAccordion = '.videos';
-                    $scope.selectedVideo = 0;
-                    $scope.videoRecordingTitle = $scope.videoRecording;
-                    $scope.displayVideosDocsPage = true;
-                    document.getElementById('display').data = casheFiles.get('vid1');
-                    $scope.slideAccordions(toggleAccordion);
-                    $scope.wordDocPdfDocSlideUp = true;
-                    $scope.quiz_running=false;
-                    break;
-
-                case 'document':
-                    console.log("bolo");
-                    $scope.wordDocDisplayScreen=true;
-                    // $scope.wordDocDisplayScreen = false;
-                    $scope.pdfDocDisplayScreen = false;
-                    $scope.pptDocDisplayScreen = false;
-                    $scope.selectedDocumentation = $scope.documentation;
-                    $scope.selectedDoc=0;
-                    $scope.displayVideosDocsPage=false;
-                    $scope.displayQuizPages=false;
-                    $scope.displayWebsiteLinksPage=false;
-                   // $scope.selectedWordDoc = 0;
-                    document.getElementById('display').data = casheFiles.get("word-doc-1");
-                    toggleAccordion = '.documents';
-                    $scope.slideAccordions(toggleAccordion);
-                    $scope.wordDocPdfDocSlideUp = false;
-                    // $('.word-docs').slideToggle(500);
-                    // $('.pdf-docs').slideUp(500);
-                    //id='word';
-                    $scope.quiz_running=false;
-                    break;
-
-                case 'word':
-                    console.log("hello");
-                    $scope.wordDocDisplayScreen = true;
-                    //$scope.wordDocDisplayScreen = false;
-                    $scope.pdfDocDisplayScreen = false;
-                    $scope.pptDocDisplayScreen = false;
-                    $scope.displayQuizPages=false;
-                    $scope.displayWebsiteLinksPage=false;
-                    toggleAccordion = '';
-                    $scope.displayVideosDocsPage = false;
-                    //document.getElementById('display').data = casheFiles.get("word-doc-1");
-                    $scope.slideAccordions(toggleAccordion);
-                    $scope.selectedDocumentation = $scope.documentation;
-                    $scope.selectedDoc=0;
-                    $scope.selectedWordDoc = 0;
-                    $scope.wordDocPdfDocSlideUp = false;
-                    $('.word-docs').slideToggle(500);
-                    $('.pdf-docs').slideUp(500);
-                    $scope.quiz_running=false;
-                    break;
-
-                case 'pdf':
-                    $scope.pdfDocDisplayScreen = true;
-                    $scope.wordDocDisplayScreen = false;
-                    //$scope.pdfDocDisplayScreen = false;
-                    $scope.pptDocDisplayScreen = false;
-
-                    $scope.displayQuizPages=false;
-                    $scope.displayWebsiteLinksPage=false;
-                    $scope.selectedDocumentation = $scope.documentation;
-                    $scope.selectedDoc=1;
-                    toggleAccordion = '';
-                    //$scope.displayNavigateTipPage=false;
-                    $scope.slideAccordions(toggleAccordion);
-                    $scope.selectedPdfDoc = 0;
-                    $scope.displayVideosDocsPage = false;
-                    document.getElementById('display').data = casheFiles.get('pdf-doc-1');
-                    $scope.wordDocPdfDocSlideUp = false;
-                    $('.word-docs').slideUp(500);
-                    $('.pdf-docs').slideToggle(500);
-                    $scope.quiz_running=false;
-                    break;
-
-                case 'ppt-doc':
-                    $scope.pptDocDisplayScreen = true;
-                    $scope.wordDocDisplayScreen = false;
-                    $scope.pdfDocDisplayScreen = false;
-                    //$scope.pptDocDisplayScreen = false;
-                    $scope.displayQuizPages=false;
-                    $scope.displayWebsiteLinksPage=false;
-                    $scope.displayNavigateTipPage=false;
-                    $scope.selectedPptTitle = $scope.pptTitle;
-                    //$scope.selectedPptDoc = 0;
-                    //document.getElementById('display').data = casheFiles.get('ppt-doc-1');
-                    toggleAccordion = '.ppt-docs';
-                    $scope.displayVideosDocsPage = false;
-                    $scope.slideAccordions(toggleAccordion);
-                    $scope.wordDocPdfDocSlideUp = true;
-                    $scope.quiz_running=false;
-                    break;
-
-                case 'websites':
-                    $scope.wordDocDisplayScreen = false;
-                    $scope.pdfDocDisplayScreen = false;
-                    $scope.pptDocDisplayScreen = false;
-                    $scope.showCasheContents=true;
-                    $scope.showBhanixContents=false;
-                    $scope.displayQuizPages=false;
-                    $scope.displayNavigateTipPage=false;
-                    $scope.selectedLinksTitle = $scope.linksTitle;
-                    $scope.selectedLinks = 0;
-                    $scope.quiz_running=true;
-                    document.getElementById('display').data = casheFiles.get('word-doc-1');
-                    toggleAccordion = '.links'
-                    $scope.websitelink = "https://www.cashe.co.in";
-                    $scope.displayWebsiteLinksPage=true;
-                    $scope.slideAccordions(toggleAccordion);
-                    
-                    //$scope.wordDocPdfDocSlideUp = true;
-                    $scope.displayVideosDocsPage = false;
-                    $scope.quiz_running=false;
-                    document.getElementById('display').data = casheFiles.get(id);
-                    break;
-                
+            {   
                 case 'quiz':
                     if($scope.quiz_running==true)
                     {
-                        $scope.displayVideosDocsPage=false;
+                        
                         $scope.displayQuizPages=true;
                         $scope.displayFintechQuizPage=true;
                         $scope.displayFintechQuizTips=true;
                         $scope.selectedQuizTopics=0;
-                        $scope.displayWebsiteLinksPage=false;
                         $scope.quiz_running = false;
                     }
                     else
@@ -650,31 +305,17 @@ var ctrl = function($scope)
                     break;
 
                 default:
-                    $scope.wordDocDisplayScreen = false;
-                    $scope.pdfDocDisplayScreen = false;
-                    $scope.pptDocDisplayScreen = false;
                     $scope.quiz_running=false;
                     //console.log("default");
                     $scope.displayQuizPages = false;
-                    $scope.displayVideosDocsPage = true;
-                    $scope.displayNavigateTipPage = false;
-                    document.getElementById('display').data = casheFiles.get(id);
-                    //already_selected_file = id;
-                    $scope.displayWebsiteLinksPage = false; 
                     break;
             }
-            if($scope.wordDocPdfDocSlideUp == true)
-            {
-                    $('.word-docs').slideUp(500);
-                    $('.pdf-docs').slideUp(500);
-                    $scope.wordDocPdfDocSlideUp = false;
-            }
+    
             $scope.slideUpQuizQuestions();
         }
     }
 // ---------X----------X----------X---------X-----------X-----------X---------
 
-    $scope.displayWebsiteLinksPage = false;
     $scope.selections = 
     [
         -1, -1,-1,-1,-1,
@@ -865,10 +506,6 @@ var ctrl = function($scope)
         
     var scoreFeedback = ['Poor','Average','Good','Excellent'];
 
-    var prev_div = 0;
-    var prev_accordion_visited = false;
-    var quiz_topic_enabled = false;
-
         /* display website links functionality */
     $scope.displayLinks = function(event)
     { 
@@ -886,50 +523,9 @@ var ctrl = function($scope)
         }
         function displayTheLinks(event)
         {
-            $scope.showCasheContents=false;
-            $scope.showBhanixContents=false;
             $scope.displayQuizPages = false;
-            $scope.displayNavigateTipPage = false;
-            $scope.displayVideosDocsPage = false;
-            $scope.displayWebsiteLinksPage = true;
-        
-            var id = event.target.id;
-            if(id=='cashe')
-            {
-                $scope.showCasheContents=true;
-                $scope.websitelink = "https://www.cashe.co.in";
-                $scope.showBhanixContents=false;
-            }
-            else
-            {
-                $scope.showBhanixContents=true;
-                $scope.websitelink = "https://www.bhanixfinance.com";
-                $scope.showCasheContents=false;
-            }
         }
     }
-
-    
-    // $scope.changeBackground = function(index,event)
-    // {   
-    //     default_video_clicked = false;
-    //     current_div = event.target.id;
-    //     $scope.displayWebsiteLinksPage = false;
-    //     current_div_clicked = true;
-    //     prev_div = current_div;
-    //     prev_accordion_visited=true;
-    // }
-
-        /* ------------------------------------------------------------------*/
-
-        /* Quiz topics highlighted */
-        /* ======================= */
-
-    var quiz_topic = '';
-    var prev_quiz_topic_visited = false;  
-    var display_quiz_tips = false;
-        /* ------------------------------------------------------------------*/
-
         
         /* making a single function for Quiz Tips */
         
